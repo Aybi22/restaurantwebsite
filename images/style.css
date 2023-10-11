@@ -1,0 +1,705 @@
+
+
+/*GENERAL CSS*/
+
+/*including padding and border in width and height*/
+
+*{
+box-sizing: border-box;  
+       
+}
+    
+    /*Global variable */
+    
+:root{
+    --blue:#0000FF;
+    --darkblue:#00008B;
+    --yellowgreen:#9ACD32;
+    --gold:#FFD700;
+    --white:#FFFFFF;
+    --seagreen:#2E8B57;
+    --pink:#FFC0CB;
+    --black:#000000;
+    --lightseagreen:#20B2AA;
+    --green:#008000;
+}    
+
+
+
+body{
+        margin:0;
+        padding:0;
+        background-image:url('images/eclair-3366430_1920.jpg');
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+        font-family: 'Caramel', cursive; ;
+        width: 100%;
+       
+       }
+       
+  
+a{
+        text-decoration:none;
+        color:var(--black);
+  }
+  
+  /* defining titles font*/
+  
+  h1,h2,h3{
+           font-weight:900;
+           text-transform: capitalize;
+           
+  }
+ 
+ p{
+        font-size:20px;
+       
+       padding:10px;
+
+ } 
+  
+  
+  /* making responsive images*/
+  
+  img{
+        max-width:100%;
+        display:block;
+
+ }
+  
+ 
+ article{
+        background-image: linear-gradient(to right,#20B2AA, white) ;
+        width:100%; /*article to occupy the  maximum width in their container*/
+
+ }
+ 
+ 
+ 
+ 
+ 
+ /*displaying the page as a grid container*/
+  
+ .grid-container{     
+                   display:grid;
+                   /*define 5 columns and 6 rows*/   
+                   grid-template-areas:
+                  "header header header header" 
+                  "nav nav nav nav"
+                  "aside main main right"
+                  "aside main main right"
+                  "aside main main right"
+                  "footer footer footer footer";
+                   background-image: linear-gradient(to right,var(--lightseagreen), var(--white));
+                   max-width:100%;
+              
+               }
+
+
+.page-container{
+                 width:100%;
+                opacity:87%;
+                 
+                }
+
+footer{
+        
+        grid-area: footer;
+        background:var(--lightseagreen);
+        color:var(--white);
+        text-align:center;
+        padding:17px;
+        font-weight:bold;
+        font-size:35px;
+        
+       }
+
+.social-media{
+            display:flex;
+            gap:50px;
+            align-items: center;
+       }
+
+.me{
+        margin-left:auto;
+        font-size:small;
+        font-weight: 900;
+       }
+ 
+ 
+       h3{
+        margin:20px;
+}
+  
+   
+.left_header a ,li{
+            text-decoration:none;
+            color:white;
+            list-style: none;
+            border-radius:15px;
+               
+}
+ 
+ 
+ header{
+        
+        background-image: linear-gradient(to right, blue ,white);
+        background-size: cover;
+        display:flex;/*creating a flex container*/
+        
+        flex-wrap: wrap;
+        grid-area:header;
+        width:100%;
+                
+  }
+ 
+ .header_right{
+            display:flex;
+            align-items:center;
+ }
+ 
+ 
+ 
+.left_header{
+               color:var(--white);
+               background:var(--black);
+               padding:12px;
+               width:250px;
+               text-align:center;
+               text-transform:uppercase;
+               font-weight: 900;
+               margin-left:50px;
+ }
+ 
+ 
+ /* creating an animation*/
+ .tip{
+        animation-name: tip;
+        animation-iteration-count: infinite;
+        animation-duration: 2s;
+        position: relative;
+        font-size: 30px;
+        
+}
+ 
+ /*defining animation distance*/
+@keyframes tip{
+                from{left:0px;}
+                to{left:50px;}
+ }
+ 
+.logo{
+        font-size:60px;
+        text-align:center;
+        text-transform:uppercase;
+        color:var(--black);
+        text-shadow:3px 4px 5px;
+        letter-spacing: 12px;
+        flex: 1;
+        
+}
+ 
+.order{
+        color:var(--white);
+        background:var(--lightseagreen);
+        width:200px;
+        padding:12px;
+        text-align: center;
+        font-family: 'Caramel', cursive;
+        font-weight:900;
+        text-transform:uppercase;
+        margin-right:10px;
+}
+
+
+.small-text{
+           font-size:14px;
+           color:var(--white);
+           font-weight:900;
+           background:var(--black);
+           padding: 3px;
+}
+ 
+ 
+ 
+nav{
+        
+    background-image: linear-gradient(to right,#20B2AA, white);
+    max-width:100%;
+    position:sticky;/*navbar stays static while content is scrolled*/
+    top:0;
+    grid-area: nav;
+    padding-top:25px;
+    z-index:1;/*allow elements with relative position to scroll under the navbar*/
+    margin-bottom: 25px;
+               
+}
+            
+nav ul{
+      display:flex;/*defining navbar as a flex container*/
+      flex-wrap:wrap;
+      justify-content: space-around;
+      align-items: center;
+      max-width:90%;
+      margin:0;
+      padding:0;             
+}
+            
+            
+.btn{
+     background-color:var(--seagreen);
+     color:var(--white);
+     padding:13px;
+     font-weight: 900;
+     margin-left:50px;
+     text-transform: uppercase;
+     border:none;
+     font-size:23px;
+}
+            
+  /*removing links bullets*/       
+nav li{
+       list-style: none;
+}
+            
+nav a{
+     text-decoration:none;
+     color:black;
+     font-weight:900;
+     text-transform:capitalize;
+     padding:15px;
+     text-transform:uppercase;
+     display: block;
+     font-size: 12px;
+     font-family: 'Caramel', cursive;
+     font-size:19px;
+}
+            
+nav a:hover{
+            border-bottom: 3px solid var(--yellowgreen);
+            color:red;
+                         
+            }
+            
+      
+.dropdmenu {
+           display:inline-block;
+           position:relative;
+}
+
+.dropmenu-items{
+                position:absolute;
+                display:none;
+                background-color: white;
+            
+}
+            
+            
+.dropmenu a{
+           display:block;
+}
+            
+.dropmenu:hover .dropmenu-items{
+                               display:block;
+}
+    
+    
+.about{
+        line-height: 22px;
+        padding:10px;
+}     
+ 
+ 
+ 
+ /*END OF GENERAL CSS*/
+
+
+
+
+
+/*INDEX CSS*/
+ 
+aside{
+     grid-area:aside;
+     padding:5px;
+     background-image: linear-gradient(to right,#20B2AA, white);
+     max-width:90%;
+     margin-left:25px;
+
+ }
+ 
+ .img_style{
+           position:relative;
+           max-width:550px;
+ }
+ 
+ 
+ 
+main{
+        
+         grid-area: main;
+         max-width:100%;
+         margin: 15px;
+         background-image: linear-gradient(to right,#20B2AA, white);
+         padding:12px;
+ }
+
+ .top_right{
+        background-image: linear-gradient(to right,#20B2AA, white) ;
+       margin-right:35px;
+      
+       
+}
+
+.right {
+                  
+        max-width:100%;          
+                  
+}
+
+.top_right li{
+          color:black;
+          font-weight:900;
+          font-family: 'Caramel', cursive;
+          font-size:19px;
+          
+}
+ 
+ 
+ 
+ 
+ footer{
+        
+        grid-area: footer;
+        background:#20B2AA;
+        color:#FFFFFF;
+        text-align:center;
+        padding:17px;
+        font-weight:bold;
+        font-size:35px;
+        
+       }
+
+       .social-media{
+            display:flex;
+            gap:50px;
+            align-items: center;
+       }
+
+       .me{
+        margin-left:auto;
+        font-size:small;
+        font-weight: 900;
+       }
+       
+ 
+ 
+ /*END OF INDEX CSS*/
+ 
+ 
+ 
+ 
+ 
+/*GALLERY CSS*/
+
+ .grid_menu{
+            
+            width:100%; /*set the width of the grid container*/
+            grid-template-columns: repeat(3,  1fr);/*set number of columns*/
+            display:grid;
+            gap:10px;/*set the space between grid items*/
+            height:auto;
+            margin:15px;
+}
+
+ 
+ .grid_menu_wrapper h2{
+                text-shadow:2px 3px 1px black;
+                color: white;
+                background-color:black;
+                max-width:500px;/*defining maximum width*/
+                margin:auto;
+                padding:10px;
+                text-align:center;
+                margin-bottom:10px;
+}
+ 
+ 
+ 
+ 
+ .grid_menu_wrapper{
+        background:gainsboro;
+       
+        width:100%;/*wrap the grid container*/
+        
+        padding:15px;
+}
+ 
+ /*END OF GALLERY CSS*/
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ /*MENU CSS*/
+
+        .txt{
+        
+        font-size:25px;
+        font-weight:900;
+        padding:10px;
+        background-image:linear-gradient(to right, blue, white);
+        flex: 1;
+        
+}
+
+
+
+.img_food{
+           max-width:25%;
+}
+
+
+
+.menu_container{
+                  
+                  display:flex;
+                  flex-wrap: wrap;
+                  width:90%;
+                  gap:10px;
+                  justify-content: center;
+                  background-color:var(--pink);
+                  padding:20px 10px;
+}
+
+
+
+.menu_container button{
+
+                   border:none;/*remove default button border*/
+                   background:#FF00FF;
+                   padding:10px;
+                   max-width:200px;
+                   color:#FFFFFF;
+                   display: block;/*put the button on the next line*/
+                   margin: 50px;/*align the button 40px from the top and in the center of its container*/
+                   font-size:22px;
+                   font-weight:900;/*create a good contrast with background-color*/
+                   animation-name:btn;
+                   animation-iteration-count: infinite;
+                   animation-duration:1s;
+                   
+}
+
+@keyframes btn{
+
+             from{background-color:#FF00FF;}
+              to  {background-color: #9ACD32;}
+}
+
+
+
+
+
+.txt_column{
+         display:flex;
+         flex-direction: column;
+         max-width: 100%;
+        
+
+}
+
+.txt{
+        flex:1;/*take the space and push the next div at the bottom of the container*/
+        max-width:100%;
+}
+
+
+.price{
+          background:#2E8B57;
+          font-size:20px;
+          text-align:center;
+          padding:12px;
+          color:var(--white);
+}
+
+
+
+
+/*END OF MENU CSS*/
+ 
+ 
+
+
+
+
+/*CONTACT CSS*/
+
+
+.info_contact{
+               background:var(--white);
+               padding:10px;
+}
+
+
+
+
+
+
+form p{
+        display:flex;
+        padding:5px;
+        align-items:center;
+       
+        
+      }
+      
+      form{
+           margin:auto;
+           width:700px;
+           background-color:pink;
+           padding:13px;
+           font-family:verdana;
+            
+      }
+       form input{
+              width:400px;
+              padding:8px;
+              border:none;
+      }
+      
+      form label{
+            width:150px;
+            text-transform:uppercase;
+            font-weight:bold;
+           
+      }
+      
+form button{
+             border:none;
+             background-color:rgb(455, 122, 46);
+             color:#fff;
+             padding:10px;
+             width:130px;
+             text-transform:uppercase;
+             font-weight:900;
+             margin:auto;
+             display:block;
+        
+}
+       
+      
+.message-box{
+           padding:50px;
+           resize:vertical;
+           overflow:hidden;
+           border:1px solid gainsboro;
+           
+}
+      
+input{
+     resize:vertical;
+     overflow:hidden; 
+      }
+
+/* END OF CONTACT CSS*/
+
+
+
+
+
+
+/*MEDIA QUERIES*/
+
+
+
+@media screen and (max-width:600px) {
+        .grid-container{
+                       grid-template-areas: 
+                       "header"
+                       "nav"
+                       "main"
+                       "main"
+                      "aside"
+                      "right_section"
+                      "footer";
+                       grid-template-columns: 1fr;
+ }
+
+}
+
+
+@media screen and (max-width:600px){
+                                  nav ul{
+                                  display:flex;
+                                  flex-direction:column;
+                                 }
+           .btn{
+                display:block;
+                margin:auto;
+}
+
+}
+
+@media screen and (max-width:600px){
+        header{
+             display:flex;
+             flex-direction: column;
+             padding:10px;
+}
+        
+}
+
+
+
+@media screen and (max-width:600px){
+
+                      .img_food{
+                             display:flex;
+                             flex-direction:column;
+                             
+                             margin:0;
+                             padding:0px;
+                             
+                      }
+
+                      
+}
+
+
+@media screen and (max-width:600px){
+
+        form{
+                margin:auto;
+                padding:5px;
+                width:300px;
+        }
+
+       form input{
+               width:100%;
+              
+        }
+        
+        
+        form p{
+                display: flex;
+                flex-direction:column;
+        }
+}
+
+@media screen and (max-width:600px){
+                    .menu_container{
+                             display:flex;
+                             flex-direction:column;
+                             width:100%;
+                    }
+}
+
+
+
+/*END OF MEDIA QUERIES*/
