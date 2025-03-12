@@ -65,6 +65,7 @@
       
     img{
             max-width:100%;
+            width:100%;
             display:block;
     
      }
@@ -205,7 +206,7 @@
      }
      
     .logo{
-            font-size:60px;
+            font-size:40px;
             text-align:center;
             text-transform:uppercase;
             color:var(--black);
@@ -405,8 +406,17 @@
               padding:20px;
               margin-bottom: 100px;
     }
-    
-    
+    .main-title{
+        text-align:center;
+        font-size:53px;
+    }
+    .hero-section{
+        background-image: url('images/canape-2802_1920.jpg');
+        background-position:relative;
+        background-repeat:no-repeat;
+        background-size:cover;
+        
+    }
     
     .square{
             position:absolute;
@@ -422,10 +432,11 @@
             margin:0 auto;
             font-weight: 900;
             box-shadow: 2px 1px 4px var(--gainsboro);
-            background-image: linear-gradient(to right,aqua, green);
+            background:var(--black);
             
            }
-     
+           background-image: linear-gradient(to right,aqua, green);
+            
      
      footer{
             
@@ -469,17 +480,20 @@
             font-size:25px;
             font-weight:900;
             padding:10px;
-            background-image:linear-gradient(to right, blue, white);
-            flex:1;
+            
+           
             max-width: 100%;
             
     }
     
-    
+    .menu_title{
+        text-align:center;
+    }
     
     .img_food{
-               max-width:90%;/*setting maximum width to 90% of its container*/
-               margin:auto;/*center content*/
+               
+               display:flex;
+               flex-direction:column;
     }
     
     
@@ -487,16 +501,18 @@
     .menu_container{
                       
                       display:grid;
-                      grid-template-columns: 1fr 1fr;
-                      row-gap: 10px;
+                      grid-template-columns: repeat(3,1fr);
+                      gap: 10px;
                       max-width:90%;
                       margin:auto;/*center the menu container*/
                       
-                      background-color: var(--pink);
+                      
                       padding:15px;
     }
     
     
+    
+
     
     .img_food button{
     
@@ -545,7 +561,7 @@
     
     
     .txt{
-            flex:1;/*takes the space and pushes the next div at the bottom of the container*/
+            /*takes the space and pushes the next div at the bottom of the container*/
             max-width:100%;
     }
     
@@ -557,6 +573,11 @@
               padding:12px;
               color:var(--white);
     }
+    
+    
+    
+    
+    
     
     
     
@@ -601,15 +622,45 @@
      /*GALLERY CSS*/
     
      .grid_menu{
-                
+        display:grid;
                 max-width:100%; /*defining the width of the grid container*/
                 grid-template-columns: repeat(3,  1fr);/*defining number of columns*/
-                display:grid;
-                gap:10px;/*set the space between grid items*/
-                height:auto;
+                
+                gap:11px;
+               
+                /*set the space between grid items*/
+                
                
     }
-    
+    .grid_menu img{
+        height:350px;
+        width:500px;
+        object-fit:cover;
+    }
+    .section-text{
+        text-align:center;
+        font-size:15px;
+        text-transform:capitalize;
+    }
+     .txt p{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        font-size:16px;
+        font-weight:200px;
+     }
+
+     .meal-price{
+        background:orange;
+        text-align:center;
+        width:50px;
+        height:50px;
+        border-radius: 100%;
+        padding:3px;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+     }
      
      .grid_menu_wrapper h2{
                     text-shadow:2px 3px 1px  var(--black);
@@ -625,13 +676,7 @@
      
      
      
-     .grid_menu_wrapper{
-            background:gainsboro;
-           
-            width:100%;/*wrapping the grid container*/
-            
-            padding:15px;
-    }
+     
      
      /*END OF GALLERY CSS*/
      
