@@ -49,6 +49,7 @@
       h1,h2{
                font-weight:900;
                text-transform:capitalize;
+               text-align:center;
                
       }
      
@@ -80,8 +81,46 @@
     
      }
      
-     
-     
+     .ad-section{
+          max-width:100%;
+          
+          display:flex;
+          justify-content:center;
+          
+     }
+     .ad-section img{
+        height:500px;
+        width:800px;
+     }
+  
+     .info{
+        background:seagreen;
+        width:50%;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+     }
+
+     .info-text{
+        font-size:33px;
+        font-weight:900;
+        text-transform:capitalize;
+     }
+     .info-btn{
+        border:none;
+        background:var(--black);
+        color:var(--white);
+        padding:11px 13px;
+        width:100px;
+        font-weight:900;
+        cursor:pointer;
+     }
+     .info-content{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+     }
+
      
      /*displaying the page as a grid container*/
       
@@ -278,23 +317,23 @@
     
     
     /*removing  default list bullet points*/       
-    nav li{
+    ul li{
            list-style: none;
     }
                 
     
     
     /*styling navigation bar hyperlinks*/
-    nav a{
+    ul a{
          text-decoration:none;
          font-weight:900;
          text-transform:capitalize;
          padding:15px 14px;
-         text-transform:uppercase;
+         
          display: block;/*defining block elements to set width and height*/
-         font-size: 12px;
-         font-family: 'Caramel', cursive;
          font-size:19px;
+         font-family: 'Caramel', cursive;
+         
          border-bottom:3px solid transparent;/*transparent border-bottom*/ 
     }
                 
@@ -387,7 +426,7 @@
     
     .top_right li{
               color:var(--black);
-              font-weight:900;
+             
               font-family: 'Caramel', cursive;
               font-size:19px;
               
@@ -410,13 +449,7 @@
         text-align:center;
         font-size:53px;
     }
-    .hero-section{
-        background-image: url('images/canape-2802_1920.jpg');
-        background-position:relative;
-        background-repeat:no-repeat;
-        background-size:cover;
-        
-    }
+    
     
     .square{
             position:absolute;
@@ -441,12 +474,13 @@
      footer{
             
             grid-area: footer;
-            background:#20B2AA;
+            background:var(--black);
             color:#FFFFFF;
             text-align:center;
             padding:17px;
             font-weight:bold;
-            font-size:35px;
+            
+            padding:54px;
             
            }
     
@@ -641,6 +675,8 @@
         text-align:center;
         font-size:15px;
         text-transform:capitalize;
+        width:400px;
+        margin:auto;
     }
      .txt p{
         display:flex;
@@ -662,16 +698,7 @@
         align-items:center;
      }
      
-     .grid_menu_wrapper h2{
-                    text-shadow:2px 3px 1px  var(--black);
-                    color: var(--white);
-                    background-color:var(--black);
-                    max-width:500px;/*defining maximum width*/
-                    margin:auto;
-                    padding:10px;
-                    text-align:center;
-                    margin-bottom:10px;
-    }
+     
      
      
      
@@ -763,6 +790,15 @@
     input{
          resize:vertical;
          overflow:hidden; 
+          }
+
+          footer{
+               background-color: var(--black);
+               margin-top:33px;
+
+          }
+          footer a{
+                color:var(--white);
           }
     
     /* END OF CONTACT CSS*/
