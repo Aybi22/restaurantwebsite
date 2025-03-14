@@ -138,7 +138,9 @@
                        min-height: 100vh;/*grid container to occupy the maximum viewport height*/
                         
     }
-    
+    h3{
+        text-align:center;
+    }
     
     .page-container{
                   
