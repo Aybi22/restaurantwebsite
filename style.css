@@ -140,8 +140,19 @@
     }
     h3{
         text-align:center;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        
     }
-    
+    .fa-thumbs-up{
+        
+        margin-left:44px;
+        vertical-align:baseline;
+    }
+    .num{
+        font-size:11px;
+    }
     .page-container{
                   
                       min-height: 100vh;/* takes the full viewport height*/
