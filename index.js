@@ -1,4 +1,4 @@
-fetch('./template.html')
+fetch('template.html')
 .then(response=>response.text())
 .then(html=>{
     let temp=document.querySelector('.temp');
