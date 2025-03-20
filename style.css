@@ -141,11 +141,7 @@
     }
     
     
-    .grid-container{
-       display:grid;
-       grid-template-columns: repeat(3,1fr); 
-
-}
+   
 
 .meal-container{
         display:grid;
