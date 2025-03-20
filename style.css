@@ -80,7 +80,11 @@
             width:100%; /*article to occupy the  maximum width in their container*/
     
      }
-     
+     .fa-bars{
+        color:var(--white);
+        font-size:23px;
+        cursor:pointer;
+     }
      .ad-section{
           max-width:100%;
           
@@ -322,7 +326,7 @@
         padding: 20px;
         z-index:1;/*defining the order of the navigation bar items*/
         margin-bottom: 25px;
-        
+        align-items: center;
                    
     }
                 
