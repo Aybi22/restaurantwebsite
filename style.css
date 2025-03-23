@@ -80,11 +80,51 @@
             width:100%; /*article to occupy the  maximum width in their container*/
     
      }
-     .fa-bars{
+     .fa-bars,.fa-xmark{
         color:var(--white);
         font-size:23px;
         cursor:pointer;
      }
+
+     .modal{
+        margin:0;
+        padding:0;
+        box-shadow:1px 3px 2px black;
+        left:0;
+        top:0;
+        overflow:hidden;
+        position:fixed;
+        background:var(--white);
+        height:100vh;
+        width:300px;
+        z-index:99;
+        margin-left:-300px;
+        transition:0.5s;
+        
+     }
+     .show-modal{
+        margin-left:0px;
+     }
+
+     .closer{
+        margin-left:-300px;
+     }
+     .red{
+        color:red;
+        transform:rotate(180deg);
+        transition:0.3s;
+     }
+     .show-closer{
+        display:block;
+     }
+     .close-modal{
+        position:absolute;
+        top:4px;
+        right:6px;
+        font-size:29px;
+        cursor:pointer;
+     }
+
      .ad-section{
           max-width:100%;
           
@@ -139,7 +179,7 @@
                       "aside main main right"
                       "aside main main right"
                       "footer footer footer footer";
-                       background-image: linear-gradient(to right,var(--lightseagreen), var(--white));
+                      margin:auto;
                        min-height: 100vh;/*grid container to occupy the maximum viewport height*/
                         
     }
@@ -151,6 +191,7 @@
         display:grid;
         max-width:70%;
         margin:auto;
+        row-gap:22px;
         grid-template-columns: repeat(2,1fr);
 }
     
@@ -243,6 +284,7 @@
             flex-wrap: wrap; /* allowing flex items to wrap if there is no space available*/
             grid-area:header;
             width:100%;/* setting maximum width*/
+            
                     
       }
      
@@ -284,7 +326,7 @@
      }
      
     .logo{
-            font-size:40px;
+            font-size:20px;
             text-align:center;
             text-transform:uppercase;
             color:var(--black);
@@ -327,6 +369,7 @@
         z-index:1;/*defining the order of the navigation bar items*/
         margin-bottom: 25px;
         align-items: center;
+        position: relative;
                    
     }
                 
@@ -627,7 +670,7 @@
     
     .img_food p {
                   color:var(--black);
-                  background: var(--white);
+                 
                   text-align: center;
                   font-size: 25px;
     }
