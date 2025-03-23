@@ -1,9 +1,9 @@
-fetch('./template.html')
+fetch('./footer.html')
 .then(response=>response.text())
 .then(html=>{
-    let temp=document.getElementById('temp');
+    let footer=document.querySelector('.footer');
     
-    temp.innerHTML=html;
+    footer.innerHTML=html;
 
     const modal=document.querySelector('.modal');
     const hamburger=document.querySelector('.fa-bars');
