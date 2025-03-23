@@ -1,9 +1,9 @@
-fetch('./footer.html')
+fetch('./temp.html')
 .then(response=>response.text())
 .then(html=>{
-    let footer=document.querySelector('.footer');
+    let temp=document.getElementById('temp');
     
-    footer.innerHTML=html;
+    temp.innerHTML=html;
 
     const modal=document.querySelector('.modal');
     const hamburger=document.querySelector('.fa-bars');
@@ -28,8 +28,22 @@ let x=e.target.parentNode;
 
 
 }
+
+
+});
     
  
+fetch('./footer.html')
+.then(response=>response.text())
+.then(html=>{
+    let footer=document.querySelector('.footer');
+    
+    footer.innerHTML=html;
+
+
+
+
+  });
 
 
 
@@ -39,5 +53,12 @@ let x=e.target.parentNode;
 
 
 
+
+fetch('./footer.html')
+.then(response=>response.text())
+.then(html=>{
+    let footer=document.document.querySelector('.footer');
+    
+    footer.innerHTML=html;
 
 });
