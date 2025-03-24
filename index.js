@@ -1,3 +1,6 @@
+
+import items from'./menu.js';
+
 fetch('./temp.html')
 .then(response=>response.text())
 .then(html=>{
@@ -34,7 +37,48 @@ if(x===e.target.parentNode || e.target===overlay){
 }
 });
 
+items.forEach(item=>{
+  
+  let container=document.querySelector('.menu-container');
+  let newBox=document.createElement('div');
+  newBox.innerHTML=`
+  <div class="menu_image">
+  
+  <img src=${item.image}>
+  </div>
 
+  <div class="txt_column">
+
+  <div class="txt">
+  <h3>${item.name}<span class="meal-price">£${item.price}</span></h3>
+  
+  <div class="header_right">
+
+      <div class="search-section">
+        <span class="fas fa-arrow-right  tip"></span>
+   
+      </div>
+
+  `;
+ 
+ container.appendChild(newBox);
+ });
+
+
+fetch('./footer.html')
+.then(response=>response.text())
+.then(html=>{
+    let footer=document.querySelector('.footer');
+    
+    footer.innerHTML=html;
+
+  });
+
+ 
+    
+  
+    
+   
 
 let menuLists=[
   {name: "sushi", image: "images/sushi-354628_1920.jpg"},
@@ -47,13 +91,8 @@ let menuLists=[
 
 ]
 
-function showImg(){
-for(let menuList of menuLists){
-  let roundImage=document.querySelector('.round-image');
- roundImage.src=`${menuList.image}`;
-}
-}
-setInterval(showImg,1000);
+
+
 
     
  
@@ -61,14 +100,16 @@ setInterval(showImg,1000);
 
 
 
-fetch('./footer.html')
-.then(response=>response.text())
-.then(html=>{
-    let footer=document.document.querySelector('.footer');
-    
-    footer.innerHTML=html;
 
-  });
+
+
+
+
+
+
+
+
+
 
 
 

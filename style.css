@@ -52,7 +52,9 @@
                text-align:center;
                
       }
-     
+     h2{
+        color:#F34213;
+     }
      
       /* defining paragraphs style*/
       p{
@@ -81,11 +83,13 @@
     
      }
      .fa-bars,.fa-xmark{
-        color:var(--white);
+        color:var(--black);
         font-size:23px;
         cursor:pointer;
      }
-
+     hr{
+       color:#F34213;
+     }
   
 
      .modal{
@@ -107,7 +111,9 @@
      .show-modal{
         margin-left:0px;
      }
-
+     .breadcrum{
+        margin-left:22px;
+     }
      .closer{
         margin-left:-300px;
      }
@@ -140,7 +146,7 @@
      }
   
      .info{
-        background:seagreen;
+        background:#F34213;
         width:50%;
         display:flex;
         justify-content:center;
@@ -238,7 +244,7 @@
             text-align:center;
             padding:17px;
             font-weight:bold;
-            font: size 0.4em;
+            font-size: 0.4em;
             
            }
     
@@ -251,7 +257,7 @@
     
     .me{
             margin-left:auto; /* pushing the element on the right part of its container*/
-            font-size:34px;
+            font-size:2rem;
             font-weight: 900;
             text-transform: uppercase;
            }
@@ -259,13 +265,7 @@
      
           
        
-    .left_header a {
-                text-decoration:none;
-                color:var(--white);
-                list-style: none;
-               
-                   
-    }
+   
      
      .wrapper_right{
                    display:flex;/*creating flex container*/
@@ -280,13 +280,14 @@
      
      header{
             
-
+            margin-top:11px;
             background-size: cover;
             display:flex;/*creating a flex container*/
             flex-wrap: wrap; /* allowing flex items to wrap if there is no space available*/
             grid-area:header;
             width:100%;/* setting maximum width*/
-            
+            align-items:center;
+         
                     
       }
      
@@ -328,12 +329,12 @@
      }
      
     .logo{
-            font-size:20px;
+            font-size:1.2rem;
             text-align:center;
             text-transform:uppercase;
-            color:var(--black);
-            text-shadow:3px 4px 5px var(--black);
-            letter-spacing: 12px;
+            color:#F34213;
+            font-weight:900;
+            font-family:verdana;
             flex: 1; /*takes the available space*/
             
     }
@@ -374,7 +375,7 @@
      
      /*defining  navigation bar*/
     nav{
-        
+       
         max-width:100%;
         position:sticky;/*defining sticky navigation bar*/
         top:0;
@@ -384,7 +385,9 @@
         margin-bottom: 25px;
         align-items: center;
         position: relative;
-                   
+        margin-top:11px;
+        border-bottom:2px solid #F34213;  
+                
     }
                 
     nav ul{
@@ -399,14 +402,15 @@
                 
       /*styling button*/          
     .btn{
-         background-color:var(--seagreen);
+         width:150px;
+         text-align:center;
          color:var(--white);
          padding:13px;
          font-weight: 900;
          margin-left:50px;
-         text-transform: uppercase;
+         text-transform:capitalize;
          border:none;
-         font-size:23px;
+         font-size:0.8rem;
     }
                 
     
@@ -434,8 +438,8 @@
     }
                 
     nav a:hover:not(.btn){/*button not selected to be styled like the nav elements on hover*/ 
-            border-bottom: 3px solid var(--yellowgreen);
-            color:var(--red);
+            border-bottom: 3px solid #DE9151;
+            color:#F34213;
                          
             }
                 
@@ -485,7 +489,7 @@
     aside{
          grid-area:aside;
          padding:5px;
-         background-image: linear-gradient(to right,var(--lightseagreen), var(--white));
+         
          max-width:90%;
          margin-left:25px;
     
@@ -503,12 +507,12 @@
              grid-area: main;
              max-width:100%;
              margin: 15px;
-             background-image: linear-gradient(to right,#20B2AA, white);
+            
              padding:12px;
      }
     
      .top_right{
-            background-image: linear-gradient(to right,#20B2AA, white) ;
+            
            margin-right:35px;
           
            
@@ -564,7 +568,7 @@
             background:var(--black);
             
            }
-           background-image: linear-gradient(to right,aqua, green);
+    
             
      
      footer{
@@ -576,7 +580,6 @@
             padding:17px;
             font-weight:bold;
             
-            padding:54px;
             
            }
     
@@ -584,6 +587,7 @@
                 display:flex;
                 gap:50px;
                 align-items: center;
+                font-size:2.5em;
            }
     
            .me{
@@ -628,7 +632,7 @@
     
     
     
-    .menu_container{
+    .menu-container{
                       
                       display:grid;
                       grid-template-columns: repeat(3,1fr);
@@ -641,7 +645,9 @@
     }
     
     
-    
+    .menu-container img{
+        height:100%;
+    }
 
     
     .img_food button{
@@ -754,7 +760,7 @@
      .grid_menu{
         display:grid;
                 max-width:100%; /*defining the width of the grid container*/
-                grid-template-columns: repeat(3,  1fr);/*defining number of columns*/
+                grid-template-columns: repeat(3,minmax(300px,  1fr));/*defining number of columns*/
                 
                 gap:11px;
                
@@ -828,6 +834,9 @@
                    padding:10px;
     }
     
+    .btn{
+        background: #2E2E3A;
+    }
     
     
     
@@ -889,7 +898,7 @@
           }
 
           footer{
-               background-color: var(--black);
+               background-color: #2E2E3A;
                margin-top:33px;
               
                bottom:0px;
