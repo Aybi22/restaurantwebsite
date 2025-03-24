@@ -56,7 +56,7 @@
      
       /* defining paragraphs style*/
       p{
-            font-size:20px;
+            font-size:1rem;
             padding:10px;
     } 
     
@@ -76,7 +76,7 @@
      } 
      
      article{
-            background-image: linear-gradient(to right,var(--lightseagreen),var(--white)) ;
+          
             width:100%; /*article to occupy the  maximum width in their container*/
     
      }
@@ -86,6 +86,8 @@
         cursor:pointer;
      }
 
+  
+
      .modal{
         margin:0;
         padding:0;
@@ -94,7 +96,7 @@
         top:0;
         overflow:hidden;
         position:fixed;
-        background:var(--white);
+        background:white;
         height:100vh;
         width:300px;
         z-index:99;
@@ -146,7 +148,7 @@
      }
 
      .info-text{
-        font-size:33px;
+        font: size 0.5em;
         font-weight:900;
         text-transform:capitalize;
      }
@@ -236,7 +238,7 @@
             text-align:center;
             padding:17px;
             font-weight:bold;
-            font-size:35px;
+            font: size 0.4em;
             
            }
     
@@ -278,7 +280,7 @@
      
      header{
             
-            background-image: linear-gradient(to right, var(--blue) ,var(--white));
+
             background-size: cover;
             display:flex;/*creating a flex container*/
             flex-wrap: wrap; /* allowing flex items to wrap if there is no space available*/
@@ -349,18 +351,30 @@
     
     
     .small-text{
-               font-size:14px;
+               font-size:1rem;
                color:var(--white);
                font-weight:900;
                background:var(--black);
                padding: 3px;
     }
+
+    .overlay{
+        width:100%;
+        background:black;
+        opacity:45%;
+       top:0;
+       right:0;
+       height:100vh;
+       position: fixed;
+       background:black;
+       visibility:hidden;
+       
+    }
      
      
      /*defining  navigation bar*/
     nav{
-            
-        background-image: linear-gradient(to right,var(--lightseagreen), var(--white));
+        
         max-width:100%;
         position:sticky;/*defining sticky navigation bar*/
         top:0;
@@ -413,7 +427,7 @@
          padding:15px 14px;
          
          display: block;/*defining block elements to set width and height*/
-         font-size:19px;
+         font-size:1rem;
          font-family: 'Caramel', cursive;
          
          border-bottom:3px solid transparent;/*transparent border-bottom*/ 
