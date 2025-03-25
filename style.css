@@ -89,7 +89,7 @@
         
          }
          .fa-bars,.fa-xmark{
-            color:var(--black);
+            color:var(--white);
             font-size:23px;
             cursor:pointer;
          }
@@ -209,7 +209,7 @@
             grid-template-columns: repeat(2,1fr);
     }
         
-        .meal-container img{
+        .container img{
             width:600px;
             height:400px;
             object-fit:cover;
@@ -224,6 +224,7 @@
             display:flex;
             align-items:center;
             justify-content:center;
+            font-family: 'montserrat',sans-serif;;
             
         }
         .fa-thumbs-up{
@@ -386,13 +387,14 @@
             position:sticky;/*defining sticky navigation bar*/
             top:0;
             grid-area: nav;/*indicating grid area*/
-            padding: 20px;
+           
             z-index:1;/*defining the order of the navigation bar items*/
             margin-bottom: 25px;
             align-items: center;
             position: relative;
             margin-top:11px;
-            border-bottom:2px solid #F34213;  
+            background-color: #2E2E3A;
+              
                     
         }
                     
@@ -405,7 +407,32 @@
               margin:0;/*no margin*/
               padding:0; /*no padding*/            
         }
-                    
+
+        .modal-menu a{
+                color:var(--black);
+        }
+
+        hr{
+          border:1px solid #F34213;
+          width:50%;
+        }
+          
+        .fa-bag-shopping{
+                font-size:25px;
+                cursor:pointer;
+        }
+#special{
+        display:flex;
+        justify-content: center;
+        align-items:center;
+}
+
+.basket-content{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+}
+
           /*styling button*/          
         .btn{
              width:150px;
@@ -417,6 +444,7 @@
              text-transform:capitalize;
              border:none;
              font-size:0.8rem;
+             background-color: #F34213;
         }
                     
         
@@ -440,7 +468,7 @@
              font-size:1rem;
              font-family: 'Caramel', cursive;
              font-family: 'montserrat',sans-serif;
-             
+             color: white;
              border-bottom:3px solid transparent;/*transparent border-bottom*/ 
         }
                     
@@ -468,7 +496,8 @@
         .dropmenu-items a{
                    display:block;/*displaying items as block elements*/
                    padding:20px;
-                   font-size:16px;
+                   font-size:1rem;
+                   color:#000000;
                 }
                     
         .dropmenu:hover  .dropmenu-items{
@@ -840,10 +869,6 @@
         .info_contact{
                        background:var(--white);
                        padding:10px;
-        }
-        
-        .btn{
-            background: #2E2E3A;
         }
         
         
