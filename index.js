@@ -56,7 +56,7 @@ items.forEach(item=>{
 
       <div class="search-section">
         <span class="fas fa-arrow-right  tip"></span>
-   
+   <button class="btn">order now</button>
       </div>
 
   `;
