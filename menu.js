@@ -4,8 +4,8 @@ const items=[
     image:"images/shish-kebab-417994_1920.jpg",
     name:"sish kebab",
     quantity:1,
-    price:25
-
+    price:25,
+    description:"taste our delicious sish kebab"
     },
 
 
@@ -16,8 +16,8 @@ const items=[
         image:"images/sushi-354628_1920.jpg" ,
         name:"sushi",
         quantity:1,
-        price:20
-    
+        price:20,
+        description:"taste our delicious sushi"
         },
 
 
@@ -27,7 +27,8 @@ const items=[
             image:"images/canape-2802_1920.jpg",
             name:"canape",
             quantity:1,
-            price:23
+            price:23,
+            description:"taste our delicious sushi"
         
             },
 
@@ -38,7 +39,9 @@ const items=[
                 image:"images/hors-doeuvre-2175326_1920.jpg",
                 name:"hors d'oeuvre",
                 quantity:1,
-                price:19
+                price:19,
+                description:"taste our delicious hors d'oeuvre"
+   
             
                 },
 
@@ -48,7 +51,8 @@ const items=[
                     image:"images/fig-3640553_1920.jpg" ,
                     name:"fig",
                     quantity:1,
-                    price:22
+                    price:22,
+                    description:"taste our delicious fig"
                 
                     },
 
@@ -59,8 +63,8 @@ const items=[
                         image:"images/easter-4948871_1920.jpg",
                         name:'easter',
                         quantity:1,
-                        price:15
-                    
+                        price:15,
+                        description:"taste our delicious easter"
                         },  
 
 
@@ -69,9 +73,10 @@ const items=[
                             image:"images/food-2362678_1920.jpg",
                             name:"food",
                             quantity:1,
-                            price:16
-                        
-                            },  
+                            price:16,
+                            description:"taste our delicious food"
+                        },
+                             
 
 
 
@@ -80,9 +85,10 @@ const items=[
                                 image:"images/ramen-7187810_1920.jpg",
                                 name:"ramen",
                                 quantity:1,
-                                price:20
-                            
-                                },  
+                                price:20,
+                                description:"taste our delicious ramen"
+                            },
+                             
             
             
                                 {
@@ -90,7 +96,8 @@ const items=[
                                     image:"images/eclair-3366430_1920.jpg",
                                     name:"eclair",
                                     quantity:1,
-                                    price:19
+                                    price:19,
+                                    description:"taste our delicious eclair"
                                 
                                     },  
             

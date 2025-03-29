@@ -1,6 +1,28 @@
 
 import items from'./menu.js';
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 fetch('./temp.html')
 .then(response=>response.text())
 .then(html=>{
@@ -10,30 +32,45 @@ fetch('./temp.html')
 
     const modal=document.querySelector('.modal');
     const hamburger=document.querySelector('.fa-bars');
-    const closer=document.querySelector('.close-modal');
+    
     let overlay=document.querySelector('.overlay');
     
     hamburger.addEventListener('click',displayModal);
     function displayModal(){
     modal.classList.toggle('show-modal');
-   hamburger.classList.add('red');
+ 
    overlay.style.visibility="visible";
    
     }
 
-overlay.addEventListener('click',closeModal);
-closer.addEventListener('click',closeModal);
- function closeModal(e){
-let x=e.target.parentNode;
-if(x===e.target.parentNode || e.target===overlay){
+    fetch('./footer.html')
+    .then(response=>response.text())
+    .then(html=>{
+        let footer=document.querySelector('.footer');
+        
+        footer.innerHTML=html;
+    
+      });
+       
+     
+    
+    
+    
+    
+    
+    
 
 
- 
-  x.classList.toggle('show-modal');
-  overlay.style.visibility="hidden";
-  
-}
+//event delegation
+document.body.addEventListener('click',closeModal);
+function closeModal(e){
+  const closeIcon=document.querySelector('.closer');
 
+  if(e.target.classList.contains('closer')|| e.target.classList.contains('modal')|| e.target.classList.contains('overlay')){
+    modal.classList.toggle('show-modal');
+    overlay.style.visibility="hidden";
+   
+  }
 }
 });
 
@@ -51,6 +88,7 @@ items.forEach(item=>{
 
   <div class="txt">
   <h3>${item.name}<span class="meal-price">£${item.price}</span></h3>
+  <p class="section-text">${item.description}</p>
   
   <div class="header_right">
 
@@ -65,14 +103,6 @@ items.forEach(item=>{
  });
 
 
-fetch('./footer.html')
-.then(response=>response.text())
-.then(html=>{
-    let footer=document.querySelector('.footer');
-    
-    footer.innerHTML=html;
-
-  });
 
  
     
@@ -90,13 +120,6 @@ let menuLists=[
 
 
 ]
-
-
-
-
-    
- 
-
 
 
 

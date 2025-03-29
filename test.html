@@ -74,3 +74,36 @@
 
 
 </html>
+
+
+
+
+overlay.addEventListener('click',closeModal);
+closer.addEventListener('click',closeModal);
+ function closeModal(e){
+let x=e.target.parentNode;
+if(x===e.target.parentNode || e.target===overlay){
+
+
+ 
+  x.classList.toggle('show-modal');
+  overlay.style.visibility="hidden";
+  
+}
+
+}
+});
+
+
+const modal=document.querySelector('.modal');
+const hamburger=document.querySelector('.fa-bars');
+
+let overlay=document.querySelector('.overlay');
+
+hamburger.addEventListener('click',displayModal);
+function displayModal(){
+modal.classList.toggle('show-modal');
+hamburger.classList.add('red');
+overlay.style.visibility="visible";
+
+}
