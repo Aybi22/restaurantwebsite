@@ -25,7 +25,7 @@
             --green:#008000;
             --gainsboro:#DCDCDC;
             --red:#FF0000;
-        
+            --section-spacing:111px;
         }    
         
         
@@ -53,17 +53,15 @@
           
           /* defining heading styles*/
           
-          h2{
-                   font-weight:900;
-                   text-transform:capitalize;
-                   text-align:center;
-                   
-          }
+          
           h1{
                 text-transform:uppercase;
           }
          h2{
             color:#F34213;
+            font-weight:900;
+            text-transform:capitalize;
+            text-align:center;
             
          }
          
@@ -278,7 +276,10 @@
         
         }
 
-
+          section{
+               
+                margin-bottom:var(--section-spacing);
+          }
 
        
        .parallax-content {
@@ -568,16 +569,55 @@ flex-direction:column;
                 justify-content:center;
         }
         .new-menu-container img{
-                width:600px;
-                height:350px;
+                width:400px;
+                height:200px;
                 object-fit:cover;
                 display:block;
         }
         .videos-section-container{
                 display:flex;
-                max-width:60%;
-               margin:auto;
+                max-width:100%;
+              justify-content: center;
+                gap:33px;
+              
         }
+        .video-info{
+                display:flex;
+                flex-direction:column;
+        }
+
+        .fa-star{
+                color:gold;
+        }
+
+        .testimonial-container{
+                display:flex;
+                max-width:100%;
+                gap:33px;
+                justify-content:center;
+                padding:33px;
+        }
+        
+       .testimonial-box{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        max-width:500px;
+        
+       } 
+        .testimonial-box img{
+                display:block;
+                width:150px;
+                height:150px;
+                object-fit: cover;
+                border-radius: 100%;
+        }
+       
+        .name{
+                text-transform:capitalize;
+                font-weight:900;
+        }
+        
         .small-text{
                    font-size:1rem;
                    color:var(--white);
