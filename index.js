@@ -96,6 +96,7 @@ items.forEach(item=>{
         <span class="fas fa-arrow-right  tip"></span>
    <button class="btn">order now</button>
       </div>
+      </div>
 
   `;
  
