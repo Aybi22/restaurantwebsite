@@ -126,19 +126,11 @@ const items=[
                         
                         
                         
-                                            {
-                                                id:12,
-                                                image:"images/bread.jpg",
-                                                name:"bread",
-                                                quantity:1,
-                                                price:3.99,
-                                                description:"taste our delicious bread"
                                             
-                                                }, 
                             
                         
                                                 {
-                                                    id:13,
+                                                    id:12,
                                                     image:"images/chocolate.jpg",
                                                     name:"bread",
                                                     quantity:1,
@@ -149,7 +141,53 @@ const items=[
                                 
                         
                         
-                        
-                                ]
+                                                    {
+                                                        id:13,
+                                                        image:"images/noodles1.jpg",
+                                                        name:"noodles",
+                                                        quantity:1,
+                                                        price:22,
+                                                        description:"taste our delicious noodles"
+                                                    
+                                                        }, 
+                                    
+                                                        {
+                                                            id:14,
+                                                            image:"images/sish.jpg",
+                                                            name:"sish kebab",
+                                                            quantity:1,
+                                                            price:23,
+                                                            description:"taste our delicious sish kebab",
+                                                            
+   
+  
+   
+    
+   
+                                                            
+                                                        
+                                                        },
+                                
+                                                        {
+                                                            id:15,
+                                                            image:"images/cheese.jpg",
+                                                            name:"cheese",
+                                                            quantity:1,
+                                                            price:18,
+                                                            description:"taste our delicious cheese",
+                                                            
+   
+  
+   
+    
+   
+                                                            
+                                                        
+                                                        },
+                                
+                                
+                                
+                                
+                                                ]
 
                         export default items;
