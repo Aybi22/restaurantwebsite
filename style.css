@@ -278,6 +278,10 @@
         gap:22px;
        
 }
+
+.hero-info p{
+        text-transform:capitalize;
+}
 .special-info-title{
         font-size:1.5rem;
         font-weight:600;
@@ -359,6 +363,32 @@
              
         
         }
+
+
+
+        .sushi-parallax {
+                /* The image used */
+                background-image: url('images/special\ sushi.jpg');
+              
+                /* Full height */
+                height: 100%; 
+              
+                /* Create the parallax scrolling effect */
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+               position:relative;
+             
+        
+        }
+
+
+
+
+
+
+
 
           section{
                
@@ -477,7 +507,7 @@ flex-direction:column;
             grid-template-columns: repeat(2,1fr);
                
     }
-      #menu .hero-section,#gallery .hero-section{
+      #menu .hero-section,#gallery .hero-section,#sushi .hero-section{
         width:100%;
         height:500px;
         object-fit :cover;
