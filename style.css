@@ -32,6 +32,8 @@
             --info-paragraph-size:0.7rem;
             --info-paragraph-color:#2E2E3A;
             --info-paragraph-align:center;
+            --section-text-margin:37px;
+            --title-margin-top:17px;
         }    
         
         
@@ -80,7 +82,7 @@
         
         h3{
             font-size:1rem;
-            
+            margin-top:var(--title-margin-top);
             text-transform:uppercase;
         }
          
@@ -274,18 +276,40 @@
         align-items:center;
         max-width:400px;
         gap:22px;
+       
 }
 .special-info-title{
-        font-size:3rem;
-        font-weight:900;
+        font-size:1.5rem;
+        font-weight:600;
         text-transform:capitalize;
+        max-width:500px;
+        text-align:center;
+        color:var(--info-paragraph-color);
+        text-transform:uppercase;
+        font-weight:700px;
+
+        
 }
+
+
+.related-container{
+        display:flex;
+}
+.related-container img{
+        width:300px;
+        height:200px;
+        background:white;
+}
+.meal-week-info .special-info-title{
+        color:white;
+}
+
 .special-words{
         display:flex;
         flex-direction:column;
         text-transform:capitalize;
         font-size:1.5rem;
-        color:#2E2E3A
+        color:white;
 }
 .special-words span{
         display:flex;
@@ -363,8 +387,9 @@
         top:50%;
         bottom:50%;
         position:absolute;
-        font-family:roboto;
-        max-width:500px;
+        font-family:Montserrat;
+        max-width:600px;
+        font-weight: 600;
         text-transform:uppercase;
         display:flex;
         flex-direction:column;
@@ -405,6 +430,10 @@
         display:flex;
 flex-direction:column;
         max-width:800px;
+        position:absolute;
+        top:20%;
+        left:7%;
+       
        
         
  }
@@ -420,7 +449,7 @@ flex-direction:column;
  a.btn{
      width:170px; 
      font-weight: bold; 
-     font-size:1.5rem; 
+     font-size:1.3rem;
  }
 
  .free{
@@ -450,11 +479,58 @@ flex-direction:column;
     }
       #menu .hero-section,#gallery .hero-section{
         width:100%;
-        height:400px;
+        height:500px;
         object-fit :cover;
         top:0;
       }  
-        .container img{
+      .meal-week-container{
+        max-width:100%;
+        height:1000px;
+        display:flex;
+        
+
+      }
+      .meal-week-container .image{
+        position:relative;
+      }
+       .image-info{
+        position:absolute;
+        top:67px;
+        left:39px;
+        font-size:22px;
+        text-transform:capitalize;
+        color:var(--white);
+        font-weight:900;
+        font-size:5rem;
+        font-family:roboto;
+        
+       }
+      .meal-week img{
+        width:1600px;
+        height:100%;
+        object-fit:cover;
+      }
+      .meal-week-info{
+        background:#BBB8B2;
+        background:gainsboro;
+        background:#FFFAFA;
+        background:#2E2E3A;
+        color:white;
+        width:1500px;
+      
+        
+      }
+        
+      .meal-week-info-content{
+        margin:73px;
+        display:flex;
+        flex-direction:column;
+        gap:63px;
+      }
+      
+      
+      
+      .container img{
             width:600px;
             height:400px;
             object-fit:cover;
@@ -472,7 +548,7 @@ flex-direction:column;
         max-width:60%;
         grid-template-columns: repeat(3,1fr);
         margin:auto;
-        row-gap: 22px;
+        gap: 22px;
         background-image: linear-gradient(to right,#F34213,white);
         padding:33px;
       }
@@ -508,9 +584,9 @@ flex-direction:column;
                 background:var(--seagreen);
                 color:var(--white);
                 
-                padding:17px;
+                padding:22px;
                 font-weight:bold;
-                font-size: 0.4em;
+                font-size: 1rem;
                 
                 
                }
@@ -552,11 +628,10 @@ flex-direction:column;
                 background-size: cover;
                 display:flex;/*creating a flex container*/
                 flex-wrap: wrap; /* allowing flex items to wrap if there is no space available*/
-                grid-area:header;
+              
                 width:100%;/* setting maximum width*/
                 align-items:center;
-               
-               
+                
              
                         
           }
@@ -1169,6 +1244,7 @@ flex-direction:column;
             margin:auto;
             font-family: 'montserrat',sans-serif;
             font-family: roboto;
+            margin-bottom:var(--section-text-margin);
         }
          .txt p{
             display:flex;
