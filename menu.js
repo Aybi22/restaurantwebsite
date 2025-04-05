@@ -103,8 +103,53 @@ const items=[
             
              
                                         
-                                      
+                                    {
+                                        id:10,
+                                        image:"images/croissant.jpg",
+                                        name:"croissant",
+                                        quantity:1,
+                                        price:5,
+                                        description:"taste our delicious croissant"
+                                    
+                                        },  
+                      
             
-                        ]
+                                        {
+                                            id:11,
+                                            image:"images/bread.jpg",
+                                            name:"bread",
+                                            quantity:1,
+                                            price:3.99,
+                                            description:"taste our delicious croissant"
+                                        
+                                            }, 
+                        
+                        
+                        
+                                            {
+                                                id:12,
+                                                image:"images/bread.jpg",
+                                                name:"bread",
+                                                quantity:1,
+                                                price:3.99,
+                                                description:"taste our delicious bread"
+                                            
+                                                }, 
+                            
+                        
+                                                {
+                                                    id:13,
+                                                    image:"images/chocolate.jpg",
+                                                    name:"bread",
+                                                    quantity:1,
+                                                    price:7.99,
+                                                    description:"taste our delicious chocolate"
+                                                
+                                                    }, 
+                                
+                        
+                        
+                        
+                                ]
 
                         export default items;
