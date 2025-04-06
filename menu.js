@@ -5,7 +5,8 @@ const items=[
     name:"sish kebab",
     quantity:1,
     price:25,
-    description:"taste our delicious sish kebab"
+    description:"taste our delicious sish kebab",
+    category:"sish kebab"
     },
 
 
@@ -17,8 +18,10 @@ const items=[
         name:"sushi",
         quantity:1,
         price:20,
-        description:"taste our delicious sushi"
-        },
+        description:"taste our delicious sushi",
+        category:"sushi"
+    
+    },
 
 
        
@@ -28,8 +31,8 @@ const items=[
             name:"canape",
             quantity:1,
             price:23,
-            description:"taste our delicious sushi"
-        
+            description:"taste our delicious sushi",
+            category:"canape"
             },
 
 
@@ -40,8 +43,8 @@ const items=[
                 name:"hors d'oeuvre",
                 quantity:1,
                 price:19,
-                description:"taste our delicious hors d'oeuvre"
-   
+                description:"taste our delicious hors d'oeuvre",
+                category:"hors d'oeuvre"
             
                 },
 
@@ -60,11 +63,11 @@ const items=[
 
                     {
                         id:6,
-                        image:"images/easter-4948871_1920.jpg",
-                        name:'easter',
+                        image:"images/noodles4.jpg",
+                        name:'noodles',
                         quantity:1,
-                        price:15,
-                        description:"taste our delicious easter"
+                        price:14.99,
+                        description:"taste our delicious noodles"
                         },  
 
 
@@ -74,7 +77,8 @@ const items=[
                             name:"food",
                             quantity:1,
                             price:16,
-                            description:"taste our delicious food"
+                            description:"taste our delicious food",
+                            category:"food"
                         },
                              
 
@@ -86,7 +90,9 @@ const items=[
                                 name:"ramen",
                                 quantity:1,
                                 price:20,
-                                description:"taste our delicious ramen"
+                                description:"taste our delicious ramen",
+                                category:"ramen"
+                            
                             },
                              
             
@@ -97,8 +103,8 @@ const items=[
                                     name:"eclair",
                                     quantity:1,
                                     price:19,
-                                    description:"taste our delicious eclair"
-                                
+                                    description:"taste our delicious eclair",
+                                    category:"confectionary"
                                     },  
             
              
@@ -109,8 +115,8 @@ const items=[
                                         name:"croissant",
                                         quantity:1,
                                         price:5,
-                                        description:"taste our delicious croissant"
-                                    
+                                        description:"taste our delicious croissant",
+                                        category:"pastry"
                                         },  
                       
             
@@ -120,8 +126,8 @@ const items=[
                                             name:"bread",
                                             quantity:1,
                                             price:3.99,
-                                            description:"taste our delicious croissant"
-                                        
+                                            description:"taste our delicious croissant",
+                                            category:"bakery"
                                             }, 
                         
                         
@@ -135,9 +141,10 @@ const items=[
                                                     name:"bread",
                                                     quantity:1,
                                                     price:7.99,
-                                                    description:"taste our delicious chocolate"
-                                                
-                                                    }, 
+                                                    description:"taste our delicious chocolate",
+                                                    category:"confectionary"
+                                                },
+                                                        
                                 
                         
                         
@@ -147,8 +154,8 @@ const items=[
                                                         name:"noodles",
                                                         quantity:1,
                                                         price:22,
-                                                        description:"taste our delicious noodles"
-                                                    
+                                                        description:"taste our delicious noodles",
+                                                        category:"noodles"
                                                         }, 
                                     
                                                         {
@@ -170,11 +177,12 @@ const items=[
                                 
                                                         {
                                                             id:15,
-                                                            image:"images/cheese.jpg",
-                                                            name:"cheese",
+                                                            image:"images/ramen1.jpg",
+                                                            name:"ramen",
                                                             quantity:1,
-                                                            price:18,
-                                                            description:"taste our delicious cheese",
+                                                            price:21.99,
+                                                            description:"taste our delicious ramen",
+                                                             category:"ramen"
                                                             
    
   
@@ -185,9 +193,284 @@ const items=[
                                                         
                                                         },
                                 
+                                                        {
+                                                            id:16,
+                                                            image:"images/ramen2.jpg",
+                                                            name:"ramen",
+                                                            quantity:1,
+                                                            price:18.99,
+                                                            description:"taste our delicious ramen",
+                                                             category:"ramen"
+                                                            
+   
+  
+   
+    
+   
+                                                            
+                                                        
+                                                        },
+
+                                                        {
+                                                            id:17,
+                                                            image:"images/ramen3.jpg",
+                                                            name:"ramen",
+                                                            quantity:1,
+                                                            price:16.50,
+                                                            description:"taste our delicious cheese",
+                                                             category:"ramen"
+                                                            
+   
+  
+   
+    
+   
+                                                            
+                                                        
+                                                        },
+
+
+                                                        {
+                                                            id:15,
+                                                            image:"images/ramen4.jpg",
+                                                            name:"ramen",
+                                                            quantity:1,
+                                                            price:19.99,
+                                                            description:"taste our delicious ramen",
+                                                            category:"ramen"
+                                                            
+   
+  
+   
+    
+   
+                                                            
+                                                        
+                                                        },
+                                                        {
+                                                            id:16,
+                                                            image:"images/noodles1 (1).jpg",
+                                                            name:"noodles",
+                                                            quantity:1,
+                                                            price:18,
+                                                            description:"taste our delicious noodles",
+                                                            categoty:"noodles"
+                                                            
+                                                            
+   
+  
+   
+    
+   
+                                                            
+                                                        
+                                                        },
                                 
+                                                
+                                                
+                                                        {
+                                                            id:17,
+                                                            image:"images/noodles1 (3).jpg",
+                                                            name:"noodles",
+                                                            quantity:1,
+                                                            price:18,
+                                                            description:"taste our delicious noodle",
+                                                             categoty:"noodles"
+                                                            
+   
+  
+   
+    
+   
+                                                            
+                                                        
+                                                        },
                                 
+                                                
+                                                
+                                                        {
+                                                            id:18,
+                                                            image:"images/noodles1 (2).jpg",
+                                                            name:"noodles",
+                                                            quantity:1,
+                                                            price:18,
+                                                            description:"taste our delicious noodles",
+                                                            categoty:"noodles"
+                                                            
+   
+  
+   
+    
+   
+                                                            
+                                                        
+                                                        },
                                 
-                                                ]
+                                                
+                                                        {
+                                                            id:19,
+                                                            image:"images/cookie.jpg",
+                                                            name:"cookie",
+                                                            quantity:1,
+                                                            price:8.99,
+                                                            description:"taste our delicious cookie",
+                                                            category:"pastry"
+                                                            
+   
+  
+   
+    
+   
+                                                            
+                                                        
+                                                        },
+                                
+                                                
+                                                        {
+                                                            id:20,
+                                                            image:"images/doughnut.jpg",
+                                                            name:"doughnut",
+                                                            quantity:1,
+                                                            price:10.50,
+                                                            description:"taste our delicious doughnut",
+                                                            category:"pastry"
+                                                            
+   
+  
+   
+    
+   
+                                                            
+                                                        
+                                                        },
+                                
+                                                
+                                                        {
+                                                            id:21,
+                                                            image:"images/cake.jpg",
+                                                            name:"cake",
+                                                            quantity:1,
+                                                            price:11.50,
+                                                            description:"taste our delicious cake",
+                                                             category:"bakery"
+                                                            
+   
+  
+   
+    
+   
+                                                            
+                                                        
+                                                        },
+                                
+                                                
+                                                        {
+                                                            id:22,
+                                                            image:"images/painauxchocolat.jpg",
+                                                            name:"pain aux chocolat",
+                                                            quantity:1,
+                                                            price:18,
+                                                            description:"taste our delicious pain aux chocolat",
+                                                             category:"bakery"
+                                                            },
+                                
+                                                
+                                                            {
+                                                                id:23,
+                                                                image:"images/baguette.jpg",
+                                                                name:"baguette",
+                                                                quantity:1,
+                                                                price:1,
+                                                                description:"taste our delicious baguette",
+                                                                 category:"bakery"
+                                                                },
+                                    
+                                                    
+                                                
+                                                                {
+                                                                    id:24,
+                                                                    image:"images/creamcake.jpg",
+                                                                    name:"creamcake",
+                                                                    quantity:1,
+                                                                    price:12.50,
+                                                                    description:"taste our delicious cream cake",
+                                                                     category:"pastry"
+                                                                    },
+                                                
+                                                
+                                                
+                                                    
+                                                                    {
+                                                                        id:25,
+                                                                        image:"images/wholebread.jpg",
+                                                                        name:"whole bread",
+                                                                        quantity:1,
+                                                                        price:3.50,
+                                                                        description:"taste our delicious whole meal",
+                                                                         category:"bakery"
+                                                                        },
+                                                    
+                                                    
+                                                    
+                                                    
+                                                                        {
+                                                                            id:26,
+                                                                            image:"images/wholemeal.jpg",
+                                                                            name:"whole meal bread",
+                                                                            quantity:1,
+                                                                            price:4.50,
+                                                                            description:"taste our delicious whole meal bread",
+                                                                             category:"bakery"
+                                                                            },
+                                                    
+                                                    
+                                                    
+                                                                            {
+                                                                                id:27,
+                                                                                image:"images/eclair.jpg",
+                                                                                name:"eclair",
+                                                                                quantity:1,
+                                                                                price:5.99,
+                                                                                description:"taste our delicious eclair",
+                                                                                 category:"confectionary"
+                                                                                },
+                                                    
+                                                    
+                                                                                {
+                                                                                    id:28,
+                                                                                    image:"images/eclair1.jpg",
+                                                                                    name:"eclair",
+                                                                                    quantity:1,
+                                                                                    price:5.99,
+                                                                                    description:"taste our delicious eclair",
+                                                                                     category:"confectionary"
+                                                                                    },
+                                                                
+                                                                
+                                                                
+                                                                                    {
+                                                                                        id:29,
+                                                                                        image:"images/cakeballs.jpg",
+                                                                                        name:"cake balls",
+                                                                                        quantity:1,
+                                                                                        price:5.99,
+                                                                                        description:"taste our delicious cake balls",
+                                                                                         category:"confectionary"
+                                                                                        },
+                                                                
+                                                                
+                                                                                        {
+                                                                                            id:30,
+                                                                                            image:"images/candes.jpg",
+                                                                                            name:"candes",
+                                                                                            quantity:1,
+                                                                                            price:5.99,
+                                                                                            description:"taste our delicious candes",
+                                                                                             category:"pastries"
+                                                                                            },
+                                                                
+                                                                                           
+                                                                
+                                                                            ]
 
                         export default items;

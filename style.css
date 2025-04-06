@@ -33,6 +33,7 @@
             --info-paragraph-color:#2E2E3A;
             --info-paragraph-align:center;
             --section-text-margin:37px;
+            --section-text-color:#2E2E3A;
             --title-margin-top:17px;
         }    
         
@@ -1170,11 +1171,17 @@ flex-direction:column;
         }
         
         
-        
+        .menu-column{
+                border:1px solid #2E2E3A;
+                max-width:500px;
+                display:flex;
+                flex-direction:column;
+
+
+        }
         
         .txt_column{
-                 display:flex;
-                 flex-direction: column;
+                 
         }
         
         
@@ -1277,6 +1284,7 @@ flex-direction:column;
             font-family: 'montserrat',sans-serif;
             font-family: roboto;
             margin-bottom:var(--section-text-margin);
+            color:var(--section-text-color);
         }
          .txt p{
             display:flex;

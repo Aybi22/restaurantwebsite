@@ -79,7 +79,10 @@ items.forEach(item=>{
   let container=document.querySelector('.menu-container');
   let newBox=document.createElement('div');
   newBox.innerHTML=`
-  <div class="menu_image">
+  
+  <div class="menu-column">
+  
+  <div class="image">
   
   <img src=${item.image}>
   </div>
@@ -97,18 +100,60 @@ items.forEach(item=>{
    <button class="btn">order now</button>
       </div>
       </div>
-
+      </div>
+</div>
   `;
  
  container.appendChild(newBox);
  });
 
 
+let retrieve=document.querySelector('.filter');
+retrieve.addEventListener('click',filterByPrice);
+
+ function filterByPrice(){
+let filteredItem=items.filter(item=>item.price>20);
+let container=document.querySelector('.menu-container');
+ 
+  
+
+container.innerHTML=
+filteredItem.map(item=>
+ ` 
 
  
-    
+ <div class="menu-column">
   
-    
+  <div class="image">
+  
+  <img src=${item.image}>
+  </div>
+
+  <div class="txt_column">
+
+  <div class="txt">
+  <h3>${item.name}<span class="meal-price">£${item.price}</span></h3>
+  <p class="section-text">${item.description}</p>
+  
+  <div class="header_right">
+
+      <div class="search-section">
+        <span class="fas fa-arrow-right  tip"></span>
+   <button class="btn">order now</button>
+      </div>
+      </div>
+      </div>
+</div>
+</div>
+ 
+ 
+  
+ 
+  
+`).join('');
+
+}
+ 
    
 
 let menuLists=[
