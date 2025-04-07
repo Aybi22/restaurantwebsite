@@ -6,7 +6,7 @@ const items=[
     quantity:1,
     price:25,
     description:"taste our delicious sish kebab",
-    category:"sish kebab"
+    category:"sishkebab"
     },
 
 
@@ -138,7 +138,7 @@ const items=[
                                                 {
                                                     id:12,
                                                     image:"images/chocolate.jpg",
-                                                    name:"bread",
+                                                    name:"chocolate",
                                                     quantity:1,
                                                     price:7.99,
                                                     description:"taste our delicious chocolate",
@@ -165,7 +165,7 @@ const items=[
                                                             quantity:1,
                                                             price:23,
                                                             description:"taste our delicious sish kebab",
-                                                            
+                                                            category:"sishkebab"
    
   
    
@@ -469,8 +469,104 @@ const items=[
                                                                                              category:"pastries"
                                                                                             },
                                                                 
-                                                                                           
+                                                                                            {
+                                                                                                id:31,
+                                                                                                image:"images/ramen6.jpg",
+                                                                                                name:"ramen",
+                                                                                                quantity:1,
+                                                                                                price:11.99,
+                                                                                                description:"taste our delicious ramen",
+                                                                                                 category:"ramen"
+                                                                                                },     
                                                                 
-                                                                            ]
+                                                                            
+                                                                            
+                                                                                                {
+                                                                                                    id:32,
+                                                                                                    image:"images/sushi5.jpg",
+                                                                                                    name:"sushi",
+                                                                                                    quantity:1,
+                                                                                                    price:11.99,
+                                                                                                    description:"taste our delicious sushi",
+                                                                                                     category:"sushi"
+                                                                                                    },     
+                                                                    
+                                                                            
+                                                                            
+                                                                                                    {
+                                                                                                        id:33,
+                                                                                                        image:"images/sushi6.jpg",
+                                                                                                        name:"sushi",
+                                                                                                        quantity:1,
+                                                                                                        price:13.99,
+                                                                                                        description:"taste our delicious sushi",
+                                                                                                         category:"sushi"
+                                                                                                        },     
+                                                                        
+                                                                                                        {
+                                                                                                            id:34,
+                                                                                                            image:"images/specialsushi.jpg",
+                                                                                                            name:"sushi",
+                                                                                                            quantity:1,
+                                                                                                            price:17.99,
+                                                                                                            description:"taste our delicious sushi",
+                                                                                                             category:"sushi"
+                                                                                                            },   
+                                                                            
+                                                                            
+                                                                                                            {
+                                                                                                                id:35,
+                                                                                                                image:"images/sushi7.jpg",
+                                                                                                                name:"sushi",
+                                                                                                                quantity:1,
+                                                                                                                price:16.99,
+                                                                                                                description:"taste our delicious sushi",
+                                                                                                                 category:"sushi"
+                                                                                                                },   
+                                                                                
+                                                                            
+                                                                                                                {
+                                                                                                                    id:36,
+                                                                                                                    image:"images/sushi8.jpg",
+                                                                                                                    name:"sushi",
+                                                                                                                    quantity:1,
+                                                                                                                    price:17.99,
+                                                                                                                    description:"taste our delicious sushi",
+                                                                                                                     category:"sushi"
+                                                                                                                    }, 
+                                                                            
+                                                                                                                    {
+                                                                                                                        id:37,
+                                                                                                                        image:"images/sishkebab2.jpg",
+                                                                                                                        name:"sish kebab",
+                                                                                                                        quantity:1,
+                                                                                                                        price:14.99,
+                                                                                                                        description:"taste our delicious sish kebab",
+                                                                                                                         category:"sishkebab"
+                                                                                                                        }, 
+                                                                            
+                                                                                                                        {
+                                                                                                                            id:38,
+                                                                                                                            image:"images/noodles4.jpg",
+                                                                                                                            name:"noodles",
+                                                                                                                            quantity:1,
+                                                                                                                            price:10.99,
+                                                                                                                            description:"taste our delicious noodles",
+                                                                                                                             category:"noodles"
+                                                                                                                            }, 
+                                                                                
+                                                                                           
+                                                                                                                            {
+                                                                                                                                id:38,
+                                                                                                                                image:"images/noodles6.jpg",
+                                                                                                                                name:"noodles",
+                                                                                                                                quantity:1,
+                                                                                                                                price:11.99,
+                                                                                                                                description:"taste our delicious noodles",
+                                                                                                                                 category:"noodles"
+                                                                                                                                }, 
+                                                                                           
+                                                                                           
+                                                                                                                ]
 
                         export default items;

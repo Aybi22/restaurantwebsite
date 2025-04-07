@@ -66,13 +66,17 @@
           h1{
                 text-transform:uppercase;
           }
-         h2{
+         h2,.category-text{
             color:#F34213;
             font-weight:900;
             text-transform:capitalize;
             text-align:center;
             font-size:2rem;
             
+         }
+
+         .para{
+                color:red;
          }
          
           /* defining paragraphs style*/
@@ -316,6 +320,12 @@
         font-size:1.5rem;
         color:white;
 }
+
+.special-menu .special-words{
+        color:#2E2E3A;
+}
+
+
 .special-words span{
         display:flex;
         gap:11px;
@@ -1130,6 +1140,21 @@ flex-direction:column;
                           
                           
         }
+
+        
+        .sort-list{
+                display:flex;
+                padding:23px;
+                gap:22px;
+                text-align:center;
+                text-transform:capitalize;
+                max-width:100%;
+                justify-content: center;
+        }
+
+        .sort-list p{
+                border:1px solid gainsboro;
+        }
         .menu-container .image{
                 height:100%;
         }
@@ -1138,7 +1163,7 @@ flex-direction:column;
             width:500px;
             height:300px;
             display:block;
-            object-fit: cover;
+            object-fit:cover;
         }
 
     .testimonial-box p{
@@ -1285,6 +1310,9 @@ flex-direction:column;
             font-family: roboto;
             margin-bottom:var(--section-text-margin);
             color:var(--section-text-color);
+        }
+        #ramen,#confectionary,#pastry,#sushi,#eclair,#bakery,#sishkebab,#noodles{
+                cursor:pointer;
         }
          .txt p{
             display:flex;
