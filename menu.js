@@ -231,7 +231,7 @@ const items=[
 
 
                                                         {
-                                                            id:15,
+                                                            id:16,
                                                             image:"images/ramen4.jpg",
                                                             name:"ramen",
                                                             quantity:1,
@@ -248,8 +248,8 @@ const items=[
                                                         
                                                         },
                                                         {
-                                                            id:16,
-                                                            image:"images/noodles1 (1).jpg",
+                                                            id:17,
+                                                            image:"images/noodles.jpg",
                                                             name:"noodles",
                                                             quantity:1,
                                                             price:18,
@@ -269,8 +269,8 @@ const items=[
                                                 
                                                 
                                                         {
-                                                            id:17,
-                                                            image:"images/noodles1 (3).jpg",
+                                                            id:18,
+                                                            image:"images/noodles4.jpg",
                                                             name:"noodles",
                                                             quantity:1,
                                                             price:18,
@@ -289,8 +289,8 @@ const items=[
                                                 
                                                 
                                                         {
-                                                            id:18,
-                                                            image:"images/noodles1 (2).jpg",
+                                                            id:19,
+                                                            image:"images/noodles6.jpg",
                                                             name:"noodles",
                                                             quantity:1,
                                                             price:18,
@@ -308,7 +308,7 @@ const items=[
                                 
                                                 
                                                         {
-                                                            id:19,
+                                                            id:20,
                                                             image:"images/cookie.jpg",
                                                             name:"cookie",
                                                             quantity:1,
@@ -327,7 +327,7 @@ const items=[
                                 
                                                 
                                                         {
-                                                            id:20,
+                                                            id:21,
                                                             image:"images/doughnut.jpg",
                                                             name:"doughnut",
                                                             quantity:1,
@@ -346,7 +346,7 @@ const items=[
                                 
                                                 
                                                         {
-                                                            id:21,
+                                                            id:22,
                                                             image:"images/cake.jpg",
                                                             name:"cake",
                                                             quantity:1,
@@ -365,7 +365,7 @@ const items=[
                                 
                                                 
                                                         {
-                                                            id:22,
+                                                            id:23,
                                                             image:"images/painauxchocolat.jpg",
                                                             name:"pain aux chocolat",
                                                             quantity:1,
@@ -376,7 +376,7 @@ const items=[
                                 
                                                 
                                                             {
-                                                                id:23,
+                                                                id:24,
                                                                 image:"images/baguette.jpg",
                                                                 name:"baguette",
                                                                 quantity:1,
@@ -388,7 +388,7 @@ const items=[
                                                     
                                                 
                                                                 {
-                                                                    id:24,
+                                                                    id:25,
                                                                     image:"images/creamcake.jpg",
                                                                     name:"creamcake",
                                                                     quantity:1,
@@ -401,7 +401,7 @@ const items=[
                                                 
                                                     
                                                                     {
-                                                                        id:25,
+                                                                        id:26,
                                                                         image:"images/wholebread.jpg",
                                                                         name:"whole bread",
                                                                         quantity:1,
@@ -414,7 +414,7 @@ const items=[
                                                     
                                                     
                                                                         {
-                                                                            id:26,
+                                                                            id:27,
                                                                             image:"images/wholemeal.jpg",
                                                                             name:"whole meal bread",
                                                                             quantity:1,
@@ -426,7 +426,7 @@ const items=[
                                                     
                                                     
                                                                             {
-                                                                                id:27,
+                                                                                id:28,
                                                                                 image:"images/eclair.jpg",
                                                                                 name:"eclair",
                                                                                 quantity:1,
@@ -437,7 +437,7 @@ const items=[
                                                     
                                                     
                                                                                 {
-                                                                                    id:28,
+                                                                                    id:29,
                                                                                     image:"images/eclair1.jpg",
                                                                                     name:"eclair",
                                                                                     quantity:1,
@@ -449,7 +449,7 @@ const items=[
                                                                 
                                                                 
                                                                                     {
-                                                                                        id:29,
+                                                                                        id:30,
                                                                                         image:"images/cakeballs.jpg",
                                                                                         name:"cake balls",
                                                                                         quantity:1,
@@ -460,7 +460,7 @@ const items=[
                                                                 
                                                                 
                                                                                         {
-                                                                                            id:30,
+                                                                                            id:31,
                                                                                             image:"images/candes.jpg",
                                                                                             name:"candes",
                                                                                             quantity:1,
@@ -470,7 +470,7 @@ const items=[
                                                                                             },
                                                                 
                                                                                             {
-                                                                                                id:31,
+                                                                                                id:32,
                                                                                                 image:"images/ramen6.jpg",
                                                                                                 name:"ramen",
                                                                                                 quantity:1,
@@ -482,7 +482,7 @@ const items=[
                                                                             
                                                                             
                                                                                                 {
-                                                                                                    id:32,
+                                                                                                    id:33,
                                                                                                     image:"images/sushi5.jpg",
                                                                                                     name:"sushi",
                                                                                                     quantity:1,
@@ -494,7 +494,7 @@ const items=[
                                                                             
                                                                             
                                                                                                     {
-                                                                                                        id:33,
+                                                                                                        id:34,
                                                                                                         image:"images/sushi6.jpg",
                                                                                                         name:"sushi",
                                                                                                         quantity:1,
@@ -504,7 +504,7 @@ const items=[
                                                                                                         },     
                                                                         
                                                                                                         {
-                                                                                                            id:34,
+                                                                                                            id:35,
                                                                                                             image:"images/specialsushi.jpg",
                                                                                                             name:"sushi",
                                                                                                             quantity:1,
@@ -515,7 +515,7 @@ const items=[
                                                                             
                                                                             
                                                                                                             {
-                                                                                                                id:35,
+                                                                                                                id:36,
                                                                                                                 image:"images/sushi7.jpg",
                                                                                                                 name:"sushi",
                                                                                                                 quantity:1,
@@ -526,7 +526,7 @@ const items=[
                                                                                 
                                                                             
                                                                                                                 {
-                                                                                                                    id:36,
+                                                                                                                    id:37,
                                                                                                                     image:"images/sushi8.jpg",
                                                                                                                     name:"sushi",
                                                                                                                     quantity:1,
@@ -536,7 +536,7 @@ const items=[
                                                                                                                     }, 
                                                                             
                                                                                                                     {
-                                                                                                                        id:37,
+                                                                                                                        id:38,
                                                                                                                         image:"images/sishkebab2.jpg",
                                                                                                                         name:"sish kebab",
                                                                                                                         quantity:1,
@@ -546,7 +546,7 @@ const items=[
                                                                                                                         }, 
                                                                             
                                                                                                                         {
-                                                                                                                            id:38,
+                                                                                                                            id:39,
                                                                                                                             image:"images/noodles4.jpg",
                                                                                                                             name:"noodles",
                                                                                                                             quantity:1,
@@ -557,7 +557,7 @@ const items=[
                                                                                 
                                                                                            
                                                                                                                             {
-                                                                                                                                id:38,
+                                                                                                                                id:40,
                                                                                                                                 image:"images/noodles6.jpg",
                                                                                                                                 name:"noodles",
                                                                                                                                 quantity:1,

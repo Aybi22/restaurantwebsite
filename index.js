@@ -3,7 +3,7 @@ import items from'./menu.js';
 
 
 
-
+let basket=[];
 
 
 
@@ -41,16 +41,71 @@ fetch('./temp.html')
  
    overlay.style.visibility="visible";
    
+    }
+
+
+
+
+
+
+
+
+//event delegation
+document.body.addEventListener('click',closeModal);
+function closeModal(e){
+  const closeIcon=document.querySelector('.closer');
+
+  if(e.target.classList.contains('closer')|| e.target.classList.contains('modal')|| e.target.classList.contains('overlay')){
+    modal.classList.toggle('show-modal');
+    overlay.style.visibility="hidden";
    
   }
+}
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  });
     
     
-    
-    
-    
-    
-    
+  
+   /*   
+let btn=document.querySelector('.btn');
+btn.addEventListener('click',addToCart);
+
+ function addToCart(){
+   let basketItems=document.querySelector('.basket-items');
+   items.map(item=>{
+   let newDiv=document.createElement('div');
+   newDiv.innerHTML=`
+  <div class="image">
+  <img src=${item.image}>
+   </div>`;
+   basketItems.appendChild(newDiv);
+   
+  
+   });
+  }
+addToCart()
+
+   */ 
     
     
     
@@ -68,11 +123,7 @@ fetch('./temp.html')
       });
        
      
-     
-
-      
-      
-      
+   
       
       
       
@@ -108,18 +159,24 @@ fetch('./temp.html')
      console.log(storedMenu);
 
 
-//event delegation
-document.body.addEventListener('click',closeModal);
-function closeModal(e){
-  const closeIcon=document.querySelector('.closer');
 
-  if(e.target.classList.contains('closer')|| e.target.classList.contains('modal')|| e.target.classList.contains('overlay')){
-    modal.classList.toggle('show-modal');
-    overlay.style.visibility="hidden";
-   
-  }
-}
-});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 items.forEach(item=>{
   
@@ -153,6 +210,8 @@ items.forEach(item=>{
  
  container.appendChild(newBox);
  });
+
+ 
 
 /*
 let retrieve=document.querySelector('.filter');
@@ -623,10 +682,6 @@ container.innerHTML=
 
 
 
-
-
-
-
     document.addEventListener('DOMContentLoaded', () => {
       const sortList=document.querySelector('.sort-list');
          sortList.addEventListener('click',addText);
@@ -710,5 +765,3 @@ container.innerHTML=
     
     );        
 
-    let basketItems=document.querySelector('.basket-items');
-    basketItems.push('images/sushi5.jpg');

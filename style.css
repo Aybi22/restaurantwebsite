@@ -100,7 +100,7 @@
         
          }
          img:hover{
-                  filter:brightness(65%);/* setting image brightness*/
+                  filter:brightness(55%);/* setting image brightness*/
           
          } 
          
@@ -127,13 +127,20 @@
             background:white;
             height:100vh;
             width:300px;
-            z-index:99;
+            z-index:999;
             margin-left:-300px;
             transition:0.5s;
+            pointer-events: auto;
             
          }
          .show-modal{
             margin-left:0px;
+         }
+
+         .modal h2{
+                margin-top:53px;
+                font-size:1.5rem;
+
          }
          .breadcrumb{
             margin-left:22px;
@@ -141,8 +148,8 @@
             font-weight: 900;
          }
          .closeIcon{
-            
             color:red;
+            
          }
          .red{
             color:red;
@@ -159,10 +166,20 @@
          .closer{
             position:absolute;
             top:4px;
-            right:6px;
+            right:4px;
+            display:flex;
+            justify-content: center;
+            align-items:center;
+            right:30px;
+            width:30px;
+            height:30px;
+            padding:3px;
+            border-radius:100%;
+            text-align:center;
             font-size:29px;
             cursor:pointer;
-            color:red;
+            color:var(--white);
+            background:#2E2E3A;
          }
          .chef-message{
                 max-width:200px;
@@ -523,6 +540,7 @@ flex-direction:column;
         height:500px;
         object-fit :cover;
         top:0;
+        
       }  
       .meal-week-container{
         max-width:100%;
@@ -619,19 +637,7 @@ flex-direction:column;
                          }
         
          /* styling footer*/
-        
-        footer{
-                
-                grid-area: footer;
-                background:var(--seagreen);
-                color:var(--white);
-                
-                padding:22px;
-                font-weight:bold;
-                font-size: 1rem;
-                
-                
-               }
+       
               
         
          /* defining social media elements as flex items*/
@@ -664,7 +670,7 @@ flex-direction:column;
          }
          
          
-         header{
+         .top-nav{
                 
                 margin-top:11px;
                 background-size: cover;
@@ -676,6 +682,14 @@ flex-direction:column;
                 
              
                         
+          }
+
+          header{
+                
+                position:sticky;
+                top:0;
+                
+                z-index:999;
           }
          .search-section{
                 display:flex;
@@ -830,6 +844,8 @@ flex-direction:column;
            position: fixed;
            background:black;
            visibility:hidden;
+           z-index:99;
+          
            
         }
          
@@ -840,9 +856,9 @@ flex-direction:column;
             max-width:100%;
             position:sticky;/*defining sticky navigation bar*/
             top:0;
-            grid-area: nav;/*indicating grid area*/
            
-            z-index:1;/*defining the order of the navigation bar items*/
+           
+            /*defining the order of the navigation bar items*/
             
             align-items: center;
             
@@ -888,6 +904,19 @@ flex-direction:column;
         display:flex;
         flex-direction:column;
         align-items:center;
+       
+          
+}
+
+.basket-items{
+        max-width:400px;
+        height:250px;
+}
+.basket-items img{
+        width:100%;
+        height:100%;
+        display:block;
+        object-fit:cover;
 }
 
           /*styling button*/          
@@ -903,6 +932,7 @@ flex-direction:column;
              font-size:0.8rem;
              background-color: #F34213;
              width:100%;
+             cursor:pointer;
         }
                     
         
@@ -1066,19 +1096,7 @@ flex-direction:column;
                }
         
                 
-         
-         footer{
-                
-                grid-area: footer;
-                background:var(--black);
-                color:#FFFFFF;
-                text-align:center;
-                padding:17px;
-                font-weight:bold;
-                
-               
-                
-               }
+              
         
                .social-media{
                     display:flex;
@@ -1426,14 +1444,22 @@ flex-direction:column;
              resize:vertical;
              overflow:hidden; 
               }
-    
-              footer{
+
+                          footer{
                    background-color: #2E2E3A;
-                  
-                
-                   bottom:0px;
+                   
+               
+                color:#FFFFFF;
+                text-align:center;
+                padding:17px;
+                font-weight:bold;
+        
+                  bottom:0px;
     
               }
+
+              
+
               footer a{
                     color:var(--white);
               }
