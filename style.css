@@ -1162,6 +1162,7 @@ flex-direction:column;
         
         .sort-list{
                 display:flex;
+                align-items:center;
                 padding:23px;
                 gap:22px;
                 text-align:center;
@@ -1182,6 +1183,30 @@ flex-direction:column;
             height:350px;
             display:block;
             object-fit:cover;
+        }
+        .sortlist-title{
+               font-weight:900;
+        }
+
+        .ingredient-box{
+                width:400px;
+                height:500px;
+                background:#2E2E3A;
+                color:var(--white);
+                margin-right:-33px;
+                z-index:999;
+                
+        }
+
+        .ingredient-box1{
+                margin-left:-33px;
+                width:400px;
+                height:500px;
+                background:#2E2E3A;
+                color:var(--white);
+                margin-left:-33px;
+                z-index:999;
+                
         }
 
     .testimonial-box p{

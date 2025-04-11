@@ -185,12 +185,12 @@ items.forEach(item=>{
   newBox.innerHTML=`
   
   <div class="menu-column">
-  
+  <a href="basket.html?id="${item.id}">
   <div class="image">
   
   <img src=${item.image}>
   </div>
-
+</a>
   <div class="txt_column">
 
   <div class="txt">
@@ -213,476 +213,9 @@ items.forEach(item=>{
 
  
 
-/*
-let retrieve=document.querySelector('.filter');
-retrieve.addEventListener('click',filterByPrice);
 
- function filterByPrice(){
-let filteredItem=items.filter(item=>item.price>20);
-let container=document.querySelector('.menu-container');
- 
-  
 
-container.innerHTML=
-filteredItem.map(item=>
- ` 
-
- 
- <div class="menu-column">
-  
-  <div class="image">
-  
-  <img src=${item.image}>
-  </div>
-
-  <div class="txt_column">
-
-  <div class="txt">
-  <h3>${item.name}<span class="meal-price">£${item.price}</span></h3>
-  <p class="section-text">${item.description}</p>
-  
-  <div class="header_right">
-
-      <div class="search-section">
-        <span class="fas fa-arrow-right  tip"></span>
-   <button class="btn">order now</button>
-      </div>
-      </div>
-      </div>
-</div>
-</div>
- 
- 
-  
- 
-  
-`).join('');
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-let ramen=document.querySelector('.ramen');
-ramen.addEventListener('click',filterByCategory);
-
- function filterByCategory(){
-let filteredRamen=items.filter(item=>item.category==="ramen");
-let container=document.querySelector('.menu-container');
- 
-  
-
-container.innerHTML=
-filteredRamen.map(item=>
- ` 
-
- 
- <div class="menu-column">
-  
-  <div class="image">
-  
-  <img src=${item.image}>
-  </div>
-
-  <div class="txt_column">
-
-  <div class="txt">
-  <h3>${item.name}<span class="meal-price">£${item.price}</span></h3>
-  <p class="section-text">${item.description}</p>
-  
-  <div class="header_right">
-
-      <div class="search-section">
-        <span class="fas fa-arrow-right  tip"></span>
-   <button class="btn">order now</button>
-      </div>
-      </div>
-      </div>
-</div>
-</div>
- 
- 
-  
- 
-  
-`).join('');
-
-}
- 
-
-let confectionary=document.querySelector('.confectionary');
-confectionary.addEventListener('click',filterByCategoryconfectionary);
-
- function filterByCategoryconfectionary(){
-let filteredconfectionary=items.filter(item=>item.category==="confectionary");
-let container=document.querySelector('.menu-container');
- 
-  
-
-container.innerHTML=
-filteredconfectionary.map(item=>
- ` 
-
- 
- <div class="menu-column">
-  
-  <div class="image">
-  
-  <img src=${item.image}>
-  </div>
-
-  <div class="txt_column">
-
-  <div class="txt">
-  <h3>${item.name}<span class="meal-price">£${item.price}</span></h3>
-  <p class="section-text">${item.description}</p>
-  
-  <div class="header_right">
-
-      <div class="search-section">
-        <span class="fas fa-arrow-right  tip"></span>
-   <button class="btn">order now</button>
-      </div>
-      </div>
-      </div>
-</div>
-</div>
- 
- 
-  
- 
-  
-`).join('');
-
-}
- 
-let pastry=document.querySelector('.pastry');
-pastry.addEventListener('click',filterByCategoryPastry);
-
- function filterByCategoryPastry(){
-let filteredPastry=items.filter(item=>item.category==="pastry");
-let container=document.querySelector('.menu-container');
- 
-  
-
-container.innerHTML=
-filteredPastry.map(item=>
- ` 
-
- 
- <div class="menu-column">
-  
-  <div class="image">
-  
-  <img src=${item.image}>
-  </div>
-
-  <div class="txt_column">
-
-  <div class="txt">
-  <h3>${item.name}<span class="meal-price">£${item.price}</span></h3>
-  <p class="section-text">${item.description}</p>
-  
-  <div class="header_right">
-
-      <div class="search-section">
-        <span class="fas fa-arrow-right  tip"></span>
-   <button class="btn">order now</button>
-      </div>
-      </div>
-      </div>
-</div>
-</div>
- 
- 
-  
- 
-  
-`).join('');
-
-}
- 
-
-let bakery=document.querySelector('.bakery');
-bakery.addEventListener('click',filterByCategoryBakery);
-
- function filterByCategoryBakery(){
-let filteredBakery=items.filter(item=>item.category==="bakery");
-let container=document.querySelector('.menu-container');
- 
-  
-
-container.innerHTML=
-filteredBakery.map(item=>
- ` 
-
- 
- <div class="menu-column">
-  
-  <div class="image">
-  
-  <img src=${item.image}>
-  </div>
-
-  <div class="txt_column">
-
-  <div class="txt">
-  <h3>${item.name}<span class="meal-price">£${item.price}</span></h3>
-  <p class="section-text">${item.description}</p>
-  
-  <div class="header_right">
-
-      <div class="search-section">
-        <span class="fas fa-arrow-right  tip"></span>
-   <button class="btn">order now</button>
-      </div>
-      </div>
-      </div>
-</div>
-</div>
- 
- 
-  
- 
-  
-`).join('');
-
-}
- 
-
-
-let sushi=document.querySelector('.sushi');
-sushi.addEventListener('click',filterByCategorySushi);
-
- function filterByCategorySushi(){
-let filteredSushi=items.filter(item=>item.category==="sushi");
-let container=document.querySelector('.menu-container');
- 
-  
-
-container.innerHTML=
-filteredSushi.map(item=>
- ` 
-
- 
- <div class="menu-column">
-  
-  <div class="image">
-  
-  <img src=${item.image}>
-  </div>
-
-  <div class="txt_column">
-
-  <div class="txt">
-  <h3>${item.name}<span class="meal-price">£${item.price}</span></h3>
-  <p class="section-text">${item.description}</p>
-  
-  <div class="header_right">
-
-      <div class="search-section">
-        <span class="fas fa-arrow-right  tip"></span>
-   <button class="btn">order now</button>
-      </div>
-      </div>
-      </div>
-</div>
-</div>
- 
- 
-  
- 
-  
-`).join('');
-
-}
- 
-
-
-
-
-let noodles=document.querySelector('.noodles');
-noodles.addEventListener('click',filterByCategoryNoodles);
-
- function filterByCategoryNoodles(){
-let filteredNoodles=items.filter(item=>item.category==="noodles");
-let container=document.querySelector('.menu-container');
- 
-  
-
-container.innerHTML=
-filteredNoodles.map(item=>
- ` 
-
- 
- <div class="menu-column">
-  
-  <div class="image">
-  
-  <img src=${item.image}>
-  </div>
-
-  <div class="txt_column">
-
-  <div class="txt">
-  <h3>${item.name}<span class="meal-price">£${item.price}</span></h3>
-  <p class="section-text">${item.description}</p>
-  
-  <div class="header_right">
-
-      <div class="search-section">
-        <span class="fas fa-arrow-right  tip"></span>
-   <button class="btn">order now</button>
-      </div>
-      </div>
-      </div>
-</div>
-</div>
- 
- 
-  
- 
-  
-`).join('');
-
-}
- 
-let sishKebab=document.querySelector('.sishkebab');
-sishKebab.addEventListener('click',filterByCategorySishKebab);
-
- function filterByCategorySishKebab(){
-let filteredSishKebab=items.filter(item=>item.category==="sishkebab");
-let container=document.querySelector('.menu-container');
- 
-  
-
-container.innerHTML=
-filteredSishKebab.map(item=>
- ` 
-
- 
- <div class="menu-column">
-  
-  <div class="image">
-  
-  <img src=${item.image}>
-  </div>
-
-  <div class="txt_column">
-
-  <div class="txt">
-  <h3>${item.name}<span class="meal-price">£${item.price}</span></h3>
-  <p class="section-text">${item.description}</p>
-  
-  <div class="header_right">
-
-      <div class="search-section">
-        <span class="fas fa-arrow-right  tip"></span>
-   <button class="btn">order now</button>
-      </div>
-      </div>
-      </div>
-</div>
-</div>
- 
- 
-  
- 
-  
-`).join('');
-
-}
- 
-
-
-let showBtn=document.querySelector('.show');
-showBtn.addEventlistener('click', showMenu);
-
-function showMenu(){
-  let slicedItems=items.slice('20');
-
-  let container=document.querySelector('.menu-container');
-
-container.innerHTML=
-  slicedItems.map(item =>{
-  `
-  
-  <img src=${item.image}>
-  
-  `}).join('');
-}
-*/
-
-
-
-/*
-    let allParas=document.getElementsByTagName('p');
-    for(let i=0; i<allParas.length; i++){
     
-   
-   
-    allParas[i].addEventListener('click',filterByCategory);
-    
-     function filterByCategory(){
-    let filteredCategory=items.filter(item=>item.category==='allParas[i]');
-    let container=document.querySelector('.menu-container');
-     
-      
-    
-    container.innerHTML=
-    filteredCategory.map(item=>
-     ` 
-    
-     
-     <div class="menu-column">
-      
-      <div class="image">
-      
-      <img src=${item.image}>
-      </div>
-    
-      <div class="txt_column">
-    
-      <div class="txt">
-      <h3>${item.name}<span class="meal-price">£${item.price}</span></h3>
-      <p class="section-text">${item.description}</p>
-      
-      <div class="header_right">
-    
-          <div class="search-section">
-            <span class="fas fa-arrow-right  tip"></span>
-       <button class="btn">order now</button>
-          </div>
-          </div>
-          </div>
-    </div>
-    </div>
-     
-     
-      
-     
-      
-    `).join('');
-    
-    }
-     
-    }  
-  */
-
-
-
-
-    document.addEventListener('DOMContentLoaded', () => {
       const sortList=document.querySelector('.sort-list');
          sortList.addEventListener('click',addText);
          
@@ -695,12 +228,67 @@ container.innerHTML=
          categoryTitle.textContent=text;
          categoryTitle.classList.add('category-text');
          }
+        
+         
+         
          let allParas=document.getElementsByTagName('p');
+         let filteredCategory;
          let paras=event.target;
          
+         
          for( paras of allParas){
+         
         
-         if(paras===event.target){
+       
+         
+      
+        if(paras===event.target){
+           filteredCategory=items.filter(item=>item.category===paras.getAttribute('id'));
+
+         
+          let container=document.querySelector('.menu-container');
+           
+            
+          
+          container.innerHTML=
+          filteredCategory.map(item=>
+           ` 
+          
+           
+           <div class="menu-column">
+            
+            <div class="image">
+            
+            <img src=${item.image}>
+            </div>
+          
+            <div class="txt_column">
+          
+            <div class="txt">
+            <h3>${item.name}<span class="meal-price">£${item.price}</span></h3>
+            <p class="section-text">${item.description}</p>
+            
+            <div class="header_right">
+          
+                <div class="search-section">
+                  <span class="fas fa-arrow-right  tip"></span>
+             <button class="btn">order now</button>
+                </div>
+                </div>
+                </div>
+          </div>
+          </div>
+           
+           `).join('');
+      
+      
+          }
+  
+        }
+          
+      
+      
+        if(paras===event.target){
           paras.classList.add("para");
         
          }else{
@@ -709,59 +297,34 @@ container.innerHTML=
         }
       
       
-        
-  
-        paras.addEventListener('click',filterByCategory);
-       
-        function filterByCategory(event){
-          paras=event.target;
-
-        let filteredCategory=items.filter(item=>item.category==='paras');
-        let container=document.querySelector('.menu-container');
-         
-          
-        
-        container.innerHTML=
-        filteredCategory.map(item=>
-         ` 
-        
-         
-         <div class="menu-column">
-          
-          <div class="image">
-          
-          <img src=${item.image}>
-          </div>
-        
-          <div class="txt_column">
-        
-          <div class="txt">
-          <h3>${item.name}<span class="meal-price">£${item.price}</span></h3>
-          <p class="section-text">${item.description}</p>
-          
-          <div class="header_right">
-        
-              <div class="search-section">
-                <span class="fas fa-arrow-right  tip"></span>
-           <button class="btn">order now</button>
-              </div>
-              </div>
-              </div>
-        </div>
-        </div>
-         
-         
-          
-         
-          
-        `).join('');
-        
-        }
-         
-        }  
       
       
-  }
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        
+        
+         
+         
+     
+      
+      
     
-    );        
+    
+   
+    
+    
+    
+  
+
+   
 

@@ -389,8 +389,8 @@ const items=[
                                                 
                                                                 {
                                                                     id:25,
-                                                                    image:"images/creamcake.jpg",
-                                                                    name:"creamcake",
+                                                                    image:"images/cinamon.jpg",
+                                                                    name:"cinamon",
                                                                     quantity:1,
                                                                     price:12.50,
                                                                     description:"taste our delicious cream cake",
