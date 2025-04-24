@@ -125,22 +125,7 @@ addToCart()
      
    
       
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      let menus=[
+  let menus=[
         {name: "sushi", image: "images/sushi-354628_1920.jpg",price:250},
         {name:"canape",image:"images/canape-2802_1920.jpg",price:243},
         {name:"noodle" , image:"images/noodles-516635_1920.jpg",price:230},
@@ -157,24 +142,6 @@ addToCart()
      console.log(savedMenus);
      const storedMenu=JSON.parse(localStorage.getItem('menus'));
      console.log(storedMenu);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -211,12 +178,7 @@ items.forEach(item=>{
  container.appendChild(newBox);
  });
 
- 
-
-
-
-    
-      const sortList=document.querySelector('.sort-list');
+ const sortList=document.querySelector('.sort-list');
          sortList.addEventListener('click',addText);
          
          function addText(event){
@@ -237,12 +199,7 @@ items.forEach(item=>{
          
          
          for( paras of allParas){
-         
-        
-       
-         
-      
-        if(paras===event.target){
+         if(paras===event.target){
            filteredCategory=items.filter(item=>item.category===paras.getAttribute('id'));
 
          
