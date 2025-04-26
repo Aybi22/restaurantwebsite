@@ -270,12 +270,12 @@
        .sort-list {
         background:#2E2E3A;
         color:var(--white);
-        margin-bottom:11px;
+        margin-bottom:31px;
        }
        
         .parallax {
                 /* The image used */
-                background-image: url('images/ramen-7187810_1920.jpg');
+                background-image: url('images/ramen3.jpg');
               
                 /* Full height */
                 height: 100%; 
@@ -285,7 +285,7 @@
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: cover;
-               position:relative;
+                position:relative;
              
         
         }
@@ -303,7 +303,10 @@
         }
         
         
-        
+      .testimonial-box p{
+          color:red;
+          line-height: 1.6;
+      }  
         
         
         
@@ -641,6 +644,9 @@ section{
        
        .parallax-menu{
         font-size:3rem;
+        font-weight:700;
+        text-transform:uppercase;
+        font-family:Montserrat;
        }
        
        
@@ -1023,9 +1029,15 @@ section{
         max-width:600px;
         
        }
+       .parallax-info .btn{
+        margin-top:33px;
+       }
 
        .testimonial-box p{
-         max-width:500px;
+         max-width:450px;
+         line-height: 1.8;
+         color:red;
+
        }
         .testimonial-box img{
                 display:block;
@@ -1382,7 +1394,7 @@ section{
         .sort-list{
                 display:flex;
                 align-items:center;
-                
+                padding:11px;
                 gap:22px;
                 text-align:center;
                 text-transform:capitalize;
