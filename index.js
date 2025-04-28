@@ -43,8 +43,7 @@ fetch('./temp.html')
    
     }
 
-
-
+    
 
 
 
@@ -255,9 +254,7 @@ items.forEach(item=>{
       
       
       
-      
-      
-      
+        
       
       
       

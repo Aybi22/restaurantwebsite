@@ -64,7 +64,13 @@
           
           /* defining heading styles*/
           
-          
+          img{
+                max-width:100%;
+                width:100%;
+                height:auto;
+                display:block;
+                object-fit:cover;
+          }
           h1{
                 text-transform:uppercase;
           }
@@ -76,6 +82,89 @@
             font-size:2rem;
             
          }
+
+
+         
+              
+              .hero-slider {
+                overflow: hidden;
+                width: 100%;
+                height: 730px;
+                position: relative;
+              }
+
+              .hero-slider img{
+                height:100%;
+                max-width:100%;
+                display:block;
+                object-fit:cover;
+              }
+              
+              .slides {
+                display: flex;
+                width: 100%; /* 100% for each image */
+                
+                height:100%;
+                animation: slide 9s infinite;
+              }
+
+              .slide {
+                width: 100%; /* each slide takes full viewport width */
+                height:100%;
+                flex-shrink: 0; /* very important! prevents squeezing */
+                background-size:cover;
+                background-repeat: no-repeat;
+                background-position: center center;
+                position:relative;
+               
+        
+        
+        
+        }
+           
+        .slide1{
+                background-image:url('images/Ramen.jpg');
+            
+        }
+
+        .slide2{
+                background-image:url('images/ramen3.jpg');
+         
+        
+        
+        }      
+              
+        
+        .slide3{
+                background-image:url('images/horsdoeuvre1.jpg');
+              
+        
+        
+        }
+        
+        
+        
+        
+       
+              
+              @keyframes slide {
+                0% { transform: translateX(0%); }
+                33% { transform: translateX(0%); }
+                44% { transform: translateX(-100%); }
+                77% { transform: translateX(-100%); }
+                88% { transform: translateX(-200%); }
+                100% { transform: translateX(-200%); }
+              }
+             
+       /*          
+       Always use background-size: cover
+
+       Always use background-position: center
+       
+       Make sure .slide has width: 100% and height: 100%     
+*/
+
+
 
          .para{
                 color:red;
@@ -161,8 +250,15 @@
          .breadcrumb{
             margin-left:22px;
             color:#2E2E3A;
-            font-weight: 900;
+            font-size:13px;
+            text-transform:capitalize;
+            
          }
+
+
+         
+         
+         
          .closeIcon{
             color:red;
             
@@ -257,7 +353,8 @@
         .hero-section{
                 max-width:100%;
                 height:730px;
-                position:relative; 
+                position:relative;
+               
                
         }
         .hero-section img{
@@ -303,11 +400,7 @@
         }
         
         
-      .testimonial-box p{
-          color:red;
-          line-height: 1.6;
-      }  
-        
+    
         
         
         
@@ -525,9 +618,7 @@
         align-items:center;
 }
 
-.quality img{
 
-}
 .special-text{
         max-width:1000px;
         margin:73px;
@@ -651,12 +742,16 @@ section{
        
        
         .hero-content{
-        position:absolute;
+       position:absolute;
         top:30px;
+       
         background-image:linear-gradient(to right,
-     rgba(0,0,0,4),
-     rgba(0,0,0,.5),
-     rgba(0,0,0,0));
+           rgba(0,0,0,4),
+           rgba(0,0,0,.5),
+           rgba(0,0,0,0));
+
+
+    max-width:100%;
     width:100%;
    height:100%;
    
@@ -678,14 +773,13 @@ section{
         display:flex;
        flex-direction:column;
         max-width:800px;
+        width:100%;
         position:absolute;
         top:20%;
         left:7%;
         align-items:flex-start;
-       
-       
         
- }
+}
  
  .order-info{
         font-size:2.5rem;
@@ -721,12 +815,14 @@ section{
     .menu-container{
             display:grid;
             max-width:70%;
+            width:100%;
             margin:auto;
             row-gap:22px;
             grid-template-columns: repeat(2,1fr);
                
     }
       #menu .hero-section,#gallery .hero-section,#sushi .hero-section{
+        max-width:100%;
         width:100%;
         height:500px;
         object-fit :cover;
@@ -735,6 +831,7 @@ section{
       }  
       .meal-week-container{
         max-width:100%;
+        width:100%;
         height:1000px;
         display:flex;
         
@@ -742,6 +839,8 @@ section{
       }
       .meal-week-container .image{
         position:relative;
+        max-width:50%;
+        width:100%;
       }
        .image-info{
         position:absolute;
@@ -756,17 +855,17 @@ section{
         
        }
       .meal-week img{
-        width:1600px;
+        width:100%;
+       max-width:100%;
         height:100%;
         object-fit:cover;
       }
       .meal-week-info{
-        background:#BBB8B2;
-        background:gainsboro;
-        background:#FFFAFA;
+       
         background:#2E2E3A;
         color:white;
-        width:1500px;
+        max-width:50%;
+        width:100%;
       
         
       }
@@ -781,13 +880,15 @@ section{
       
       
       .container img{
-            width:600px;
+            max-width:600px;
+            width:100%;
             height:400px;
             object-fit:cover;
         }
         
       .meal-container img{
-        width:500px;
+        max-width:500px;
+        width:100%;
         height:350px;
         object-fit:cover;
       }
@@ -796,6 +897,7 @@ section{
       .meal-container{
         display:grid;
         max-width:60%;
+        width:100%;
         grid-template-columns: repeat(3,1fr);
         margin:auto;
         gap: 22px;
@@ -1033,12 +1135,7 @@ section{
         margin-top:33px;
        }
 
-       .testimonial-box p{
-         max-width:450px;
-         line-height: 1.8;
-         color:red;
-
-       }
+      
         .testimonial-box img{
                 display:block;
                 width:150px;
@@ -1432,6 +1529,8 @@ section{
                 
         }
        .special-info-content{
+        max-width:500px;
+        width:100%;
         margin:33px;
         display:flex;
         flex-direction:column;
@@ -1439,50 +1538,99 @@ section{
         justify-content:center;
 }
 .about{
-        width:1200px;
-        height:500px;
-        display:block;
-        object-fit:cover;
+     width:700px;
+     height:500px;
+     object-fit:cover;
+       
 }
 .action-info{
        max-width:600px;
+       width:100%;
+       height:300px;
         display:flex;
         flex-direction:column;
+        border-radius:23px;
         text-align:left;
         background:var(--info-paragraph-color);
+        
         color:var(--white);
         padding:33px;
+
+}
+.action-info-content{
+        flex:1;
+       
+}
+.sustainability-wrapper{
+        display:flex;
+        flex-direction:row-reverse;
+        gap:33px;
+
+        max-width:100%;
+        width:100%;
+
+
+}
+
+.charity-wrapper{
+        display:flex;
+       
+        max-width:100%;
+        width:100%;
+        gap:33px;
+       
+        
+       
 }
 
 .action-info .btn{
         display:block;
         margin:11px auto;
 }
-.action-info-title{
-        font-size:1.5rem;
+.action-info h3{
+        margin-bottom:23px;
         color:var(--white);
-        font-weight:900;
+       
         text-transform:capitalize;
 }
 .action-wrapper{
         display:flex;
-        align-items:center;
-        justify-content:space-between;
-
+        
+        gap:33px;
+       
+        max-width:100%;
+        width:100%;
+     
+        
+        
 }
+
+.offer-box p,.testimonial-box p{
+        font-size: 0.8rem;
+        line-height: 1.8;
+        text-align: center;
+        width:50%;
+}
+.action-wrapper img,.charity-wrapper img,.sustainability-wrapper img{
+max-width:700px;
+
+width:100%;
+}
+
 
 .special-info-content .a.btn{
         width:170px;
+        
 }
 
-        
+        /*  
 
     .testimonial-box p{
         color:var(--info-paragrpah-color);
         font-size:var(--info-paragraph-size);
         text-align: var(--info-paragraph-align);
     }
-        
+   */    
         .img_food button{
         
                            border:none;/*removing default button border*/
@@ -1801,20 +1949,53 @@ section{
         
         /*defining 1 column and 7 rows for thi breakpoint*/
         
-        @media screen and (max-width:600px) {
-                .grid-container{
-                               grid-template-areas: 
-                               "header"
-                               "nav"
-                               "main"
-                               "main"
-                               "aside"
-                               "right_section"
-                               "footer";
-                               grid-template-columns: 1fr;
-         }
-        
+        @media screen and (max-width:480px){
+          .new-menu-container{
+                display:flex;
+                flex-direction:column;
+          }
+
+        .videos-section-container{
+                display:flex;
+                flex-direction:column;
+                width:60%;
         }
+        .left-box{
+                display:flex;
+                flex-direction:column;
+        }
+        .meal-week-container{
+                display:flex;
+                flex-direction:column;
+        }
+        
+          .special-info{
+                display:flex;
+                flex-direction:column;
+                align-items:center;
+          }
+       
+
+          .special-info-content{
+                font-size:11px;
+                width:200px;
+                margin:auto;
+          }
+
+              .main-title{
+                font-size:2.5rem;
+                width:400px;
+              }
+               .testimonial-container{
+                display:flex;
+                flex-direction:column;
+               }
+               .hero-section img{
+               max-width:100%;
+               width:100%;
+               }  
+        }
+               
         
         /*sets one column for navigation elements for this breakpoint*/
         @media screen and (max-width:600px){
