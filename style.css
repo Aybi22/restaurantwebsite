@@ -36,6 +36,7 @@
             --section-text-color:#2E2E3A;
             --title-margin-top:17px;
             --special-words-color:white;
+            --container-gap-size:33px;
             
         }    
         
@@ -89,7 +90,7 @@
               .hero-slider {
                 overflow: hidden;
                 width: 100%;
-                height: 730px;
+                height: 750px;
                 position: relative;
               }
 
@@ -105,7 +106,7 @@
                 width: 100%; /* 100% for each image */
                 
                 height:100%;
-                animation: slide 9s infinite;
+                animation: slide 15s infinite;
               }
 
               .slide {
@@ -136,7 +137,7 @@
               
         
         .slide3{
-                background-image:url('images/horsdoeuvre1.jpg');
+                background-image:url('images/horsdoeuvre3.jpg');
               
         
         
@@ -568,7 +569,8 @@
                 background-image: url('images/noodles1.jpg');
               
                 /* Full height */
-                height: 100%; 
+                height: 80%; 
+                width:60%;
               
                 /* Create the parallax scrolling effect */
                 background-attachment: fixed;
@@ -782,17 +784,76 @@ section{
 }
  
  .order-info{
-        font-size:2.5rem;
+        font-size:2rem;
         font-family:Montserrat;
         width:100%;
         color:var(--white);
         text-transform:capitalize;
-        font-weight:600
+        font-weight:500;
+        font-style: oblique;
+        color:gold;
  }
  a.btn{
      width:170px; 
      font-weight: bold; 
      font-size:1.3rem;
+ }
+
+ .contact-section{
+        display:flex;
+        justify-content:space-between;
+       max-width:70%;
+       gap:var(--container-gap-size);
+       margin:auto;
+        align-items:center;
+ }
+
+ .contactform{
+        margin-top:var(--container-gap-size);
+       
+        
+ }
+ .message-wrapper{
+        display:flex;
+        justify-content:space-between;
+        max-width:70%;
+        margin:auto;
+        gap:var(--container-gap-size);
+ }
+
+ .contact-infos{
+        margin-left:33px;
+        color:var(--info-paragraph-color);
+        font-size:2rem;
+        font-weight:900;
+        width:800px;
+        height:500px;
+ }
+ .contact-infos p{
+        font-size: 1.6rem;
+        text-transform:capitalize;
+        margin-right:var(--container-gap-size);
+        width:500px;
+ }
+ .contact-parallax{
+        background-image: url('images/sushi-354628_1920.jpg');
+        background-size:cover;
+        position:relative;
+        background-attachment: fixed;
+        height:550px;
+        background-repeat: no-repeat;
+
+ }
+
+ .map{
+        margin-top:var(--container-gap-size);
+ }
+ .location h3{
+        text-align:center;
+ }
+ .locate{
+        margin-top:23px;
+        
  }
 
  .free{
@@ -1857,7 +1918,19 @@ width:100%;
                 align-items:center;
                
         }
-              
+            
+        .form-content{
+                display:flex;
+                flex-direction:column;
+                padding:11px;
+        }
+
+        .form-content button{
+                margin:35px auto;
+        }
+
+
+
               form{
                    margin:auto;
                    max-width:700px;
@@ -1865,11 +1938,16 @@ width:100%;
                    background: #2E2E3A;
                    padding:13px;
                    font-family:verdana;
+                   height:600px;
+                   padding:33px;
+                   display:flex;
+                   align-items:center;
+                   justify-content:center;
                     
               }
                form input{
                       width:400px;
-                      padding:8px;
+                      padding:18px;
                       border:none;
               }
               
