@@ -21,7 +21,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <!-- fontawesome for icons -->
 <script src="https://kit.fontawesome.com/798e587ede.js" crossorigin="anonymous"></script>
-
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 </head>
 
 <!--end of the head tag-->
@@ -30,12 +30,12 @@
 
 <!--opening the body of the page-->
 
-<body>
+<body style data-aos-easing="ease"  data-aos-duration="400"  data-aos-delay="0">
   
   
   
-
-  <div id="temp"></div>
+<div id="temp"></div>
+  
   <div id="home"> 
 
   <div class="hero-slider">
@@ -72,8 +72,8 @@
 
 
         <div class="hero-info">
-       <h1 class="main-title">savor the soul of japan-Authentic Ramen,
-        crafted fresh daily!
+       <h1 class="main-title">savor the soul of japan-Authentic Ramen!
+       
        </h1>
          
        <p> warm,rich broth.Perfectly tender noodles. A bowl of comfort awaits you.</p>
@@ -144,7 +144,7 @@
 </div>
 </div>
 
-<section class="new-menu">
+<section class="new-menu"  data-aos="flip-down">
   
 <h2>new menu</h2>
 <p class="section-text">Discover the Latest trends at Your favorite men fashion store.
@@ -640,7 +640,19 @@
 </div>
 
 <div class="footer"></div>
+
 <script type="module" src="index.js"></script>
+
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+
+
+</script>
+
+
+
 
 </body>
 

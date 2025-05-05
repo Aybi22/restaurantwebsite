@@ -1,4 +1,4 @@
-const items=[
+let items=[
     {
     id:1,
     image:"images/shish-kebab-417994_1920.jpg",
@@ -7,6 +7,7 @@ const items=[
     price:25,
     description:"taste our delicious sish kebab",
     category:"sishkebab"
+
     },
 
 
@@ -104,8 +105,10 @@ const items=[
                                     quantity:1,
                                     price:19,
                                     description:"taste our delicious eclair",
-                                    category:"confectionary"
-                                    },  
+                                    category:"confectionary",
+                                  
+                                
+                                },  
             
              
                                         
