@@ -92,7 +92,7 @@
           h1{
                 text-transform:uppercase;
           }
-         h2,.category-text{
+         h2{
             color:#F34213;
             font-weight:900;
             text-transform:capitalize;
@@ -101,8 +101,15 @@
             
          }
 
+         .category-text{
+         font-weight:700;
+         font-size:1.5rem;
+         margin-bottom:1rem;
+         color:#F34213;
+         text-align:center;
+         text-transform:capitalize;
+         }
 
-         
               
               .hero-slider {
                 overflow: hidden;
@@ -403,6 +410,7 @@
 
         .special-menu-container{
                 display:flex;
+               
                 max-width:100%;
                 width:100%;
                 align-items:center;
@@ -425,6 +433,7 @@
        
         .seller-menu-container{
                 display:flex;
+              
                 max-width:100%;
                 width:100%;
                 align-items:center;
@@ -721,7 +730,7 @@ color:#F34213;
 }
 
 section{
-               
+              
                 margin-bottom:var(--section-spacing);  
           }
 
@@ -743,6 +752,10 @@ section{
        
        }
 
+       .logo{
+        color:red;
+       }
+
        .parallax-info{
         top:50%;
         bottom:50%;
@@ -755,10 +768,16 @@ section{
         flex-direction:column;
        }
        
-       
+      .sort-list{
+        background:#2E2E3A;
+        display:flex;
+        color:var(--white);
+        padding:11px;
+        margin-bottom:1rem;
+      } 
        
        .parallax-menu{
-        font-size:3rem;
+        font-size:2rem;
         font-weight:700;
         text-transform:uppercase;
         font-family:Montserrat;
@@ -996,7 +1015,7 @@ section{
  }
  .main-title{
         color:var(--white);
-        font-size:63px;
+        font-size:4rem;
         margin-bottom:1rem;
         text-transform:uppercase;
         font-family:Montserrat;
@@ -1016,6 +1035,7 @@ section{
         width:100%;
         height:1000px;
         display:flex;
+       
         
 
       }
@@ -1226,7 +1246,8 @@ section{
                 display:flex;
                 max-width:100%;
                 gap:21px;
-                justify-content:center;
+                justify-content:center;   
+               
         }
         .new-menu-container img{
                 width:600px;
@@ -1274,6 +1295,7 @@ section{
         }
         .videos-section-container{
                 display:flex;
+               
                 max-width:100%;
               justify-content: center;
                 gap:33px;
@@ -1290,6 +1312,7 @@ section{
 
         .testimonial-container{
                 display:flex;
+                
                 max-width:100%;
                 gap:33px;
                 justify-content:center;
@@ -1374,7 +1397,7 @@ section{
                     
         nav ul{
               display:flex;/*defining navigation bar as a flex container*/
-              flex-wrap:wrap;/*wrapping flex items when no space ais available*/
+              flex-direction:column;/*wrapping flex items when no space ais available*/
               justify-content: space-around;/*creating space before, between and after flex items*/
               align-items: center;/*controlling flex items alignement*/
               max-width:90%;/*setting maximum width*/
@@ -1531,14 +1554,7 @@ section{
          
          
          
-        main{
-                
-                 grid-area: main;
-                 max-width:100%;
-                 margin: 15px;
-                
-                 padding:12px;
-         }
+       
         
          .top_right{
                 
@@ -1655,13 +1671,7 @@ section{
         
         
         
-        .menu-container{
-                          
-                          display:grid;
-                          grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
-                          gap:10px;
-                        
-                         }
+        
                        
         
        
@@ -1670,18 +1680,7 @@ section{
         
         
         
-                        .sort-list{
-                display:flex;
-                align-items:center;
-                text-transform:capitalize;
-                max-width:100%;
-                width:100%;
-                justify-content: center;
-                background:#2E2E3A;
-                color:var(--white);
-                margin-bottom:31px;
-
-        }
+        
 
         
         .menu-container .image{
@@ -1698,6 +1697,7 @@ section{
         }
         .sortlist-title{
                font-weight:900;
+               white-space: nowrap;
         }
 
         .description-box{
@@ -1964,6 +1964,12 @@ width:100%;
             font-family: roboto;
             margin-bottom:var(--section-text-margin);
             color:var(--section-text-color);
+
+        }
+
+
+        .menu-container .section-text{
+                white-space: nowrap;
         }
         #ramen,#confectionary,#pastry,#sushi,#eclair,#bakery,#sishkebab,#noodles{
                 cursor:pointer;
@@ -2001,7 +2007,22 @@ width:100%;
          
          
         /*CONTACT CSS*/
+        form{
+                margin:0;
+                padding:5px;
+                width:100%;
+        }
+
+       form input{
+               width:100%;
+              
+        }
         
+        
+        form p{
+                display: flex;
+                flex-direction:row; /*displaying form elements in column*/
+        }
         
                
         .contact_section a{
@@ -2054,6 +2075,7 @@ width:100%;
                    height:600px;
                    padding:33px;
                    display:flex;
+                   flex-direction: column;
                    align-items:center;
                    justify-content:center;
                     
@@ -2135,7 +2157,17 @@ width:100%;
         
         /* END OF CONTACT CSS*/
         
-        
+        .menu-container {
+                display: grid;
+                gap: 10px;
+               
+                max-width:100%;
+                width:100%;
+                justify-content: center;
+                grid-template-columns: repeat(1, 1fr); /* default: 1 column */
+                box-sizing: border-box;
+        }
+              
         
         
         
@@ -2144,219 +2176,183 @@ width:100%;
         
         /*defining 1 column and 7 rows for thi breakpoint*/
         
-        @media screen and (max-width:600px){
-          .new-menu-container{
-                display:flex;
-                flex-direction:column;
-          }
-
-          .menu-container{
-                display:grid;
-                grid-template-columns:1fr;
-                width:100%;
-                align-items: center;
+        @media(min-width:480px){
+                .menu-container{
+                        grid-template-columns: repeat(2,1fr);
                 }
+        
+      
+               
+        
+                  .section-text{
+                        font-size:0.5rem;
+                       
+                  }
+                  
+               
+                .left-box{
+                        display:flex;
+                        flex-direction:column;
+                }
+              
+                .meal-week-info{
+                        width:100%;
+                }
+                .parallax-menu{
+                        font-size:1.5rem;
+                        width:70%;
+                        margin-bottom:2rem;
+                }
+                
+                  .special-info{
+                        display:flex;
+                        flex-direction:column;
+                        align-items:center;
+                  }
+               
+        
+                  .special-info-content{
+                        font-size:11px;
+                        width:200px;
+                        margin:auto;
+                  }
+        
+                  .hero-info{
+                        width:80%;
+                  }
+                   
+                      
+                      p{
+                        font-size:0.8rem;
+                      }
+                       
+                       .hero-section img{
+                       max-width:100%;
+                       width:100%;
+                       } 
+                       
+        
+                       nav ul{
+                        display:flex;
+                        flex-direction:row;
+                       }
+ 
+        
+      
+        
+     
 
-          .section-text{
-                font-size:0.7rem;
-                width:60%;
-          }
-          
-        .videos-section-container{
-                display:flex;
-                flex-direction:column;
-                width:60%;
-        }
-        .left-box{
-                display:flex;
-                flex-direction:column;
-        }
-        .meal-week-container{
-                display:flex;
-                flex-direction:column;
-                width:100%;
-        }
-        .meal-week-info{
-                width:100%;
-        }
-        .parallax-menu{
-                font-size:1.5rem;
-                width:70%;
-                margin-bottom:2rem;
+
+
+
+
+        
+        
+        
+        
         }
         
-          .special-info{
-                display:flex;
-                flex-direction:column;
-                align-items:center;
-          }
+        @media(min-width:768px){
+                .menu-container{
+                        grid-template-columns: repeat(2,1fr);
+                }
+        }
+        
+        
+        
+        @media(min-width:1024px){
+                .menu-container{
+                        grid-template-columns: repeat(3,1fr);
+                }   
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        /*
+        @media(min-width:1024px){
+                .menu-container{
+                        grid-template-columns: repeat(3,1fr);
+                }
+        
+                .new-menu-container{
+                        display:flex;
+                        flex-direction:row;
+                        max-width:100%;
+                gap:21px;
+                justify-content:center; 
+                  } 
+                  .testimonial-container{
+                        display:flex;
+                        flex-direction:row;
+                       }
+          
+                       .seller-menu-container{
+                        display:flex;
+                        flex-direction:row;
+                }
+                        
+                .special-menu-container{
+                        display:flex;
+                        flex-direction:row;
+                }
+                
+                  .main-title{
+                        font-size:4rem;
+                  }    
+            
+        
+             .meal-week-container{
+        
+                flex-direction: row;
+        
+        
+                }
        
-
-          .special-info-content{
-                font-size:11px;
-                width:200px;
-                margin:auto;
-          }
-
-          .hero-info{
-                width:80%;
-          }
-           .sort-list{
-                display:flex;
-                flex-direction:column;
-                align-items: center;
-                justify-content:center;
-                text-align:center;
-                gap:11px;
-              
-           }
-              .main-title{
-                font-size:2rem;
-              
-              }
-              p{
-                font-size:0.8rem;
-              }
-               .testimonial-container{
-                display:flex;
-                flex-direction:column;
-               }
-               .hero-section img{
-               max-width:100%;
-               width:100%;
-               }  
+               
+               
+        
+        
+        
+        
         }
                
         
-        /*sets one column for navigation elements for this breakpoint*/
-        @media screen and (max-width:600px){
-                                          nav ul{
-                                          display:flex;
-                                          flex-direction:column;
-                                         }
-                   
+      */ 
         
-        }
         
-        /*displaying header elements as column at this breakpoint*/
         
-        @media screen and (max-width:600px){
-                header{
-                     display:flex;
-                     flex-direction: column;
-                     padding:10px;
+      
                      
-        }
-                
-                 .logo{
-                      font-size: 40px;  /*resizing logo size */
-         
-                 }
         
-        }
-        
-        
-        
-        @media screen and (max-width:600px){
-        
-                                        /*displaying flex items in column */
-                                 .img_food{
-                                     display:flex;
-                                     flex-direction:column;
-                                      width: 100%;
-                                      margin: 0;
-                                     
-                                    }
-        
-                              
-        }
-        
-        
-        @media screen and (max-width:600px){
-        
-                form{
-                        margin:0;
-                        padding:5px;
-                        width:100%;
-                }
-        
-               form input{
-                       width:100%;
-                      
-                }
                 
                 
-                form p{
-                        display: flex;
-                        flex-direction:column; /*displaying form elements in column*/
-                }
-        }
-        
-        @media screen and (max-width:600px){
-                            .menu_container{
-                                     display:flex;
-                                     flex-direction:column;
-                                     width:100%;
-                            }
-        }
         
         
         
-        @media screen and (max-width:600px){
-                .grid_menu{
-                         display:flex;
-                         flex-direction:column;
-                         width:100%;
-                         margin:0;
-                         padding:0;
-                }
-        }
+        
+       
+        
+        
+       
+        
+                
+        
+        
+       
         
         
         
         
         
-        @media screen and (max-width:600px){
-                body{
-                         margin:0;
-                         width:auto;
-                         padding:0;
-                         
-                         
-                }
-        
-                 .top_right_image{
-                                   margin-top:80px;
-                 }
-        
-        }
-        
-        
-        @media screen and (max-width:780px){
-                body{
-                         margin:0;
-                         
-                         
-                         
-                }
-                    /*defining 1 column and 6 rows at this breakpoint */
-                .grid-container{
-        
-                        grid-template-areas:
-                        "header"
-                        "nav"
-                         "main"
-                         "aside"
-                         "right_section"
-                        "footer";
-        
-                } 
-        
-                  
-        
-        
-        
-        }
+       
         
         
         
