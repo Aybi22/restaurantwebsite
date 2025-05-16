@@ -1,21 +1,13 @@
 
 import items from'./menu.js';
 
-fetch('./temp.html')
+fetch('./template.html')
 .then(response=>response.text())
 .then(html=>{
-    let temp=document.getElementById('temp');
+    let headTemplate=document.getElementById('head-template');
     
-    temp.innerHTML=html;
-
-
-
-
-
-
-
-
-    const modal=document.querySelector('.modal');
+    headTemplate.innerHTML=html;
+const modal=document.querySelector('.modal');
     const hamburger=document.querySelector('.fa-bars');
     
     let overlay=document.querySelector('.overlay');
@@ -40,31 +32,12 @@ function closeModal(e){
   }
 }
 
-});
+
 
   
-   /*   
-let btn=document.querySelector('.btn');
-btn.addEventListener('click',addToCart);
-
- function addToCart(){
-   let basketItems=document.querySelector('.basket-items');
-   items.map(item=>{
-   let newDiv=document.createElement('div');
-   newDiv.innerHTML=`
-  <div class="image">
-  <img src=${item.image}>
-   </div>`;
-   basketItems.appendChild(newDiv);
-   
   
-   });
-  }
-addToCart()
-
-   */ 
     
-    
+});   
     
     
     
@@ -93,9 +66,8 @@ addToCart()
       
       ]
      
-      let savedMenu=localStorage.setItem("name", "waffles");
-     console.log(savedMenu);
-     let savedMenus=localStorage.setItem("menus", JSON.stringify('name'));
+      
+     let savedMenus=localStorage.setItem("menus", JSON.stringify(menus));
      console.log(savedMenus);
      const storedMenu=JSON.parse(localStorage.getItem('menus'));
      console.log(storedMenu);
@@ -167,7 +139,6 @@ console.log(updatedItem);
 
 */
      
-
 
 
 
