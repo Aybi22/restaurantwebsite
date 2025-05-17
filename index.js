@@ -1,12 +1,16 @@
 
 import items from'./menu.js';
 
+
 fetch('./template.html')
 .then(response=>response.text())
 .then(html=>{
     let headTemplate=document.getElementById('head-template');
     
     headTemplate.innerHTML=html;
+
+
+
 const modal=document.querySelector('.modal');
     const hamburger=document.querySelector('.fa-bars');
     

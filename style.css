@@ -44,15 +44,18 @@
         html, body{
                 margin:0; /*no margin*/
                 padding:0; /* no padding*/
-                font-family: 'Caramel', cursive; ;/*defining page font family*/
-
+                
                 font-family: "Montserrat",sans serif;
                 font-family: roboto;
                 width: 100%;  /* full width*/
                 min-height:100vh; /* stretching body height to full viewport */
                 overflow-x: hidden;
 
-                font-family: "Montserrat",sans serif;
+               
+                font-family:roboto;
+                line-height: 1.5;
+                font-size:16px;
+                 font-family: Open Sans;
         }
              
         body, html {
@@ -78,8 +81,14 @@
                 margin-bottom:57px;
          }
           
-          
-          
+          .special-text{
+            padding: 3rem 2rem 4rem 2rem;   
+          }
+         
+          .special-text p{
+                border-bottom: 1px solid #F34213;
+                padding:11px;
+          }
           
           
           img{
@@ -238,7 +247,7 @@
         
          }
          img:hover{
-                  filter:brightness(55%);/* setting image brightness*/
+                  filter:brightness(85%);/* setting image brightness*/
           
          } 
          
@@ -454,7 +463,8 @@
         }
 .seller-menu-container img{
         height:700px;
-        width:500px;
+        max-width:1200px;
+        width:100%;
         margin-left:0;
         display:block;
         object-fit:cover;    
@@ -463,7 +473,8 @@
 
         .special-menu-container img{
         height:700px;
-        width:500px;
+        max-width:1200px;
+        width:100%;
         margin-left:0;
         display:block;
         object-fit:cover;
@@ -561,8 +572,8 @@
                 background-image: url('images/canape-2802_1920.jpg');
               
                 /* Full height */
-                height: 80%; 
-                 max-width:95%;
+                height: 600px; 
+                 max-width:100%;
                 /* Create the parallax scrolling effect */
                 background-attachment: fixed;
                 background-position: center;
@@ -740,7 +751,7 @@ color:#F34213;
 
 section{
               
-                margin-bottom:var(--section-spacing);  
+                margin-top:var(--section-spacing);  
           }
 
        
@@ -872,16 +883,14 @@ section{
         align-items:flex-start;
         
 }
-.top-header{
-      
-}
+
 .mylogo{
         color:#DE9151;
         font-size:1.3rem;
         text-align:center;
         text-transform:uppercase;
         font-weight:900;
-        font-family:verdana;
+        font-family:Montserrat;
         margin:0.6rem auto;
         }
 
@@ -914,6 +923,7 @@ section{
         margin-bottom:2rem;
         max-width:350px;
         width:100%;
+        padding:3px;
         
 }
 
@@ -1034,8 +1044,12 @@ section{
         margin-bottom:1rem;
         text-transform:uppercase;
         font-family:Montserrat;
+        font-family:Playfair Display;
+        font-family:Montserrat;
  }
-    
+   h2,h3,h4{
+     font-family:Playfair Display;   
+   } 
    
       #menu .hero-section,#gallery .hero-section,#sushi .hero-section{
         max-width:100%;
@@ -1412,7 +1426,7 @@ section{
                     
         nav ul{
               display:flex;/*defining navigation bar as a flex container*/
-              flex-direction:column;/*wrapping flex items when no space ais available*/
+              
               justify-content: space-around;/*creating space before, between and after flex items*/
               align-items: center;/*controlling flex items alignement*/
               max-width:90%;/*setting maximum width*/
@@ -1662,7 +1676,7 @@ section{
         .txt{
                 
                 font-size:25px;
-                font-weight:900;
+               
                 padding:10px;
                 
                
@@ -1726,7 +1740,7 @@ section{
                 display:flex;
                 align-items:center;
                 justify-content:center;
-                
+               padding: 3rem 2rem; 
         }
        .special-info-content{
         max-width:500px;
@@ -1804,6 +1818,7 @@ section{
         
         
 }
+
 
 .offer-box p,.testimonial-box p{
         font-size: 0.8rem;
@@ -1932,45 +1947,13 @@ width:100%;
         
         
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-         /*GALLERY CSS*/
+        /*GALLERY CSS*/
         
         
         .section-text{
             text-align:center;
             font-size:0.9rem;
+            
             text-transform:capitalize;
             max-width:400px;
             width:100%;
@@ -2174,24 +2157,209 @@ width:100%;
         
         .menu-container {
                 display: grid;
-                gap: 10px;
+                gap: 13px;
                
                 max-width:100%;
                 width:100%;
                 justify-content: center;
-                grid-template-columns: repeat(1, 1fr); /* default: 1 column */
+                grid-template-columns: repeat(4, 1fr); /* default: 1 column */
                 box-sizing: border-box;
         }
               
+        .menu-container img{
+                height:300px;
+                width:400px;
+                display:block;
+                object-fit:cover;
+        }
+
+       .special-menu a.btn{
+                margin-top:2rem;;
+                
+       }
+       .special-menu p{
+        line-height: 1.8;
+        
+       }
+          /*ANIMATIONS AND FADES*/
+      .menu-container .image img{
+       transition:transform 0.5s ease;
+      }
+
+.menu-container img:hover{
+        transform:scale(1.02);
+
+}
+        
+        
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.order-btn {
+  background-color: #e53935;
+  color: white;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.order-btn:hover {
+  background-color: #c62828;
+  transform: scale(1.05);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*MEDIA QUERIES*/
         
         
         
         
-        /*MEDIA QUERIES*/
+        
+        @media screen and (max-width:768px){
+                .menu-container{
+                        grid-template-columns: 1fr;
+                }
+
+                .main-title{
+                        font-size:2rem;
+                }
+
+                h1{
+                font-size:1.8rem;
+                }
+                
+            .menu-container img{
+                height:300px;
+                width:100%;
+                display:block;
+                object-fit:cover;
+        
+        }
+          .sort-list{
+                flex-direction: column;
+                text-align:center;
+                margin:0 auto;
+          }
+           nav ul{
+                flex-direction:column;
+                justify-content: flex-start;
+           }
+
+           .new-menu-container{
+                flex-direction:column;
+               
+           }
+
+          .special-menu-container{
+                flex-direction: column;
+          }
+          .special-menu{
+                flex-direction: column;
+          }
+
+           .seller-menu-container{
+                flex-direction: column;
+           }
+
+         .meal-week-container{
+                flex-direction: column;
+              
+         }
+
+        .testimonial-container{
+                flex-direction: column;
+                gap:0px;
+        
+        
+        }
+        .videos-section-container{
+                flex-direction: column;
+        }
+        
+       .videos-section-container h3{
+                font-size:1rem;
+                margin:11px auto;
+        }
+        
+        .videos-section-container img{
+                width:100%;
+                height:300px;
+                object-fit:cover;
+        }
+        .name-search{
+           margin-top:11px;  
+        } 
+        .name-search p{
+                font-size:0.5rem;
+                margin-top:11px;
+        }
+        
+        .testimonial-box img{
+                width:100%;
+                height:200px;
+                object-fit:cover;
+        }
+
+        
+        .testimonial-box p{
+                font-size:0.8rem;
+
+}
+        
+        }      
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         /*defining 1 column and 7 rows for thi breakpoint*/
         
-        @media(min-width:480px){
+        /*@media(min-width:480px){
                 .menu-container{
                         grid-template-columns: repeat(2,1fr);
                 }
@@ -2253,7 +2421,7 @@ width:100%;
                        }
  
         
-      
+}
         
      
 
@@ -2281,7 +2449,7 @@ width:100%;
                 }   
         }
         
-        
+        */
         
         
         
