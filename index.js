@@ -1,13 +1,14 @@
 
 import items from'./menu.js';
 
-
 fetch('./template.html')
 .then(response=>response.text())
-.then(html=>{
+.then(html=>{  //inside a .then() block, a variable is only usable inside that block.
     let headTemplate=document.getElementById('head-template');
     
     headTemplate.innerHTML=html;
+
+
 
 
 
@@ -36,18 +37,22 @@ function closeModal(e){
   }
 }
 
+});
 
 
+
+
+
+
+
+
+ 
+
   
-  
     
-});   
+
     
-    
-    
-    
-    
-    fetch('./footer.html')
+fetch('./footer.html')
     .then(response=>response.text())
     .then(html=>{
         let footer=document.querySelector('.footer');
@@ -56,27 +61,11 @@ function closeModal(e){
     
       });
        
+ 
+   
+  
      
    
-      
-  let menus=[
-        {name: "sushi", image: "images/sushi-354628_1920.jpg",price:250},
-        {name:"canape",image:"images/canape-2802_1920.jpg",price:243},
-        {name:"noodle" , image:"images/noodles-516635_1920.jpg",price:230},
-        {name:"berries", image:"images/berries-g2680066e3_1920.jpg",price:123,},
-        {name:"waffles",image:"images/waffles-gd7d530cde_1920.jpg",price:213},
-       {name:"chocolate",image: "images/chocolate-2764581_1920.jpg",price:67},
-      
-      
-      ]
-     
-      
-     let savedMenus=localStorage.setItem("menus", JSON.stringify(menus));
-     console.log(savedMenus);
-     const storedMenu=JSON.parse(localStorage.getItem('menus'));
-     console.log(storedMenu);
-     
-     
     
 function displayMenu(){
 items.forEach(item=>{
@@ -103,7 +92,9 @@ items.forEach(item=>{
 
       <div class="search-section">
         <span class="fas fa-arrow-right  tip"></span>
-   <button class="btn">order now</button>
+  <button  class="btn" data-product-id=${item.id}  data-name=${item.name} 
+   data-price=${item.price} data-image=${item.image}>order now</button>
+   
       </div>
       </div>
       </div>
@@ -117,6 +108,32 @@ items.forEach(item=>{
 
 }
 displayMenu();
+
+let button=document.querySelectorAll('.btn')
+console.log(button);
+button.forEach((btn) =>{
+ 
+btn.addEventListener('click',show);
+function show(e){
+const image=e.target.dataset.image;
+const name=e.target.dataset.name;
+const price=e.target.dataset.price;
+console.log(price);
+
+localStorage.setItem('selectedItemImage',image);
+localStorage.setItem('selectedItemName',name);
+localStorage.setItem('selectedItemPrice',price);
+
+
+//Use localStorage to persist data between pages.
+// DOM scope is per page, and JavaScript doesn’t remember your selections across pages unless you store them explicitly.
+window.location.href='basket.html';
+}
+
+});
+
+
+
 
 
 
@@ -301,7 +318,6 @@ searchButton.addEventListener('click',showFood);
 
 
 }
-
 
 
 

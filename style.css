@@ -117,6 +117,7 @@
          color:#F34213;
          text-align:center;
          text-transform:capitalize;
+         font-family: Playfair Display;
          }
 
               
@@ -184,7 +185,7 @@
         
         } 
         
-        .stars{
+        .stars i{
                 color:#DE9151;
         }
        
@@ -393,27 +394,87 @@
                             
         }
         
-        .hero-section{
-                max-width:100%;
-                height:730px;
+        
+ .hero-section{
+
+
+                background-position:center;
+                background-size:cover;
+                background-repeat:no-repeat;
+                height:500px;
+                width:100%;
+               
+                color:white;
+                display:flex;
+                align-items: center;
+                justify-content: center;
                 position:relative;
-               
-               
+               z-index:0;
+ }
+
+  
+ .hero-section.about{
+background-image: url('images/aboutimage.jpg');
+
+width:100%;
+ }
+ .hero-section.menu{
+ background-image: url('images/menu1.jpg');
+ 
+ }
+ 
+
+
+.hero-section::before{
+              position:absolute;
+                width:100%;
+                height:500px;
+                content:'';
+                z-index:1;
+                background: rgba(0, 0, 0, 0.55);
+                
+
         }
-        .hero-section img{
-                height:100%;
-                max-width:100%;
-                display:block;
-                object-fit:cover;
+
+.hero-section > * {
+  position: relative;
+  z-index: 2;
+}
+
+
+
+ 
+
+
+
+ 
+        .menu-title{
+                font-size: 5rem;
+                font-family:Montserrat;
         }
+
        
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+     
+       .parallax-container{
+        display:flex;
+       
+       justify-content: center;
+        
+       }
        
         .menu-parallax {
                 /* The image used */
-                background-image: url('images/ramen3.jpg');
+                background-image: url('images/pasta.jpg');
               
                 /* Full height */
-                height: 60%; 
+                height: 600px; 
                 width:100%;
               
                 /* Create the parallax scrolling effect */
@@ -422,20 +483,21 @@
                 background-repeat: no-repeat;
                 background-size: cover;
                 position:relative;
+                
              
         
         }
 
         .special-menu-container{
                 display:flex;
-               
+   
                 max-width:100%;
                 width:100%;
                 align-items:center;
                
                 justify-content:flex-start;
                 margin-top:var(--article-spacing);
-                
+                box-shadow:0 10px 30px rgba(0, 0, 0, 0.2);
                 gap:63px;
         }
         
@@ -455,7 +517,7 @@
                 max-width:100%;
                 width:100%;
                 align-items:center;
-               
+               box-shadow:0 10px 30px rgba(0, 0, 0, 0.2); 
                 justify-content:flex-end;
                 margin-top:var(--article-spacing);
                 
@@ -539,8 +601,8 @@
         display:flex;
         gap:11px;
 }
-.fa-check{
-        color:gold;
+.special-words .fa-check{
+       color:#DE9151;
         font-weight:900;
 }
 
@@ -580,9 +642,24 @@
                 background-repeat: no-repeat;
                 background-size: cover;
                 position:relative;
-                margin:31px auto;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
              
         
+        }
+
+
+        .hpme-parallax img{
+               object-fit: cover;
+               object-position: center;
+               width:100%;
+               height:100%;
+        }
+        .home-parallax parallax-content, menu-parallax parallax-content{
+                background:var(--white);
+                color:var(--black);
+                max-width:700px;
+                width:100%;
+                height:100%;
         }
 
 
@@ -646,13 +723,14 @@
         align-items:center;
         width:500px;
         gap:22px;
-
+        border:1px solid black;
+        
 }
 .offer-box-wrapper{
         display:flex;
         justify-content:space-between;
-        background-color: var(--info-paragraph-color);
-        color:white;
+        gap:11px;
+       
         padding:33px;
 
 }
@@ -742,7 +820,7 @@ color:#F34213;
           
 .offer-box i{
         font-size:5rem;
-        color:var(--white);
+        color:var(--info-paragraph-color);
 }
 
 .offerings h3{
@@ -755,44 +833,26 @@ section{
           }
 
        
-       .parallax-content {
-           color:var(--white);
-           font-weight:900;
-           background-image:linear-gradient(to right,
-           rgba(0,0,0,4),
-           rgba(0,0,0,.5),
-           rgba(0,0,0,0));
-           padding:33px;
-           height:100%;
-           width:100%;
-           bottom:0;
-           position:absolute;
-           top:0;
-           
-       
-       }
-
-      
-
-       .parallax-info{
-        top:50%;
-        bottom:50%;
-        position:absolute;
-        font-family:Montserrat;
-        max-width:600px;
-        font-weight: 600;
-        text-transform:uppercase;
-        display:flex;
-        flex-direction:column;
-       }
+     
        
       .sort-list{
-        background:#2E2E3A;
+      
+        max-width:100%;
+      text-transform: capitalize;
+        justify-content:center;
         display:flex;
-        color:var(--white);
-        padding:11px;
+       border:1px solid gainsboro;
+       
+        gap:23px;
         margin-bottom:1rem;
       } 
+.sort-list div{
+      font-weight:600;
+      border-right: 1px solid gainsboro;
+     padding:11px;
+     text-align:center;
+}
+    
        
        .parallax-menu{
         font-size:2rem;
@@ -800,7 +860,17 @@ section{
         text-transform:uppercase;
         font-family:Montserrat;
        }
-       
+        .hero-para{
+        display:flex;
+       position:absolute;
+        flex-direction:column;
+        align-items: center;
+        text-align: center;
+        color:white;
+        font-weight:900;
+        z-index:2;
+        
+       }
        
         .hero-content{
        position:absolute;
@@ -921,11 +991,13 @@ section{
         justify-content:center;
         margin:auto;
         margin-bottom:2rem;
-        max-width:350px;
+        max-width:380px;
+       margin-top:2rem;
         width:100%;
         padding:3px;
         
 }
+
 
 #gsearch{
         border:none;
@@ -933,20 +1005,45 @@ section{
         color:var(--white);
         cursor:pointer;
         font-weight:900;
+        padding: 10px;
+        background-color: #ff4d00;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  height: 42px;
+
+}
+
+
+#search{
+     padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  flex: 1; /* optional, lets input take more width */
+  box-sizing: border-box;    
+        
 }
 .name-search p{
         text-transform:capitalize;
         font-weight:900;
+       font-size:0.9rem;
+       
 }
  
  .order-info{
         font-size:2.5rem;
-        font-family:dancing script;
+        font-family:inherit;
         width:100%;
         color:var(--white);
         text-transform:capitalize;
         font-weight:900;
-        font-style: oblique;
+       
         color:#DE9151;
         
  }
@@ -1008,13 +1105,39 @@ section{
         width:500px;
  }
  .contact-parallax{
-        background-image: url('images/sushi-354628_1920.jpg');
+        background-image: url('images/chips.jpg');
         background-size:cover;
+        background-position: center;
         position:relative;
         background-attachment: fixed;
         height:550px;
         background-repeat: no-repeat;
+        filter:brightness(49%);
+        z-index:-99;
 
+ }
+
+ .food-name{
+       font-size:1.5rem;
+      font-weight:900;
+       text-transform:capitalize;
+       font-family: Playfair Display;
+
+       
+       
+       
+ }
+ .order-infos{
+        display:flex;
+        flex-direction: column;
+        justify-content:center;
+        gap:11px;
+        margin-top: 11px;
+        align-items:center;
+ }
+
+ .spoon{
+        margin-left:11px;
  }
 
  .map{
@@ -1027,6 +1150,12 @@ section{
         margin-top:23px;
         
  }
+ .food-price{
+        font-size:1.3rem;
+        font-family: Playfair Display;
+        color:#e03e00;
+        font-weight:700;
+ }
 
  .free{
         text-transform:uppercase;
@@ -1037,6 +1166,7 @@ section{
         font-weight:300;
         color:#DE9151;
         font-weight:900;
+        font-family:Playfair Display;
  }
  .main-title{
         color:var(--white);
@@ -1062,7 +1192,7 @@ section{
       .meal-week-container{
         max-width:100%;
         width:100%;
-        height:1000px;
+        height:800px;
         display:flex;
        
         
@@ -1143,7 +1273,7 @@ section{
             display:flex;
             align-items:center;
             justify-content:center;
-            font-family: 'montserrat',sans-serif;;
+            font-family: Playfair Display;
             
         }
         .fa-thumbs-up{
@@ -1274,7 +1404,7 @@ section{
         .new-menu-container{
                 display:flex;
                 max-width:100%;
-                gap:21px;
+                gap:31px;
                 justify-content:center;   
                
         }
@@ -1286,8 +1416,8 @@ section{
         }
         .new-menu-container p{
                 color:var(--info-paragraph-color);
-                font-size: var(--info-paragraph-size);
-                
+                font-size:1rem;
+                margin-top:11px;
                 color:var(--white);
         }
 
@@ -1297,6 +1427,7 @@ section{
                align-items:center;
                 background:#2E2E3A;
                 color:var(--white);
+                box-shadow:0 10px 30px rgba(0, 0, 0, 0.2); 
                
                
         }
@@ -1313,7 +1444,72 @@ section{
                 width:170px;
 
         }
+          .reservation-container{
+                display:flex;
+                max-width:100%;
+              justify-content:center;
+                margin-top:2rem;
+                margin-bottom:2rem;
+          }
+        
+        
+        .reservation-container img{
+                width:800px;
+                height:800px;
+                display:block;
+                object-fit:cover;
+          }
+          .order-image{
+                object-fit:cover
+          }
 
+          .reservation-box{
+                background:var(--info-paragraph-color);
+             
+                width:800px;
+                height:800px;
+          }
+          .reservation-box h1{
+                color:var(--white);
+                font-weight:900;
+                text-align:center;
+                margin-top: 1rem;
+          }
+          
+          .reservation-box h2{
+                color:#DE9151;
+          }
+          
+         .box-content{
+                display:flex;
+                flex-direction:column;
+                align-items:center;
+                margin-top: 2rem;
+                padding: 11px;
+                width:100%;
+               
+         } 
+          
+          
+          
+          .reservation-box p{
+                color:var(--white);
+                text-align:center;
+                margin:auto;
+          }
+
+          .reservation-box .order-btn{
+                margin-top:2rem;
+                text-transform:capitalize;
+                font-weight:900;
+                width:170px;
+               
+          }
+          .box-content div{
+                margin-bottom:1rem;
+                display:flex;
+                align-items:center;
+          }
 
         h3{
           display:flex;
@@ -1335,9 +1531,7 @@ section{
                 flex-direction:column;
         }
 
-        .fa-star{
-                color:gold;
-        }
+        
 
         .testimonial-container{
                 display:flex;
@@ -1347,13 +1541,27 @@ section{
                 justify-content:center;
                 padding:33px;
         }
-        
+
+        .special-text img{
+                width:200px;
+                height:250px;
+        }
+        .special-gallery{
+                display:flex;
+                gap:11px;
+        }
+        .menu-container img{
+                border-radius:11px;
+        }
        .testimonial-box{
         display:flex;
         flex-direction:column;
         align-items:center;
         gap:11px;
         max-width:600px;
+       border-radius:11px;
+        border:7px solid#DE9151;
+        padding:13px 11px;
         
        }
        .parallax-info .btn{
@@ -1515,8 +1723,8 @@ section{
         }
                     
         nav a:hover:not(.btn){/*button not selected to be styled like the nav elements on hover*/ 
-                border-bottom: 3px solid #DE9151;
-                color:#F34213;
+                border-bottom:3px solid#F34213;
+                color: #DE9151;
                              
                 }
                     
@@ -1758,7 +1966,7 @@ section{
        
 }
 .action-info{
-       max-width:600px;
+       max-width:500px;
        width:100%;
        height:300px;
         display:flex;
@@ -1772,7 +1980,7 @@ section{
 
 }
 .action-info-content{
-        flex:1;
+       flex:1;
        
 }
 .sustainability-wrapper{
@@ -1809,16 +2017,23 @@ section{
 }
 .action-wrapper{
         display:flex;
-        
+        justify-content:center;
         gap:33px;
-       
+      align-items:center;
         max-width:100%;
         width:100%;
      
         
         
 }
-
+.action-wrapper img{
+        
+        
+}
+.grid-container{
+        display:flex;
+        
+}
 
 .offer-box p,.testimonial-box p{
         font-size: 0.8rem;
@@ -1827,7 +2042,7 @@ section{
         width:50%;
 }
 .action-wrapper img,.charity-wrapper img,.sustainability-wrapper img{
-max-width:700px;
+max-width:100%;
 
 width:100%;
 }
@@ -1952,14 +2167,14 @@ width:100%;
         
         .section-text{
             text-align:center;
-            font-size:0.9rem;
-            
-            text-transform:capitalize;
-            max-width:400px;
+            font-size:2rem;
+            font-weight:700;
+            text-transform:uppercase;
+            max-width:1000px;
             width:100%;
             margin:auto;
             font-family: 'montserrat',sans-serif;
-            font-family: roboto;
+            
             margin-bottom:var(--section-text-margin);
             color:var(--section-text-color);
 
@@ -2132,9 +2347,7 @@ width:100%;
     
               }
 
-           #about .hero-section{
-                height:500px;
-           }  
+         
 
               footer a{
                     color:var(--white);
@@ -2224,7 +2437,9 @@ width:100%;
 
 
 
-
+p,a{
+font-family:Montserrat;
+}
 
 
 
