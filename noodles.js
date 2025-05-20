@@ -1,14 +1,13 @@
 import items from './menu.js';
-export function filteredByCategoryRamen(){
+export function filteredByCategoryNoodles(){
 
-let filteredRamen=items.filter(item=>item.category==="ramen");
-console.log(filteredRamen);
-
-let ramenContainer=document.querySelector('.ramen-container');
+let filteredNoodles=items.filter(item=>item.category==="noodles");
 
 
-ramenContainer.innerHTML=
-filteredRamen.map(item=>
+let noodlesContainer=document.querySelector('.noodles-container');
+
+noodlesContainer.innerHTML=
+filteredNoodles.map(item=>
 `
    
 <div class="menu-column">
@@ -24,18 +23,13 @@ filteredRamen.map(item=>
   <h3>${item.name}<span class="meal-price">£${item.price}</span></h3>
   <p class="section-text">${item.description}</p>
   </div>
-  
  
+
+      
   <button  class="btn" data-product-id=${item.id}  data-name=${item.name} 
    data-price=${item.price} data-image=${item.image}>order now</button>
    
-    </div>
-     </div>
-      
-     
-      
-      
-     
+       </div>
+      </div>
 `).join('');
-
 }

@@ -4,23 +4,37 @@ import {filteredByCategorySushi} from'./sushi.js';
 import {filteredByCategoryShishKebab} from'./shishkebab.js';
 import { filteredByCategoryBerries } from'./berries.js';
 import { filteredByCategoryRamen } from'./ramen.js';
+import { filteredByCategoryNoodles } from'./noodles.js';
 
-document.addEventListener('DOMContentLoaded',()=>{ //want your code to run as soon 
-// as the page structure is ready, 
-// without waiting for large files (e.g., images) to load.
+
+
+//want your code to run as soon as the page structure is ready, without waiting for large files (e.g., images) to load.//
+
+document.addEventListener('DOMContentLoaded',()=>{
 filteredByCategorySushi();
 });
 
 document.addEventListener('DOMContentLoaded',()=>{
+
 filteredByCategoryShishKebab();
+
 });
-document.addEventListener('DOMContentLoaded',()=>{
-filteredByCategoryBerries();
-})
 
 document.addEventListener('DOMContentLoaded',()=>{
 filteredByCategoryRamen();
 });
+
+document.addEventListener('DOMContentLoaded',()=>{
+
+filteredByCategoryBerries();
+});
+
+
+document.addEventListener('DOMContentLoaded',()=>{
+
+filteredByCategoryNoodles();
+});
+
 
 
 fetch('./template.html')
@@ -64,9 +78,6 @@ function closeModal(e){
 
 
 
- 
-
-  
     
 
     
@@ -126,6 +137,8 @@ items.forEach(item=>{
 
 }
 displayMenu();
+
+
 
 let button=document.querySelectorAll('.btn')
 console.log(button);
@@ -355,10 +368,6 @@ searchButton.addEventListener('click',showFood);
 
 
 
-
-
-
-
 /*
 function showFood() {
 let mapItems = items.map(item => item.name.toLowerCase());
@@ -400,6 +409,8 @@ if (mapItems.includes(input)) {
          
      
       
+
+  
       
     
     
