@@ -672,7 +672,7 @@ width:100%;
                 background-image: url('images/herosushi.jpg');
               
                 /* Full height */
-                height: 600px 
+                height: 600px;
               
                 /* Create the parallax scrolling effect */
                 background-attachment: fixed;
@@ -1255,8 +1255,12 @@ section{
         width:100%;
         height:350px;
         object-fit:cover;
+        border-radius: 11px;
       }
-
+.meal-container img:hover{
+        transition:transform ease 0.3s;
+        transform:scale(1.1);
+}
       
       .meal-container{
         display:grid;
