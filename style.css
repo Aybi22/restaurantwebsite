@@ -486,7 +486,15 @@ width:100%;
  
  
  
- 
+ .hero-txt{
+        font-size:1.5rem;
+        font-family:Montserrat;
+        text-transform:uppercase;
+        color:white;
+        font-weight:700;
+        margin-bottom:1rem;
+        text-align:center;
+}
      
        .parallax-container{
         display:flex;
@@ -497,7 +505,7 @@ width:100%;
        
         .menu-parallax {
                 /* The image used */
-                background-image: url('images/pasta.jpg');
+                background-image: url('images/egg.jpg');
               
                 /* Full height */
                 height: 600px; 
