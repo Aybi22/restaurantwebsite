@@ -6,34 +6,49 @@ import { filteredByCategoryBerries } from'./berries.js';
 import { filteredByCategoryRamen } from'./ramen.js';
 import { filteredByCategoryNoodles } from'./noodles.js';
 
-
-
 //want your code to run as soon as the page structure is ready, without waiting for large files (e.g., images) to load.//
 
 document.addEventListener('DOMContentLoaded',()=>{
 filteredByCategorySushi();
+displayOrder();
+
 });
 
 document.addEventListener('DOMContentLoaded',()=>{
 
 filteredByCategoryShishKebab();
+displayOrder();
 
 });
 
 document.addEventListener('DOMContentLoaded',()=>{
 filteredByCategoryRamen();
+displayOrder();
 });
 
 document.addEventListener('DOMContentLoaded',()=>{
 
 filteredByCategoryBerries();
+displayOrder();
+
 });
 
 
 document.addEventListener('DOMContentLoaded',()=>{
 
 filteredByCategoryNoodles();
+displayOrder();
+
 });
+
+
+
+
+
+
+
+
+
 
 
 
@@ -140,6 +155,19 @@ displayMenu();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+function displayOrder(){
+
 let button=document.querySelectorAll('.btn')
 console.log(button);
 button.forEach((btn) =>{
@@ -163,7 +191,7 @@ window.location.href='basket.html';
 
 });
 
-
+}
 
 
 
