@@ -480,18 +480,12 @@ width:100%;
         }
 
        
- 
- 
- 
- 
- 
- 
  .hero-txt{
         font-size:1.5rem;
         font-family:Montserrat;
         text-transform:uppercase;
         color:white;
-        font-weight:700;
+        font-weight:500;
         margin-bottom:1rem;
         text-align:center;
 }
@@ -1357,7 +1351,7 @@ section{
         grid-template-columns: repeat(3,1fr);
         margin:auto;
         gap: 22px;
-        background-image: linear-gradient(to right,#F34213,white);
+        
         padding:33px;
         margin-bottom:22px;
       }

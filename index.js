@@ -1,5 +1,17 @@
 
 import items from'./menu.js';
+import {filteredByCategorySushi} from'./sushi.js';
+import {filteredByCategoryShishKebab} from'./shishkebab.js';
+
+document.addEventListener('DOMContentLoaded',()=>{
+filteredByCategorySushi();
+});
+
+document.addEventListener('DOMContentLoaded',()=>{
+filteredByCategoryShishKebab();
+});
+
+
 
 fetch('./template.html')
 .then(response=>response.text())
@@ -7,7 +19,6 @@ fetch('./template.html')
     let headTemplate=document.getElementById('head-template');
     
     headTemplate.innerHTML=html;
-
 
 
 
@@ -38,9 +49,6 @@ function closeModal(e){
 }
 
 });
-
-
-
 
 
 

@@ -1,13 +1,13 @@
 import items from './menu.js';
-export function filteredByCategorySushi(){
+export function filteredByCategoryShishKebab(){
 
-let filteredSushi=items.filter(item=>item.category=="sushi");
-console.log(filteredSushi);
+let filteredShishKebab=items.filter(item=>item.category=="shishkebab");
+console.log(filteredShishKebab);
 
 let mealContainer=document.querySelector('.meal-container');
 console.log(mealContainer);
 mealContainer.innerHTML=
-filteredSushi.map(item=>
+filteredShishKebab.map(item=>
 `
    
 <div class="menu-column">
