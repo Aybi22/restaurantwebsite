@@ -164,7 +164,7 @@ let items=[
                                                         {
                                                             id:14,
                                                             image:"images/sish.jpg",
-                                                            name:"sish kebab",
+                                                            name:"sishkebab",
                                                             quantity:1,
                                                             price:23,
                                                             description:"taste our delicious sish kebab",
