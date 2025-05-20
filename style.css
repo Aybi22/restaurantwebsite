@@ -669,10 +669,10 @@ width:100%;
 
         .sushi-parallax {
                 /* The image used */
-                background-image: url('images/sushi1\ \(2\).jpg');
+                background-image: url('images/herosushi.jpg');
               
                 /* Full height */
-                height: 100%; 
+                height: 600px 
               
                 /* Create the parallax scrolling effect */
                 background-attachment: fixed;
