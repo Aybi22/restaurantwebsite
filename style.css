@@ -427,8 +427,18 @@ width:100%;
         
         }
 
+.hero-section.berries{
+        background-image: url('images/berries1\ \(1\).jpg');
+        
+        }
 
-.hero-section::before{
+
+
+
+
+
+
+        .hero-section::before{
               position:absolute;
                 width:100%;
                 height:500px;
@@ -489,6 +499,18 @@ width:100%;
                 
              
         
+        }
+
+
+        .berries-parallax{
+                background-image: url('images/berries1\ \(1\).jpg');
+                background-position:center;
+                background-size:cover;
+                background-repeat:no-repeat;
+                background-attachment:fixed;
+                width:100%;
+                height:600px;
+                position:relative
         }
 
         .special-menu-container{
@@ -1259,7 +1281,7 @@ section{
       }
 .meal-container img:hover{
         transition:transform ease 0.3s;
-        transform:scale(1.1);
+        transform:scale(1.05);
 }
       
       .meal-container{
