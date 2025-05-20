@@ -1,13 +1,14 @@
 import items from './menu.js';
-export function filteredByCategorySushi(){
+export function filteredByCategoryRamen(){
 
-let filteredSushi=items.filter(item=>item.category==="sushi");
-console.log(filteredSushi);
+let filteredRamen=items.filter(item=>item.category==="ramen");
+console.log(filteredRamen);
 
 let mealContainer=document.querySelector('.meal-container');
+
 console.log(mealContainer);
-mealContainer.innerHTML=
-filteredSushi.map(item=>
+itemContainer.innerHTML=
+filteredRamen.map(item=>
 `
    
 <div class="menu-column">
@@ -22,6 +23,7 @@ filteredSushi.map(item=>
   <div class="txt">
   <h3>${item.name}<span class="meal-price">£${item.price}</span></h3>
   <p class="section-text">${item.description}</p>
+  </div>
   
   <div class="header_right">
 
@@ -32,7 +34,11 @@ filteredSushi.map(item=>
    
       </div>
       </div>
-      </div>
-      </div>
+      
+     
+      
+      
+     
 `).join('');
+
 }

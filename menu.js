@@ -594,21 +594,12 @@ let items=[
                                                                                                                                  
                                                                                                                                 }, 
                                                                                            
-                                                                                                                                {
-                                                                                                                                id:42,
-                                                                                                                                image:"images/kebab5.jpg",
-                                                                                                                                name:"shishkebab",
-                                                                                                                                quantity:1,
-                                                                                                                                price:12.99,
-                                                                                                                                description:"taste our delicious sish kebab",
-                                                                                                                                 category:"sishkebab"
-                                                                                                                                 
-                                                                                                                                }, 
+                                                                                                                               
                                                                                            
                                                                                                                 
-                                                                                                                 {
+                                                                                                                               {
                                                                                                                                 id:43,
-                                                                                                                                image:"images/berries1(1).jpg",
+                                                                                                                                image:"images/berries1.jpg",
                                                                                                                                 name:"berries",
                                                                                                                                 quantity:1,
                                                                                                                                 price:12.99,
@@ -620,11 +611,11 @@ let items=[
                                                                                                                 
                                                                                                                  {
                                                                                                                                 id:44,
-                                                                                                                                image:"images/berries1(2).jpg",
+                                                                                                                                image:"images/berries2.jpg",
                                                                                                                                 name:"berries",
                                                                                                                                 quantity:1,
                                                                                                                                 price:12.99,
-                                                                                                                                description:"taste our delicious sish kebab",
+                                                                                                                                description:"taste our delicious berries",
                                                                                                                                  category:"berries"
                                                                                                                                  
                                                                                                                                 },
@@ -634,11 +625,11 @@ let items=[
 
                                                                                                                                  {
                                                                                                                                 id:45,
-                                                                                                                                image:"images/berries1(3).jpg",
+                                                                                                                                image:"images/berries3.jpg",
                                                                                                                                 name:"berries",
                                                                                                                                 quantity:1,
                                                                                                                                 price:12.99,
-                                                                                                                                description:"taste our delicious sish kebab",
+                                                                                                                                description:"taste our delicious berries",
                                                                                                                                  category:"berries"
                                                                                                                                  
                                                                                                                                 },
@@ -649,11 +640,11 @@ let items=[
 
                                                                                                                                  {
                                                                                                                                 id:46,
-                                                                                                                                image:"images/berries1(4).jpg",
+                                                                                                                                image:"images/berries4.jpg",
                                                                                                                                 name:"berries",
                                                                                                                                 quantity:1,
                                                                                                                                 price:12.99,
-                                                                                                                                description:"taste our delicious sish kebab",
+                                                                                                                                description:"taste our delicious berries",
                                                                                                                                  category:"berries"
                                                                                                                                  
                                                                                                                                 },
@@ -665,18 +656,18 @@ let items=[
                                                                                                                                 name:"berries",
                                                                                                                                 quantity:1,
                                                                                                                                 price:12.99,
-                                                                                                                                description:"taste our delicious sish kebab",
+                                                                                                                                description:"taste our delicious berries",
                                                                                                                                  category:"berries"
                                                                                                                                  
                                                                                                                                 },
                                                                                                                             
                                                                                                                              {
-                                                                                                                                id:42,
+                                                                                                                                id:48,
                                                                                                                                 image:"images/berries6.jpg",
                                                                                                                                 name:"berries",
                                                                                                                                 quantity:1,
                                                                                                                                 price:12.99,
-                                                                                                                                description:"taste our delicious sish kebab",
+                                                                                                                                description:"taste our delicious berries",
                                                                                                                                  category:"berries"
                                                                                                                                  
                                                                                                                                 },

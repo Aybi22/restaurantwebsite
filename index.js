@@ -3,9 +3,11 @@ import items from'./menu.js';
 import {filteredByCategorySushi} from'./sushi.js';
 import {filteredByCategoryShishKebab} from'./shishkebab.js';
 import { filteredByCategoryBerries } from'./berries.js';
+import { filteredByCategoryRamen } from'./ramen.js';
 
-
-document.addEventListener('DOMContentLoaded',()=>{
+document.addEventListener('DOMContentLoaded',()=>{ //want your code to run as soon 
+// as the page structure is ready, 
+// without waiting for large files (e.g., images) to load.
 filteredByCategorySushi();
 });
 
@@ -14,6 +16,10 @@ filteredByCategoryShishKebab();
 });
 document.addEventListener('DOMContentLoaded',()=>{
 filteredByCategoryBerries();
+})
+
+document.addEventListener('DOMContentLoaded',()=>{
+filteredByCategoryRamen();
 });
 
 
