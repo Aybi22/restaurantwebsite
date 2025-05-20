@@ -1,7 +1,7 @@
 import items from './menu.js';
 export function filteredByCategoryShishKebab(){
 
-let filteredShishKebab=items.filter(item=>item.category=="shishkebab");
+let filteredShishKebab=items.filter(item=>item.category==="shishkebab");
 console.log(filteredShishKebab);
 
 let mealContainer=document.querySelector('.meal-container');

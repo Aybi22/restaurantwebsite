@@ -2,6 +2,8 @@
 import items from'./menu.js';
 import {filteredByCategorySushi} from'./sushi.js';
 import {filteredByCategoryShishKebab} from'./shishkebab.js';
+import { filteredByCategoryBerries } from'./berries.js';
+
 
 document.addEventListener('DOMContentLoaded',()=>{
 filteredByCategorySushi();
@@ -10,7 +12,9 @@ filteredByCategorySushi();
 document.addEventListener('DOMContentLoaded',()=>{
 filteredByCategoryShishKebab();
 });
-
+document.addEventListener('DOMContentLoaded',()=>{
+filteredByCategoryBerries();
+});
 
 
 fetch('./template.html')

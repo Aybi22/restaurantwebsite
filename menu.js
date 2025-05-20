@@ -594,13 +594,93 @@ let items=[
                                                                                                                                  
                                                                                                                                 }, 
                                                                                            
+                                                                                                                                {
+                                                                                                                                id:42,
+                                                                                                                                image:"images/kebab5.jpg",
+                                                                                                                                name:"shishkebab",
+                                                                                                                                quantity:1,
+                                                                                                                                price:12.99,
+                                                                                                                                description:"taste our delicious sish kebab",
+                                                                                                                                 category:"sishkebab"
+                                                                                                                                 
+                                                                                                                                }, 
                                                                                            
                                                                                                                 
+                                                                                                                 {
+                                                                                                                                id:43,
+                                                                                                                                image:"images/berries1(1).jpg",
+                                                                                                                                name:"berries",
+                                                                                                                                quantity:1,
+                                                                                                                                price:12.99,
+                                                                                                                                description:"taste our delicious berries",
+                                                                                                                                 category:"berries"
+                                                                                                                                 
+                                                                                                                                },
                                                                                                                 
                                                                                                                 
-                                                                                                                
-                                                                                                                
-                                                                                                                
+                                                                                                                 {
+                                                                                                                                id:44,
+                                                                                                                                image:"images/berries1(2).jpg",
+                                                                                                                                name:"berries",
+                                                                                                                                quantity:1,
+                                                                                                                                price:12.99,
+                                                                                                                                description:"taste our delicious sish kebab",
+                                                                                                                                 category:"berries"
+                                                                                                                                 
+                                                                                                                                },
+                                                                                                                            
+                                                                                                                            
+
+
+                                                                                                                                 {
+                                                                                                                                id:45,
+                                                                                                                                image:"images/berries1(3).jpg",
+                                                                                                                                name:"berries",
+                                                                                                                                quantity:1,
+                                                                                                                                price:12.99,
+                                                                                                                                description:"taste our delicious sish kebab",
+                                                                                                                                 category:"berries"
+                                                                                                                                 
+                                                                                                                                },
+
+
+
+
+
+                                                                                                                                 {
+                                                                                                                                id:46,
+                                                                                                                                image:"images/berries1(4).jpg",
+                                                                                                                                name:"berries",
+                                                                                                                                quantity:1,
+                                                                                                                                price:12.99,
+                                                                                                                                description:"taste our delicious sish kebab",
+                                                                                                                                 category:"berries"
+                                                                                                                                 
+                                                                                                                                },
+                                                                                                                            
+                                                                                                                            
+                                                                                                                             {
+                                                                                                                                id:47,
+                                                                                                                                image:"images/berries5.jpg",
+                                                                                                                                name:"berries",
+                                                                                                                                quantity:1,
+                                                                                                                                price:12.99,
+                                                                                                                                description:"taste our delicious sish kebab",
+                                                                                                                                 category:"berries"
+                                                                                                                                 
+                                                                                                                                },
+                                                                                                                            
+                                                                                                                             {
+                                                                                                                                id:42,
+                                                                                                                                image:"images/berries6.jpg",
+                                                                                                                                name:"berries",
+                                                                                                                                quantity:1,
+                                                                                                                                price:12.99,
+                                                                                                                                description:"taste our delicious sish kebab",
+                                                                                                                                 category:"berries"
+                                                                                                                                 
+                                                                                                                                },
+                                                                                                                            
                                                                                                                             ]
 
                         export default items;
