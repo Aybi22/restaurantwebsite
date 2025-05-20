@@ -422,7 +422,10 @@ width:100%;
  background-image: url('images/menu1.jpg');
  
  }
- 
+ .hero-section.sushi{
+        background-image: url('images/herosushi.jpg');
+        
+        }
 
 
 .hero-section::before{
