@@ -438,12 +438,17 @@ width:100%;
         
         }
 
-.hero-section.noodles{
+.noodles.hero-section{
         background-image: url('images/heronoodles1.jpg');
         background-position: center;
-        
+       
         }
 
+.shishkebab.hero-section{
+        background-image: url('images/herokebab.jpg');
+        background-position: center;
+       
+        }
 
 
         .hero-section::before{
@@ -545,6 +550,27 @@ width:100%;
                 position:relative
         }
 
+        
+         .shish-parallax{
+                background-image: url('images/herokebab.jpg');
+                background-position:center;
+                background-size:cover;
+                background-repeat:no-repeat;
+                background-attachment:fixed;
+                width:100%;
+                height:600px;
+                position:relative
+        }
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
         .special-menu-container{
                 display:flex;
    
