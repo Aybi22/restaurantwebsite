@@ -570,6 +570,37 @@ let items=[
                                                                                                                                 }, 
                                                                                            
                                                                                            
-                                                                                                                ]
+                                                                                                                
+                                                                                                                            {
+                                                                                                                                id:41,
+                                                                                                                                image:"images/kebab4.jpg",
+                                                                                                                                name:"shishkebab",
+                                                                                                                                quantity:1,
+                                                                                                                                price:12.99,
+                                                                                                                                description:"taste our delicious sish kebab",
+                                                                                                                                 category:"sishkebab"
+                                                                                                                                 
+                                                                                                                                }, 
+                                                                                           
+                                                                                           
+                                                                                                                            {
+                                                                                                                                id:42,
+                                                                                                                                image:"images/kebab5.jpg",
+                                                                                                                                name:"shishkebab",
+                                                                                                                                quantity:1,
+                                                                                                                                price:12.99,
+                                                                                                                                description:"taste our delicious sish kebab",
+                                                                                                                                 category:"sishkebab"
+                                                                                                                                 
+                                                                                                                                }, 
+                                                                                           
+                                                                                           
+                                                                                                                
+                                                                                                                
+                                                                                                                
+                                                                                                                
+                                                                                                                
+                                                                                                                
+                                                                                                                            ]
 
                         export default items;
