@@ -8,6 +8,7 @@ import { filteredByCategoryNoodles } from'./noodles.js';
 
 //want your code to run as soon as the page structure is ready, without waiting for large files (e.g., images) to load.//
 
+
 document.addEventListener('DOMContentLoaded',()=>{
 filteredByCategorySushi();
 displayOrder();
@@ -40,7 +41,6 @@ filteredByCategoryNoodles();
 displayOrder();
 
 });
-
 
 
 
@@ -154,18 +154,6 @@ items.forEach(item=>{
 displayMenu();
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 function displayOrder(){
 
 let button=document.querySelectorAll('.btn')
@@ -192,6 +180,18 @@ window.location.href='basket.html';
 });
 
 }
+
+displayOrder();
+
+
+
+
+
+
+
+
+
+
 
 
 
