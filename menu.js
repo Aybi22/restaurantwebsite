@@ -92,7 +92,8 @@ let items=[
                                 quantity:1,
                                 price:20,
                                 description:"taste our delicious ramen",
-                                category:"ramen"
+                                category:"ramen",
+                                location:"newmenucontainer"
                             
                             },
                              
@@ -106,7 +107,7 @@ let items=[
                                     price:19,
                                     description:"taste our delicious eclair",
                                     category:"confectionary",
-                                  
+                                   location:"newmenucontainer"
                                 
                                 },  
             
@@ -524,7 +525,9 @@ let items=[
                                                                                                                 quantity:1,
                                                                                                                 price:16.99,
                                                                                                                 description:"taste our delicious sushi",
-                                                                                                                 category:"sushi"
+                                                                                                                 category:"sushi",
+                                                                                                                 location:"newmenucontainer"
+                                                                                                                
                                                                                                                 },   
                                                                                 
                                                                             
@@ -671,6 +674,27 @@ let items=[
                                                                                                                                  category:"berries"
                                                                                                                                  
                                                                                                                                 },
+                                                                                                                            
+                                                                                                                            
+                                                                                                                             {
+                                                                                                                                id:49,
+                                                                                                                                image:"images/sishkebab1 (2).jpg",
+                                                                                                                                name:"shishkebab",
+                                                                                                                                quantity:1,
+                                                                                                                                price:21,
+                                                                                                                                description:"taste our delicious sish kebab",
+                                                                                                                                 category:"sishkebab",
+                                                                                                                                 location:"newmenucontainer"
+                                                                                                                                 
+                                                                                                                                }, 
+                                                                                                                            
+                                                                                                                            
+                                                                                                                            
+                                                                                                                            
+                                                                                                                            
+                                                                                                                            
+                                                                                                                            
+                                                                                                                            
                                                                                                                             
                                                                                                                             ]
 

@@ -156,7 +156,7 @@ displayMenu();
 
 function displayOrder(){
 
-let button=document.querySelectorAll('.btn')
+let button=document.querySelectorAll('.btn');
 console.log(button);
 button.forEach((btn) =>{
  

@@ -179,9 +179,10 @@
    seasoned egg, and perfectly spiced toppings.
     </p>
   </div>
-    <a class="btn" data-name="ramen" data-price="price" 
-      data-image="images/ramen.jpg
-      data-productId="id" href="menu.html">order now</a>
+  
+    <a class="btn" data-name="ramen" data-price="£12" 
+      data-image="images/ramen.jpg"
+      data-productId="id"  href="basket.html">order now</a>
  
 </div>
 
@@ -258,7 +259,7 @@
 
 <div class="menu-container-info">
 <div class="image">
-<img src="images/sishkebab1 (2).jpg" alt="sish kebab image">
+<img src="images/sishkebab1 (2).jpg" alt="sishkebabimage">
 </div>
 
 <div class="menu-container-content">
@@ -662,13 +663,7 @@
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
 <script>
-  AOS.init({
-    duration: 1200,
-    once: true,
-    offset: 100,
-    easing: 'ease-in-out',
-    delay: 100,
-  });
+ document.querySelector('.btn').href=window.href.basket.html;
 </script>
 
 
