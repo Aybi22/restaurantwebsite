@@ -41,11 +41,11 @@ let items=[
             {
                 id:4,
                 image:"images/hors-doeuvre-2175326_1920.jpg",
-                name:"hors d'oeuvre",
+                name:"horsdoeuvre",
                 quantity:1,
                 price:19,
-                description:"taste our delicious hors d'oeuvre",
-                category:"hors d'oeuvre"
+                description:"Our hors doeuvre selection brings you delicious little bites made to share and enjoy, with a perfect balance of taste and tradition.",
+                category:"horsdoeuvre"
             
                 },
 
@@ -235,7 +235,7 @@ let items=[
 
 
                                                         {
-                                                            id:16,
+                                                            id:18,
                                                             image:"images/ramen4.jpg",
                                                             name:"ramen",
                                                             quantity:1,
@@ -252,7 +252,7 @@ let items=[
                                                         
                                                         },
                                                         {
-                                                            id:17,
+                                                            id:19,
                                                             image:"images/noodles.jpg",
                                                             name:"noodles",
                                                             quantity:1,
@@ -273,7 +273,7 @@ let items=[
                                                 
                                                 
                                                         {
-                                                            id:18,
+                                                            id:20,
                                                             image:"images/noodles4.jpg",
                                                             name:"noodles",
                                                             quantity:1,
@@ -293,7 +293,7 @@ let items=[
                                                 
                                                 
                                                         {
-                                                            id:19,
+                                                            id:21,
                                                             image:"images/noodles6.jpg",
                                                             name:"noodles",
                                                             quantity:1,
@@ -312,7 +312,7 @@ let items=[
                                 
                                                 
                                                         {
-                                                            id:20,
+                                                            id:22,
                                                             image:"images/cookie.jpg",
                                                             name:"cookie",
                                                             quantity:1,
@@ -331,7 +331,7 @@ let items=[
                                 
                                                 
                                                         {
-                                                            id:21,
+                                                            id:23,
                                                             image:"images/doughnut.jpg",
                                                             name:"doughnut",
                                                             quantity:1,
@@ -350,7 +350,7 @@ let items=[
                                 
                                                 
                                                         {
-                                                            id:22,
+                                                            id:24,
                                                             image:"images/cake.jpg",
                                                             name:"cake",
                                                             quantity:1,
@@ -369,7 +369,7 @@ let items=[
                                 
                                                 
                                                         {
-                                                            id:23,
+                                                            id:25,
                                                             image:"images/painauxchocolat.jpg",
                                                             name:"pain aux chocolat",
                                                             quantity:1,
@@ -380,7 +380,7 @@ let items=[
                                 
                                                 
                                                             {
-                                                                id:24,
+                                                                id:26,
                                                                 image:"images/baguette.jpg",
                                                                 name:"baguette",
                                                                 quantity:1,
@@ -392,7 +392,7 @@ let items=[
                                                     
                                                 
                                                                 {
-                                                                    id:25,
+                                                                    id:27,
                                                                     image:"images/cinamon.jpg",
                                                                     name:"cinamon",
                                                                     quantity:1,
@@ -405,7 +405,7 @@ let items=[
                                                 
                                                     
                                                                     {
-                                                                        id:26,
+                                                                        id:28,
                                                                         image:"images/wholebread.jpg",
                                                                         name:"whole bread",
                                                                         quantity:1,
@@ -418,7 +418,7 @@ let items=[
                                                     
                                                     
                                                                         {
-                                                                            id:27,
+                                                                            id:29,
                                                                             image:"images/wholemeal.jpg",
                                                                             name:"whole meal bread",
                                                                             quantity:1,
@@ -430,7 +430,7 @@ let items=[
                                                     
                                                     
                                                                             {
-                                                                                id:28,
+                                                                                id:30,
                                                                                 image:"images/eclair.jpg",
                                                                                 name:"eclair",
                                                                                 quantity:1,
@@ -441,7 +441,7 @@ let items=[
                                                     
                                                     
                                                                                 {
-                                                                                    id:29,
+                                                                                    id:31,
                                                                                     image:"images/eclair1.jpg",
                                                                                     name:"eclair",
                                                                                     quantity:1,
@@ -453,7 +453,7 @@ let items=[
                                                                 
                                                                 
                                                                                     {
-                                                                                        id:30,
+                                                                                        id:32,
                                                                                         image:"images/cakeballs.jpg",
                                                                                         name:"cake balls",
                                                                                         quantity:1,
@@ -464,7 +464,7 @@ let items=[
                                                                 
                                                                 
                                                                                         {
-                                                                                            id:31,
+                                                                                            id:33,
                                                                                             image:"images/candes.jpg",
                                                                                             name:"candes",
                                                                                             quantity:1,
@@ -474,7 +474,7 @@ let items=[
                                                                                             },
                                                                 
                                                                                             {
-                                                                                                id:32,
+                                                                                                id:34,
                                                                                                 image:"images/ramen6.jpg",
                                                                                                 name:"ramen",
                                                                                                 quantity:1,
@@ -486,7 +486,7 @@ let items=[
                                                                             
                                                                             
                                                                                                 {
-                                                                                                    id:33,
+                                                                                                    id:35,
                                                                                                     image:"images/sushi5.jpg",
                                                                                                     name:"sushi",
                                                                                                     quantity:1,
@@ -498,7 +498,7 @@ let items=[
                                                                             
                                                                             
                                                                                                     {
-                                                                                                        id:34,
+                                                                                                        id:36,
                                                                                                         image:"images/sushi6.jpg",
                                                                                                         name:"sushi",
                                                                                                         quantity:1,
@@ -508,7 +508,7 @@ let items=[
                                                                                                         },     
                                                                         
                                                                                                         {
-                                                                                                            id:35,
+                                                                                                            id:37,
                                                                                                             image:"images/specialsushi.jpg",
                                                                                                             name:"sushi",
                                                                                                             quantity:1,
@@ -519,7 +519,7 @@ let items=[
                                                                             
                                                                             
                                                                                                             {
-                                                                                                                id:36,
+                                                                                                                id:38,
                                                                                                                 image:"images/sushi7.jpg",
                                                                                                                 name:"sushi",
                                                                                                                 quantity:1,
@@ -532,7 +532,7 @@ let items=[
                                                                                 
                                                                             
                                                                                                                 {
-                                                                                                                    id:37,
+                                                                                                                    id:39,
                                                                                                                     image:"images/sushi8.jpg",
                                                                                                                     name:"sushi",
                                                                                                                     quantity:1,
@@ -542,7 +542,7 @@ let items=[
                                                                                                                     }, 
                                                                             
                                                                                                                     {
-                                                                                                                        id:38,
+                                                                                                                        id:40,
                                                                                                                         image:"images/sishkebab2.jpg",
                                                                                                                         name:"sish kebab",
                                                                                                                         quantity:1,
@@ -552,7 +552,7 @@ let items=[
                                                                                                                         }, 
                                                                             
                                                                                                                         {
-                                                                                                                            id:39,
+                                                                                                                            id:41,
                                                                                                                             image:"images/noodles4.jpg",
                                                                                                                             name:"noodles",
                                                                                                                             quantity:1,
@@ -563,7 +563,7 @@ let items=[
                                                                                 
                                                                                            
                                                                                                                             {
-                                                                                                                                id:40,
+                                                                                                                                id:42,
                                                                                                                                 image:"images/noodles6.jpg",
                                                                                                                                 name:"noodles",
                                                                                                                                 quantity:1,
@@ -575,7 +575,7 @@ let items=[
                                                                                            
                                                                                                                 
                                                                                                                             {
-                                                                                                                                id:41,
+                                                                                                                                id:43,
                                                                                                                                 image:"images/kebab4.jpg",
                                                                                                                                 name:"shishkebab",
                                                                                                                                 quantity:1,
@@ -587,7 +587,7 @@ let items=[
                                                                                            
                                                                                            
                                                                                                                             {
-                                                                                                                                id:42,
+                                                                                                                                id:44,
                                                                                                                                 image:"images/kebab5.jpg",
                                                                                                                                 name:"shishkebab",
                                                                                                                                 quantity:1,
@@ -601,7 +601,7 @@ let items=[
                                                                                            
                                                                                                                 
                                                                                                                                {
-                                                                                                                                id:43,
+                                                                                                                                id:45,
                                                                                                                                 image:"images/berries1.jpg",
                                                                                                                                 name:"berries",
                                                                                                                                 quantity:1,
@@ -613,7 +613,7 @@ let items=[
                                                                                                                 
                                                                                                                 
                                                                                                                  {
-                                                                                                                                id:44,
+                                                                                                                                id:46,
                                                                                                                                 image:"images/berries2.jpg",
                                                                                                                                 name:"berries",
                                                                                                                                 quantity:1,
@@ -627,7 +627,7 @@ let items=[
 
 
                                                                                                                                  {
-                                                                                                                                id:45,
+                                                                                                                                id:47,
                                                                                                                                 image:"images/berries3.jpg",
                                                                                                                                 name:"berries",
                                                                                                                                 quantity:1,
@@ -642,7 +642,7 @@ let items=[
 
 
                                                                                                                                  {
-                                                                                                                                id:46,
+                                                                                                                                id:48,
                                                                                                                                 image:"images/berries4.jpg",
                                                                                                                                 name:"berries",
                                                                                                                                 quantity:1,
@@ -654,7 +654,7 @@ let items=[
                                                                                                                             
                                                                                                                             
                                                                                                                              {
-                                                                                                                                id:47,
+                                                                                                                                id:49,
                                                                                                                                 image:"images/berries5.jpg",
                                                                                                                                 name:"berries",
                                                                                                                                 quantity:1,
@@ -665,7 +665,7 @@ let items=[
                                                                                                                                 },
                                                                                                                             
                                                                                                                              {
-                                                                                                                                id:48,
+                                                                                                                                id:50,
                                                                                                                                 image:"images/berries6.jpg",
                                                                                                                                 name:"berries",
                                                                                                                                 quantity:1,
@@ -677,7 +677,7 @@ let items=[
                                                                                                                             
                                                                                                                             
                                                                                                                              {
-                                                                                                                                id:49,
+                                                                                                                                id:51,
                                                                                                                                 image:"images/sish.jpg",
                                                                                                                                 name:"shishkebab",
                                                                                                                                 quantity:1,

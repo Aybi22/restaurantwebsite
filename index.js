@@ -50,10 +50,23 @@ displayOrder();
 });
 
 
+document.addEventListener('DOMContentLoaded',()=>{
 
+displaySpecial();
+displayOrder();
+});
 
+document.addEventListener('DOMContentLoaded',()=>{
 
+displaySeller();
+displayOrder();
+});
 
+document.addEventListener('DOMContentLoaded',()=>{
+
+displayChefSpecial();
+displayOrder();
+});
 
 
 fetch('./template.html')
@@ -94,46 +107,6 @@ function closeModal(e){
 });
 
 
-function displaynewMenu(){
-
-
-let newContainer=document.querySelector('.new-menu-container');
-console.log(newContainer);
-let filteredContainer=items.filter(item=>item.location==="newmenucontainer");
-console.log(filteredContainer);
-
-newContainer.innerHTML=
-filteredContainer.map(item=>
-
-  `<div class="menu-column">
- 
-  <div class="image">
-  
-  <img src=${item.image}>
-  </div>
-
-  <div class="txt_column">
-
-  <div class="txt">
-  <h3>${item.name}<span class="meal-price">£${item.price}</span></h3>
-  <p class="section-text">${item.description}</p>
-  </div>
- 
-
-      
-  <button  class="btn" data-product-id=${item.id}  data-name=${item.name} 
-   data-price=${item.price} data-image=${item.image}>order now</button>
-   
-       </div>
-      </div>
-`).join('');
-}
-
-
-displaynewMenu();
-
-
-
 
 
 
@@ -163,7 +136,7 @@ items.forEach(item=>{
   let newBox=document.createElement('div');
   newBox.classList.add('box');
   newBox.innerHTML=`
-  <div class="menu-item">
+ 
 <div class="menu-column">
   <a href="basket.html?id=${item.id}>
   <div class="image">
@@ -175,20 +148,19 @@ items.forEach(item=>{
 
   <div class="txt">
   <h3>${item.name}<span class="meal-price">£${item.price}</span></h3>
-  <p class="section-text">${item.description}</p>
+  <p>${item.description}</p>
+ 
   
-  <div class="header_right">
-
-      <div class="search-section">
-        <span class="fas fa-arrow-right  tip"></span>
-  <button  class="btn" data-product-id=${item.id}  data-name=${item.name} 
-   data-price=${item.price} data-image=${item.image}>order now</button>
+  
+        
+  <a  class="btn" data-product-id=${item.id}  data-name=${item.name} 
+   data-price=${item.price} data-image=${item.image}>order now</a>
    
+      
       </div>
       </div>
       </div>
-      </div>
-</div>
+
   `;
  
  container.appendChild(newBox);
@@ -197,6 +169,270 @@ items.forEach(item=>{
 
 }
 displayMenu();
+
+
+function displaynewMenu(){
+
+
+let newContainer=document.querySelector('.new-menu-container');
+console.log(newContainer);
+let filteredContainer=items.filter(item=>item.location==="newmenucontainer");
+console.log(filteredContainer);
+
+newContainer.innerHTML=
+filteredContainer.map(item=>
+`<div class="menu-container-info">
+<div class="image">
+<img src="${item.image}">
+</div>
+
+<div class="menu-container-content">
+<h3> ${item.name}<span class="meal-price">£${item.price}</span> </h3>
+<div class="stars">
+  <i class="fa-solid fa-star"></i>
+
+  <i class="fa-solid fa-star"></i>
+  
+  <i class="fa-solid fa-star"></i> 
+  <i class="fa-solid fa-star"></i>
+  
+  <i class="fa-solid fa-star"></i>
+  
+
+</div>
+<p class="menu-text">${item.description}</p>
+</div>
+  <a  class="btn" data-product-id=${item.id}  data-name=${item.name} 
+   data-price=${item.price} data-image=${item.image}>order now</a>
+
+</div>
+
+
+
+
+ 
+`).join('');
+}
+
+
+displaynewMenu();
+
+
+function displaySpecial(){
+
+let specialMenuContainer=document.querySelector('.special-menu-container');
+
+let findSpecialMenu=items.filter(item=>item.id===4);
+console.log(findSpecialMenu);
+specialMenuContainer.innerHTML=
+findSpecialMenu.map(item=>
+
+`
+
+  <div class="left-box">
+  
+ 
+<div class="description-box">
+    <div class="special-info">
+    <div class="special-info-content">
+    <h3>we offer the best hors d'oeuvre</h3>
+    <div class="special-words">
+  <span><i class="fa-solid fa-check"></i>healthy</span>
+  <span><i class="fa-solid fa-check"></i>tasty</span>
+  <span><i class="fa-solid fa-check"></i>excellent</span>
+    </div>
+  
+<p>Our hors d'oeuvre selection brings you delicious little bites made to share and enjoy, 
+    with a perfect balance of taste and tradition.</p>
+
+  <div class="special-menu-price">
+  <span class="special-price">£${item.price}</span>
+  </div>
+   <button class="btn" data-product-id="${item.id}"  data-name="${item.name}" 
+   data-price="${item.price}" data-image="${item.image}">order now</button>
+
+</div>
+
+  
+  </div>
+  </div>
+
+   
+  <div class="image">
+<img src="${item.image}">
+
+
+</div>
+
+<div class="special-text">
+<div class="slide-container">
+
+  <h3>tasty and unique</h3>
+
+  </div>
+<p>
+  Delicately crafted to please both the eye and palate, our hors d’oeuvres are a fusion of creativity and flavor. 
+  Each bite-sized masterpiece offers a unique blend of textures and ingredients — from crisp canapés to savory 
+  tartlets — making them the perfect start to an unforgettable dining experience. 
+  Whether served as a welcome tease or a stylish party feature, 
+  our hors d’oeuvres promise taste that lingers and presentation that impresses..
+</p>
+
+</div>
+</div>
+
+
+
+`).join('');
+
+}
+
+displaySpecial();
+
+
+
+
+function displaySeller(){
+
+let sellerMenuContainer=document.querySelector('.seller-menu-container');
+
+let findSpecialMenu=items.filter(item=>item.id===1);
+console.log(sellerMenuContainer);
+sellerMenuContainer.innerHTML=
+findSpecialMenu.map(item=>
+`
+<div class="left-box">
+  <div class="special-text">
+    <div class="slide-container">
+    <h3>tasty and unique</h3>
+    </div>
+    <p>
+      
+      Savor the bold, smoky flavor of our handcrafted shish kebabs
+       — skewered to perfection and flame-grilled with care. Each skewer is a vibrant mix of tender marinated meat, 
+       fresh vegetables, and aromatic spices, creating a mouthwatering harmony of taste and texture.
+        Whether you choose lamb, chicken, or a vegetarian blend, 
+      our shish kebabs deliver a satisfying bite that’s as hearty as it is unforgettable..
+    </p>
+
+
+
+
+  </div>
+<div class="image">
+  <img src="${item.image}">
+
+</div>
+  <div class="description-box">
+
+<div class="special-info">
+      <div class="special-info-content">
+      <h3>we offer the best sish kebab</h3>
+      <div class="special-words">
+    <span><i class="fa-solid fa-check"></i>healthy</span>
+    <span><i class="fa-solid fa-check"></i>tasty</span>
+    <span><i class="fa-solid fa-check"></i>excellent</span>
+      </div>
+    
+    <p>Tender, marinated cubes of meat and colorful vegetables, grilled to smoky perfection 
+      and bursting with bold Mediterranean flavors..</p>
+   
+    <div class="special-menu-price">
+    <span class="special-price">£${item.price}</span>
+    
+    </div>
+    <button class="btn" data-product-id="${item.id}"  data-name="${item.name}" 
+   data-price="${item.price}" data-image="${item.image}">order now</button>
+   
+    </div>
+    </div>
+</div>
+  
+</div>
+
+`).join('');
+}
+
+displaySeller();
+
+
+function displayChefSpecial(){
+
+let chefContainer=document.querySelector('.meal-week-container');
+
+let findChefMenu=items.filter(item=>item.id===17);
+console.log(findChefMenu);
+chefContainer.innerHTML=
+findChefMenu.map(item=>
+` <div class="image">
+  <img src="${item.image}">
+<span class="image-info">£${item.price}</span>
+
+</div>
+
+
+<div class="meal-week-info">
+  <div class="meal-week-info-content">
+  <h3>What Makes This Week's Meal Special</h3>
+  
+  
+  
+  
+  
+  <p>
+    Fresh ramen with grilled shrimp, soft-boiled eggs, and seasonal greens in a rich umami broth
+  </p>
+
+    <div class="special-words">
+      <span><i class="fa-solid fa-check"></i>healthy</span>
+      <span><i class="fa-solid fa-check"></i>delicious</span>
+      <span><i class="fa-solid fa-check"></i>unique</span>
+        </div>
+        
+        
+       
+<button class="btn" data-product-id="${item.id}"  data-name="${item.name}" 
+   data-price="${item.price}" data-image="${item.image}">order now</button>
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+
+</div>
+
+ </div>
+
+
+`).join('');
+}
+
+displayChefSpecial();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
