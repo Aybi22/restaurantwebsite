@@ -154,6 +154,26 @@ items.forEach(item=>{
 displayMenu();
 
 
+
+
+
+
+
+let newContainer=document.querySelector('.new-menu-container');
+console.log(newContainer);
+let filteredContainer=items.filter(item=>item.location==="newmenucontainer");
+console.log(filteredContainer);
+
+
+
+
+
+
+
+
+
+
+
 function displayOrder(){
 
 let button=document.querySelectorAll('.btn');
