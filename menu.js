@@ -91,7 +91,7 @@ let items=[
                                 name:"ramen",
                                 quantity:1,
                                 price:20,
-                                description:"taste our delicious ramen",
+                                description:"A savory Japanese classic made with rich, slow-cooked broth, tender noodles, seasoned egg, and perfectly spiced toppings.",
                                 category:"ramen",
                                 location:"newmenucontainer"
                             
@@ -105,7 +105,7 @@ let items=[
                                     name:"eclair",
                                     quantity:1,
                                     price:19,
-                                    description:"taste our delicious eclair",
+                                    description:"Delicate pastry filled with vanilla cream and finished with a glossy chocolate topping.",
                                     category:"confectionary",
                                    location:"newmenucontainer"
                                 
@@ -524,7 +524,7 @@ let items=[
                                                                                                                 name:"sushi",
                                                                                                                 quantity:1,
                                                                                                                 price:16.99,
-                                                                                                                description:"taste our delicious sushi",
+                                                                                                                description:" Fresh, hand-rolled sushi crafted with premium rice, crisp seaweed, and delicately sliced fish a perfect balance of flavor and texture.",
                                                                                                                  category:"sushi",
                                                                                                                  location:"newmenucontainer"
                                                                                                                 
@@ -678,11 +678,11 @@ let items=[
                                                                                                                             
                                                                                                                              {
                                                                                                                                 id:49,
-                                                                                                                                image:"images/sishkebab1 (2).jpg",
+                                                                                                                                image:"images/sish.jpg",
                                                                                                                                 name:"shishkebab",
                                                                                                                                 quantity:1,
                                                                                                                                 price:21,
-                                                                                                                                description:"taste our delicious sish kebab",
+                                                                                                                                description:" Juicy, marinated meat skewers grilled to perfection with colorful bell peppers and onions  bold flavor in every bite.",
                                                                                                                                  category:"sishkebab",
                                                                                                                                  location:"newmenucontainer"
                                                                                                                                  
