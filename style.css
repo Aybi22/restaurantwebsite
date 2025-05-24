@@ -503,7 +503,7 @@ width:100%;
        
         .menu-parallax {
                 /* The image used */
-                background-image: url('images/egg.jpg');
+                background-image: url('images/menuhero.jpg');
               
                 /* Full height */
                 height: 600px; 
@@ -1091,7 +1091,7 @@ section{
         font-weight: bold;
         cursor: pointer;
         transition: background-color 0.3s ease, transform 0.2s ease;
-        padding:5px;
+        padding:5px 7px;
 
 }
 
