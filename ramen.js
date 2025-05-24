@@ -26,7 +26,7 @@ filteredRamen.map(item=>
   </div>
   
  
-  <button  class="btn" data-product-id=${item.id}  data-name=${item.name} 
+  <button class="btn" data-product-id=${item.id}  data-name=${item.name} 
    data-price=${item.price} data-image=${item.image}>order now</button>
    
     </div>

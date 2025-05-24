@@ -9,6 +9,15 @@ import { filteredByCategoryNoodles } from'./noodles.js';
 //want your code to run as soon as the page structure is ready, without waiting for large files (e.g., images) to load.//
 
 
+
+
+
+
+
+
+
+
+
 document.addEventListener('DOMContentLoaded',()=>{
 filteredByCategorySushi();
 displayOrder();
@@ -16,7 +25,6 @@ displayOrder();
 });
 
 document.addEventListener('DOMContentLoaded',()=>{
-
 filteredByCategoryShishKebab();
 displayOrder();
 
@@ -28,7 +36,6 @@ displayOrder();
 });
 
 document.addEventListener('DOMContentLoaded',()=>{
-
 filteredByCategoryBerries();
 displayOrder();
 
@@ -36,7 +43,6 @@ displayOrder();
 
 
 document.addEventListener('DOMContentLoaded',()=>{
-
 filteredByCategoryNoodles();
 displayOrder();
 
@@ -44,29 +50,26 @@ displayOrder();
 
 
 document.addEventListener('DOMContentLoaded',()=>{
-
 displaynewMenu();
 displayOrder();
 });
 
 
 document.addEventListener('DOMContentLoaded',()=>{
-
 displaySpecial();
 displayOrder();
 });
 
 document.addEventListener('DOMContentLoaded',()=>{
-
 displaySeller();
 displayOrder();
 });
 
 document.addEventListener('DOMContentLoaded',()=>{
-
 displayChefSpecial();
 displayOrder();
 });
+
 
 
 fetch('./template.html')
@@ -75,20 +78,13 @@ fetch('./template.html')
     let headTemplate=document.getElementById('head-template');
     
     headTemplate.innerHTML=html;
-
-
-
-
 const modal=document.querySelector('.modal');
     const hamburger=document.querySelector('.fa-bars');
-    
     let overlay=document.querySelector('.overlay');
-    
     hamburger.addEventListener('click',displayModal);
     function displayModal(){
     modal.classList.toggle('show-modal');
- 
-   overlay.style.visibility="visible";
+    overlay.style.visibility="visible";
    
     }
 
@@ -105,15 +101,6 @@ function closeModal(e){
 }
 
 });
-
-
-
-
-
-
-    
-
-    
 fetch('./footer.html')
     .then(response=>response.text())
     .then(html=>{
@@ -123,12 +110,7 @@ fetch('./footer.html')
     
       });
        
- 
-   
-  
-     
-   
-    
+
 function displayMenu(){
 items.forEach(item=>{
   
@@ -149,36 +131,179 @@ items.forEach(item=>{
   <div class="txt">
   <h3>${item.name}<span class="meal-price">£${item.price}</span></h3>
   <p>${item.description}</p>
- 
-  
-  
-        
-  <a  class="btn" data-product-id=${item.id}  data-name=${item.name} 
-   data-price=${item.price} data-image=${item.image}>order now</a>
-   
-      
+ <button class="btn" data-product-id=${item.id}  data-name=${item.name} 
+   data-price=${item.price} data-image=${item.image}>order now</button>
+   </div>
       </div>
-      </div>
-      </div>
+    
 
   `;
- 
  container.appendChild(newBox);
  });
- 
+ displayOrder();
 
 }
 displayMenu();
 
 
+
+const sortList=document.querySelector('.sort-list');
+         sortList.addEventListener('click',addText);
+         
+         function addText(event){
+          
+           let categoryTitle=document.querySelector('.category-title');
+          
+         let text= event.target.getAttribute('id');
+         if(text){
+         categoryTitle.textContent=text;
+         categoryTitle.classList.add('category-text');
+         }
+        
+        let allParas=document.getElementsByTagName('div');
+        let paras=event.target;
+        for( paras of allParas){
+         if(paras===event.target){
+         let filteredCategory=items.filter(item=>item.category===paras.getAttribute('id'));
+ let container=document.querySelector('.menu-container');
+container.innerHTML="";
+           console.log(filteredCategory);
+container.innerHTML=
+filteredCategory.map(item=>
+        
+  ` <div class="menu-column">
+  
+  <div class="image">
+  
+  <img src=${item.image}>
+  </div>
+
+  <div class="txt_column">
+
+  <div class="txt">
+  <h3>${item.name}<span class="meal-price">£${item.price}</span></h3>
+  <p>${item.description}</p>
+  </div>
+ <button class="btn" data-product-id=${item.id}  data-name=${item.name} 
+   data-price=${item.price} data-image=${item.image}>order now</button>
+   </div>
+      </div>
+          
+      `).join('');
+          
+  
+        }
+          
+      if(paras===event.target){
+          paras.classList.add("para");
+        
+         }else{
+          paras.classList.remove("para");
+         }
+        
+        }
+        displayOrder();
+        }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // map() method is used to create a new array 
+
+    
+    //Checks if a specific value exists in an array.
+
+  // some Tests if at least one element in the array passes a test function (a callback).
+
+   
+      
+ // some Tests if at least one element in the array passes a test function (a callback).
+    
+ let searchBox=document.getElementById('search');
+ let searchButton=document.getElementById('gsearch');
+ console.log(searchButton);
+searchButton.addEventListener('click',showFood);
+ 
+
+
+ function showFood(){
+   
+ let mapItems=items.map(item=>{
+   return item.name;
+ })
+
+ let searchBox=document.getElementById('search');
+
+ const searchValue=searchBox.value.trim().toLowerCase();//convert input to lowercase(makes input value case-sensitive).trim removes whitespace
+ 
+ if(!searchValue){
+   alert('enter food name');
+ }else if(mapItems.includes(searchValue)){
+ 
+   let container=document.querySelector('.menu-container');
+
+ let filtered=items.filter(item=>item.name===searchValue); 
+container.innerHTML=
+filtered.map(item=>
+   
+     `
+     <div class="menu-column">
+  
+  <div class="image">
+  
+  <img src=${item.image}>
+  </div>
+
+  <div class="txt_column">
+
+  <div class="txt">
+  <h3>${item.name}<span class="meal-price">£${item.price}</span></h3>
+  <p>${item.description}</p>
+  </div>
+ <button  class="btn" data-product-id=${item.id}  data-name=${item.name} 
+   data-price=${item.price} data-image=${item.image}>order now</button>
+   </div>
+     
+      </div>
+     
+     
+
+
+     `).join('');
+   
+   
+   }
+
+displayOrder();
+
+}
+
+
+
+
 function displaynewMenu(){
-
-
 let newContainer=document.querySelector('.new-menu-container');
 console.log(newContainer);
 let filteredContainer=items.filter(item=>item.location==="newmenucontainer");
 console.log(filteredContainer);
-
 newContainer.innerHTML=
 filteredContainer.map(item=>
 `<div class="menu-container-info">
@@ -190,49 +315,31 @@ filteredContainer.map(item=>
 <h3> ${item.name}<span class="meal-price">£${item.price}</span> </h3>
 <div class="stars">
   <i class="fa-solid fa-star"></i>
-
   <i class="fa-solid fa-star"></i>
-  
   <i class="fa-solid fa-star"></i> 
   <i class="fa-solid fa-star"></i>
-  
   <i class="fa-solid fa-star"></i>
-  
-
-</div>
+  </div>
 <p class="menu-text">${item.description}</p>
 </div>
   <a  class="btn" data-product-id=${item.id}  data-name=${item.name} 
    data-price=${item.price} data-image=${item.image}>order now</a>
 
 </div>
-
-
-
-
- 
 `).join('');
 }
 
-
 displaynewMenu();
-
-
 function displaySpecial(){
-
 let specialMenuContainer=document.querySelector('.special-menu-container');
-
 let findSpecialMenu=items.filter(item=>item.id===4);
 console.log(findSpecialMenu);
 specialMenuContainer.innerHTML=
 findSpecialMenu.map(item=>
 
 `
-
-  <div class="left-box">
-  
- 
-<div class="description-box">
+<div class="left-box">
+  <div class="description-box">
     <div class="special-info">
     <div class="special-info-content">
     <h3>we offer the best hors d'oeuvre</h3>
@@ -248,26 +355,19 @@ findSpecialMenu.map(item=>
   <div class="special-menu-price">
   <span class="special-price">£${item.price}</span>
   </div>
-   <button class="btn" data-product-id="${item.id}"  data-name="${item.name}" 
-   data-price="${item.price}" data-image="${item.image}">order now</button>
+   <a class="btn" data-product-id="${item.id}"  data-name="${item.name}" 
+   data-price="${item.price}" data-image="${item.image}">order now</a>
 
 </div>
-
-  
-  </div>
-  </div>
-
-   
-  <div class="image">
+</div>
+ </div>
+<div class="image">
 <img src="${item.image}">
-
-
 </div>
 
 <div class="special-text">
 <div class="slide-container">
-
-  <h3>tasty and unique</h3>
+<h3>tasty and unique</h3>
 
   </div>
 <p>
@@ -281,21 +381,14 @@ findSpecialMenu.map(item=>
 </div>
 </div>
 
-
-
 `).join('');
 
 }
 
 displaySpecial();
 
-
-
-
 function displaySeller(){
-
 let sellerMenuContainer=document.querySelector('.seller-menu-container');
-
 let findSpecialMenu=items.filter(item=>item.id===1);
 console.log(sellerMenuContainer);
 sellerMenuContainer.innerHTML=
@@ -341,8 +434,8 @@ findSpecialMenu.map(item=>
     <span class="special-price">£${item.price}</span>
     
     </div>
-    <button class="btn" data-product-id="${item.id}"  data-name="${item.name}" 
-   data-price="${item.price}" data-image="${item.image}">order now</button>
+    <a class="btn" data-product-id="${item.id}"  data-name="${item.name}" 
+   data-price="${item.price}" data-image="${item.image}">order now</a>
    
     </div>
     </div>
@@ -391,20 +484,10 @@ findChefMenu.map(item=>
         
         
        
-<button class="btn" data-product-id="${item.id}"  data-name="${item.name}" 
-   data-price="${item.price}" data-image="${item.image}">order now</button>
+<a class="btn" data-product-id="${item.id}"  data-name="${item.name}" 
+   data-price="${item.price}" data-image="${item.image}">order now</a>
 
-
-
-
-
-
-
-
-
-
-
-      </div>
+</div>
 
 </div>
 
@@ -415,36 +498,6 @@ findChefMenu.map(item=>
 }
 
 displayChefSpecial();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 function displayOrder(){
 
@@ -486,229 +539,6 @@ displayOrder();
 
 
 
-
-
-
-//can't reassign a const
-
-/*
-const item = {
-  name: "Burger",
-  price: 5,
-  description: "Tasty!"
-};
-
-const updatedItem = {
-  ...item,
-  price: 10
-};
-
-console.log(updatedItem);
-// { name: "Burger", price: 10, description: "Tasty!" }
-✅ All properties are copied
-✅ Only price is updated
-✅ The original item stays unchanged
-
-*/
-     
-
-
-
-
-
-
-
-
-
-
-
-
-
-const sortList=document.querySelector('.sort-list');
-         sortList.addEventListener('click',addText);
-         
-         function addText(event){
-           
-           let categoryTitle=document.querySelector('.category-title');
-          
-         let text= event.target.getAttribute('id');
-         if(text){
-         categoryTitle.textContent=text;
-         categoryTitle.classList.add('category-text');
-         }
-        
-         
-         
-         let allParas=document.getElementsByTagName('p');
-         let filteredCategory;
-         let paras=event.target;
-         
-         
-         for( paras of allParas){
-         if(paras===event.target){
-           filteredCategory=items.filter(item=>item.category===paras.getAttribute('id'));
-
-         
-          let container=document.querySelector('.menu-container');
-           
-            
-          
-          container.innerHTML=
-          filteredCategory.map(item=>
-           ` 
-          
-           
-           <div class="menu-column">
-            
-            <div class="image">
-            
-            <img src=${item.image}>
-            </div>
-          
-            <div class="txt_column">
-          
-            <div class="txt">
-            <h3>${item.name}<span class="meal-price">£${item.price}</span></h3>
-            <p class="section-text">${item.description}</p>
-            
-            <div class="header_right">
-          
-                <div class="search-section">
-                  <span class="fas fa-arrow-right  tip"></span>
-             <button class="btn">order now</button>
-                </div>
-                </div>
-                </div>
-          </div>
-          </div>
-           
-           `).join('');
-      
-      
-          }
-  
-        }
-          
-      
-      
-        if(paras===event.target){
-          paras.classList.add("para");
-        
-         }else{
-          paras.classList.remove("para");
-         }
-        
-       
-        
-        }
-      
-    // map() method is used to create a new array 
-
-    
-    //Checks if a specific value exists in an array.
-
-  // some Tests if at least one element in the array passes a test function (a callback).
-
-   
-      
- // some Tests if at least one element in the array passes a test function (a callback).
-    
- let searchBox=document.getElementById('search');
- let searchButton=document.getElementById('gsearch');
- console.log(searchButton);
-searchButton.addEventListener('click',showFood);
- 
-
-
- function showFood(){
-   
- let mapItems=items.map(item=>{
-   return item.name;
- })
-
- let searchBox=document.getElementById('search');
-
- const searchValue=searchBox.value.trim().toLowerCase();//convert input to lowercase(makes input value case-sensitive).trim removes whitespace
- 
- if(!searchValue){
-   alert('enter food name');
- }else if(mapItems.includes(searchValue)){
- 
-   let container=document.querySelector('.menu-container');
-
- let filtered=items.filter(item=>item.name===searchValue); 
-
-   container.innerHTML=
-   
-   filtered.map(item=>
-     `<div class="image">
-  <img src=${item.image}>
-  </div>
-<div class="txt_column">
-       
-         <div class="txt">
-         <h3>${item.name}<span class="meal-price">£${item.price}</span></h3>
-         <p class="section-text">${item.description}</p>
-         
-         <div class="header_right">
-       
-             <div class="search-section">
-               <span class="fas fa-arrow-right  tip"></span>
-          <button class="btn">order now</button>
-             </div>
-             </div>
-             </div>
-       </div>
-
-
-     `).join('');
-   
-   
-   }
-
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-function showFood() {
-let mapItems = items.map(item => item.name.toLowerCase());
-let searchBox = document.getElementById('search');
-let input = searchBox.value.trim().toLowerCase();
-let container = document.querySelector('.menu-container');
-
-if (mapItems.includes(input)) {
- let filtered = items.filter(item => item.name.toLowerCase() === input);
-
- let content = `<p>${searchBox.value} is available. You can order!</p>`;
- content += filtered
-   .map(item => `<img src="${item.image}" alt="${item.name}" style="width:150px; margin:10px;">`)
-   .join('');
-
- container.innerHTML = content;
-} else {
- container.innerHTML = `<p>❌ Enter a valid food name.</p>`;
-}
-}
-*/
 
 
 

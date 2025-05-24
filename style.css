@@ -423,7 +423,7 @@ background-image: url('images/kitchen1.jpg');
 width:100%;
  }
  .hero-section.menu{
- background-image: url('images/menu1.jpg');
+ background-image: url('images/menuhero.jpg');
  
  }
  .hero-section.sushi{
@@ -579,7 +579,7 @@ width:100%;
         
         .special-menu-container{
                 display:flex;
-   
+                
                 max-width:100%;
                 width:100%;
                 align-items:center;
@@ -832,6 +832,7 @@ width:100%;
 
 .special-text{
         max-width:1000px;
+        width:100%;
         margin:73px;
        
 }
@@ -1319,7 +1320,9 @@ section{
         gap:63px;
       }
       
-      
+     .meal-week-info-content .btn{
+        width:170px;
+     } 
       
       .container img{
             max-width:600px;
@@ -2085,10 +2088,9 @@ section{
                 z-index:999;
                 max-width:500px;
                 width:100%;
-                display:flex;
-                align-items:center;
-                justify-content:center;
-               padding: 3rem 2rem; 
+               
+               padding: 3rem 2rem;
+              
         }
        .special-info-content{
         max-width:500px;
@@ -2259,8 +2261,7 @@ width:100%;
         }
        
         .left-box{
-                display:flex;
-                
+              
                 
         }
         
@@ -2636,16 +2637,7 @@ font-family:Montserrat;
                
            }
 
-          .special-menu-container{
-                flex-direction: column;
-          }
-          .special-menu{
-                flex-direction: column;
-          }
-
-           .seller-menu-container{
-                flex-direction: column;
-           }
+          
 
          .meal-week-container{
                 flex-direction: column;
@@ -2723,133 +2715,4 @@ font-family:Montserrat;
         
         
         
-        /*defining 1 column and 7 rows for thi breakpoint*/
-        
-        /*@media(min-width:480px){
-                .menu-container{
-                        grid-template-columns: repeat(2,1fr);
-                }
-        
-      
-               
-        
-                  .section-text{
-                        font-size:0.5rem;
-                       
-                  }
-                  
-               
-                .left-box{
-                        display:flex;
-                        flex-direction:column;
-                }
-              
-                .meal-week-info{
-                        width:100%;
-                }
-                .parallax-menu{
-                        font-size:1.5rem;
-                        width:70%;
-                        margin-bottom:2rem;
-                }
-                
-                  .special-info{
-                        display:flex;
-                        flex-direction:column;
-                        align-items:center;
-                  }
-               
-        
-                  .special-info-content{
-                        font-size:11px;
-                        width:200px;
-                        margin:auto;
-                  }
-        
-                  .hero-info{
-                        width:80%;
-                  }
-                   
-                      
-                      p{
-                        font-size:0.8rem;
-                      }
-                       
-                       .hero-section img{
-                       max-width:100%;
-                       width:100%;
-                       } 
-                       
-        
-                       nav ul{
-                        display:flex;
-                        flex-direction:row;
-                       }
- 
-        
-}
-        
-     
-
-
-
-
-
-        
-        
-        
-        
-        }
-        
-        @media(min-width:768px){
-                .menu-container{
-                        grid-template-columns: repeat(2,1fr);
-                }
-        }
-        
-        
-        
-        @media(min-width:1024px){
-                .menu-container{
-                        grid-template-columns: repeat(3,1fr);
-                }   
-        }
-        
-        */
-        
-        
-        
-        
-        
-        
-        
-        
-       
-        
-                
-                
-        
-        
-        
-        
-       
-        
-        
-       
-        
-                
-        
-        
-       
-        
-        
-        
-        
-        
-       
-        
-        
-        
-        
-        /*END OF MEDIA QUERIES*/
         

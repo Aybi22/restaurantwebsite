@@ -453,7 +453,187 @@ overlay.style.visibility="visible";
 
 
 
+<script>
 
+
+//can't reassign a const
+
+/*
+const item = {
+  name: "Burger",
+  price: 5,
+  description: "Tasty!"
+};
+
+const updatedItem = {
+  ...item,
+  price: 10
+};
+
+console.log(updatedItem);
+// { name: "Burger", price: 10, description: "Tasty!" }
+✅ All properties are copied
+✅ Only price is updated
+✅ The original item stays unchanged
+
+*/
+     
+
+
+
+
+/*
+function showFood() {
+let mapItems = items.map(item => item.name.toLowerCase());
+let searchBox = document.getElementById('search');
+let input = searchBox.value.trim().toLowerCase();
+let container = document.querySelector('.menu-container');
+
+if (mapItems.includes(input)) {
+ let filtered = items.filter(item => item.name.toLowerCase() === input);
+
+ let content = `<p>${searchBox.value} is available. You can order!</p>`;
+ content += filtered
+   .map(item => `<img src="${item.image}" alt="${item.name}" style="width:150px; margin:10px;">`)
+   .join('');
+
+ container.innerHTML = content;
+} else {
+ container.innerHTML = `<p>❌ Enter a valid food name.</p>`;
+}
+}
+*/
+
+
+let container=document.querySelector('.menu-container');
+           console.log(container);
+            
+          
+          container.innerHTML=
+          filteredCategory.map(item=>
+           ` 
+          
+           
+           <div class="menu-column">
+            
+            <div class="image">
+            
+            <img src=${item.image}>
+            </div>
+          
+            <div class="txt_column">
+          
+            <div class="txt">
+            <h3>${item.name}<span class="meal-price">£${item.price}</span></h3>
+            <p class="section-text">${item.description}</p>
+            
+            <div class="header_right">
+          
+                <div class="search-section">
+                  <span class="fas fa-arrow-right  tip"></span>
+             <button class="btn">order now</button>
+                </div>
+                </div>
+                </div>
+          </div>
+          </div>
+           
+           `).join('');
+      
+
+
+
+
+container.innerHTML=
+   
+   
+     `<div class="image">
+  <img src=${item.image}>
+  </div>
+<div class="txt_column">
+       
+         <div class="txt">
+         <h3>${item.name}<span class="meal-price">£${item.price}</span></h3>
+         <p class="section-text">${item.description}</p>
+         
+         <div class="header_right">
+       
+             <div class="search-section">
+               <span class="fas fa-arrow-right  tip"></span>
+          <button class="btn">order now</button>
+             </div>
+             </dfiltered.map(item=>iv>
+             </div>
+       </div>
+
+
+     `).join('');
+   
+
+const sortList=document.querySelector('.sort-list');
+         sortList.addEventListener('click',addText);
+         
+         function addText(event){
+           
+           let categoryTitle=document.querySelector('.category-title');
+          
+         let text= event.target.getAttribute('id');
+         if(text){
+         categoryTitle.textContent=text;
+         categoryTitle.classList.add('category-text');
+         }
+        
+         
+         
+         let allParas=document.getElementsByTagName('p');
+        
+         let paras=event.target;
+         let container=document.querySelector('.menu-container');
+         
+         for( paras of allParas){
+         if(paras===event.target){
+          let filteredCategory=items.filter(item=>item.category===paras.getAttribute('id'));
+           
+container.innerHTML=
+filteredCategory.map(item=>
+        ` <div class="menu-column">
+  
+  <div class="image">
+  
+  <img src=${item.image}>
+  </div>
+</a>
+  <div class="txt_column">
+
+  <div class="txt">
+  <h3>${item.name}<span class="meal-price">£${item.price}</span></h3>
+  <p>${item.description}</p>
+ <button class="btn" data-product-id=${item.id}  data-name=${item.name} 
+   data-price=${item.price} data-image=${item.image}>order now</button>
+   </div>
+      </div>
+          
+      `).join('');
+          }
+  
+        }
+          
+      
+      
+        if(paras===event.target){
+          paras.classList.add("para");
+        
+         }else{
+          paras.classList.remove("para");
+         }
+        
+  
+        
+        }
+      
+addText();
+
+</script>
 
 
 
@@ -465,3 +645,136 @@ overlay.style.visibility="visible";
 
 </article>
 </section>
+
+
+
+/*defining 1 column and 7 rows for thi breakpoint*/
+        
+        /*@media(min-width:480px){
+                .menu-container{
+                        grid-template-columns: repeat(2,1fr);
+                }
+        
+      
+               
+        
+                  .section-text{
+                        font-size:0.5rem;
+                       
+                  }
+                  
+               
+                .left-box{
+                        display:flex;
+                        flex-direction:column;
+                }
+              
+                .meal-week-info{
+                        width:100%;
+                }
+                .parallax-menu{
+                        font-size:1.5rem;
+                        width:70%;
+                        margin-bottom:2rem;
+                }
+                
+                  .special-info{
+                        display:flex;
+                        flex-direction:column;
+                        align-items:center;
+                  }
+               
+        
+                  .special-info-content{
+                        font-size:11px;
+                        width:200px;
+                        margin:auto;
+                  }
+        
+                  .hero-info{
+                        width:80%;
+                  }
+                   
+                      
+                      p{
+                        font-size:0.8rem;
+                      }
+                       
+                       .hero-section img{
+                       max-width:100%;
+                       width:100%;
+                       } 
+                       
+        
+                       nav ul{
+                        display:flex;
+                        flex-direction:row;
+                       }
+ 
+        
+}
+        
+     
+
+
+
+
+
+        
+        
+        
+        
+        }
+        
+        @media(min-width:768px){
+                .menu-container{
+                        grid-template-columns: repeat(2,1fr);
+                }
+        }
+        
+        
+        
+        @media(min-width:1024px){
+                .menu-container{
+                        grid-template-columns: repeat(3,1fr);
+                }   
+        }
+        
+        */
+        
+        
+        
+        
+        
+        
+        
+        
+       
+        
+                
+                paras.getAttribute('id')
+        
+        
+        
+        
+       
+        
+        
+       
+        
+                
+        
+        
+       
+        
+        
+        
+        
+        
+       
+        
+        
+        
+        
+        /*END OF MEDIA QUERIES*/
+        
