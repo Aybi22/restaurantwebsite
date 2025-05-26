@@ -205,28 +205,7 @@ filteredCategory.map(item=>
         displayOrder();
         }
     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // map() method is used to create a new array 
+// map() method is used to create a new array 
 
     
     //Checks if a specific value exists in an array.
@@ -236,7 +215,6 @@ filteredCategory.map(item=>
    
       
  // some Tests if at least one element in the array passes a test function (a callback).
-    
  let searchBox=document.getElementById('search');
  let searchButton=document.getElementById('gsearch');
  console.log(searchButton);
@@ -338,10 +316,13 @@ specialMenuContainer.innerHTML=
 findSpecialMenu.map(item=>
 
 `
-<div class="left-box">
+
+
+
   <div class="description-box">
-    <div class="special-info">
+   <div class="special-info">
     <div class="special-info-content">
+
     <h3>we offer the best hors d'oeuvre</h3>
     <div class="special-words">
   <span><i class="fa-solid fa-check"></i>healthy</span>
@@ -355,15 +336,23 @@ findSpecialMenu.map(item=>
   <div class="special-menu-price">
   <span class="special-price">£${item.price}</span>
   </div>
-   <a class="btn" data-product-id="${item.id}"  data-name="${item.name}" 
-   data-price="${item.price}" data-image="${item.image}">order now</a>
+  
+   <button class="btn" data-product-id="${item.id}"  data-name="${item.name}" 
+   data-price="${item.price}" data-image="${item.image}">order now</button>
 
 </div>
+
+
+
 </div>
- </div>
+
+</div>
+
 <div class="image">
 <img src="${item.image}">
 </div>
+
+
 
 <div class="special-text">
 <div class="slide-container">
@@ -381,6 +370,8 @@ findSpecialMenu.map(item=>
 </div>
 </div>
 
+</div>
+
 `).join('');
 
 }
@@ -394,7 +385,7 @@ console.log(sellerMenuContainer);
 sellerMenuContainer.innerHTML=
 findSpecialMenu.map(item=>
 `
-<div class="left-box">
+
   <div class="special-text">
     <div class="slide-container">
     <h3>tasty and unique</h3>

@@ -573,8 +573,7 @@ width:100%;
         
         
         
-        
-        
+       
         
         
         .special-menu-container{
@@ -587,20 +586,13 @@ width:100%;
                 justify-content:flex-start;
                 margin-top:var(--article-spacing);
                 box-shadow:0 10px 30px rgba(0, 0, 0, 0.2);
-                gap:63px;
+               
         }
         
         
     
         
-        
-        
-        
-        
-        
-        
-       
-        .seller-menu-container{
+         .seller-menu-container{
                 display:flex;
               
                 max-width:100%;
@@ -610,7 +602,7 @@ width:100%;
                 justify-content:flex-end;
                 margin-top:var(--article-spacing);
                 
-                gap:63px;
+               
         }
 .seller-menu-container img{
         height:700px;
@@ -624,7 +616,7 @@ width:100%;
 
         .special-menu-container img{
         height:700px;
-        max-width:1200px;
+       
         width:100%;
         margin-left:0;
         display:block;
@@ -635,18 +627,18 @@ width:100%;
 }
 
 
-
 .special-info{
         display:flex;
         flex-direction:column;
         align-items:center;
         max-width:400px;
         gap:22px;
-        
-       
-}
+        }
 
-.hero-info p{
+
+
+
+        .hero-info p{
         text-transform:capitalize;
         margin-bottom: 1rem;
 }
@@ -830,12 +822,7 @@ width:100%;
 }
 
 
-.special-text{
-        max-width:1000px;
-        width:100%;
-        margin:73px;
-       
-}
+
 
 h3{
 font-size:1.2rem;
@@ -2232,6 +2219,7 @@ width:100%;
                 max-width:500px;
                 display:flex;
                 flex-direction:column;
+               
              
         }
         .menu-column .btn{
@@ -2256,10 +2244,7 @@ width:100%;
                 font-size:1.5rem;
         }
        
-        .left-box{
-              
-                
-        }
+       
         
         .img_food img{
                        display:block;
