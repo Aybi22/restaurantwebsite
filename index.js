@@ -12,7 +12,7 @@ import { filteredByCategoryNoodles } from'./noodles.js';
 
 document.addEventListener("DOMContentLoaded", () => {
 
-const text = document.querySelector(".mylogo");
+const text = document.querySelector(".main-title");
   const chars = text.textContent.split("");
 
   text.textContent = ""; // clear it
@@ -23,7 +23,7 @@ const text = document.querySelector(".mylogo");
     text.appendChild(span);
   });
 
-  gsap.from(".headline span", {
+  gsap.from(".main-title span", {
     opacity: 0,
     y: 20,
     stagger: 0.05,

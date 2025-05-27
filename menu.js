@@ -87,7 +87,7 @@ let items=[
 
                             {
                                 id:8,
-                                image:"images/ramen-7187810_1920.jpg",
+                                image:"images/ramen.jpg",
                                 name:"ramen",
                                 quantity:1,
                                 price:20,
