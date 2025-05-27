@@ -636,11 +636,26 @@ width:100%;
         gap:22px;
         }
 
-
-
+.vegan-container img{
+        width:500px;
+        height:500px;
+        object-fit:cover;
+}
+.vegan-container .image{
+        height:100%;
+}
+.vegan-container{
+        display:flex;
+        max-width: 100%;
+        width:100%;
+       
+        justify-content: center;
+        gap:2rem;
+}
 
         .hero-info p{
         text-transform:capitalize;
+        font-size:1.5rem;
         margin-bottom: 1rem;
 }
 .special-info-title{
@@ -1151,13 +1166,17 @@ section{
 
  .contact-section{
         display:flex;
-        justify-content:space-between;
-       max-width:70%;
-       gap:var(--container-gap-size);
-       margin:auto;
-        align-items:start;
- }
-
+        justify-content:center;
+        align-items: flex-start;
+       max-width:100%;
+       width:100%;
+       height:500px;
+      
+}
+.contact-section p{
+        color:var(--white);
+       
+}
  .contactform{
         margin-top:var(--container-gap-size);
        
@@ -1172,18 +1191,19 @@ section{
  }
 
  .contact-infos{
-        margin-right:43px;
-        color:var(--info-paragraph-color);
+       background-color: var(--info-paragraph-color);
+        color:var(--white);
         font-size:2rem;
-        font-weight:900;
-        width:800px;
-        padding:1rem;
-        height:500px;
+     
+        max-width:800px;
+       padding:2rem;
+        height:100%;
  }
  .contact-infos h3{
-        color:#F34213;
-        text-decoration: underline;
+        color:var(--white);
+        
         margin-bottom:1.3rem;
+        padding:1rem;
  }
  .msge-info h3{
         margin-bottom:1rem;
@@ -1206,6 +1226,12 @@ section{
         z-index:-99;
 
  }
+ .location h3{
+        color:var(--white);
+ }
+.location .map{
+        height:100%;
+}
 
  .food-name{
        font-size:1.5rem;
