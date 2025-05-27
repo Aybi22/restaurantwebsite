@@ -418,7 +418,7 @@
 
   
  .hero-section.about{
-background-image: url('images/kitchen1.jpg');
+background-image: url('images/pasta.jpg');
 
 width:100%;
  }
@@ -810,7 +810,8 @@ width:100%;
         align-items:center;
         width:500px;
         gap:22px;
-        border:1px solid black;
+        border:7px solid#DE9151;
+        border-radius:11px;
         
 }
 .offer-box-wrapper{
@@ -820,6 +821,14 @@ width:100%;
        
         padding:33px;
 
+}
+
+.history-text{
+        max-width:900px;
+        margin:auto;
+        text-align:center;
+        line-height:1.8;
+        margin-top:1rem;
 }
 
 .quality{
@@ -1186,7 +1195,7 @@ section{
         width:500px;
  }
  .contact-parallax{
-        background-image: url('images/chips.jpg');
+        background-image: url('images/contactimage.jpg');
         background-size:cover;
         background-position: center;
         position:relative;
@@ -2334,7 +2343,7 @@ width:100%;
             max-width:1000px;
             width:100%;
             margin:auto;
-            font-family: 'montserrat',sans-serif;
+            font-family:Montserrat;
            
             margin-bottom:var(--section-text-margin);
             color:var(--section-text-color);
