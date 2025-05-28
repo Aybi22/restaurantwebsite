@@ -546,8 +546,48 @@ displayOrder();
 
 
 
+function validateForm() {
+  const email = document.getElementById("email").value;
+  if (!email.includes("@")) {
+    alert("Please enter a valid email.");
+    return false; //  Stop form submission
+  }
+  return true; //  Allow form to submit
+}
 
+function validateForm() {
+  const name = document.getElementById("name").value.trim();//trim removes any extra spaces from the beginning and end of a string.
+  const email = document.getElementById("email").value.trim();
+  const phone = document.getElementById("phone").value.trim();
+  const message = document.getElementById("message").value.trim();
 
+  // Name check
+  if (name === "") {
+    alert("Please enter your name.");
+    return false;
+  }
+
+  // Email format check
+  if (!email.includes("@") || !email.includes(".")) {
+    alert("Please enter a valid email address.");
+    return false;
+  }
+
+  // Optional: phone number check (digits only)
+  if (phone !== "" && !/^\d{7,15}$/.test(phone)) {
+    alert("Phone number should be 7–15 digits.");
+    return false;
+  }
+
+  // Message length check
+  if (message.length < 10) {
+    alert("Please enter a message with at least 10 characters.");
+    return false;
+  }
+
+  // If all checks pass
+  return true;
+}
 
 
 
