@@ -544,7 +544,7 @@ window.location.href='basket.html';
 
 displayOrder();
 
-
+/*
 
 function validateForm() {
   const email = document.getElementById("email").value;
@@ -554,9 +554,11 @@ function validateForm() {
   }
   return true; //  Allow form to submit
 }
+validateForm()
 
 function validateForm() {
-  const name = document.getElementById("name").value.trim();//trim removes any extra spaces from the beginning and end of a string.
+  const name = document.getElementById("name").value.trim().toLowerCase//trim removes any extra spaces from the beginning and end of a string.
+  //toLowercase converts the entire input to lowercase.
   const email = document.getElementById("email").value.trim();
   const phone = document.getElementById("phone").value.trim();
   const message = document.getElementById("message").value.trim();
@@ -590,7 +592,7 @@ function validateForm() {
 }
 
 
-
+*/
 
 
 

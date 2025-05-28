@@ -1692,18 +1692,19 @@ section{
                 color:#DE9151;
           }
           
-         .box-content{
+        
+         .reservation-content{
+               
+                margin-top:2rem;
                 display:flex;
                 flex-direction:column;
-                align-items:center;
-                margin-top: 2rem;
-                padding: 11px;
-                max-width:800px;
-                width: 100%;
                
-         } 
-          
-          
+             justify-content: center;
+         }
+          .form-header{
+               
+               
+          }
           
           .reservation-box p{
                 color:var(--white);
@@ -1711,19 +1712,36 @@ section{
                 margin:auto;
           }
 
-          .reservation-box .order-btn{
+          form .order-btn{
                 margin-top:2rem;
                 text-transform:capitalize;
                 font-weight:900;
                 width:170px;
+                
                
           }
-          .box-content div{
-                margin-bottom:1rem;
-                display:flex;
-                align-items:center;
+          form{
+                max-width:800px;
+                width:100%;
+               
+          }
+          form label{
+                width:150px;
+          }
+          
+          form div{
+               display:flex;
+               align-items:center;
+               max-width:500px;
+               width:100%;
                 justify-content: space-between;
-                width:500px;
+                margin-bottom: 1rem;
+                
+          }
+         form input{
+                max-width:400px;
+                width:100%;
+                flex-grow: 1;
           }
 
         h3{
