@@ -1725,6 +1725,9 @@ section{
                 width:100%;
                
           }
+          footer i{
+                color:#DE9151;
+          }
           form label{
                 width:150px;
           }
