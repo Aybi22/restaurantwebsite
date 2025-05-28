@@ -664,6 +664,7 @@ width:100%;
         display:flex;
         max-width: 100%;
         width:100%;
+        flex-wrap:wrap;
        
         justify-content: center;
         gap:2rem;
@@ -853,7 +854,7 @@ width:100%;
         display:flex;
         justify-content:space-between;
         gap:11px;
-       
+       flex-wrap: wrap;
         padding:33px;
 
 }
@@ -1578,8 +1579,9 @@ section{
               
         }
 
-        .category-links{
+         .category{
                 display:flex;
+                
         }
 
         .contacts{
@@ -1725,7 +1727,7 @@ section{
                 width:100%;
                
           }
-          footer i{
+          .contacts i{
                 color:#DE9151;
           }
           form label{
