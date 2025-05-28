@@ -93,7 +93,23 @@
                 border-bottom: 1px solid #F34213;
                 padding:11px;
           }
-          
+          .top-header{
+                display:flex;
+                align-items:center;
+                justify-content:center;
+          }
+          .top.btn{
+                border-radius:11px;
+                padding:9px 13px;
+                font-size:1rem;
+                background:#DE9151;
+            
+                color:black;
+                margin-left:auto;
+          }
+          .top-header .btn:hover{
+                color:white;
+          }
           
           img{
                 max-width:100%;
@@ -128,7 +144,7 @@
               .hero-slider {
                 overflow: hidden;
                 width: 100%;
-                height: 750px;
+                height: 780px;
                 position: relative;
               }
 
@@ -652,6 +668,10 @@ width:100%;
         justify-content: center;
         gap:2rem;
 }
+.vegan-container h4{
+        color:#F34213;
+        color:#DE9151 ;
+}
 
         .hero-info p{
         text-transform:capitalize;
@@ -796,7 +816,7 @@ width:100%;
 
         .about-parallax {
                 /* The image used */
-                background-image: url('images/noodles1.jpg');
+                background-image: url('images/burger3.jpg');
               
                 /* Full height */
                 height: 80%; 
@@ -844,6 +864,8 @@ width:100%;
         text-align:center;
         line-height:1.8;
         margin-top:1rem;
+        border-bottom: 1px solid #DE9151;
+        padding:13px;
 }
 
 .quality{
@@ -1204,6 +1226,10 @@ section{
         
         margin-bottom:1.3rem;
         padding:1rem;
+ }
+
+ .contact-infos i{
+        color:#DE9151;
  }
  .msge-info h3{
         margin-bottom:1rem;
@@ -2636,12 +2662,20 @@ font-family:Montserrat;
 
 
 
+h4{
+        color:#DE9151;
+}
 
+ .testimonial-box h4{
+background:var(--black);
+padding:11px 15px;
+   }
 
+.meal-week-info p{
+        margin-bottom:-37px;
+ margin-top:-37px;
 
-
-
-
+}
 
 
 
@@ -2734,7 +2768,7 @@ font-family:Montserrat;
                 font-size:0.8rem;
 
 }
-   
+  
 .reservation-container{
         flex-direction:column;
 

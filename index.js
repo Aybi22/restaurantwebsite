@@ -496,8 +496,10 @@ findChefMenu.map(item=>
       <span><i class="fa-solid fa-check"></i>unique</span>
         </div>
         
-        
-       
+  <h4>Chef’s Special Ramen</h4>      
+       <p>A soul-warming bowl crafted with passion and precision. Featuring slow-simmered broth infused with rich umami flavors, 
+       tender slices of marinated chashu pork, springy house-made noodles, a soft-boiled soy egg, and a medley of fresh toppings 
+       — including scallions, nori, and bamboo shoots.</p>
 <a class="btn" data-product-id="${item.id}"  data-name="${item.name}" 
    data-price="${item.price}" data-image="${item.image}">order now</a>
 
