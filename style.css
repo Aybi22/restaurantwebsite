@@ -1731,7 +1731,16 @@ section{
           form label{
                 width:150px;
           }
-          
+
+          .form-section div{
+               
+          }
+          .form-section{
+                max-width:600px;
+                width:100%;
+                margin-bottom:3rem;
+                
+          }
           form div{
                display:flex;
                align-items:center;
@@ -1741,6 +1750,8 @@ section{
                 margin-bottom: 1rem;
                 
           }
+         
+               
          form input{
                 max-width:400px;
                 width:100%;

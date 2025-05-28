@@ -165,33 +165,37 @@ contact
   
    <div class="form-section">
     <!--setting form-->
+     <h4>Contact Form</h4>
+    
     <form>
-      <div class="form-content">
+     <div class="form-content">
       <!--defining label and input as paragraphs-->
-      <p>
-      <label for="firstname">Firstname :</label>
-      <input id="firstname" type="text"   name="first name">
-     </p>
+     
       
-    <p>  
+      <div>
+      <label for="firstname">Firstname :</label>
+      <input id="firstname" type="text" placeholder="Firstname"  name="first name"  required>
+      </div>
+      
+    <div>  
      <label for="Lastname">Lastname :</label>
-      <input id="Lastname" type="text"  name="lastname">
-    </p>
-      <p>
+      <input id="Lastname" type="text" placeholder="Lastname" name="lastname"  required>
+    </div>
+      <div>
       <label for="E-mail">E-mail :</label>
-      <input id="E-mail"  type="text"   name="E-mail">
-    </p>
+      <input id="email"  type="text" placeholder="email"  name="E-mail"  required>
+      </div>
       
     
       
-      <p>
+      <div>
       <label for="message">message: </label>
-      <textarea id="message" name="user_message"></textarea>
-      </p>
+      <textarea id="message" placeholder="message" name="user_message"></textarea>
+      </div>
     
      <button type="submit">submit</button>   <!--submit button-->
-     </div>
     
+    </div>
     
 </form>
 </div> 
