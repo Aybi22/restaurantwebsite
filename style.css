@@ -652,6 +652,10 @@ width:100%;
         gap:22px;
         }
 
+.vegan-box{
+        display:flex;
+        flex-direction:column;
+}
 .vegan-container img{
         width:500px;
         height:500px;
@@ -1418,7 +1422,7 @@ section{
       .meal-container, .sushi-container, 
       .berries-container, .ramen-container, .shish-container, .noodles-container{
         display:grid;
-        max-width:60%;
+        max-width:1200px;
         width:100%;
         grid-template-columns: repeat(3,1fr);
         margin:auto;
@@ -1581,6 +1585,7 @@ section{
 
          .category{
                 display:flex;
+                flex-wrap:wrap;
                 
         }
 
@@ -2711,7 +2716,16 @@ padding:11px 15px;
 
 }
 
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
 
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 
 
@@ -2725,11 +2739,21 @@ padding:11px 15px;
                 .menu-container{
                         grid-template-columns: 1fr;
                 }
-
+                 .section-text{
+                        font-size:1rem;
+                 }
                 .main-title{
                         font-size:2rem;
                 }
-
+                  .footer-content{
+                        flex-direction:column;
+                        align-items:center;
+                        gap:23px;
+                  }
+                  .contacts{
+                        flex-direction:column;
+                        font-size:1rem;
+                  }
                 h1{
                 font-size:1.8rem;
                 }
@@ -2816,7 +2840,11 @@ padding:11px 15px;
 .special-menu-container{
         height:auto;
 }
-
+.meal-container, .sushi-container, 
+      .berries-container, .ramen-container, .shish-container, .noodles-container{
+      grid-template-columns: 1fr;
+      width:100%;
+      }
  
 }
 
@@ -2827,7 +2855,11 @@ padding:11px 15px;
         
     @media screen and (min-width:768px) and (max-width: 1023px)  {
       
-
+.meal-container, .sushi-container, 
+      .berries-container, .ramen-container, .shish-container, .noodles-container{
+      grid-template-columns: repeat(2,1fr);
+      width:100%;
+      }
 }     
         
         
