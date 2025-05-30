@@ -610,7 +610,12 @@ const cards = document.querySelectorAll('.vegan-box');
   });
 
 
+window.addEventListener('click',(e)=>{
+  if(e.target.classList.contains('btn')){
+    document.body.style.backgroundColor="pink";
+  }
 
+});
 
 
 
