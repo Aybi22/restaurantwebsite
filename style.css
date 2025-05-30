@@ -1102,7 +1102,7 @@ section{
 }
 
 .mylogo{
-        color:#F34213;
+        color:var(--info-paragraph-color);
         font-size:1.3rem;
         text-align:center;
         text-transform:uppercase;
@@ -2169,7 +2169,7 @@ section{
                 display:flex;
                 flex-direction: column;
                 
-                flex-grow:1;
+               
 
         }
         
@@ -2370,11 +2370,16 @@ width:100%;
                 max-width:500px;
                 display:flex;
                 flex-direction:column;
+                min-height:600px;
+               
+                padding:13px;
                
              
         }
-        .menu-column .btn{
-                margin-top:auto;
+        .menu-column a.btn{
+                margin-bottom:3rem;
+                width:50%;
+
         }
 
         .burger img{

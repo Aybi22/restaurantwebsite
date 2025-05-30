@@ -143,20 +143,22 @@ items.forEach(item=>{
   newBox.innerHTML=`
  
 <div class="menu-column">
-  <a href="basket.html?id=${item.id}>
+
   <div class="image">
   
   <img src=${item.image}>
   </div>
-</a>
-  <div class="txt_column">
+
+  
 
   <div class="txt">
   <h3>${item.name}<span class="meal-price">£${item.price}</span></h3>
   <p>${item.description}</p>
- <button class="btn" data-product-id=${item.id}  data-name=${item.name} 
-   data-price=${item.price} data-image=${item.image}>order now</button>
-   </div>
+  </div>
+  
+ <a class="btn" data-product-id=${item.id}  data-name=${item.name} 
+   data-price=${item.price} data-image=${item.image}>order now</a>
+  
       </div>
     
 
@@ -360,8 +362,8 @@ findSpecialMenu.map(item=>
   <span class="special-price">£${item.price}</span>
   </div>
   
-   <button class="btn" data-product-id="${item.id}"  data-name="${item.name}" 
-   data-price="${item.price}" data-image="${item.image}">order now</button>
+   <a class="btn" data-product-id="${item.id}"  data-name="${item.name}" 
+   data-price="${item.price}" data-image="${item.image}">order now</a>
 
 </div>
 
