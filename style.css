@@ -1102,7 +1102,7 @@ section{
 }
 
 .mylogo{
-        color:#DE9151;
+        color:var(--black);
         font-size:1.3rem;
         text-align:center;
         text-transform:uppercase;
