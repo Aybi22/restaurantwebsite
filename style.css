@@ -674,8 +674,8 @@ width:100%;
         gap:2rem;
 }
 .vegan-container h4{
-        color:#F34213;
-        color:#DE9151 ;
+        color:var(--info-paragraph-color);
+        
 }
 
         .hero-info p{
@@ -2100,7 +2100,7 @@ section{
         .chef-message p{
                 
                 text-transform:capitalize;
-                text-transform:capitalize;
+              
         }
         
         
@@ -2155,6 +2155,8 @@ section{
                 font-size:25px;
                padding:10px;
                 max-width: 100%;
+                display:flex;
+                flex-direction:column;
                 flex-grow:1;
                
                 
@@ -2196,19 +2198,7 @@ section{
         
         
 
-        
-        .menu-container .image{
-                height:100%;
-        }
-        .menu-container .btn{
-                margin-left:51px;
-        }
-        .menu-container img{
-            max-width:500px;
-            height:350px;
-            display:block;
-            object-fit:cover;
-        }
+       
         .sortlist-title{
                font-weight:900;
                white-space: nowrap;
@@ -2370,15 +2360,15 @@ width:100%;
                 max-width:500px;
                 display:flex;
                 flex-direction:column;
-                min-height:600px;
-               
+                min-height:700px;
+              
                 padding:13px;
                
              
         }
         .menu-column a.btn{
                 margin-bottom:3rem;
-                width:50%;
+               
 
         }
 
@@ -2646,23 +2636,28 @@ width:100%;
         
         .menu-container {
                 display: grid;
-                gap: 13px;
+                
        
-               padding:33px;
-                max-width:100%;
+              
+                max-width:1500px;
                 width:100%;
-                justify-content: center;
-                grid-template-columns: repeat(4, 1fr); /* default: 1 column */
+              margin:auto;
+                grid-template-columns:repeat(auto-fill,minmax(500px, 1fr)); /* default: 1 column */
                 box-sizing: border-box;
         }
               
         .menu-container img{
-                height:300px;
-                width:400px;
-                display:block;
-                object-fit:cover;
+                
+                
         }
 
+        .menu-container img{
+           max-width: 500px;
+           width:100%;
+            height:350px;
+            display:block;
+            object-fit:cover;
+        }
        .special-menu a.btn{
                 margin-top:2rem;;
                 
@@ -2715,7 +2710,6 @@ width:100%;
 
 
 
-
 p,a{
 font-family:Montserrat;
 }
@@ -2723,12 +2717,12 @@ font-family:Montserrat;
 
 
 h4{
-        color:#DE9151;
+        color:var(--info-paragraph-color);
 }
 
  .testimonial-box h4{
-background:var(--black);
-padding:11px 15px;
+color:var(--info-paragraph-color)
+
    }
 
 .meal-week-info p{
@@ -2748,7 +2742,10 @@ padding:11px 15px;
   transform: translateY(0);
 }
 
-
+a.btn, .btn{
+        background:#DE9151;
+        color:var(--black);
+}
 
 /*MEDIA QUERIES*/
         
@@ -2759,6 +2756,7 @@ padding:11px 15px;
         @media screen and (max-width:768px){
                 .menu-container{
                         grid-template-columns: 1fr;
+                        
                 }
                  .section-text{
                         font-size:1rem;
@@ -2785,13 +2783,7 @@ padding:11px 15px;
                    .offer-box-wrapper{
                         grid-template-columns: 1fr;
                    }
-            .menu-container img{
-                height:300px;
-                width:100%;
-                display:block;
-                object-fit:cover;
-        
-        }
+           
           .sort-list{
                 flex-direction: column;
                 text-align:center;
@@ -2885,13 +2877,17 @@ padding:11px 15px;
 }
 
       
-        
+@media screen and (max-width: 500px) {
+  .menu-container {
+    width:100%;
+  }
+}        
         
         
         
     @media screen and (min-width:768px) and (max-width: 1023px)  {
       
-.meal-container, .sushi-container, 
+.menu-container, .meal-container, .sushi-container, 
       .berries-container, .ramen-container, .shish-container, .noodles-container{
       grid-template-columns: repeat(2,1fr);
       width:100%;
