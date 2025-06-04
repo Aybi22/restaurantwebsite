@@ -104,9 +104,9 @@ fetch('./template.html')
 
 
 
-   let navHamburger = document.querySelector('.nav-hamburger');
-   console.log(navHamburger);
-  navHamburger.addEventListener('click', showMobileMenu);
+   let hamburger = document.querySelector('.hamburger');
+   console.log(hamburger);
+  hamburger.addEventListener('click', showMobileMenu);
   function showMobileMenu() {
       let mobileMenu = document.querySelector('.mobileMenu');
       mobileMenu.classList.toggle('mobile-box');
@@ -116,15 +116,7 @@ fetch('./template.html')
 
 
 
-const modal=document.querySelector('.modal');
-    const hamburger=document.querySelector('.fa-bars');
-    let overlay=document.querySelector('.overlay');
-    hamburger.addEventListener('click',displayModal);
-    function displayModal(){
-    modal.classList.toggle('show-modal');
-    overlay.style.visibility="visible";
-   
-    }
+
 
     //event delegation
  document.body.addEventListener('click',closeModal);
