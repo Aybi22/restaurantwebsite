@@ -760,10 +760,33 @@ addText();
         
        
         
+          
+         <ul class="dropmenu-items"> <!-- setting an unodered list for the drpdown menu-->
+        <li><a href="sushi.html">sushi</a></li>
+        <li><a href="berries.html">berries</a></li>
+        <li><a href="ramen.html">ramen</a></li>
+        <li><a href="sishkebab.html">sish kebab</a></li>
+        <li><a href="noodles.html">noodles</a></li>
+        <li><a href="eclair.html">eclair</a></li>
+                 
         
+                  </ul>
        
         
-                
+        ul a{
+             text-decoration:none;
+             font-weight:900;
+             text-transform:capitalize;
+             padding:15px 14px;
+             
+             display: block;/*defining block elements to set width and height*/
+             font-size:1rem;
+             font-family: 'Caramel', cursive;
+             font-family: 'montserrat',sans-serif;
+             font-family: roboto;
+             color: white;
+             border-bottom:3px solid transparent;/*transparent border-bottom*/ 
+        }        
         
         
        
@@ -779,3 +802,25 @@ addText();
         
         /*END OF MEDIA QUERIES*/
         
+<div class="modal">
+
+      <h2>top-ranked menu</h2>
+<ul class="modal-menu">
+   
+
+      <a href="sushi.html">sushi</a>
+        <a href="berries.html">berries</a>
+        <a href="ramen.html">ramen</a>
+        <a href="sishkebab.html">sish kebab</a>
+        <a href="noodles.html">noodles</a>
+        <a href="eclair.html">eclair</a>
+    </ul> 
+
+<span class="closer">&times;</span>
+
+    </div>
+    </div>  
+      <!--end of page-container-->
+      
+   <div class="overlay"></div>   
+

@@ -96,13 +96,34 @@
           .top-header{
                 display:flex;
                 align-items:center;
-                justify-content:center;
+                justify-content: space-around;
+               
+        }
+
+     .top-icons{
+        color:var(--info-paragraph-color);
+     }
+         
+     
+     
+
+          .top-header ul,li,a{
+                 color:var(--info-paragraph-color);
+                text-transform: uppercase;
+                font-size:1rem;
+                font-weight:800;
+                font-family:Montserrat;
+               gap:23px;
+                display: flex;
+              text-align:center;
+                justify-content: center;
           }
           .top.btn{
                 border-radius:11px;
                 padding:9px 13px;
                 font-size:1rem;
                 background:#DE9151;
+                
             
                 color:black;
                 margin-left:auto;
@@ -319,7 +340,10 @@
             
          }
 
-
+      .breadcrumb a{
+        font-size:0.8rem;
+        text-transform: lowercase;
+      }
          
          
          
@@ -680,7 +704,7 @@ width:100%;
 
         .hero-info p{
         text-transform:capitalize;
-        font-size:1.5rem;
+        font-size:1rem;
         margin-bottom: 1rem;
 }
 .special-info-title{
@@ -1103,15 +1127,15 @@ section{
 
 .mylogo{
         color:var(--info-paragraph-color);
-        font-size:1.3rem;
-        text-align:center;
+        font-size:2rem;
+      
         text-transform:uppercase;
         font-weight:900;
         font-family:Montserrat;
-        margin:0.6rem auto;
+       
         }
 
-        
+      
 
         .logo-title{
                 display:block;
@@ -1626,12 +1650,31 @@ flex: 1;
                 
         }
 
+        footer ul li a{
+                text-transform: lowercase;
+                font-size:1rem;
+                text-transform:capitalize;
+                color:var(--white);
+
+        }
+        
+
+        
+        footer ul{
+                display:flex;
+                gap:11px;
+        }
         .contacts{
                 display:flex;
                 align-items:center;
                 justify-content:center;
                 gap:33px;
                 font-size:1.5rem;
+                color:var(--white);
+        }
+        .contacts  li{
+                color:var(--white);
+                text-transform:lowercase;
         }
 
         .footer-content{
@@ -1903,7 +1946,7 @@ flex: 1;
          
          
          /*defining  navigation bar*/
-        nav{
+        nav .subnav{
            
             max-width:100%;
             position:sticky;/*defining sticky navigation bar*/
@@ -1998,52 +2041,39 @@ flex: 1;
         
         
         /*styling navigation bar hyperlinks*/
-        ul a{
-             text-decoration:none;
-             font-weight:900;
-             text-transform:capitalize;
-             padding:15px 14px;
-             
-             display: block;/*defining block elements to set width and height*/
-             font-size:1rem;
-             font-family: 'Caramel', cursive;
-             font-family: 'montserrat',sans-serif;
-             font-family: roboto;
-             color: white;
-             border-bottom:3px solid transparent;/*transparent border-bottom*/ 
-        }
+        
                     
-        nav a:hover:not(.btn){/*button not selected to be styled like the nav elements on hover*/ 
+        .top-header ul a:hover:not(.top-icons,.btn top){/*button not selected to be styled like the nav elements on hover*/ 
                 border-bottom:3px solid#F34213;
                 color: #DE9151;
                              
                 }
                     
            /*defining dropdown menu*/   
-        .dropdmenu {
+       .top-header  .dropdmenu {
                    
                    position:relative;
                   
         }
         
-        .dropmenu-items{
+        .top-header .dropmenu-items{
                         position:absolute;
                         display:none; /*elements not appearing on the page*/
                         background-color:var(--white);
-                        
+                        z-index: -999;
                         
                         
         }
                     
                     
-        .dropmenu-items a{
+        .top-header .dropmenu-items a{
                    display:block;/*displaying items as block elements*/
                    padding:20px;
                    font-size:1rem;
                    color:#000000;
                 }
                     
-        .dropmenu:hover  .dropmenu-items{
+       .top-header .dropmenu:hover  .dropmenu-items{
                                        display:flex;
                                        padding:2rem;
                                        
@@ -2815,7 +2845,6 @@ nav i{
    .mobile-box{
     width:100%;
 }
-
 
 
 
