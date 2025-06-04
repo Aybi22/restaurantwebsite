@@ -2060,13 +2060,14 @@ flex: 1;
                         position:absolute;
                         display:none; /*elements not appearing on the page*/
                         background-color:var(--white);
-                        z-index: -999;
+                        z-index: 999;
+                        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
                         
                         
         }
                     
                     
-        .top-header .dropmenu-items a{
+        .top-header .dropmenu-items li a{
                    display:block;/*displaying items as block elements*/
                    padding:20px;
                    font-size:1rem;
@@ -2079,7 +2080,9 @@ flex: 1;
                                        
         
         }
-            
+          .top-header .dropmenu-items.show {
+  display: block;
+} 
             
         .about{
                 line-height:32px; /*setting vertical distance between lines*/

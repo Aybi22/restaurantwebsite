@@ -636,7 +636,15 @@ window.addEventListener('click',(e)=>{
 
 
 
+document.addEventListener('DOMContentLoaded', () => {
+  const dropToggle = document.querySelector('.dropdown-toggle');
+  const dropMenu = document.querySelector('.dropmenu-items');
 
+  dropToggle.addEventListener('click', (e) => {
+    e.preventDefault(); // prevent navigation on click
+    dropMenu.classList.toggle('show');
+  });
+});
 
 
  
