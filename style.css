@@ -1447,10 +1447,10 @@ flex: 1;
       }
         
       .meal-week-info-content{
-        margin:73px;
+       
         display:flex;
         flex-direction:column;
-        gap:63px;
+
       }
       
      .meal-week-info-content .btn{
@@ -1715,7 +1715,7 @@ flex: 1;
         .menu-container-content{
              
                padding:23px;
-               height:200px; 
+               height:100px; 
                flex:1;
                
         }
@@ -1877,9 +1877,10 @@ flex: 1;
                 display:flex;
                 
                 max-width:100%;
+                width:100%;
                 gap:33px;
                 justify-content:center;
-                padding:33px;
+                padding:23px;
         }
 
         .special-text img{
@@ -2415,8 +2416,8 @@ flex: 1;
 .offer-box p,.testimonial-box p{
         font-size: 0.8rem;
         line-height: 1.8;
-        text-align: center;
-        width:50%;
+      
+        width:100%;
 }
 .action-wrapper img,.charity-wrapper img,.sustainability-wrapper img{
 max-width:100%;
@@ -2471,7 +2472,7 @@ width:100%;
                 max-width:500px;
                 display:flex;
                 flex-direction:column;
-                min-height:700px;
+                min-height:650px;
               
                 padding:13px;
                
@@ -2840,9 +2841,7 @@ color:var(--info-paragraph-color)
    }
 
 .meal-week-info p{
-        margin-bottom:-37px;
- margin-top:-37px;
-
+       
 }
 
 .fade-in {
@@ -2922,7 +2921,7 @@ a.btn, .btn{
                   .hamburger{
                         display:block;
                   }
-
+                 
                   nav ul li{
                         display:none;
                   }
@@ -2985,9 +2984,13 @@ a.btn, .btn{
 
         .testimonial-container{
                 flex-direction: column;
-                gap:0px;
+                
         
         
+        }
+
+        .testimonial-container p{
+                text-align: left;
         }
         .videos-section-container{
                 flex-direction: column;
@@ -3080,6 +3083,12 @@ img{
       grid-template-columns: repeat(2,1fr);
       width:100%;
       }
+
+.menu-column{
+        height:690px;
+}
+
+
 }     
         
         
