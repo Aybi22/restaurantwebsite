@@ -101,6 +101,21 @@ fetch('./template.html')
     let headTemplate=document.getElementById('head-template');
     
     headTemplate.innerHTML=html;
+
+
+
+   let navHamburger = document.querySelector('.nav-hamburger');
+   console.log(navHamburger);
+  navHamburger.addEventListener('click', showMobileMenu);
+  function showMobileMenu() {
+      let mobileMenu = document.querySelector('.mobileMenu');
+      mobileMenu.classList.toggle('mobile-box');
+  }
+  
+
+
+
+
 const modal=document.querySelector('.modal');
     const hamburger=document.querySelector('.fa-bars');
     let overlay=document.querySelector('.overlay');
