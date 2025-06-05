@@ -3120,18 +3120,22 @@ img{
     flex: 1 1 45%;            /* flexible items, about half width */
     margin: 10px;
   }
-
+.video-info video {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
 
 .videos-section-container{
         display:flex;
         flex-direction: row;
         flex-wrap:wrap;
-        justify-content: center;
+        justify-content:flex-start;
         align-items: center;
 }
 
 .videos-section-container >* {
-       
+       flex:0 1 45%;
 }
 
 .testimonial-container{
