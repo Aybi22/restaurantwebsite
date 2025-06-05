@@ -2416,8 +2416,9 @@ flex: 1;
 .offer-box p,.testimonial-box p{
         font-size: 0.8rem;
         line-height: 1.8;
-      
-        width:100%;
+      text-align:center;
+        width:50%;
+        margin-bottom: 2rem;
 }
 .action-wrapper img,.charity-wrapper img,.sustainability-wrapper img{
 max-width:100%;
