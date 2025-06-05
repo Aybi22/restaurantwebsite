@@ -524,6 +524,7 @@ width:100%;
         .menu-title{
                 font-size: 5rem;
                 font-family:Montserrat;
+         
         }
 
        
@@ -685,9 +686,10 @@ width:100%;
         gap:23px;
 
 }
+.menu-title
 
 .vegan-box .btn{
-        margin:auto;
+        margin:1rem auto;
 }
 .vegan-container img{
         width:500px;
@@ -3061,6 +3063,13 @@ a.btn, .btn{
        
         text-align:center;
 }
+
+.menu-title{
+        font-size:4rem;
+}
+
+
+
 }
 
       
