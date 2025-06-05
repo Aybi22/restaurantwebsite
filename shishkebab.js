@@ -24,8 +24,8 @@ filteredShishKebab.map(item=>
   <p class="section-text">${item.description}</p>
   </div>
  
-  <button  class="btn" data-product-id=${item.id}  data-name=${item.name} 
-   data-price=${item.price} data-image=${item.image}>order now</button>
+  <a  class="btn" data-product-id=${item.id}  data-name=${item.name} 
+   data-price=${item.price} data-image=${item.image}>order now</a>
    
       </div>
        </div>
