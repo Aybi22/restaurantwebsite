@@ -1645,7 +1645,8 @@ flex: 1;
                 display:flex;
                 max-width:100%;
                 gap:31px;
-                justify-content:center;   
+                justify-content:center; 
+               
                
         }
         form{
@@ -2914,7 +2915,7 @@ a.btn, .btn{
         
         
         
-        @media screen and (max-width:768px){
+        @media screen and (max-width:767px){
                 .menu-container{
                         grid-template-columns: 1fr;
                         
@@ -3104,8 +3105,69 @@ img{
 .custom-card{
         height:auto;
 }
+.new-menu-container{
+        
 
-}     
+
+    display: flex;
+    flex-direction: row;      /* horizontal alignment */
+    flex-wrap: wrap;          /* wrap items if needed */
+    justify-content: space-between; /* spread out nicely */
+    align-items: center;      /* vertical centering */
+  }
+
+  .new-menu-container > * {
+    flex: 1 1 45%;            /* flexible items, about half width */
+    margin: 10px;
+  }
+
+
+.videos-section-container{
+        display:flex;
+        flex-direction: row;
+        flex-wrap:wrap;
+        justify-content: center;
+        align-items: center;
+}
+
+.videos-section-container >* {
+       
+}
+
+.testimonial-container{
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap:21px;
+        justify-content:flex-start;
+}
+.testimonial-container >*{
+        flex:0 1 45%;
+        max-width:45%;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
         
         
         
