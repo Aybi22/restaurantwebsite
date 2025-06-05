@@ -3067,7 +3067,10 @@ a.btn, .btn{
 .menu-title{
         font-size:4rem;
 }
-
+.menu-column .btn{
+        width:100%;
+        margin:auto;
+}
 
 
 }
@@ -3096,7 +3099,7 @@ img{
       }
 
 .menu-column{
-        height:690px;
+        height:auto;
 }
 .custom-card{
         height:auto;
