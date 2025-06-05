@@ -2807,8 +2807,9 @@ width:100%;
 
 
 .order-btn {
-  background-color: #e53935;
-  color: white;
+  background-color:#DE9151;
+  color: var(--black);
+  font-weight: 900;
   padding: 12px 24px;
   font-size: 1rem;
   border: none;
@@ -3087,7 +3088,9 @@ img{
 .menu-column{
         height:690px;
 }
-
+.custom-card{
+        height:auto;
+}
 
 }     
         
