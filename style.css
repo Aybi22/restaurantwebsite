@@ -1249,12 +1249,9 @@ flex: 1;
      font-weight: bold; 
      font-size:1.3rem;
      cursor:pointer;
-     transition: 0.9s
- }
-
- .menu-column a.btn{
-        display:flex;
-        align-items:center;
+     transition: 0.9s;
+     display:flex;
+     align-items:center;
        
         
  }
@@ -2099,7 +2096,7 @@ nav ul a:hover:not(.top-icons, .btn.top) {
       .dropmenu {
                    
                    position:relative;
-                   width:auto
+                   width:auto;
                   
         }
         
@@ -2107,11 +2104,19 @@ nav ul a:hover:not(.top-icons, .btn.top) {
                         position:absolute;
                         display:none; /*elements not appearing on the page*/
                         background-color:var(--white);
-                       
-                     
+                        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
                         top:100%;/* right below the parent */
                         left:0;
                         z-index:100;
+                        left: 50%;/*moves the left edge of the element to the center (50%) of its relatively positioned parent.*/
+                        transform: translateX(-50%);/*moves the element LEFT by 50% of its own width
+                         horizontally centers an absolutely positioned element */
+                        min-width: 180px;
+                        max-height: 600px;
+                        margin-top:0;
+                        padding-top:0;
+                        overflow-y: auto;
+
                         
         }
 
@@ -2866,6 +2871,7 @@ color:var(--info-paragraph-color)
 a.btn, .btn{
         background:#DE9151;
         color:var(--black);
+        font-size: 1.3rem;
 }
 .hamburger{
        cursor:pointer;
@@ -2889,7 +2895,8 @@ a.btn, .btn{
     align-items:center;
     z-index:99;
     text-align:center;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
    
    }
    .mobileMenu li a{
@@ -2950,6 +2957,23 @@ nav .hamburger i{
                         grid-template-columns: 1fr;
                         
                 }
+
+
+
+                .dropmenu-items {
+    padding: 0.5rem 1rem;
+  }
+
+  .dropmenu-items li a {
+    padding: 7px;
+    font-size: 0.9rem;
+  }
+
+
+
+
+
+
                 .mylogo{
                         font-size:1.5rem;
                 }
