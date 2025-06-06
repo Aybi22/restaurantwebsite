@@ -93,7 +93,7 @@
                 border-bottom: 1px solid #F34213;
                 padding:11px;
           }
-          .top-header{
+          nav{
                 display:flex;
                 align-items:center;
                 justify-content: space-around;
@@ -110,7 +110,7 @@
      
      
 
-          .top-header ul,li,a{
+          nav ul,li,a{
                  color:var(--info-paragraph-color);
                 text-transform: uppercase;
                 font-size:1rem;
@@ -131,7 +131,7 @@
                 color:black;
                 margin-left:auto;
           }
-          .top-header .btn:hover{
+          nav .btn:hover{
                 color:white;
           }
           
@@ -1162,9 +1162,7 @@ section{
                
                 
         }
-        nav .a.btn{
-               
-        }
+        
 
 .name-search{
         display:flex;
@@ -2064,7 +2062,7 @@ flex: 1;
         /*styling navigation bar hyperlinks*/
         
                     
-        .top-header ul a {
+        nav ul a {
   position: relative;
   display: inline-block;
   padding-bottom: 0.3em;
@@ -2072,7 +2070,7 @@ flex: 1;
   text-decoration: none;
 }
 
- .top-header ul a::after {
+ nav ul a::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -2084,12 +2082,12 @@ flex: 1;
   border-radius: 2px;
 }    
         
-.top-header ul a:hover:not(.top-icons, .btn.top)::after {
+nav ul a:hover:not(.top-icons, .btn.top)::after {
   width: 100%;
   left: 0;
 }
 
-.top-header ul a:hover:not(.top-icons, .btn.top) {
+nav ul a:hover:not(.top-icons, .btn.top) {
   color: #DE9151;
 }
 
@@ -2766,20 +2764,14 @@ width:100%;
         
         .menu-container {
                 display: grid;
-                
-       
-              
                 max-width:1500px;
                 width:100%;
-              margin:auto;
+                margin:auto;
                 grid-template-columns:repeat(auto-fill,minmax(500px, 1fr)); /* default: 1 column */
                 box-sizing: border-box;
         }
               
-        .menu-container img{
-                
-                
-        }
+       
 
         .menu-container img{
            max-width: 500px;
@@ -2934,15 +2926,15 @@ a.btn, .btn{
     width:100%;
 }
 
-.top-header i{
+nav i{
         color:#DE9151; 
 }
 
-.top-header .top-icons i{
+nav .top-icons i{
         color:var(--info-paragraph-color);
 }
 
-.top-header .hamburger i{
+nav .hamburger i{
         color:var(--info-paragraph-color);
 }
 
