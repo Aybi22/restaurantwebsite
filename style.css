@@ -1245,8 +1245,9 @@ flex: 1;
         color:#DE9151;
         
  }
- a.btn{
-     width:170px; 
+ .menu-column a.btn{
+    max-width:100%;
+    width:100%;
      font-weight: bold; 
      font-size:1.3rem;
      cursor:pointer;
