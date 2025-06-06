@@ -1254,6 +1254,13 @@ flex: 1;
      transition: 0.9s
  }
 
+ .menu-column a.btn{
+        display:flex;
+        align-items:center;
+       
+        
+ }
+
  a.btn:hover{
         background: #e03e00;
  }

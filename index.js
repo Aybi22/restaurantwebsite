@@ -164,7 +164,7 @@ items.forEach(item=>{
   </div>
   
  <a class="btn" data-product-id=${item.id}  data-name=${item.name} 
-   data-price=${item.price} data-image=${item.image}>order now</a>
+   data-price=${item.price} data-image=${item.image}>order now   <i class="fa-solid fa-cart-shopping"></i> </a>
   
       </div>
     
