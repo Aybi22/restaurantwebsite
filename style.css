@@ -3171,6 +3171,21 @@ img{
 .menu-column{
         height:auto;
 }
+
+
+ .hamburger{
+        display:block;
+                  
+}
+                 
+nav ul li{
+ display:none;
+                  
+}
+
+
+
+
 .custom-card{
         height:auto;
 }
