@@ -1548,13 +1548,6 @@ flex: 1;
        
               
         
-         /* defining social media elements as flex items*/
-        .social-media{
-                    display:flex;
-                    gap:50px;/*defining space between flex items*/
-                    align-items: center;/*center the alignements for the items of the flex container*/
-               }
-        
         .me{
                 margin-left:auto; /* pushing the element on the right part of its container*/
                 font-size:2rem;
@@ -2253,7 +2246,7 @@ nav ul a:hover:not(.top-icons, .btn.top) {
         
                .social-media{
                     display:flex;
-                    gap:50px;
+                    gap:13px;
                     align-items: center;
                     font-size:2.5em;
                }
@@ -3171,7 +3164,9 @@ img{
 .menu-column{
         height:auto;
 }
-
+.social-media i{
+        font-size:1.5rem;
+}
 
  .hamburger{
         display:block;
