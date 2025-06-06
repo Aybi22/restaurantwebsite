@@ -110,8 +110,32 @@ fetch('./template.html')
   function showMobileMenu() {
       let mobileMenu = document.querySelector('.mobileMenu');
       mobileMenu.classList.toggle('mobile-box');
+
   }
+
+let closeMobile = document.querySelector('.closeMobile');
+  closeMobile.addEventListener('click', mobileClose);
+  function mobileClose(e) {
+      let mobileMenu = document.querySelector('.mobileMenu');
   
+      if (e.target === closeMobile) {
+          mobileMenu.classList.remove('mobile-box');
+      }
+  }
+      
+        
+        
+   
+    
+   
+    
+      
+      
+      
+      
+      
+      
+   
 
 
 

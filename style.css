@@ -2098,14 +2098,14 @@ flex: 1;
 
                     
            /*defining dropdown menu*/   
-       .top-header .dropmenu {
+      .dropmenu {
                    
                    position:relative;
                    width:auto
                   
         }
         
-       .top-header .dropmenu-items{
+       .dropmenu-items{
                         position:absolute;
                         display:none; /*elements not appearing on the page*/
                         background-color:var(--white);
@@ -2119,7 +2119,7 @@ flex: 1;
 
                     
                     
-       .top-header .dropmenu-items li a{
+       .dropmenu-items li a{
                    display:block;/*displaying items as block elements*/
                    padding:20px;
                    font-size:1rem;
@@ -2128,7 +2128,7 @@ flex: 1;
             
                 }
                     
-      .top-header .dropmenu:hover  .dropmenu-items{
+      .dropmenu:hover  .dropmenu-items{
                                        display:block;
                                        padding:2rem;
                                      
@@ -2136,7 +2136,7 @@ flex: 1;
                                        
         
         }
-      .top-header  .dropmenu-items.show {
+       .dropmenu-items.show {
   display: block;
 } 
 
@@ -2881,25 +2881,54 @@ a.btn, .btn{
 }
 
 .mobileMenu{
-    background:var(--info-paragraph-color);
+    background:var(--white);
     width:0%;
     right:0;
     left:0;
     bottom:0;
     top:0;
-   
+    position:fixed;
   
-    color:white;
-    transition:ease-out 3s;
+    color:var(--info-paragraph-color);
+    transition:ease-out 0.3s;
     display:flex;
     flex-direction: column;
     justify-content:center; 
     align-items:center;
-    
+    z-index:99;
     text-align:center;
+    overflow: hidden;
    
    }
+   .mobileMenu li a{
+        color:var(--info-paragraph-color);
+      
+        margin-bottom: 3rem;
+       
 
+   }
+
+   .mobileMenu a.btn{
+        width:200px;
+        padding:1rem;
+   }
+.closeMobile{
+    position:absolute;
+    cursor:pointer;
+    top:55px;
+    right:22px;
+    font-size:33px;
+    color:var(--white);
+    cursor:pointer;  
+}
+
+
+.menuMobile {
+        display:flex;
+        flex-direction:column;
+        gap:23px;
+        border:7px solid yellow;
+}
 
    .mobile-box{
     width:100%;
