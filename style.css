@@ -336,16 +336,19 @@
 
          }
          .breadcrumb{
-            margin-left:22px;
+            display:flex;
+           
             color:#2E2E3A;
-            font-size:13px;
-            text-transform:capitalize;
-            
+            font-size:15px;
+            gap:0.5rem;
+            text-transform:capitalize;  
+            margin-left: 1rem; 
          }
 
       .breadcrumb a{
         font-size:0.8rem;
         text-transform: lowercase;
+         text-transform:capitalize;
       }
          
          
@@ -1337,6 +1340,7 @@ flex: 1;
         background-repeat: no-repeat;
         filter:brightness(49%);
         z-index:-99;
+        margin-bottom: 2rem;
 
  }
  .location h3{
