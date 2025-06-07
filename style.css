@@ -822,13 +822,13 @@ width:100%;
         }
 
 
-        .hpme-parallax img{
+        .home-parallax img{
                object-fit: cover;
                object-position: center;
                width:100%;
                height:100%;
         }
-        .home-parallax parallax-content, menu-parallax parallax-content{
+        .home-parallax .parallax-content, menu-parallax .parallax-content{
                 background:var(--white);
                 color:var(--black);
                 max-width:700px;
@@ -836,7 +836,13 @@ width:100%;
                 height:100%;
         }
 
-
+         .parallax-content{
+               
+                display:flex;
+                flex-direction:column;
+                align-items:center;
+                text-align:center;
+         }
 
         .sushi-parallax {
                 /* The image used */
@@ -1338,12 +1344,30 @@ flex: 1;
         background-attachment: fixed;
         height:550px;
         background-repeat: no-repeat;
-        filter:brightness(49%);
-        z-index:-99;
+
         margin-bottom: 2rem;
+        display:flex;
+        justify-content:center;
+        align-items:center;
 
  }
- .location h3{
+
+.contact-parallax::before{
+        content:"";
+        position:absolute;
+        inset:0;/*top: 0; right: 0; bottom: 0; left: 0;*/;
+        background:rgba(0, 0, 0, 0.4); /* dark overlay */;
+        z-index:1;
+}
+
+.contact-parallax >*{
+        z-index:2;
+        position:relative;
+}
+
+
+
+.location h3{
         color:var(--white);
  }
 .location .map{
@@ -1938,7 +1962,12 @@ flex: 1;
        .parallax-info .btn{
         margin-top:33px;
        }
+.parallax-info ::before{
+             content:"";
+             color:white;
 
+
+}
       
         .testimonial-box img{
                 display:block;
