@@ -690,6 +690,32 @@ let items=[
                                                                                                                             
                                                                                                                             
                                                                                                                             
+                                                                                                                             {
+                                                                                                                                id:52,
+                                                                                                                                image:"images/heronoodles1.jpg",
+                                                                                                                                name:"noodles",
+                                                                                                                                quantity:1,
+                                                                                                                                price:17,
+                                                                                                                                description:"delicious noodles.",
+                                                                                                                                 category:"noodles",
+                                                                                                                                 
+                                                                                                                                 
+                                                                                                                                }, 
+                                                                                                                            
+                                                                                                                            
+                                                                                                                            
+                                                                                                                             {
+                                                                                                                                id:53,
+                                                                                                                                image:"images/herokebab.jpg",
+                                                                                                                                name:"shishkebab",
+                                                                                                                                quantity:1,
+                                                                                                                                price:17,
+                                                                                                                                description:"delicious shish kebab.",
+                                                                                                                                 category:"shishkebab",
+                                                                                                                                 
+                                                                                                                                 
+                                                                                                                                }, 
+                                                                                                                            
                                                                                                                             
                                                                                                                             
                                                                                                                             

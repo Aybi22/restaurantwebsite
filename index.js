@@ -366,7 +366,7 @@ filteredContainer.map(item=>
 displaynewMenu();
 function displaySpecial(){
 let specialMenuContainer=document.querySelector('.special-menu-container');
-let findSpecialMenu=items.filter(item=>item.id===4);
+let findSpecialMenu=items.filter(item=>item.id===52);
 console.log(findSpecialMenu);
 specialMenuContainer.innerHTML=
 findSpecialMenu.map(item=>
@@ -436,7 +436,7 @@ displaySpecial();
 
 function displaySeller(){
 let sellerMenuContainer=document.querySelector('.seller-menu-container');
-let findSpecialMenu=items.filter(item=>item.id===1);
+let findSpecialMenu=items.filter(item=>item.id===53);
 console.log(sellerMenuContainer);
 sellerMenuContainer.innerHTML=
 findSpecialMenu.map(item=>
