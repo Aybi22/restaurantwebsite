@@ -1691,6 +1691,8 @@ flex: 1;
                 font-size:1.5rem;
                 margin:auto;
                 color:var(--white);
+                border-bottom: 1px solid #DE9151;
+                padding:1rem;
         }
         .contacts  li{
                 color:var(--white);
