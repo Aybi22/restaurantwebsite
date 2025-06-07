@@ -2346,11 +2346,12 @@ nav ul a:hover:not(.top-icons, .btn.top) {
        .special-info-content{
         max-width:500px;
         width:100%;
-        margin:33px;
+        margin:33px; 
         display:flex;
         flex-direction:column;
         gap:33px;
         justify-content:center;
+        align-items:center;
 }
 .about{
      width:700px;
@@ -3189,6 +3190,7 @@ nav ul li{
 
   .description-box{
         max-width:none;/*remove max-width*/
+
   }
 
 .section-text{
