@@ -3179,7 +3179,7 @@ nav ul li{
 }
 
 
- .special-menu-container {
+ .special-menu-container, .seller-menu-container {
     height: auto;
     flex-direction: column; /* Optional if items are stacking */
     padding: 1rem; /* Optional: add breathing room */
