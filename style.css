@@ -3193,6 +3193,13 @@ nav ul li{
         padding:2rem;
 }
 
+.special-info{
+      align-items: center;
+      
+      text-align: center;
+      margin:auto;
+}
+
  .special-menu-container, .seller-menu-container {
     height: auto;
     flex-direction: column; /* Optional if items are stacking */
