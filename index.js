@@ -379,15 +379,18 @@ findSpecialMenu.map(item=>
    <div class="special-info">
     <div class="special-info-content">
 
-    <h3>we offer the best hors d'oeuvre</h3>
+    <h3>We provide premium-quality noodles</h3>
     <div class="special-words">
   <span><i class="fa-solid fa-check"></i>healthy</span>
   <span><i class="fa-solid fa-check"></i>tasty</span>
   <span><i class="fa-solid fa-check"></i>excellent</span>
     </div>
   
-<p>Our hors d'oeuvre selection brings you delicious little bites made to share and enjoy, 
-    with a perfect balance of taste and tradition.</p>
+<p>
+ Indulge in our handcrafted noodles, made fresh with the finest ingredients. 
+Every bowl is a perfect blend of tradition, taste, and texture — a true celebration of flavor..
+
+</p>
 
   <div class="special-menu-price">
   <span class="special-price">£${item.price}</span>
@@ -416,11 +419,12 @@ findSpecialMenu.map(item=>
 
   </div>
 <p>
-  Delicately crafted to please both the eye and palate, our hors d’oeuvres are a fusion of creativity and flavor. 
-  Each bite-sized masterpiece offers a unique blend of textures and ingredients — from crisp canapés to savory 
-  tartlets — making them the perfect start to an unforgettable dining experience. 
-  Whether served as a welcome tease or a stylish party feature, 
-  our hors d’oeuvres promise taste that lingers and presentation that impresses..
+ Our noodles are more than just a meal — they’re a culinary experience. 
+ Expertly prepared to deliver unbeatable taste, texture, and satisfaction.
+
+
+Prepared with fresh vegetables, rich spices, and wholesome ingredients, 
+our noodles are as nutritious as they are delicious — perfect for health-conscious food lovers. 
 </p>
 
 </div>
