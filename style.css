@@ -3038,8 +3038,12 @@ nav .hamburger i{
     font-size: 0.9rem;
   }
 
-.order-form
-
+.order-form label{
+        font-size:0.7rem;
+}
+.order-form .order-btn{
+      width:100%;
+}
 
 
 
