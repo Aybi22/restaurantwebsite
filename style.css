@@ -82,7 +82,7 @@
               } 
           
          .contact-parallax .main-title{
-                margin-bottom:57px;
+               
          }
           
           .special-text{
@@ -338,17 +338,19 @@
          .breadcrumb{
             display:flex;
            
-            color:#2E2E3A;
-            font-size:15px;
             gap:0.5rem;
             text-transform:capitalize;  
             margin-left: 1rem; 
+            color:grey;
          }
 
       .breadcrumb a{
-        font-size:0.8rem;
+        font-size:1rem;
         text-transform: lowercase;
          text-transform:capitalize;
+color:grey;
+ font-weight: 400;
+
       }
          
          
@@ -1345,7 +1347,7 @@ flex: 1;
         height:550px;
         background-repeat: no-repeat;
 
-        margin-bottom: 2rem;
+        
         display:flex;
         justify-content:center;
         align-items:center;
@@ -1364,7 +1366,9 @@ flex: 1;
         z-index:2;
         position:relative;
 }
-
+.breadcrumb.contact{
+        margin-top:2rem;
+}
 
 
 .location h3{
@@ -1902,9 +1906,10 @@ flex: 1;
                 flex-grow: 1;
           }
 
-        h3{
+       .contact-section h3{
           display:flex;
-         justify-content:space-between;
+         
+         gap:11px;
         }
         .likes{
                 font-size:0.7rem;
