@@ -3236,6 +3236,7 @@ nav ul li{
   .new-menu-container > * {
     flex: 1 1 45%;            /* flexible items, about half width */
     margin: 10px;
+    height:700px;
   }
 .video-info video {
   width: 100%;
