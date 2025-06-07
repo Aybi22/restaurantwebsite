@@ -1688,13 +1688,20 @@ flex: 1;
                 display:flex;
                 align-items:center;
                 justify-content:center;
-                gap:33px;
+              
                 font-size:1.5rem;
+                margin:auto;
                 color:var(--white);
         }
         .contacts  li{
                 color:var(--white);
                 text-transform:lowercase;
+                display:flex;
+                align-items:center;
+                width:300px;
+        }
+        .contacts i{
+                font-size:1.5rem;
         }
 
         .footer-content{
