@@ -123,9 +123,8 @@ let closeMobile = document.querySelector('.closeMobile');
       }
   }
       
-        
-        
-   
+    
+    
     
    
     
@@ -666,14 +665,26 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-
  
       
       
       
+      const succesMessage=document.querySelector('.success-message');
+  const orderForm=document.querySelector('.order-form');
+ const submitBtn=document.querySelector('.order-btn');
+ submitBtn.addEventListener('click',showSuccessMsge);
+console.log(submitBtn);  
+   
+ function showSuccessMsge(){
+  if(succesMessage && orderForm){
+  
+  orderForm.classList.add('hidden');
+  succesMessage.classList.remove('hidden');
+
+ }
       
-      
-      
+}    
+       
         
         
          

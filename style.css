@@ -250,7 +250,10 @@
        
        Make sure .slide has width: 100% and height: 100%     
 */
-
+.success-message{
+        color:white;
+        font-weight:900;
+}
 
 
          .para{
@@ -353,7 +356,9 @@ color:grey;
 
       }
          
-         
+       .hidden{
+        display:none;
+       }  
          
          .closeIcon{
             color:red;
@@ -3018,7 +3023,11 @@ nav .hamburger i{
                         
                 }
 
-
+               #order-image{
+                max-height:410px;
+                object-fit:cover;
+                width:100%;
+               }
 
                 .dropmenu-items {
     padding: 0.5rem 1rem;
@@ -3029,7 +3038,7 @@ nav .hamburger i{
     font-size: 0.9rem;
   }
 
-
+.order-form
 
 
 
