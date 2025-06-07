@@ -3189,7 +3189,9 @@ nav ul li{
  display:none;
                   
 }
-
+.meal-week-info{
+        padding:2rem;
+}
 
  .special-menu-container, .seller-menu-container {
     height: auto;
