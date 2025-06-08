@@ -102,27 +102,7 @@ fetch('./template.html')
     
     headTemplate.innerHTML=html;
 
- const successMessage=document.querySelector('.success-message');
-  const orderForm=document.querySelector('.order-form');
- const submitBtn=document.querySelector('.order-btn');
-  submitBtn.addEventListener('click',showSuccessMsge);
-
-   
- function showSuccessMsge(){
-  
-  if(successMessage && orderForm){
-   
- orderForm.style.display="none";
- successMessage.style.display="block";
  
-      
-
-setTimeout(()=>{
-  successMessage.style.display="none";
-  document.getElementById('next-btn').style.display="block";
-},6000);
-}
- }
 
    let hamburger = document.querySelector('.hamburger');
    console.log(hamburger);
@@ -144,7 +124,27 @@ let closeMobile = document.querySelector('.closeMobile');
   }
       
     
-    
+  const successMessage=document.querySelector('.success-message');
+  const orderForm=document.querySelector('.order-form');
+ const submitBtn=document.querySelector('.order-btn');
+  submitBtn.addEventListener('click',showSuccessMsge);
+
+   
+ function showSuccessMsge(){
+  
+  if(successMessage && orderForm){
+   
+ orderForm.style.display="none";
+ successMessage.style.display="block";
+ 
+      
+
+setTimeout(()=>{
+  successMessage.style.display="none";
+  document.getElementById('next-btn').style.display="block";
+},6000);
+}
+ }  
     
    
     
