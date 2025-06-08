@@ -2921,6 +2921,16 @@ color:var(--info-paragraph-color)
 .videos-section h3{
         margin-bottom:1rem;
 }
+.big-text{
+        font-size:5rem;
+        font-weight:900;
+        text-transform:capitalize;
+}
+.red-text{
+      font-size:3rem;
+      font-weight:900;
+      
+}
 
 .fade-in {
   opacity: 0;
