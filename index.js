@@ -111,14 +111,18 @@ fetch('./template.html')
  function showSuccessMsge(){
   
   if(successMessage && orderForm){
-   successMessage.style.display="block";
+   
  orderForm.style.display="none";
-
- }
+ successMessage.style.display="block";
+ 
       
-}  
 
-
+setTimeout(()=>{
+  successMessage.style.display="none";
+  document.getElementById('next-btn').style.display="block";
+},6000);
+}
+ }
 
    let hamburger = document.querySelector('.hamburger');
    console.log(hamburger);

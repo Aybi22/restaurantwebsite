@@ -260,6 +260,14 @@
         gap:2rem; 
         
 }
+#next-btn{
+
+          display:block;
+        width:300px;
+      
+        margin:5rem auto;
+       
+}
 
 .success-message p{
       color:white;
@@ -2957,7 +2965,9 @@ color:var(--info-paragraph-color)
         width:100%;
 }
 .order-form{
-        border:2px solid red;
+       display:flex;
+       flex-direction:column;
+       flex:1;
        
        
 }
