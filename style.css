@@ -3179,6 +3179,7 @@ nav .hamburger i{
            }
 
            .new-menu-container{
+                display:flex;
                 flex-direction:column;
                
            }
@@ -3186,11 +3187,13 @@ nav .hamburger i{
           
 
          .meal-week-container{
+                display:flex;
                 flex-direction: column;
               
          }
 
         .testimonial-container{
+                display:flex;
                 flex-direction: column;
                 
         
@@ -3240,6 +3243,7 @@ nav .hamburger i{
 }
     
 .special-menu-container,.seller-menu-container{
+        display:flex;
         flex-direction: column;
         margin:0;
 }
@@ -3249,6 +3253,7 @@ nav .hamburger i{
 }
 .meal-container, .sushi-container, 
       .berries-container, .ramen-container, .shish-container, .noodles-container{
+
       grid-template-columns: 1fr;
       width:100%;
       }
