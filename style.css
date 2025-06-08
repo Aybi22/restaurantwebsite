@@ -3074,7 +3074,7 @@ nav .hamburger i{
                         grid-template-columns: 1fr;
                         
                 }
-
+                 
                 .success-message p{
                         font-size:2rem;
                 }
@@ -3126,6 +3126,12 @@ nav .hamburger i{
                  }
                 .main-title{
                         font-size:2rem;
+
+                }
+
+                .hero-info{
+                 
+                        width:300px;
                 }
                   .footer-content{
                         flex-direction:column;
