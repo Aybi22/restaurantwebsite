@@ -251,10 +251,27 @@
        Make sure .slide has width: 100% and height: 100%     
 */
 .success-message{
-        color:white;
-        font-weight:900;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content: center;
+        margin:auto;
+       
+        gap:2rem; 
+        
 }
 
+.success-message p{
+      color:white;
+        font-weight:900;
+        font-size:4rem; 
+        margin-bottom:2rem;
+}
+.success-message a.btn{
+        width:50%;
+        display:block;
+        margin:auto;
+}
 
          .para{
                 color:red;
@@ -2931,13 +2948,18 @@ color:var(--info-paragraph-color)
       font-weight:900;
       text-transform:capitalize;
       color:#c62828;
-      transform:translate3d();
+      
       
 }
 
 .home-parallax .parallax-content{
         max-width:500px;
         width:100%;
+}
+.order-form{
+        border:2px solid red;
+       
+       
 }
 
 .fade-in {

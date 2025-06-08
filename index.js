@@ -102,6 +102,22 @@ fetch('./template.html')
     
     headTemplate.innerHTML=html;
 
+ const successMessage=document.querySelector('.success-message');
+  const orderForm=document.querySelector('.order-form');
+ const submitBtn=document.querySelector('.order-btn');
+  submitBtn.addEventListener('click',showSuccessMsge);
+
+   
+ function showSuccessMsge(){
+  
+  if(successMessage && orderForm){
+   successMessage.style.display="block";
+ orderForm.style.display="none";
+
+ }
+      
+}  
+
 
 
    let hamburger = document.querySelector('.hamburger');
@@ -580,6 +596,29 @@ window.location.href='basket.html';
 
 displayOrder();
 
+;
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
 
 function validateForm() {
@@ -669,21 +708,7 @@ document.addEventListener('DOMContentLoaded', () => {
       
       
       
-      const succesMessage=document.querySelector('.success-message');
-  const orderForm=document.querySelector('.order-form');
- const submitBtn=document.querySelector('.order-btn');
- submitBtn.addEventListener('click',showSuccessMsge);
-console.log(submitBtn);  
-   
- function showSuccessMsge(){
-  if(succesMessage && orderForm){
   
-  orderForm.classList.add('hidden');
-  succesMessage.classList.remove('hidden');
-
- }
-      
-}    
        
         
         
