@@ -2929,7 +2929,15 @@ color:var(--info-paragraph-color)
 .red-text{
       font-size:3rem;
       font-weight:900;
+      text-transform:capitalize;
+      color:#c62828;
+      transform:translate3d();
       
+}
+
+.home-parallax .parallax-content{
+        max-width:500px;
+        width:100%;
 }
 
 .fade-in {
