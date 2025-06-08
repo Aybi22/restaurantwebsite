@@ -3129,6 +3129,13 @@ nav .hamburger i{
 
                 }
 
+                .videos-section p{
+                       
+                        max-width:300px;
+                        text-align: center;
+                        margin:auto;
+                }
+
                 .hero-info{
                    display:flex;
                    flex-direction: column;
