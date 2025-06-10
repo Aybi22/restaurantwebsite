@@ -391,6 +391,11 @@ color:grey;
             color:red;
             
          }
+
+
+         .close{
+        color:red;
+         }
          .red{
             color:red;
             transform:rotate(180deg);
@@ -2414,6 +2419,10 @@ nav ul a:hover:not(.top-icons, .btn.top) {
                padding: 3rem 2rem;
               
         }
+
+        .description-box p{
+                text-align:center;
+        }
        .special-info-content{
         max-width:500px;
         width:100%;
@@ -2992,7 +3001,7 @@ a.btn, .btn{
     bottom:0;
     top:0;
     position:fixed;
-  
+   height: 100%;
     color:var(--info-paragraph-color);
     transition:ease-out 0.3s;
     display:flex;
@@ -3037,6 +3046,9 @@ a.btn, .btn{
 
    .mobile-box{
     width:100%;
+}
+.show-hamburger{
+     display:none;
 }
 
 nav i{
@@ -3130,9 +3142,10 @@ nav .hamburger i{
                    flex-direction: column;
                    align-items: center;
                     text-align:center;
-                    width:90%;
-                    max-width:300px;
-                    margin:0 auto;
+                    width:100%;
+                    
+                  margin:auto;
+                    padding:0;
 
                        
                 }

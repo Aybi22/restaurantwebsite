@@ -105,24 +105,38 @@ fetch('./template.html')
  
 
    let hamburger = document.querySelector('.hamburger');
+   let close=document.querySelector('.closer')
    console.log(hamburger);
   hamburger.addEventListener('click', showMobileMenu);
   function showMobileMenu() {
       let mobileMenu = document.querySelector('.mobileMenu');
       mobileMenu.classList.toggle('mobile-box');
-
+     hamburger.style.display="none";
+    
+      
   }
 
-let closeMobile = document.querySelector('.closeMobile');
-  closeMobile.addEventListener('click', mobileClose);
+ close = document.querySelector('.closer');
+  close.addEventListener('click', mobileClose);
   function mobileClose(e) {
       let mobileMenu = document.querySelector('.mobileMenu');
   
-      if (e.target === closeMobile) {
+      if (e.target === close) {
+        
           mobileMenu.classList.remove('mobile-box');
-      }
-  }
+           hamburger.classList.remove('show-hamburger'); 
+          
       
+    
+    
+}
+}
+
+
+
+    
+    
+    
     
   const successMessage=document.querySelector('.success-message');
   const orderForm=document.querySelector('.order-form');
