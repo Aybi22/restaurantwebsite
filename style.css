@@ -2415,7 +2415,7 @@ nav ul a:hover:not(.top-icons, .btn.top) {
         }
 
         .description-box{
-               height:700px;
+               min-height:700px;
                 background:#2E2E3A;
                 color:var(--white);
                

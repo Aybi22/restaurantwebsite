@@ -6,7 +6,7 @@ let items=[
     quantity:1,
     price:25,
     description:"taste our delicious sish kebab",
-    category:"sishkebab"
+    category:"shishkebab"
 
     },
 
@@ -169,7 +169,7 @@ let items=[
                                                             quantity:1,
                                                             price:23,
                                                             description:"taste our delicious sish kebab",
-                                                            category:"sishkebab"
+                                                            category:"shishkebab"
    
   
    
@@ -548,7 +548,7 @@ let items=[
                                                                                                                         quantity:1,
                                                                                                                         price:14.99,
                                                                                                                         description:"taste our delicious sish kebab",
-                                                                                                                         category:"sishkebab"
+                                                                                                                         category:"shishkebab"
                                                                                                                         }, 
                                                                             
                                                                                                                         {
@@ -581,7 +581,7 @@ let items=[
                                                                                                                                 quantity:1,
                                                                                                                                 price:12.99,
                                                                                                                                 description:"taste our delicious sish kebab",
-                                                                                                                                 category:"sishkebab"
+                                                                                                                                 category:"shishkebab"
                                                                                                                                  
                                                                                                                                 }, 
                                                                                            
@@ -593,7 +593,7 @@ let items=[
                                                                                                                                 quantity:1,
                                                                                                                                 price:12.99,
                                                                                                                                 description:"taste our delicious sish kebab",
-                                                                                                                                 category:"sishkebab"
+                                                                                                                                 category:"shishkebab"
                                                                                                                                  
                                                                                                                                 }, 
                                                                                            
@@ -683,7 +683,7 @@ let items=[
                                                                                                                                 quantity:1,
                                                                                                                                 price:21,
                                                                                                                                 description:" Juicy, marinated meat skewers grilled to perfection with colorful bell peppers and onions  bold flavor in every bite.",
-                                                                                                                                 category:"sishkebab",
+                                                                                                                                 category:"shishkebab",
                                                                                                                                  location:"newmenucontainer"
                                                                                                                                  
                                                                                                                                 }, 
