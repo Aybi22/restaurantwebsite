@@ -3193,11 +3193,16 @@ nav .hamburger i{
                 flex-direction: column;
               
          }
+ .meal-week-info-content{
+        width:70%;
+        margin: auto;
+ }
+
 
         .testimonial-container{
                 display:flex;
                 flex-direction: column;
-                
+        
         
         
         }

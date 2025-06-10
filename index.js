@@ -123,7 +123,7 @@ fetch('./template.html')
   
       if (e.target === close) {
         
-          mobileMenu.classList.remove('mobile-box');
+          mobileMenu.classList.remove('mobile-box')
            hamburger.classList.remove('show-hamburger'); 
           
       
