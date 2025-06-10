@@ -220,7 +220,7 @@ let items=[
                                                             image:"images/ramen3.jpg",
                                                             name:"ramen",
                                                             quantity:1,
-                                                            price:16.50,
+                                                            price:16,
                                                             description:"taste our delicious cheese",
                                                              category:"ramen"
                                                             

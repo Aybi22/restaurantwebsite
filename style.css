@@ -1509,13 +1509,13 @@ flex: 1;
       }
        .image-info{
         position:absolute;
-        top:67px;
-        left:39px;
-        font-size:22px;
+        top:60px;
+        left:3px;
+        
         text-transform:capitalize;
         color:var(--white);
         font-weight:900;
-        font-size:5rem;
+        font-size:2rem;
         font-family:roboto;
         
        }
