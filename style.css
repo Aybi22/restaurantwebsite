@@ -2396,19 +2396,6 @@ nav ul a:hover:not(.top-icons, .btn.top) {
         }
         
         
-        
-        
-                       
-        
-       
-        
-        
-        
-        
-        
-        
-
-       
         .sortlist-title{
                font-weight:900;
                white-space: nowrap;
@@ -2662,8 +2649,9 @@ width:100%;
         .section-text{
             text-align:center;
             font-size:2rem;
-            font-weight:700;
-            text-transform:uppercase;
+            font-weight:600;
+            text-transform:capitalize;
+       
             max-width:1000px;
             width:100%;
             margin:auto;

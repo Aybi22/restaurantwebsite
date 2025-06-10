@@ -146,22 +146,7 @@ setTimeout(()=>{
 }
  }  
     
-   
-    
-      
-      
-      
-      
-      
-      
-   
-
-
-
-
-
-
-    //event delegation
+  //event delegation
  document.body.addEventListener('click',closeModal);
 function closeModal(e){
   const closeIcon=document.querySelector('.closer');
