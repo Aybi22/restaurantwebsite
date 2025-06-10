@@ -863,7 +863,7 @@ width:100%;
                width:100%;
                height:100%;
         }
-        .home-parallax .parallax-content, menu-parallax .parallax-content{
+         .menu-parallax .parallax-content{
                 background:var(--white);
                 color:var(--black);
                 max-width:700px;
