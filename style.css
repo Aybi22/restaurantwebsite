@@ -659,7 +659,8 @@ width:100%;
         
         .special-menu-container{
                 display:flex;
-                min-height: 700px;/*make container responsive*/
+                align-items: stretch;
+                height: 700px;/*make container responsive*/
                 max-width:100%;
                 width:100%;
                 align-items:center;
@@ -2402,7 +2403,7 @@ nav ul a:hover:not(.top-icons, .btn.top) {
         }
 
         .description-box{
-               min-height:700px;
+               height:700px;
                 background:#2E2E3A;
                 color:var(--white);
                
