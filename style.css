@@ -1330,6 +1330,7 @@ flex: 1;
 }
 .contact-section p{
         color:var(--white);
+        font-size:1rem;
        
 }
  .contactform{
@@ -1350,13 +1351,15 @@ flex: 1;
  .contact-infos{
        background-color: var(--info-paragraph-color);
         color:var(--white);
-        font-size:2rem;
+       font-size:1rem;
      
         max-width:800px;
         width:100%;
        padding:2rem;
         height:100%;
  }
+
+
  .contact-infos h3{
         color:var(--white);
         
@@ -1371,10 +1374,11 @@ flex: 1;
         margin-bottom:1rem;
  }
  .contact-infos p:not(.email){
-        font-size: 1.6rem;
+        font-size: 1rem;
         text-transform:capitalize;
         margin-right:var(--container-gap-size);
-        width:500px;
+        max-width:500px;
+        width:100%;
  }
  .contact-parallax{
         background-image: url('images/contactimage.jpg');
