@@ -1510,12 +1510,12 @@ flex: 1;
        .image-info{
         position:absolute;
         top:60px;
-        left:3px;
+        left:7px;
         
         text-transform:capitalize;
         color:var(--white);
         font-weight:900;
-        font-size:2rem;
+        font-size:2.5rem;
         font-family:roboto;
         
        }
