@@ -3310,7 +3310,7 @@ img{
         
         
         
-    @media screen and (min-width:768px) and (max-width: 1023px)  {
+    @media screen and (min-width:768px) and (max-width: 1024px)  {
       
 .menu-container, .meal-container, .sushi-container, 
       .berries-container, .ramen-container, .shish-container, .noodles-container{
@@ -3385,7 +3385,7 @@ nav ul li{
   }
 .video-info video {
   width: 100%;
-  height: auto;
+  height:auto;
   object-fit: cover;
 }
 
@@ -3394,12 +3394,13 @@ nav ul li{
         flex-direction: row;
         flex-wrap:wrap;
         justify-content:flex-start;
-        align-items: center;
+       
 }
 
 .videos-section-container >* {
        flex:0 1 45%;
        margin:10px;
+       
 }
 
 .testimonial-container{
