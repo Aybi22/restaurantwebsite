@@ -675,7 +675,7 @@ width:100%;
         
          .seller-menu-container{
                 display:flex;
-               height:700px;
+               min-height:700px;
                 max-width:100%;
                 width:100%;
                 align-items:center;
