@@ -1515,7 +1515,7 @@ flex: 1;
         text-transform:capitalize;
         color:var(--white);
         font-weight:900;
-        font-size:2.5rem;
+        font-size:10rem;
         font-family:roboto;
         
        }
@@ -1526,7 +1526,9 @@ flex: 1;
         object-fit:cover;
       }
       .meal-week-info{
-       
+       display:flex;
+       justify-content:center;
+       align-items:center;
         background:#2E2E3A;
         color:white;
         max-width:100%;
@@ -3078,7 +3080,9 @@ nav .hamburger i{
                         grid-template-columns: 1fr;
                         
                 }
-                 
+                 .image-info{
+                        font-size:2rem;
+                 }
                 .success-message p{
                         font-size:2rem;
                 }
@@ -3317,6 +3321,12 @@ img{
       grid-template-columns: repeat(2,1fr);
       width:100%;
       }
+
+ .image-info{
+   font-size:5rem;
+   left:4rem;
+ }
+
 
 .menu-column{
         height:auto;
