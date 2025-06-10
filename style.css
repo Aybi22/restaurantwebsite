@@ -1497,6 +1497,13 @@ flex: 1;
       
 
       }
+
+      .fa-pizza-slice{
+        color:#DE9151;
+        font-size:0.9rem;
+        margin-left:1rem;
+        vertical-align: baseline;
+      }
       
       .meal-week-container .image{
         position:relative;
