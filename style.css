@@ -2719,6 +2719,11 @@ width:100%;
             font-size:16px;
             font-weight:200px;
          }
+
+         .txt h3{
+                display:flex;
+                border:2px solid red;
+         }
     
          .meal-price{
             
