@@ -103,6 +103,9 @@ fetch('./template.html')
     headTemplate.innerHTML=html;
 
  
+ let searchButton=document.getElementById('search-btn');
+
+ searchButton.addEventListener('click',showFood);
 
    let hamburger = document.querySelector('.hamburger');
    let close=document.querySelector('.closer')
@@ -195,7 +198,7 @@ items.forEach(item=>{
 
   <div class="image">
   
-  <img src="${item.image}"  alt="${product.alt}" >
+  <img src="${item.image}"  alt="${item.alt}" >
   </div>
 
   
@@ -249,7 +252,7 @@ filteredCategory.map(item=>
   
   <div class="image">
   
-  <img src="${item.image}" alt="${product.alt}">
+  <img src="${item.image}" alt="${item.alt}">
   </div>
 
   <div class="txt_column">
@@ -289,10 +292,8 @@ filteredCategory.map(item=>
    
       
  // some Tests if at least one element in the array passes a test function (a callback).
- let searchBox=document.getElementById('search');
- let searchButton=document.getElementById('gsearch');
- console.log(searchButton);
-searchButton.addEventListener('click',showFood);
+ 
+
  
 
 
@@ -302,9 +303,9 @@ searchButton.addEventListener('click',showFood);
    return item.name;
  })
 
- let searchBox=document.getElementById('search');
+ let searchInput=document.getElementById('search-input');
 
- const searchValue=searchBox.value.trim().toLowerCase();//convert input to lowercase(makes input value case-sensitive).trim removes whitespace
+ const searchValue=searchInput.value.trim().toLowerCase();//convert input to lowercase(makes input value case-sensitive).trim removes whitespace
  
  if(!searchValue){
    alert('enter food name');
@@ -321,7 +322,7 @@ filtered.map(item=>
   
   <div class="image">
   
-  <img src="${item.image}" alt="${product.alt}"  >
+  <img src="${item.image}" alt="${item.alt}">
   </div>
 
   <div class="txt_column">
@@ -360,7 +361,7 @@ newContainer.innerHTML=
 filteredContainer.map(item=>
 `<div class="menu-container-info">
 <div class="image">
-<img src="${item.image}" alt="${product.alt}">
+<img src="${item.image}" alt="${item.alt}">
 </div>
 
 <div class="menu-container-content">
@@ -426,7 +427,7 @@ Every bowl is a perfect blend of tradition, taste, and texture — a true celebr
 </div>
 
 <div class="image">
-<img src="${item.image}"   alt="${product.alt}" >
+<img src="${item.image}"   alt="${item.alt}" >
 </div>
 
 
@@ -482,7 +483,7 @@ findSpecialMenu.map(item=>
 
   </div>
 <div class="image">
-  <img src="${item.image}"  alt="${product.alt}" >
+  <img src="${item.image}"  alt="${item.alt}" >
 
 </div>
   <div class="description-box">
@@ -527,7 +528,7 @@ console.log(findChefMenu);
 chefContainer.innerHTML=
 findChefMenu.map(item=>
 ` <div class="image">
-  <img src="${item.image}" alt="${product.alt}">
+  <img src="${item.image}" alt="${item.alt}">
 <span class="image-info">£${item.price}</span>
 
 </div>

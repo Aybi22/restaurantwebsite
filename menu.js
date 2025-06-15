@@ -2,7 +2,7 @@ let items=[
     {
     id:1,
     image:"images/shish-kebab-417994_1920.webp",
-    alt:"shishkebab brochette with meat, tomatao and cucumber ";
+    alt:"shishkebab brochette with meat, tomatao and cucumber ",
     name:"sish kebab",
     quantity:1,
     price:25,
@@ -58,7 +58,7 @@ let items=[
                 {
                     id:5,
                     image:"images/fig-3640553_1920.webp" ,
-                    alt:"Slices of bread topped with cheese, figs, seeds, fresh herbs, and a sprinkle of paprika";
+                    alt:"Slices of bread topped with cheese, figs, seeds, fresh herbs, and a sprinkle of paprika",
                     name:"fig",
                     quantity:1,
                     price:22,
@@ -127,7 +127,7 @@ let items=[
                                     {
                                         id:10,
                                         image:"images/croissant.webp",
-                                         alt:"Golden, flaky croissants dusted with powdered sugar, some filled with creamy custard";
+                                         alt:"Golden, flaky croissants dusted with powdered sugar, some filled with creamy custard",
                                         name:"croissant",
                                         quantity:1,
                                         price:5,
@@ -139,7 +139,7 @@ let items=[
                                         {
                                             id:11,
                                             image:"images/bread.webp",
-                                            alt:"A close-up of several round, rustic loaves of bread with golden-brown crusts and a light dusting of flour.";
+                                            alt:"A close-up of several round, rustic loaves of bread with golden-brown crusts and a light dusting of flour.",
 
                                             name:"bread",
                                             quantity:1,
@@ -170,7 +170,7 @@ let items=[
                                                     {
                                                         id:13,
                                                         image:"images/noodles1.webp",
-                                                         alt:"A black bowl filled with ramen noodles, topped with sliced green onions, chopped red chili, crispy bits, and half of a boiled egg";
+                                                         alt:"A black bowl filled with ramen noodles, topped with sliced green onions, chopped red chili, crispy bits, and half of a boiled egg",
                                                         name:"noodles",
                                                         quantity:1,
                                                         price:22,
@@ -218,7 +218,7 @@ let items=[
                                                         {
                                                             id:16,
                                                             image:"images/ramen2.webp",
-                                                             alt:"A black bowl filled with ramen noodles, topped with chopped green onions, red chili slices, and half a boiled egg";
+                                                             alt:"A black bowl filled with ramen noodles, topped with chopped green onions, red chili slices, and half a boiled egg",
                                                             name:"ramen",
                                                             quantity:1,
                                                             price:18.99,
@@ -454,7 +454,7 @@ let items=[
                                                                         {
                                                                             id:29,
                                                                             image:"images/wholemeal.webp",
-                                                                             alt:"";
+                                                                             alt:"",
                                                                             name:"whole meal bread",
                                                                             quantity:1,
                                                                             price:4.50,
@@ -467,7 +467,7 @@ let items=[
                                                                             {
                                                                                 id:30,
                                                                                 image:"images/eclair.webp",
-                                                                                 alt:"";
+                                                                                 alt:"",
                                                                                 name:"eclair",
                                                                                 quantity:1,
                                                                                 price:5.99,
@@ -479,7 +479,7 @@ let items=[
                                                                                 {
                                                                                     id:31,
                                                                                     image:"images/eclair1.webp",
-                                                                                     alt:"";
+                                                                                     alt:"",
                                                                                     name:"eclair",
                                                                                     quantity:1,
                                                                                     price:5.99,
@@ -492,7 +492,7 @@ let items=[
                                                                                     {
                                                                                         id:32,
                                                                                         image:"images/cakeballs.webp",
-                                                                                         alt:"";
+                                                                                         alt:"",
                                                                                         name:"cake balls",
                                                                                         quantity:1,
                                                                                         price:5.99,
@@ -504,7 +504,7 @@ let items=[
                                                                                         {
                                                                                             id:33,
                                                                                             image:"images/candes.webp",
-                                                                                             alt:"";
+                                                                                             alt:"",
                                                                                             name:"candes",
                                                                                             quantity:1,
                                                                                             price:5.99,
@@ -515,7 +515,7 @@ let items=[
                                                                                             {
                                                                                                 id:34,
                                                                                                 image:"images/ramen6.webp",
-                                                                                                 alt:"";
+                                                                                                 alt:"",
                                                                                                 name:"ramen",
                                                                                                 quantity:1,
                                                                                                 price:11.99,
@@ -528,7 +528,7 @@ let items=[
                                                                                                 {
                                                                                                     id:35,
                                                                                                     image:"images/sushi5.webp",
-                                                                                                     alt:"";
+                                                                                                     alt:"",
                                                                                                     name:"sushi",
                                                                                                     quantity:1,
                                                                                                     price:11.99,
@@ -541,7 +541,7 @@ let items=[
                                                                                                     {
                                                                                                         id:36,
                                                                                                         image:"images/sushi6.webp",
-                                                                                                         alt:"";
+                                                                                                         alt:"",
                                                                                                         name:"sushi",
                                                                                                         quantity:1,
                                                                                                         price:13.99,
@@ -552,7 +552,7 @@ let items=[
                                                                                                         {
                                                                                                             id:37,
                                                                                                             image:"images/specialsushi.webp",
-                                                                                                             alt:"";
+                                                                                                             alt:"",
                                                                                                             name:"sushi",
                                                                                                             quantity:1,
                                                                                                             price:17.99,
@@ -564,7 +564,7 @@ let items=[
                                                                                                             {
                                                                                                                 id:38,
                                                                                                                 image:"images/sushi7.webp",
-                                                                                                                 alt:"";
+                                                                                                                 alt:"",
                                                                                                                 name:"sushi",
                                                                                                                 quantity:1,
                                                                                                                 price:16.99,
@@ -578,7 +578,7 @@ let items=[
                                                                                                                 {
                                                                                                                     id:39,
                                                                                                                     image:"images/sushi8.webp",
-                                                                                                                     alt:"";
+                                                                                                                     alt:"",
                                                                                                                     name:"sushi",
                                                                                                                     quantity:1,
                                                                                                                     price:17.99,
@@ -589,7 +589,7 @@ let items=[
                                                                                                                     {
                                                                                                                         id:40,
                                                                                                                         image:"images/sishkebab2.webp",
-                                                                                                                         alt:"";
+                                                                                                                         alt:"",
                                                                                                                         name:"sish kebab",
                                                                                                                         quantity:1,
                                                                                                                         price:14.99,
@@ -600,7 +600,7 @@ let items=[
                                                                                                                         {
                                                                                                                             id:41,
                                                                                                                             image:"images/noodles4.webp",
-                                                                                                                             alt:"";
+                                                                                                                             alt:"",
                                                                                                                             name:"noodles",
                                                                                                                             quantity:1,
                                                                                                                             price:10.99,
@@ -624,7 +624,7 @@ let items=[
                                                                                                                             {
                                                                                                                                 id:43,
                                                                                                                                 image:"images/kebab4.webp",
-                                                                                                                                 alt:"";
+                                                                                                                                 alt:"",
                                                                                                                                 name:"shishkebab",
                                                                                                                                 quantity:1,
                                                                                                                                 price:12.99,
@@ -637,7 +637,7 @@ let items=[
                                                                                                                             {
                                                                                                                                 id:44,
                                                                                                                                 image:"images/kebab5.webp",
-                                                                                                                                 alt:"";
+                                                                                                                                 alt:"",
                                                                                                                                 name:"shishkebab",
                                                                                                                                 quantity:1,
                                                                                                                                 price:12.99,
@@ -652,7 +652,7 @@ let items=[
                                                                                                                                {
                                                                                                                                 id:45,
                                                                                                                                 image:"images/berries1.webp",
-                                                                                                                                 alt:"";
+                                                                                                                                 alt:"",
                                                                                                                                 name:"berries",
                                                                                                                                 quantity:1,
                                                                                                                                 price:12.99,
@@ -665,7 +665,7 @@ let items=[
                                                                                                                  {
                                                                                                                                 id:46,
                                                                                                                                 image:"images/berries2.webp",
-                                                                                                                                 alt:"";
+                                                                                                                                 alt:"",
                                                                                                                                 name:"berries",
                                                                                                                                 quantity:1,
                                                                                                                                 price:12.99,
@@ -680,7 +680,7 @@ let items=[
                                                                                                                                  {
                                                                                                                                 id:47,
                                                                                                                                 image:"images/berries3.webp",
-                                                                                                                                 alt:"";
+                                                                                                                                 alt:"",
                                                                                                                                 name:"berries",
                                                                                                                                 quantity:1,
                                                                                                                                 price:12.99,
@@ -696,7 +696,7 @@ let items=[
                                                                                                                                  {
                                                                                                                                 id:48,
                                                                                                                                 image:"images/berries4.webp",
-                                                                                                                                 alt:"";
+                                                                                                                                 alt:"",
                                                                                                                                 name:"berries",
                                                                                                                                 quantity:1,
                                                                                                                                 price:12.99,
@@ -709,7 +709,7 @@ let items=[
                                                                                                                              {
                                                                                                                                 id:49,
                                                                                                                                 image:"images/berries5.webp",
-                                                                                                                                 alt:"";
+                                                                                                                                 alt:"",
                                                                                                                                 name:"berries",
                                                                                                                                 quantity:1,
                                                                                                                                 price:12.99,
@@ -721,7 +721,7 @@ let items=[
                                                                                                                              {
                                                                                                                                 id:50,
                                                                                                                                 image:"images/berries6.webp",
-                                                                                                                                 alt:"";
+                                                                                                                                 alt:"",
                                                                                                                                 name:"berries",
                                                                                                                                 quantity:1,
                                                                                                                                 price:12.99,
@@ -734,7 +734,7 @@ let items=[
                                                                                                                              {
                                                                                                                                 id:51,
                                                                                                                                 image:"images/sish.webp",
-                                                                                                                                 alt:"";
+                                                                                                                                 alt:"",
                                                                                                                                 name:"shishkebab",
                                                                                                                                 quantity:1,
                                                                                                                                 price:21,
@@ -749,7 +749,7 @@ let items=[
                                                                                                                              {
                                                                                                                                 id:52,
                                                                                                                                 image:"images/heronoodles1.webp",
-                                                                                                                                 alt:"";
+                                                                                                                                 alt:"",
                                                                                                                                 name:"noodles",
                                                                                                                                 quantity:1,
                                                                                                                                 price:17,
@@ -764,7 +764,7 @@ let items=[
                                                                                                                              {
                                                                                                                                 id:53,
                                                                                                                                 image:"images/herokebab.webp",
-                                                                                                                                 alt:"";
+                                                                                                                                 alt:"",
                                                                                                                                 name:"shishkebab",
                                                                                                                                 quantity:1,
                                                                                                                                 price:17,
