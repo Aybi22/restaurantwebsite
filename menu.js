@@ -588,12 +588,12 @@ let items=[
                                                                             
                                                                                                                     {
                                                                                                                         id:40,
-                                                                                                                        image:"images/sishkebab2.webp",
+                                                                                                                        image:"images/shishkebab2.webp",
                                                                                                                          alt:"",
-                                                                                                                        name:"sish kebab",
+                                                                                                                        name:"shishkebab",
                                                                                                                         quantity:1,
                                                                                                                         price:14.99,
-                                                                                                                        description:"taste our delicious sish kebab",
+                                                                                                                        description:"taste our delicious shish kebab",
                                                                                                                          category:"shishkebab"
                                                                                                                         }, 
                                                                             
