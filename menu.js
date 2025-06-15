@@ -775,7 +775,18 @@ let items=[
                                                                                                                                 }, 
                                                                                                                             
                                                                                                                             
-                                                                                                                            
+                                                                                                                             {
+                                                                                                                                id:54,
+                                                                                                                                image:"images/burger3.webp",
+                                                                                                                                 alt:"A gourmet burger with lettuce, tomato, red onion, sauce, and beef patty",
+                                                                                                                                name:"burger",
+                                                                                                                                quantity:1,
+                                                                                                                                price:7,
+                                                                                                                                description:"delicious beef burger.",
+                                                                                                                                 category:"burger",
+                                                                                                                                 
+                                                                                                                                 
+                                                                                                                                }, 
                                                                                                                             
                                                                                                                             
                                                                                                                             
