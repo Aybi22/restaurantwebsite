@@ -1305,10 +1305,7 @@ flex: 1;
        
         
  }
- .menu-column{
-        
-      
- }
+ 
 
  .hero-section a.btn{
         max-width:200px;
@@ -2713,27 +2710,29 @@ width:100%;
                 cursor:pointer;
         }
          .txt p{
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
-            font-size:16px;
+           
+           text-transform: capitalize;
+           max-width:100%;
+           width:100%;
+           margin:auto;
+            font-size:1rem;
             font-weight:200px;
+           
          }
 
          .txt h3{
                 display:flex;
-                border:2px solid red;
+               font-family: Montserrat;
+                justify-content: center;
+                align-items:center;
+                gap:1rem;
          }
     
          .meal-price{
             
-            text-align:center;
-            margin-left:22px;
-            border-radius: 100%;
-            padding:3px;
-            display:flex;
-            justify-content:center;
-            align-items:center;
+            
+          
+           
             font-family: Montserrat;
             font-size: 1.5rem;
             
