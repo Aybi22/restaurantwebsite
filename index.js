@@ -195,7 +195,7 @@ items.forEach(item=>{
 
   <div class="image">
   
-  <img src=${item.image}>
+  <img src="${item.image}"  alt="${product.alt}" >
   </div>
 
   
@@ -249,7 +249,7 @@ filteredCategory.map(item=>
   
   <div class="image">
   
-  <img src=${item.image}>
+  <img src="${item.image}" alt="${product.alt}">
   </div>
 
   <div class="txt_column">
@@ -321,7 +321,7 @@ filtered.map(item=>
   
   <div class="image">
   
-  <img src=${item.image}>
+  <img src="${item.image}" alt="${product.alt}"  >
   </div>
 
   <div class="txt_column">
@@ -360,7 +360,7 @@ newContainer.innerHTML=
 filteredContainer.map(item=>
 `<div class="menu-container-info">
 <div class="image">
-<img src="${item.image}">
+<img src="${item.image}" alt="${product.alt}">
 </div>
 
 <div class="menu-container-content">
@@ -426,7 +426,7 @@ Every bowl is a perfect blend of tradition, taste, and texture — a true celebr
 </div>
 
 <div class="image">
-<img src="${item.image}">
+<img src="${item.image}"   alt="${product.alt}" >
 </div>
 
 
@@ -482,7 +482,7 @@ findSpecialMenu.map(item=>
 
   </div>
 <div class="image">
-  <img src="${item.image}">
+  <img src="${item.image}"  alt="${product.alt}" >
 
 </div>
   <div class="description-box">
@@ -527,7 +527,7 @@ console.log(findChefMenu);
 chefContainer.innerHTML=
 findChefMenu.map(item=>
 ` <div class="image">
-  <img src="${item.image}">
+  <img src="${item.image}" alt="${product.alt}">
 <span class="image-info">£${item.price}</span>
 
 </div>
