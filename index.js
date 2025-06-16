@@ -124,6 +124,17 @@ fetch("./template.html")
       }
     }
 
+    orderForm.addEventListener("submit", function (e) {
+      // Check if form is valid
+      if (!orderForm.checkValidity()) {
+        orderForm.reportValidity();
+        return;
+      }
+
+      // If valid, show success message
+      showSuccessMsge();
+    });
+
     function showSuccessMsge() {
       if (successMessage && orderForm) {
         orderForm.style.display = "none";
