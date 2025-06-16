@@ -2732,6 +2732,13 @@ width:100%;
                 align-items:center;
                 gap:1rem;
          }
+
+         .new-menu-container h3{
+               
+                display:flex;
+                align-items: center;
+                justify-content:space-between;
+         }
     
          .meal-price{
             
