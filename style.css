@@ -490,7 +490,7 @@ color:grey;
                 background-position:center;
                 background-size:cover;
                 background-repeat:no-repeat;
-                height:500px;
+                height:700px;
                 width:100%;
                margin-bottom:2rem;
                 color:white;
@@ -503,21 +503,26 @@ color:grey;
 
   
  .hero-section.about{
-background-image: url('images/pasta.jpg');
-
+background-image: url('images/pasta.webp');
 width:100%;
+
  }
+ .hero-section.about .menu-title{
+        margin-bottom:2rem;
+ }
+
+
  .hero-section.menu{
- background-image: url('images/menuhero.jpg' );
+ background-image: url('images/menuhero.webp' );
  
  }
  .hero-section.sushi{
-        background-image: url('images/herosushi.jpg');
+        background-image: url('images/herosushi.webp');
         
         }
 
 .hero-section.berries{
-        background-image: url('images/berries1.jpg');
+        background-image: url('images/berries1.webp');
         
         }
 

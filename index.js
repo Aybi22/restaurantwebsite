@@ -74,6 +74,11 @@ document.addEventListener("DOMContentLoaded", () => {
   displayOrder();
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  displayVegan();
+  displayOrder();
+});
+
 fetch("./template.html")
   .then((response) => response.text())
   .then((html) => {
@@ -252,6 +257,44 @@ function addText(event) {
   displayOrder();
 }
 
+function displayVegan() {
+  let veganContainer = document.querySelector(".vegan-container");
+  let filteredVegan = items.filter((item) => item.category === "vegan");
+  console.log(filteredVegan);
+
+  let veganBox = document.createElement("div");
+
+  veganContainer.innerHTML = filteredVegan
+    .map(
+      (item) =>
+        ` <div class="menu-column">
+  
+  <div class="image">
+  
+  <img src="${item.image}" alt="${item.alt}">
+  </div>
+
+  <div class="txt_column">
+
+  <div class="txt">
+  <h3>${item.name}<span class="meal-price">£${item.price}</span></h3>
+  <p>${item.description}</p>
+  </div>
+ <button class="btn" data-product-id=${item.id}  data-name=${item.name} 
+   data-price=${item.price} data-image=${item.image}>order now   <i class="fa-solid fa-cart-shopping"></i> </button>
+   </div>
+      </div>
+          
+      
+        
+  `
+    )
+    .join("");
+  veganContainer.appendChild(veganBox);
+  displayOrder();
+}
+
+displayVegan();
 // map() method is used to create a new array
 
 //Checks if a specific value exists in an array.
