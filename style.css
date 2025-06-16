@@ -3066,6 +3066,9 @@ color:var(--info-paragraph-color)
                    margin:4rem auto;
        
 }
+.cook{
+       width:auto;
+}
 
 .order-form input{
         padding:0.9rem;
