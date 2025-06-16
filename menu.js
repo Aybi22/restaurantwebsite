@@ -607,18 +607,18 @@ let items = [
   {
     id: 55,
     image: "images/vegan8.webp",
-    alt: "A gourmet burger with lettuce, tomato, red onion, sauce, and beef patty",
+    alt: " sliced grilled chicken, avocado, cherry tomatoes, yellow tomatoes, mixed greens, and grilled chicken cubes, topped with black sesame seeds",
     name: "vegan salad",
     quantity: 1,
     price: 11,
-    description: "deliciousvegan salad.",
+    description: "delicious vegan salad.",
     category: "vegan",
   },
 
   {
     id: 56,
     image: "images/veganramen.webp",
-    alt: "A gourmet burger with lettuce, tomato, red onion, sauce, and beef patty",
+    alt: "noodles, grilled tofu slices, bok choy, roasted carrots, a red sauce, and topped with chopped green onions sits ",
     name: "vegan ramen",
     quantity: 1,
     price: 11,
@@ -629,7 +629,7 @@ let items = [
   {
     id: 57,
     image: "images/veganburger.webp",
-    alt: "A gourmet burger with lettuce, tomato, red onion, sauce, and beef patty",
+    alt: "vegan burger with tomato and cucumber",
     name: "vegan burger",
     quantity: 1,
     price: 11,
