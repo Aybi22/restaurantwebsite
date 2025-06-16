@@ -2735,10 +2735,7 @@ width:100%;
     
          .meal-price{
             
-            
-          
-           
-            font-family: Montserrat;
+            font-family: Montserrat !important;
             font-size: 1.5rem;
             
          }
