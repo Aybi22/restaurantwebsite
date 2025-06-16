@@ -1,23 +1,19 @@
-
-import items from'./menu.js';
-import {filteredByCategorySushi} from'./sushi.js';
-import {filteredByCategoryShishKebab} from'./shishkebab.js';
-import { filteredByCategoryBerries } from'./berries.js';
-import { filteredByCategoryRamen } from'./ramen.js';
-import { filteredByCategoryNoodles } from'./noodles.js';
+import items from "./menu.js";
+import { filteredByCategorySushi } from "./sushi.js";
+import { filteredByCategoryShishKebab } from "./shishkebab.js";
+import { filteredByCategoryBerries } from "./berries.js";
+import { filteredByCategoryRamen } from "./ramen.js";
+import { filteredByCategoryNoodles } from "./noodles.js";
 
 //want your code to run as soon as the page structure is ready, without waiting for large files (e.g., images) to load.//
 
-
-
 document.addEventListener("DOMContentLoaded", () => {
-
-const text = document.querySelector(".main-title");
+  const text = document.querySelector(".main-title");
   const chars = text.textContent.split("");
 
   text.textContent = ""; // clear it
 
-  chars.forEach(char => {
+  chars.forEach((char) => {
     const span = document.createElement("span");
     span.textContent = char;
     text.appendChild(span);
@@ -27,172 +23,139 @@ const text = document.querySelector(".main-title");
     opacity: 0,
     y: 20,
     stagger: 0.05,
-    duration: 0.6
+    duration: 0.6,
   });
 
-gsap.to(".mylogo", { duration: 1, x: 100, opacity: 1 });
-
-
-
-
+  gsap.to(".mylogo", { duration: 1, x: 100, opacity: 1 });
 });
 
-
-
-
-
-document.addEventListener('DOMContentLoaded',()=>{
-filteredByCategorySushi();
-displayOrder();
-
+document.addEventListener("DOMContentLoaded", () => {
+  filteredByCategorySushi();
+  displayOrder();
 });
 
-document.addEventListener('DOMContentLoaded',()=>{
-filteredByCategoryShishKebab();
-displayOrder();
-
+document.addEventListener("DOMContentLoaded", () => {
+  filteredByCategoryShishKebab();
+  displayOrder();
 });
 
-document.addEventListener('DOMContentLoaded',()=>{
-filteredByCategoryRamen();
-displayOrder();
+document.addEventListener("DOMContentLoaded", () => {
+  filteredByCategoryRamen();
+  displayOrder();
 });
 
-document.addEventListener('DOMContentLoaded',()=>{
-filteredByCategoryBerries();
-displayOrder();
-
+document.addEventListener("DOMContentLoaded", () => {
+  filteredByCategoryBerries();
+  displayOrder();
 });
 
-
-document.addEventListener('DOMContentLoaded',()=>{
-filteredByCategoryNoodles();
-displayOrder();
-
+document.addEventListener("DOMContentLoaded", () => {
+  filteredByCategoryNoodles();
+  displayOrder();
 });
 
-
-document.addEventListener('DOMContentLoaded',()=>{
-displaynewMenu();
-displayOrder();
+document.addEventListener("DOMContentLoaded", () => {
+  displaynewMenu();
+  displayOrder();
 });
 
-
-document.addEventListener('DOMContentLoaded',()=>{
-displaySpecial();
-displayOrder();
+document.addEventListener("DOMContentLoaded", () => {
+  displaySpecial();
+  displayOrder();
 });
 
-document.addEventListener('DOMContentLoaded',()=>{
-displaySeller();
-displayOrder();
+document.addEventListener("DOMContentLoaded", () => {
+  displaySeller();
+  displayOrder();
 });
 
-document.addEventListener('DOMContentLoaded',()=>{
-displayChefSpecial();
-displayOrder();
+document.addEventListener("DOMContentLoaded", () => {
+  displayChefSpecial();
+  displayOrder();
 });
 
+fetch("./template.html")
+  .then((response) => response.text())
+  .then((html) => {
+    //inside a .then() block, a variable is only usable inside that block.
+    let headTemplate = document.getElementById("head-template");
 
+    headTemplate.innerHTML = html;
 
-fetch('./template.html')
-.then(response=>response.text())
-.then(html=>{  //inside a .then() block, a variable is only usable inside that block.
-    let headTemplate=document.getElementById('head-template');
-    
-    headTemplate.innerHTML=html;
+    const successMessage = document.querySelector(".success-message");
+    const orderForm = document.querySelector(".order-form");
+    const submitBtn = document.querySelector(".order-btn");
+    console.log(submitBtn);
+    submitBtn.addEventListener("click", showSuccessMsge);
 
- 
- let searchButton=document.getElementById('search-btn');
+    let hamburger = document.querySelector(".hamburger");
+    let close = document.querySelector(".closer");
+    console.log(hamburger);
+    hamburger.addEventListener("click", showMobileMenu);
+    function showMobileMenu() {
+      let mobileMenu = document.querySelector(".mobileMenu");
+      mobileMenu.classList.toggle("mobile-box");
+      hamburger.style.display = "none";
+    }
 
- searchButton.addEventListener('click',showFood);
+    close = document.querySelector(".closer");
+    close.addEventListener("click", mobileClose);
+    function mobileClose(e) {
+      let mobileMenu = document.querySelector(".mobileMenu");
 
-   let hamburger = document.querySelector('.hamburger');
-   let close=document.querySelector('.closer')
-   console.log(hamburger);
-  hamburger.addEventListener('click', showMobileMenu);
-  function showMobileMenu() {
-      let mobileMenu = document.querySelector('.mobileMenu');
-      mobileMenu.classList.toggle('mobile-box');
-     hamburger.style.display="none";
-    
-      
-  }
-
- close = document.querySelector('.closer');
-  close.addEventListener('click', mobileClose);
-  function mobileClose(e) {
-      let mobileMenu = document.querySelector('.mobileMenu');
-  
       if (e.target === close) {
-        
-          mobileMenu.classList.remove('mobile-box')
-           hamburger.classList.remove('show-hamburger'); 
-          
-      
-    
-    
-}
-}
+        mobileMenu.classList.remove("mobile-box");
+        hamburger.classList.remove("show-hamburger");
+      }
+    }
 
+    //event delegation
+    document.body.addEventListener("click", closeModal);
+    function closeModal(e) {
+      const closeIcon = document.querySelector(".closer");
 
+      if (
+        e.target.classList.contains("closer") ||
+        e.target.classList.contains("modal") ||
+        e.target.classList.contains("overlay")
+      ) {
+        modal.classList.toggle("show-modal");
+        overlay.style.visibility = "hidden";
+      }
+    }
 
-    
-    
-    
-    
-  const successMessage=document.querySelector('.success-message');
-  const orderForm=document.querySelector('.order-form');
- const submitBtn=document.querySelector('.order-btn');
-  submitBtn.addEventListener('click',showSuccessMsge);
+    function showSuccessMsge() {
+      if (successMessage && orderForm) {
+        orderForm.style.display = "none";
+        successMessage.style.display = "block";
 
-   
- function showSuccessMsge(){
-  
-  if(successMessage && orderForm){
-   
- orderForm.style.display="none";
- successMessage.style.display="block";
- 
-      
+        setTimeout(() => {
+          successMessage.style.display = "none";
+          document.getElementById("next-btn").style.display = "block";
+        }, 6000);
+      }
+    }
+  });
 
-setTimeout(()=>{
-  successMessage.style.display="none";
-  document.getElementById('next-btn').style.display="block";
-},6000);
-}
- }  
-    
-  //event delegation
- document.body.addEventListener('click',closeModal);
-function closeModal(e){
-  const closeIcon=document.querySelector('.closer');
+let searchButton = document.getElementById("search-btn");
 
-  if(e.target.classList.contains('closer')|| e.target.classList.contains('modal')|| e.target.classList.contains('overlay')){
-    modal.classList.toggle('show-modal');
-    overlay.style.visibility="hidden";
-   
-  }
-}
+searchButton.addEventListener("click", showFood);
+console.log(searchButton);
 
-});
-fetch('./footer.html')
-    .then(response=>response.text())
-    .then(html=>{
-        let footer=document.querySelector('.footer');
-        
-        footer.innerHTML=html;
-    
-      });
-       
+fetch("./footer.html")
+  .then((response) => response.text())
+  .then((html) => {
+    let footer = document.querySelector(".footer");
 
-function displayMenu(){
-items.forEach(item=>{
-  
-  let container=document.querySelector('.menu-container');
-  let newBox=document.createElement('div');
-  newBox.classList.add('box');
-  newBox.innerHTML=`
+    footer.innerHTML = html;
+  });
+
+function displayMenu() {
+  items.forEach((item) => {
+    let container = document.querySelector(".menu-container");
+    let newBox = document.createElement("div");
+    newBox.classList.add("box");
+    newBox.innerHTML = `
  
 <div class="menu-column">
 
@@ -215,40 +178,38 @@ items.forEach(item=>{
     
 
   `;
- container.appendChild(newBox);
- });
- displayOrder();
-
+    container.appendChild(newBox);
+  });
+  displayOrder();
 }
 displayMenu();
 
+const sortList = document.querySelector(".sort-list");
+sortList.addEventListener("click", addText);
 
+function addText(event) {
+  let categoryTitle = document.querySelector(".category-title");
 
-const sortList=document.querySelector('.sort-list');
-         sortList.addEventListener('click',addText);
-         
-         function addText(event){
-          
-           let categoryTitle=document.querySelector('.category-title');
-          
-         let text= event.target.getAttribute('id');
-         if(text){
-         categoryTitle.textContent=text;
-         categoryTitle.classList.add('category-text');
-         }
-        
-        let allParas=document.getElementsByTagName('div');
-        let paras=event.target;
-        for( paras of allParas){
-         if(paras===event.target){
-         let filteredCategory=items.filter(item=>item.category===paras.getAttribute('id'));
- let container=document.querySelector('.menu-container');
-container.innerHTML="";
-           console.log(filteredCategory);
-container.innerHTML=
-filteredCategory.map(item=>
-        
-  ` <div class="menu-column">
+  let text = event.target.getAttribute("id");
+  if (text) {
+    categoryTitle.textContent = text;
+    categoryTitle.classList.add("category-text");
+  }
+
+  let allParas = document.getElementsByTagName("div");
+  let paras = event.target;
+  for (paras of allParas) {
+    if (paras === event.target) {
+      let filteredCategory = items.filter(
+        (item) => item.category === paras.getAttribute("id")
+      );
+      let container = document.querySelector(".menu-container");
+      container.innerHTML = "";
+      console.log(filteredCategory);
+      container.innerHTML = filteredCategory
+        .map(
+          (item) =>
+            ` <div class="menu-column">
   
   <div class="image">
   
@@ -266,58 +227,47 @@ filteredCategory.map(item=>
    </div>
       </div>
           
-      `).join('');
-          
-  
-        }
-          
-      if(paras===event.target){
-          paras.classList.add("para");
-        
-         }else{
-          paras.classList.remove("para");
-         }
-        
-        }
-        displayOrder();
-        }
-    
-// map() method is used to create a new array 
+      `
+        )
+        .join("");
+    }
 
-    
-    //Checks if a specific value exists in an array.
+    if (paras === event.target) {
+      paras.classList.add("para");
+    } else {
+      paras.classList.remove("para");
+    }
+  }
+  displayOrder();
+}
 
-  // some Tests if at least one element in the array passes a test function (a callback).
+// map() method is used to create a new array
 
-   
-      
- // some Tests if at least one element in the array passes a test function (a callback).
- 
+//Checks if a specific value exists in an array.
 
- 
+// some Tests if at least one element in the array passes a test function (a callback).
 
+// some Tests if at least one element in the array passes a test function (a callback).
 
- function showFood(){
-   
- let mapItems=items.map(item=>{
-   return item.name;
- })
+function showFood() {
+  let mapItems = items.map((item) => {
+    return item.name;
+  });
 
- let searchInput=document.getElementById('search-input');
+  let searchInput = document.getElementById("search-input");
 
- const searchValue=searchInput.value.trim().toLowerCase();//convert input to lowercase(makes input value case-sensitive).trim removes whitespace
- 
- if(!searchValue){
-   alert('enter food name');
- }else if(mapItems.includes(searchValue)){
- 
-   let container=document.querySelector('.menu-container');
+  const searchValue = searchInput.value.trim().toLowerCase(); //convert input to lowercase(makes input value case-sensitive).trim removes whitespace
 
- let filtered=items.filter(item=>item.name===searchValue); 
-container.innerHTML=
-filtered.map(item=>
-   
-     `
+  if (!searchValue) {
+    alert("enter food name");
+  } else if (mapItems.includes(searchValue)) {
+    let container = document.querySelector(".menu-container");
+
+    let filtered = items.filter((item) => item.name === searchValue);
+    container.innerHTML = filtered
+      .map(
+        (item) =>
+          `
      <div class="menu-column">
   
   <div class="image">
@@ -340,26 +290,25 @@ filtered.map(item=>
      
 
 
-     `).join('');
-   
-   
-   }
+     `
+      )
+      .join("");
+  }
 
-displayOrder();
-
+  displayOrder();
 }
 
-
-
-
-function displaynewMenu(){
-let newContainer=document.querySelector('.new-menu-container');
-console.log(newContainer);
-let filteredContainer=items.filter(item=>item.location==="newmenucontainer");
-console.log(filteredContainer);
-newContainer.innerHTML=
-filteredContainer.map(item=>
-`<div class="menu-container-info">
+function displaynewMenu() {
+  let newContainer = document.querySelector(".new-menu-container");
+  console.log(newContainer);
+  let filteredContainer = items.filter(
+    (item) => item.location === "newmenucontainer"
+  );
+  console.log(filteredContainer);
+  newContainer.innerHTML = filteredContainer
+    .map(
+      (item) =>
+        `<div class="menu-container-info">
 <div class="image">
 <img src="${item.image}" alt="${item.alt}">
 </div>
@@ -379,18 +328,20 @@ filteredContainer.map(item=>
    data-price=${item.price} data-image=${item.image}>order now</a>
 
 </div>
-`).join('');
+`
+    )
+    .join("");
 }
 
 displaynewMenu();
-function displaySpecial(){
-let specialMenuContainer=document.querySelector('.special-menu-container');
-let findSpecialMenu=items.filter(item=>item.id===52);
-console.log(findSpecialMenu);
-specialMenuContainer.innerHTML=
-findSpecialMenu.map(item=>
-
-`
+function displaySpecial() {
+  let specialMenuContainer = document.querySelector(".special-menu-container");
+  let findSpecialMenu = items.filter((item) => item.id === 52);
+  console.log(findSpecialMenu);
+  specialMenuContainer.innerHTML = findSpecialMenu
+    .map(
+      (item) =>
+        `
 
 
 
@@ -451,19 +402,21 @@ our noodles are as nutritious as they are delicious — perfect for health-consc
 
 </div>
 
-`).join('');
-
+`
+    )
+    .join("");
 }
 
 displaySpecial();
 
-function displaySeller(){
-let sellerMenuContainer=document.querySelector('.seller-menu-container');
-let findSpecialMenu=items.filter(item=>item.id===53);
-console.log(sellerMenuContainer);
-sellerMenuContainer.innerHTML=
-findSpecialMenu.map(item=>
-`
+function displaySeller() {
+  let sellerMenuContainer = document.querySelector(".seller-menu-container");
+  let findSpecialMenu = items.filter((item) => item.id === 53);
+  console.log(sellerMenuContainer);
+  sellerMenuContainer.innerHTML = findSpecialMenu
+    .map(
+      (item) =>
+        `
 
   <div class="special-text">
     <div class="slide-container">
@@ -513,21 +466,22 @@ findSpecialMenu.map(item=>
   
 </div>
 
-`).join('');
+`
+    )
+    .join("");
 }
 
 displaySeller();
 
+function displayChefSpecial() {
+  let chefContainer = document.querySelector(".meal-week-container");
 
-function displayChefSpecial(){
-
-let chefContainer=document.querySelector('.meal-week-container');
-
-let findChefMenu=items.filter(item=>item.id===17);
-console.log(findChefMenu);
-chefContainer.innerHTML=
-findChefMenu.map(item=>
-` <div class="image">
+  let findChefMenu = items.filter((item) => item.id === 17);
+  console.log(findChefMenu);
+  chefContainer.innerHTML = findChefMenu
+    .map(
+      (item) =>
+        ` <div class="image">
   <img src="${item.image}" alt="${item.alt}">
 <span class="image-info">£${item.price}</span>
 
@@ -566,62 +520,36 @@ findChefMenu.map(item=>
  </div>
 
 
-`).join('');
+`
+    )
+    .join("");
 }
 
 displayChefSpecial();
 
-function displayOrder(){
+function displayOrder() {
+  let button = document.querySelectorAll(".btn");
+  console.log(button);
+  button.forEach((btn) => {
+    btn.addEventListener("click", show);
+    function show(e) {
+      const image = e.target.dataset.image;
+      const name = e.target.dataset.name;
+      const price = e.target.dataset.price;
+      console.log(price);
 
-let button=document.querySelectorAll('.btn');
-console.log(button);
-button.forEach((btn) =>{
- 
-btn.addEventListener('click',show);
-function show(e){
-const image=e.target.dataset.image;
-const name=e.target.dataset.name;
-const price=e.target.dataset.price;
-console.log(price);
+      localStorage.setItem("selectedItemImage", image);
+      localStorage.setItem("selectedItemName", name);
+      localStorage.setItem("selectedItemPrice", price);
 
-localStorage.setItem('selectedItemImage',image);
-localStorage.setItem('selectedItemName',name);
-localStorage.setItem('selectedItemPrice',price);
-
-
-//Use localStorage to persist data between pages.
-// DOM scope is per page, and JavaScript doesn’t remember your selections across pages unless you store them explicitly.
-window.location.href='basket.html';
-}
-
-});
-
+      //Use localStorage to persist data between pages.
+      // DOM scope is per page, and JavaScript doesn’t remember your selections across pages unless you store them explicitly.
+      window.location.href = "basket.html";
+    }
+  });
 }
 
 displayOrder();
-
-;
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*
 
@@ -673,63 +601,36 @@ function validateForm() {
 
 */
 
-const cards = document.querySelectorAll('.vegan-box');
+const cards = document.querySelectorAll(".vegan-box");
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
+        entry.target.classList.add("visible");
       }
     });
-  }, { threshold: 0.1 });
+  },
+  { threshold: 0.1 }
+);
 
-  cards.forEach(card => {
-    card.classList.add('fade-in');
-    observer.observe(card);
-  });
+cards.forEach((card) => {
+  card.classList.add("fade-in");
+  observer.observe(card);
+});
 
-
-window.addEventListener('click',(e)=>{
-  if(e.target.classList.contains('btn')){
-    document.body.style.backgroundColor="pink";
+window.addEventListener("click", (e) => {
+  if (e.target.classList.contains("btn")) {
+    document.body.style.backgroundColor = "pink";
   }
-
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const dropToggle = document.querySelector(".dropdown-toggle");
+  const dropMenu = document.querySelector(".dropmenu-items");
 
-
-document.addEventListener('DOMContentLoaded', () => {
-  const dropToggle = document.querySelector('.dropdown-toggle');
-  const dropMenu = document.querySelector('.dropmenu-items');
-
-  dropToggle.addEventListener('click', (e) => {
+  dropToggle.addEventListener("click", (e) => {
     e.preventDefault(); // prevent navigation on click
-    dropMenu.classList.toggle('show');
+    dropMenu.classList.toggle("show");
   });
 });
-
- 
-      
-      
-      
-  
-       
-        
-        
-         
-         
-     
-      
-
-  
-      
-    
-    
-   
-    
-    
-    
-  
-
-   
-
