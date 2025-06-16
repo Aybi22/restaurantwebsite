@@ -153,11 +153,6 @@ fetch("./template.html")
     }
   });
 
-let searchButton = document.getElementById("search-btn");
-
-searchButton.addEventListener("click", showFood);
-console.log(searchButton);
-
 fetch("./footer.html")
   .then((response) => response.text())
   .then((html) => {
@@ -165,6 +160,11 @@ fetch("./footer.html")
 
     footer.innerHTML = html;
   });
+
+let searchButton = document.getElementById("search-btn");
+
+searchButton.addEventListener("click", showFood);
+console.log(searchButton);
 
 function displayMenu() {
   items.forEach((item) => {

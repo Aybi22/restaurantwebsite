@@ -763,7 +763,7 @@ width:100%;
 
         .hero-info p{
         text-transform:capitalize;
-        font-size:1rem;
+        font-size:1.5rem;
         margin-bottom: 1rem;
 }
 .special-info-title{
@@ -3224,7 +3224,7 @@ nav .hamburger i{
                        
                 }
                 .hero-info p{
-                        font-size:0.9rem;
+                        font-size:1rem;
                 }
                   .footer-content{
                         flex-direction:column;
