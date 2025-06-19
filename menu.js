@@ -79,8 +79,8 @@ let items = [
 
   {
     id: 8,
-    image: "images/ramen.webp",
-    alt: "A black bowl filled with ramen noodles, topped with sliced green onions, red chili peppers, and half a boiled egg",
+    image: "images/ramen11.webp",
+    alt: "A  bowl filled with ramen noodles, topped with sliced green onions, red chili peppers, and half a boiled egg",
     name: "ramen",
     quantity: 1,
     price: 20,
@@ -172,8 +172,8 @@ let items = [
 
   {
     id: 16,
-    image: "images/ramen2.webp",
-    alt: "A black bowl filled with ramen noodles, topped with chopped green onions, red chili slices, and half a boiled egg",
+    image: "images/ramen12.webp",
+    alt: "A  bowl filled with ramen noodles, topped with chopped green onions, red chili slices, and half a boiled egg",
     name: "ramen",
     quantity: 1,
     price: 18.99,
