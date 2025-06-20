@@ -187,7 +187,7 @@ function displayMenu() {
   <p>${item.description}</p>
   </div>
   
- <a class="btn" data-product-id=${item.id}  data-name=${item.name} 
+ <a  href="#" class="btn" data-product-id=${item.id}  data-name=${item.name} 
    data-price=${item.price} data-image=${item.image}>order now   <i class="fa-solid fa-cart-shopping"></i> </a>
   
       </div>
@@ -238,7 +238,7 @@ function addText(event) {
   <h3>${item.name}<span class="meal-price">£${item.price}</span></h3>
   <p>${item.description}</p>
   </div>
- <button class="btn" data-product-id=${item.id}  data-name=${item.name} 
+ <button  href="#"  class="btn" data-product-id=${item.id}  data-name=${item.name} 
    data-price=${item.price} data-image=${item.image}>order now</button>
    </div>
       </div>
@@ -280,7 +280,7 @@ function displayVegan() {
   <h3>${item.name}<span class="meal-price">£${item.price}</span></h3>
   <p>${item.description}</p>
   </div>
- <button class="btn" data-product-id=${item.id}  data-name=${item.name} 
+ <button  href="#" class="btn" data-product-id=${item.id}  data-name=${item.name} 
    data-price=${item.price} data-image=${item.image}>order now   <i class="fa-solid fa-cart-shopping"></i> </button>
    </div>
       </div>
@@ -335,7 +335,7 @@ function showFood() {
   <h3>${item.name}<span class="meal-price">£${item.price}</span></h3>
   <p>${item.description}</p>
   </div>
- <button  class="btn" data-product-id=${item.id}  data-name=${item.name} 
+ <button href="#" class="btn" data-product-id=${item.id}  data-name=${item.name} 
    data-price=${item.price} data-image=${item.image}>order now</button>
    </div>
      
@@ -378,7 +378,7 @@ function displaynewMenu() {
   </div>
 <p class="menu-text">${item.description}</p>
 </div>
-  <a  class="btn" data-product-id=${item.id}  data-name=${item.name} 
+  <a  href="#" class="btn" data-product-id=${item.id}  data-name=${item.name} 
    data-price=${item.price} data-image=${item.image}>order now</a>
 
 </div>
@@ -420,7 +420,7 @@ Every bowl is a perfect blend of tradition, taste, and texture — a true celebr
   <span class="special-price">£${item.price}</span>
   </div>
   
-   <a class="btn" data-product-id="${item.id}"  data-name="${item.name}" 
+   <a  href="#" class="btn" data-product-id="${item.id}"  data-name="${item.name}" 
    data-price="${item.price}" data-image="${item.image}">order now</a>
 
 </div>
@@ -511,7 +511,7 @@ function displaySeller() {
     <span class="special-price">£${item.price}</span>
     
     </div>
-    <a class="btn" data-product-id="${item.id}"  data-name="${item.name}" 
+    <a  href="#" class="btn" data-product-id="${item.id}"  data-name="${item.name}" 
    data-price="${item.price}" data-image="${item.image}">order now</a>
    
     </div>
@@ -564,7 +564,7 @@ function displayChefSpecial() {
        <p>A soul-warming bowl crafted with passion and precision. Featuring slow-simmered broth infused with rich umami flavors, 
        tender slices of marinated chashu pork, springy house-made noodles, a soft-boiled soy egg, and a medley of fresh toppings 
        — including scallions, nori, and bamboo shoots.</p>
-<a class="btn" data-product-id="${item.id}"  data-name="${item.name}" 
+<a href="#" class="btn" data-product-id="${item.id}"  data-name="${item.name}" 
    data-price="${item.price}" data-image="${item.image}">order now</a>
 
 </div>
