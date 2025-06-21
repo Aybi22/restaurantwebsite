@@ -239,7 +239,7 @@ function addText(event) {
   <p>${item.description}</p>
   </div>
  <button  href="#"  class="btn" data-product-id=${item.id}  data-name=${item.name} 
-   data-price=${item.price} data-image=${item.image}>order now</button>
+   data-price=${item.price} data-image=${item.image}>order now   <i class="fa-solid fa-cart-shopping"></i>  </button>
    </div>
       </div>
           
@@ -336,7 +336,7 @@ function showFood() {
   <p>${item.description}</p>
   </div>
  <button href="#" class="btn" data-product-id=${item.id}  data-name=${item.name} 
-   data-price=${item.price} data-image=${item.image}>order now</button>
+   data-price=${item.price} data-image=${item.image}>order now <i class="fa-solid fa-cart-shopping"></i> </button>
    </div>
      
       </div>
@@ -379,7 +379,7 @@ function displaynewMenu() {
 <p class="menu-text">${item.description}</p>
 </div>
   <a  href="#" class="btn" data-product-id=${item.id}  data-name=${item.name} 
-   data-price=${item.price} data-image=${item.image}>order now</a>
+   data-price=${item.price} data-image=${item.image}>order now    <i class="fa-solid fa-cart-shopping"></i> </a>
 
 </div>
 `
@@ -421,7 +421,7 @@ Every bowl is a perfect blend of tradition, taste, and texture — a true celebr
   </div>
   
    <a  href="#" class="btn" data-product-id="${item.id}"  data-name="${item.name}" 
-   data-price="${item.price}" data-image="${item.image}">order now</a>
+   data-price="${item.price}" data-image="${item.image}">order now  <i class="fa-solid fa-cart-shopping"></i>  </a>
 
 </div>
 
@@ -512,7 +512,7 @@ function displaySeller() {
     
     </div>
     <a  href="#" class="btn" data-product-id="${item.id}"  data-name="${item.name}" 
-   data-price="${item.price}" data-image="${item.image}">order now</a>
+   data-price="${item.price}" data-image="${item.image}">order now   <i class="fa-solid fa-cart-shopping"></i> </a>
    
     </div>
     </div>
@@ -565,7 +565,7 @@ function displayChefSpecial() {
        tender slices of marinated chashu pork, springy house-made noodles, a soft-boiled soy egg, and a medley of fresh toppings 
        — including scallions, nori, and bamboo shoots.</p>
 <a href="#" class="btn" data-product-id="${item.id}"  data-name="${item.name}" 
-   data-price="${item.price}" data-image="${item.image}">order now</a>
+   data-price="${item.price}" data-image="${item.image}">order now  <i class="fa-solid fa-cart-shopping"></i> </a>
 
 </div>
 
