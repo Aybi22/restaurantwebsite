@@ -161,8 +161,19 @@ min-height:800px; /* or use a fixed height if appropriate */
             text-transform:capitalize;
             text-align:center;
             font-size:2rem;
-            
+            line-height: 1.3;
+            min-height: 2rem;
+           
          }
+
+
+         .fa, .fas, .far, .fal, .fab {
+  display: inline-block;
+  width: 1em;        /* fixes width */
+  height: 1em;       /* fixes height */
+  line-height: 1;
+  vertical-align: middle;
+}
 
          .category-text{
          font-weight:700;
@@ -211,6 +222,19 @@ min-height:800px; /* or use a fixed height if appropriate */
         
         }
            
+.slide1,
+.slide2,
+.slide3 {
+  flex: 1 0 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+
+
         .slide1{
                 background-image:url('images/Ramen.webp');
             
@@ -218,7 +242,7 @@ min-height:800px; /* or use a fixed height if appropriate */
 
         .slide2{
                 background-image:url('images/ramen3.webp');
-         
+               
         
         
         }      
@@ -226,7 +250,7 @@ min-height:800px; /* or use a fixed height if appropriate */
         
         .slide3{
                 background-image:url('images/meal.webp');
-              
+             
         
         
         }
