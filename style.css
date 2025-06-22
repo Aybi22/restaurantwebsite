@@ -1316,8 +1316,8 @@ flex: 1;
 }
  
 
- .hero-section a.btn{
-        max-width:200px;
+ .hero-info a.btn{
+        max-width:50%;
         width:100%;
  }
 

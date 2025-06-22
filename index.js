@@ -8,28 +8,6 @@ import { filteredByCategoryNoodles } from "./noodles.js";
 //want your code to run as soon as the page structure is ready, without waiting for large files (e.g., images) to load.//
 
 document.addEventListener("DOMContentLoaded", () => {
-  const text = document.querySelector(".main-title");
-  const chars = text.textContent.split("");
-
-  text.textContent = ""; // clear it
-
-  chars.forEach((char) => {
-    const span = document.createElement("span");
-    span.textContent = char;
-    text.appendChild(span);
-  });
-
-  gsap.from(".main-title span", {
-    opacity: 0,
-    y: 20,
-    stagger: 0.05,
-    duration: 0.6,
-  });
-
-  gsap.to(".mylogo", { duration: 1, x: 100, opacity: 1 });
-});
-
-document.addEventListener("DOMContentLoaded", () => {
   filteredByCategorySushi();
   displayOrder();
 });
