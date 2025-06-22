@@ -162,7 +162,7 @@ contact
     <!--setting form-->
      <h3>Contact Form</h3>
     
-    <form>
+    <form id="order-form" onsubmit="return validateForm()" >
      <div class="form-content">
       <!--defining label and input as paragraphs-->
      
@@ -177,7 +177,7 @@ contact
       <input id="Lastname" type="text" placeholder="Lastname" name="lastname"  required>
     </div>
       <div>
-      <label for="E-mail">E-mail :</label>
+      <label for="email">E-mail :</label>
       <input id="email"  type="text" placeholder="email"  name="E-mail"  required>
       </div>
       
@@ -188,7 +188,7 @@ contact
       <textarea id="message" placeholder="message" name="user_message"  required></textarea>
       </div>
     
-     <button type="submit">submit</button>   <!--submit button-->
+     <button type="submit">submit</button> <!--submit button-->
     
     </div>
     
