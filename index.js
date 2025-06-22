@@ -90,12 +90,12 @@ fetch("./template.html")
     const successMessage = document.querySelector(".success-message");
     const orderForm = document.querySelector(".order-form");
     const submitBtn = document.querySelector(".order-btn");
-    console.log(submitBtn);
+
     submitBtn.addEventListener("click", showSuccessMsge);
 
     let hamburger = document.querySelector(".hamburger");
     let close = document.querySelector(".closer");
-    console.log(hamburger);
+
     hamburger.addEventListener("click", showMobileMenu);
     function showMobileMenu() {
       let mobileMenu = document.querySelector(".mobileMenu");
@@ -164,7 +164,6 @@ fetch("./footer.html")
 let searchButton = document.getElementById("search-btn");
 
 searchButton.addEventListener("click", showFood);
-console.log(searchButton);
 
 function displayMenu() {
   items.forEach((item) => {
@@ -221,7 +220,7 @@ function addText(event) {
       );
       let container = document.querySelector(".menu-container");
       container.innerHTML = "";
-      console.log(filteredCategory);
+
       container.innerHTML = filteredCategory
         .map(
           (item) =>
@@ -260,7 +259,6 @@ function addText(event) {
 function displayVegan() {
   let veganContainer = document.querySelector(".vegan-container");
   let filteredVegan = items.filter((item) => item.category === "vegan");
-  console.log(filteredVegan);
 
   let veganBox = document.createElement("div");
 
@@ -354,11 +352,11 @@ function showFood() {
 
 function displaynewMenu() {
   let newContainer = document.querySelector(".new-menu-container");
-  console.log(newContainer);
+
   let filteredContainer = items.filter(
     (item) => item.location === "newmenucontainer"
   );
-  console.log(filteredContainer);
+
   newContainer.innerHTML = filteredContainer
     .map(
       (item) =>
@@ -391,7 +389,7 @@ displaynewMenu();
 function displaySpecial() {
   let specialMenuContainer = document.querySelector(".special-menu-container");
   let findSpecialMenu = items.filter((item) => item.id === 52);
-  console.log(findSpecialMenu);
+
   specialMenuContainer.innerHTML = findSpecialMenu
     .map(
       (item) =>
@@ -466,7 +464,7 @@ displaySpecial();
 function displaySeller() {
   let sellerMenuContainer = document.querySelector(".seller-menu-container");
   let findSpecialMenu = items.filter((item) => item.id === 53);
-  console.log(sellerMenuContainer);
+
   sellerMenuContainer.innerHTML = findSpecialMenu
     .map(
       (item) =>
@@ -531,7 +529,7 @@ function displayChefSpecial() {
   let chefContainer = document.querySelector(".meal-week-container");
 
   let findChefMenu = items.filter((item) => item.id === 17);
-  console.log(findChefMenu);
+
   chefContainer.innerHTML = findChefMenu
     .map(
       (item) =>
@@ -565,7 +563,7 @@ function displayChefSpecial() {
        tender slices of marinated chashu pork, springy house-made noodles, a soft-boiled soy egg, and a medley of fresh toppings 
        — including scallions, nori, and bamboo shoots.</p>
 <a href="#" class="btn" data-product-id="${item.id}"  data-name="${item.name}" 
-   data-price="${item.price}" data-image="${item.image}">order now  <i class="fa-solid fa-cart-shopping"></i> </a>
+   data-price="${item.price}" data-image="${item.image}">order now  <i class="fa-solid fa-cart-shopping"></i>21 </a>
 
 </div>
 
@@ -583,14 +581,13 @@ displayChefSpecial();
 
 function displayOrder() {
   let button = document.querySelectorAll(".btn");
-  console.log(button);
+
   button.forEach((btn) => {
     btn.addEventListener("click", show);
     function show(e) {
       const image = e.target.dataset.image;
       const name = e.target.dataset.name;
       const price = e.target.dataset.price;
-      console.log(price);
 
       localStorage.setItem("selectedItemImage", image);
       localStorage.setItem("selectedItemName", name);
