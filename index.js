@@ -563,7 +563,7 @@ function displayChefSpecial() {
        tender slices of marinated chashu pork, springy house-made noodles, a soft-boiled soy egg, and a medley of fresh toppings 
        — including scallions, nori, and bamboo shoots.</p>
 <a href="#" class="btn" data-product-id="${item.id}"  data-name="${item.name}" 
-   data-price="${item.price}" data-image="${item.image}">order now  <i class="fa-solid fa-cart-shopping"></i>21 </a>
+   data-price="${item.price}" data-image="${item.image}">order now   <i class="fa-solid fa-cart-shopping"></i> </a>
 
 </div>
 

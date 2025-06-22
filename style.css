@@ -1297,7 +1297,7 @@ flex: 1;
         color:#DE9151;
         
  }
- .menu-column a.btn{
+  a.btn, .btn, .meal-week-info a.btn,  .special-info a.btn {
     max-width:100%;
     width:100%;
      font-weight: bold; 
@@ -1310,6 +1310,10 @@ flex: 1;
        
         
  }
+.new-menu-container a.btn{
+   max-width:80%;
+   width:100%;
+}
  
 
  .hero-section a.btn{
