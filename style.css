@@ -67,9 +67,13 @@
                 text-decoration:none; /* removing  default hyperlinks text decoration */ 
                 color:var(--black);  /* defining black as color for all the link elements */ 
           }
-          
+          #home h1{
+                min-height:3em;
+          }
           /* defining heading styles*/
-          
+           a.btn, .btn{
+                height:48px;
+           }
          img{
                 max-width:100%;
                 width:100%;
