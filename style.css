@@ -454,12 +454,12 @@ color:grey;
             width:30px;
             height:30px;
             padding:3px;
-            border-radius:100%;
+          
             text-align:center;
-            font-size:29px;
+            font-size:1rem;
             cursor:pointer;
-            color:var(--white);
-            background:#2E2E3A;
+            color:var(--black);
+           
          }
          .chef-message{
                 max-width:200px;
@@ -783,13 +783,14 @@ width:100%;
         height:100%;
 }
 .vegan-container{
-        display:flex;
-        max-width: 100%;
+        display:grid;
+        grid-template-columns: repeat(3,1fr);
+        max-width: 1500px;
         width:100%;
-        flex-wrap:wrap;
-       
+        place-items:center;
+       margin:auto;
         justify-content: center;
-        gap:2rem;
+        
 }
 .vegan-container h4{
         color:var(--info-paragraph-color);
@@ -1352,7 +1353,7 @@ flex: 1;
         align-items: flex-start;
        max-width:100%;
        width:100%;
-       height:500px;
+       min-height:500px;
       
 }
 .contact-section p{
@@ -1381,7 +1382,7 @@ flex: 1;
         max-width:800px;
         width:100%;
        padding:2rem;
-        height:100%;
+        height:500px;
  }
 
  .contact-infos-content{
@@ -1427,11 +1428,10 @@ h4{
         background-attachment: fixed;
         height:550px;
         background-repeat: no-repeat;
-
-        
         display:flex;
         justify-content:center;
-        align-items:center;
+        align-items:center; 
+       
 
  }
 
@@ -1441,11 +1441,14 @@ h4{
         inset:0;/*top: 0; right: 0; bottom: 0; left: 0;*/;
         background:rgba(0, 0, 0, 0.4); /* dark overlay */;
         z-index:1;
+
+
 }
 
 .contact-parallax >*{
         z-index:2;
         position:relative;
+       
 }
 .breadcrumb.contact{
         margin-top:2rem;
@@ -2000,6 +2003,10 @@ h4{
           display:flex;
          
          gap:11px;
+        }
+
+        .form-section h3{
+                margin-bottom:1rem;
         }
         .likes{
                 font-size:0.7rem;
@@ -2850,7 +2857,10 @@ width:100%;
                        padding:10px;
         }
         
-        
+        .contact-section{
+                min-height:500px;
+              
+        }
         
         
         /*defining label and input as flex items*/
@@ -3215,6 +3225,8 @@ nav .hamburger i{
                         font-size:2rem;
                 }
 
+                
+
                #order-image{
                 max-height:410px;
                 object-fit:cover;
@@ -3428,7 +3440,10 @@ nav .hamburger i{
         width:100%;
         margin:auto;
 }
-
+.vegan-container{
+        display:grid;
+        grid-template-columns: 1fr;
+}
 
 }
 
@@ -3485,6 +3500,19 @@ h2{
         width:80%;
        
 }
+
+.sort-list{
+        max-width:100%;
+        margin:0;
+        padding:0;
+}
+
+.sort-list div{
+        font-size:0.52rem;
+        text-align:center;
+        padding:0.7rem;
+}
+
 .testimonial-box p{
         text-align:left;
         margin:0;
@@ -3492,7 +3520,10 @@ h2{
         width:100%;
 }
 .menu-column{
-        height:auto;
+        height:690px;
+}
+.txt p{
+        line-height:1.7;
 }
 .social-media i{
         font-size:1.5rem;
@@ -3603,6 +3634,9 @@ nav ul li{
         white-space: nowrap;
         padding:1rem;
 }
+.vegan-container{
+        grid-template-columns: repeat(2,1fr);
+}
 
 }
 
@@ -3631,9 +3665,84 @@ nav ul li{
 
 }
 
+@media screen and (max-width:480px){
+        .menu-title{
+                font-size:2.5rem;
+        }
+
+        .hero-txt{
+                font-size:1.2rem;
+                width:80%;
+        }
+
+.menu-container{
+       display:grid;
+       grid-template-columns:1fr;
+       max-width: 100%;
+        place-items:center;
+        justify-content: center;
+        }
+
+label {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+input, textarea {
+  width: 100%;
+  box-sizing: border-box;
+}
+.form-content button{
+        width:100%;
+}
+
+.message-wrapper{
+        width:80%;
+        margin:auto;
+}
 
 
+        .parallax-content p{
+       
+       margin: auto;
+       margin-bottom: 1rem;
+}
+.parallax-content a.btn{
+        width:60%;
+        font-size:1rem;
+        text-align:center;
+        margin: auto;
+}
+label{
+font-size:0.7rem;
 
+}
+.hero-section a.btn{
+        width:50%;
+}
+
+.menu-column{
+        height:auto;
+       
+}
+.menu-column a.btn{
+        font-size:1rem;
+}
+
+.menu-column p{
+        text-align:left;
+        margin:0;
+        font-size:0.8rem;
+        line-height: 1.6;
+        width:100%;
+}
+.contacts li{
+        white-space:nowrap;
+}
+.mylogo, .fa-bag-shopping{
+        font-size:1rem;
+}
+
+}
 
 
 

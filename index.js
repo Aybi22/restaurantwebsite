@@ -69,37 +69,6 @@ fetch("./template.html")
 
     headTemplate.innerHTML = html;
 
-    const successMessage = document.querySelector(".success-message");
-    const orderForm = document.getElementById("order-form");
-    const submitBtn = document.querySelector(".order-btn");
-
-    orderForm.addEventListener("submit", function (e) {
-      // Check if form is valid
-      if (!orderForm.checkValidity()) {
-        orderForm.reportValidity();
-        return;
-      }
-      if (!validateForm()) {
-        return; // If JS validation fails, don't submit
-      }
-      // If valid, show success message
-      showSuccessMsge();
-    });
-
-    function showSuccessMsge() {
-      if (successMessage && orderForm) {
-        orderForm.style.display = "none";
-        successMessage.style.display = "block";
-
-        setTimeout(() => {
-          successMessage.style.display = "none";
-          document.getElementById("next-btn").style.display = "block";
-        }, 6000);
-      }
-    }
-
-    submitBtn.addEventListener("click", showSuccessMsge);
-
     let hamburger = document.querySelector(".hamburger");
     let close = document.querySelector(".closer");
 
@@ -135,6 +104,37 @@ fetch("./template.html")
         overlay.style.visibility = "hidden";
       }
     }
+
+    const successMessage = document.querySelector(".success-message");
+    const orderForm = document.getElementById("order-form");
+    const submitBtn = document.querySelector(".order-btn");
+
+    orderForm.addEventListener("submit", function (e) {
+      // Check if form is valid
+      if (!orderForm.checkValidity()) {
+        orderForm.reportValidity();
+        return;
+      }
+      if (!validateForm()) {
+        return; // If JS validation fails, don't submit
+      }
+      // If valid, show success message
+      showSuccessMsge();
+    });
+
+    function showSuccessMsge() {
+      if (successMessage && orderForm) {
+        orderForm.style.display = "none";
+        successMessage.style.display = "block";
+
+        setTimeout(() => {
+          successMessage.style.display = "none";
+          document.getElementById("next-btn").style.display = "block";
+        }, 6000);
+      }
+    }
+
+    submitBtn.addEventListener("click", showSuccessMsge);
 
     orderForm.addEventListener("submit", function (e) {
       // Check if form is valid
