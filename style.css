@@ -1106,6 +1106,7 @@ section{
       border-right: 1px solid gainsboro;
      padding:11px;
      text-align:center;
+     cursor: pointer;
 }
     
        
@@ -1316,7 +1317,7 @@ flex: 1;
         color:#DE9151;
         
  }
-  a.btn, .btn, .meal-week-info a.btn,  .special-info a.btn {
+  a.btn,  .meal-week-info a.btn,  .special-info a.btn {
     max-width:100%;
     width:100%;
      font-weight: bold; 

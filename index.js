@@ -246,8 +246,8 @@ function addText(event) {
   <h3>${item.name}<span class="meal-price">£${item.price}</span></h3>
   <p>${item.description}</p>
   </div>
- <button  href="#"  class="btn" data-product-id=${item.id}  data-name=${item.name} 
-   data-price=${item.price} data-image=${item.image}>order now   <i class="fa-solid fa-cart-shopping"></i>  </button>
+ <a  href="#"  class="btn" data-product-id=${item.id}  data-name=${item.name} 
+   data-price=${item.price} data-image=${item.image}>order now   <i class="fa-solid fa-cart-shopping"></i>  </a>
    </div>
       </div>
           
@@ -287,8 +287,8 @@ function displayVegan() {
   <h3>${item.name}<span class="meal-price">£${item.price}</span></h3>
   <p>${item.description}</p>
   </div>
- <button  href="#" class="btn" data-product-id=${item.id}  data-name=${item.name} 
-   data-price=${item.price} data-image=${item.image}>order now   <i class="fa-solid fa-cart-shopping"></i> </button>
+ <a href="#" class="btn" data-product-id=${item.id}  data-name=${item.name} 
+   data-price=${item.price} data-image=${item.image}>order now   <i class="fa-solid fa-cart-shopping"></i> </a>
    </div>
       </div>
           
