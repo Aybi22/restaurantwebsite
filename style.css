@@ -447,18 +447,16 @@ color:grey;
             position:absolute;
             top:4px;
             right:4px;
-            display:flex;
-            justify-content: center;
-            align-items:center;
+           
             right:30px;
             width:30px;
             height:30px;
             padding:3px;
-          
-            text-align:center;
-            font-size:1rem;
+           
+           
+            font-size:0.7rem;
             cursor:pointer;
-            color:var(--black);
+            color:var(--red);
            
          }
          .chef-message{
@@ -3676,6 +3674,11 @@ nav ul li{
                 font-size:1.2rem;
                 width:80%;
         }
+
+        .form-header p{
+                width:80%;
+        }
+        
 
 .menu-container{
        display:grid;
