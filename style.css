@@ -316,6 +316,7 @@ min-height:800px; /* or use a fixed height if appropriate */
         width:50%;
         display:block;
         margin:auto;
+       
 }
 
          .para{
@@ -1954,6 +1955,12 @@ h4{
                 margin:auto;
           }
 
+
+
+          .order-form .order-btn{
+              
+          }
+
           form .order-btn{
                 margin-top:2rem;
                 text-transform:capitalize;
@@ -3035,7 +3042,7 @@ textarea {
   background-color:#DE9151;
   color: var(--black);
   font-weight: 900;
-  padding: 12px 24px;
+  
   font-size: 1rem;
   border: none;
   border-radius: 6px;

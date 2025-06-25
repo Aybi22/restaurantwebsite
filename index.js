@@ -106,7 +106,7 @@ fetch("./template.html")
     }
 
     const successMessage = document.querySelector(".success-message");
-    const orderForm = document.getElementById("order-form");
+    const orderForm = document.querySelector(".order-form");
     const submitBtn = document.querySelector(".order-btn");
 
     orderForm.addEventListener("submit", function (e) {
