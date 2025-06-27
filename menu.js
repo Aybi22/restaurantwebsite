@@ -384,7 +384,7 @@ let items = [
   {
     id: 35,
     image: "images/sushi5.webp",
-    alt: "",
+    alt: "Sushi rolls arranged on a wooden board, accompanied by a pair of chopsticks resting beside them.",
     name: "sushi",
     quantity: 1,
     price: 11.99,
@@ -395,7 +395,7 @@ let items = [
   {
     id: 36,
     image: "images/sushi6.webp",
-    alt: "",
+    alt: " A sushi roll filled with avocado and assorted vegetables, presented on a black slate surface.",
     name: "sushi",
     quantity: 1,
     price: 13.99,
@@ -406,7 +406,7 @@ let items = [
   {
     id: 37,
     image: "images/specialsushi.webp",
-    alt: "",
+    alt: "assorted sushi featuring various types of seafood, including fish, shrimp, and crab.",
     name: "sushi",
     quantity: 1,
     price: 17.99,
@@ -417,7 +417,7 @@ let items = [
   {
     id: 38,
     image: "images/sushi7.webp",
-    alt: "",
+    alt: "A colorful tray of assorted sushi",
     name: "sushi",
     quantity: 1,
     price: 16.99,
@@ -430,7 +430,7 @@ let items = [
   {
     id: 39,
     image: "images/sushi8.webp",
-    alt: "",
+    alt: "Sushi rolls with salmon and rice",
     name: "sushi",
     quantity: 1,
     price: 17.99,

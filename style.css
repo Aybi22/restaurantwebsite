@@ -508,6 +508,15 @@ color:grey;
                z-index:0;
  }
 
+
+
+
+ .hero-section.menu{
+background-image: url('images/menuhero.webp');
+
+
+ }
+
   
  .hero-section.about{
 background-image: url('images/pasta.webp');
@@ -519,10 +528,7 @@ width:100%;
  }
 
 
- .hero-section.menu{
- background-image: url('images/menuhero.webp' );
- 
- }
+
  .hero-section.sushi{
         background-image: url('images/herosushi.webp');
         
@@ -570,7 +576,6 @@ width:100%;
 
 
 
- 
 
 
 
@@ -578,6 +583,7 @@ width:100%;
         .menu-title{
                 font-size: 5rem;
                 font-family:Montserrat;
+                font-weight: 900;
          
         }
 
@@ -3647,7 +3653,7 @@ nav ul li{
 
 @media screen and (max-width:480px){
         .menu-title{
-                font-size:2.5rem;
+                font-size:3.5rem;
         }
 
         .hero-txt{
