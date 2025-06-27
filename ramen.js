@@ -25,7 +25,7 @@ export function filteredByCategoryRamen() {
   </div>
   
  
-  <a   href="#" class="btn" data-product-id=${item.id}  data-name=${item.name} 
+  <a href="#" class="btn" data-product-id=${item.id}  data-name=${item.name} 
    data-price=${item.price} data-image=${item.image}>order now <i class="fa-solid fa-cart-shopping"></i> </a>
    
     </div>

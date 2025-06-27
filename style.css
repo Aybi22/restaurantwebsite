@@ -541,7 +541,7 @@ width:100%;
 
 
 .hero-section.ramen{
-        background-image: url('images/parallaxramen.jpg');
+        background-image: url('images/parallaxramen.webp');
         
         }
 
@@ -552,7 +552,7 @@ width:100%;
         }
 
 .shishkebab.hero-section{
-        background-image: url('images/herokebab.jpg');
+        background-image: url('images/herokebab.webp');
         background-position: center;
        
         }
