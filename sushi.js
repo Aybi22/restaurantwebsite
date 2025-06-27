@@ -1,20 +1,20 @@
-import items from './menu.js';
-export function filteredByCategorySushi(){
+import items from "./menu.js";
+export function filteredByCategorySushi() {
+  let filteredSushi = items.filter((item) => item.category === "sushi");
+  console.log(filteredSushi);
 
-let filteredSushi=items.filter(item=>item.category==="sushi");
-console.log(filteredSushi);
+  let sushiContainer = document.querySelector(".sushi-container");
 
-let sushiContainer=document.querySelector('.sushi-container');
-
-sushiContainer.innerHTML=
-filteredSushi.map(item=>
-`
+  sushiContainer.innerHTML = filteredSushi
+    .map(
+      (item) =>
+        `
    
 <div class="menu-column">
  
   <div class="image">
   
-  <img src=${item.image}>
+  <img src=${item.image} alt="${item.alt}">
   </div>
 
   <div class="txt_column">
@@ -26,10 +26,12 @@ filteredSushi.map(item=>
  
 
       
-  <a  class="btn" data-product-id=${item.id}  data-name=${item.name} 
+  <a href="#" class="btn" data-product-id=${item.id}  data-name=${item.name} 
    data-price=${item.price} data-image=${item.image}>order now  <i class="fa-solid fa-cart-shopping"></i> </a>
    
        </div>
       </div>
-`).join('');
+`
+    )
+    .join("");
 }
