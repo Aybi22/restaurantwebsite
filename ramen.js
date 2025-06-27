@@ -1,21 +1,20 @@
-import items from './menu.js';
-export function filteredByCategoryRamen(){
+import items from "./menu.js";
+export function filteredByCategoryRamen() {
+  let filteredRamen = items.filter((item) => item.category === "ramen");
+  console.log(filteredRamen);
 
-let filteredRamen=items.filter(item=>item.category==="ramen");
-console.log(filteredRamen);
+  let ramenContainer = document.querySelector(".ramen-container");
 
-let ramenContainer=document.querySelector('.ramen-container');
-
-
-ramenContainer.innerHTML=
-filteredRamen.map(item=>
-`
+  ramenContainer.innerHTML = filteredRamen
+    .map(
+      (item) =>
+        `
    
 <div class="menu-column">
  
   <div class="image">
   
-  <img src=${item.image}>
+  <img src=${item.image}  alt=${item.alt}>
   </div>
 
   <div class="txt_column">
@@ -26,7 +25,7 @@ filteredRamen.map(item=>
   </div>
   
  
-  <a class="btn" data-product-id=${item.id}  data-name=${item.name} 
+  <a   href="#" class="btn" data-product-id=${item.id}  data-name=${item.name} 
    data-price=${item.price} data-image=${item.image}>order now <i class="fa-solid fa-cart-shopping"></i> </a>
    
     </div>
@@ -36,6 +35,7 @@ filteredRamen.map(item=>
       
       
      
-`).join('');
-
+`
+    )
+    .join("");
 }

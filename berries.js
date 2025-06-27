@@ -1,20 +1,20 @@
-import items from './menu.js';
-export function filteredByCategoryBerries(){
+import items from "./menu.js";
+export function filteredByCategoryBerries() {
+  let filteredBerries = items.filter((item) => item.category === "berries");
+  console.log(filteredBerries);
 
-let filteredBerries=items.filter(item=>item.category==="berries");
-console.log(filteredBerries);
+  let berriesContainer = document.querySelector(".berries-container");
 
-let berriesContainer=document.querySelector('.berries-container');
-
-berriesContainer.innerHTML=
-filteredBerries.map(item=>
-`
+  berriesContainer.innerHTML = filteredBerries
+    .map(
+      (item) =>
+        `
    
 <div class="menu-column">
  
   <div class="image">
   
-  <img src=${item.image}>
+  <img src=${item.image}  alt=${item.alt}>
   </div>
 
   <div class="txt_column">
@@ -24,10 +24,12 @@ filteredBerries.map(item=>
   <p class="section-text">${item.description}</p>
   </div>
  
-  <a  class="btn" data-product-id=${item.id}  data-name=${item.name} 
+  <a href="#" class="btn" data-product-id=${item.id}  data-name=${item.name} 
    data-price=${item.price} data-image=${item.image}>order now  <i class="fa-solid fa-cart-shopping"></i>  </a>
    
        </div>
       </div>
-`).join('');
+`
+    )
+    .join("");
 }

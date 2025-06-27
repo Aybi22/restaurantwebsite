@@ -1,20 +1,19 @@
-import items from './menu.js';
-export function filteredByCategoryNoodles(){
+import items from "./menu.js";
+export function filteredByCategoryNoodles() {
+  let filteredNoodles = items.filter((item) => item.category === "noodles");
 
-let filteredNoodles=items.filter(item=>item.category==="noodles");
+  let noodlesContainer = document.querySelector(".noodles-container");
 
-
-let noodlesContainer=document.querySelector('.noodles-container');
-
-noodlesContainer.innerHTML=
-filteredNoodles.map(item=>
-`
+  noodlesContainer.innerHTML = filteredNoodles
+    .map(
+      (item) =>
+        `
    
 <div class="menu-column">
  
   <div class="image">
   
-  <img src=${item.image}>
+  <img src=${item.image}   alt=${item.alt}>
   </div>
 
   <div class="txt_column">
@@ -26,10 +25,12 @@ filteredNoodles.map(item=>
  
 
       
-  <a  class="btn" data-product-id=${item.id}  data-name=${item.name} 
+  <a href="#" class="btn" data-product-id=${item.id}  data-name=${item.name} 
    data-price=${item.price} data-image=${item.image}>order now <i class="fa-solid fa-cart-shopping"></i></a>
    
        </div>
       </div>
-`).join('');
+`
+    )
+    .join("");
 }

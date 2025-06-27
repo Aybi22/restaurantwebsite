@@ -1,20 +1,21 @@
-import items from './menu.js';
-export function filteredByCategoryShishKebab(){
+import items from "./menu.js";
+export function filteredByCategoryShishKebab() {
+  let filteredShishKebab = items.filter(
+    (item) => item.category === "shishkebab"
+  );
 
-let filteredShishKebab=items.filter(item=>item.category==="shishkebab");
+  let shishContainer = document.querySelector(".shish-container");
 
-
-let shishContainer=document.querySelector('.shish-container');
-
-shishContainer.innerHTML=
-filteredShishKebab.map(item=>
-`
+  shishContainer.innerHTML = filteredShishKebab
+    .map(
+      (item) =>
+        `
    
 <div class="menu-column">
  
   <div class="image">
   
-  <img src=${item.image}>
+  <img src=${item.image}   alt=${item.alt}>
   </div>
 
   <div class="txt_column">
@@ -24,11 +25,13 @@ filteredShishKebab.map(item=>
   <p class="section-text">${item.description}</p>
   </div>
  
-  <a  class="btn" data-product-id=${item.id}  data-name=${item.name} 
+  <a href="#"  class="btn" data-product-id=${item.id}  data-name=${item.name} 
    data-price=${item.price} data-image=${item.image}>order now   <i class="fa-solid fa-cart-shopping"></i> </a>
    
       </div>
        </div>
       
-`).join('');
+`
+    )
+    .join("");
 }
