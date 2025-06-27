@@ -236,33 +236,11 @@ min-height:800px; /* or use a fixed height if appropriate */
 
 
 
-        .slide1{
-                background-image:url('images/Ramen.webp');
-            
-        }
-
-        .slide2{
-                background-image:url('images/ramen3.webp');
-               
-        
-        
-        }      
-              
-        
-        .slide3{
-                background-image:url('images/meal.webp');
-             
-        
-        
-        }
-        
-          
-        .slide4{
-                background-image:url('images/healthy.jpg');
+      
               
         
         
-        } 
+       
         
         .stars i{
                 color:#DE9151;
