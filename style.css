@@ -1298,7 +1298,7 @@ flex: 1;
         color:#DE9151;
         
  }
-  a.btn,  .meal-week-info a.btn,  .special-info a.btn {
+  a.btn,  .meal-week-info a.btn,  .special-info a.btn{
     max-width:100%;
     width:100%;
      font-weight: bold; 
@@ -3114,7 +3114,7 @@ color:var(--info-paragraph-color)
   transform: translateY(0);
 }
 
-a.btn, .btn{
+a.btn, .btn, .form-btn{
         background:#DE9151;
         color:var(--black);
         font-size: 1.3rem;
