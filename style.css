@@ -386,14 +386,15 @@ min-height:800px; /* or use a fixed height if appropriate */
             text-transform:capitalize;  
             margin-left: 1rem; 
             color:grey;
+            
          }
 
       .breadcrumb a{
         font-size:1rem;
         text-transform: lowercase;
          text-transform:capitalize;
-color:grey;
- font-weight: 400;
+color:black;
+ font-weight: 500;
 
       }
          
@@ -1399,7 +1400,7 @@ h4{
         
  }
  .contact-parallax{
-        background-image: url('images/contactimage.jpg');
+        background-image: url('images/contactimage.webp');
         background-size:cover;
         background-position: center;
         position:relative;
@@ -3432,8 +3433,7 @@ nav .hamburger i{
         grid-template-columns: 1fr;
 }
 
-}
-
+        }
       
 @media screen and (max-width: 500px) {
   .menu-container {
