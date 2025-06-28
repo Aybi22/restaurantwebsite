@@ -3206,6 +3206,9 @@ nav .hamburger i{
                         grid-template-columns: 1fr;
                         
                 }
+                .hero-section img{
+                        height:auto;
+                }
                  .image-info{
                         font-size:2rem;
                  }
