@@ -13,10 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  validateForm();
-});
-
-document.addEventListener("DOMContentLoaded", () => {
   filteredByCategoryShishKebab();
   displayOrder();
 });

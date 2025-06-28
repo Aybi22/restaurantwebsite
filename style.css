@@ -277,7 +277,7 @@ min-height:800px; /* or use a fixed height if appropriate */
 
           display:block;
         width:300px;
-      
+    
         margin:5rem auto;
        
 }
@@ -427,9 +427,14 @@ color:black;
                 position:absolute;
                 right:4px;
                 top:4px;
-                color:var(--black);
+                color:var(--white);
+                background:black;
+                width:20px;
+                height:20px;
+                text-align:center;
+                border-radius:100%;
                 z-index: 999;
-                font-size: 0.7rem;
+                font-size: 0.5rem;
         
         }
 
