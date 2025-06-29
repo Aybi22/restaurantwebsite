@@ -444,7 +444,9 @@ color:black;
         
         }
 
+.fa-pizza-slice{
 
+}
 .menu-toggle {
   position: relative;
   cursor: pointer;
@@ -1560,6 +1562,8 @@ h4{
       .fa-pizza-slice{
         color:#DE9151;
         font-size:0.9rem;
+        line-height:1.4;
+        min-height: 0.7rem;
         margin-left:1rem;
         vertical-align: baseline;
       }
