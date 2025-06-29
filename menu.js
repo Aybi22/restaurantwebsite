@@ -13,7 +13,7 @@ let items = [
   {
     id: 2,
     image: "images/sushi-354628_1920.webp",
-    alt: "sushi",
+    alt: "A plate of sushi, a traditional Japanese dish, featuring various rolls and fresh ingredients.",
     name: "sushi",
     quantity: 1,
     price: 20,
@@ -68,7 +68,7 @@ let items = [
   {
     id: 7,
     image: "images/food-2362678_1920.webp",
-    alt: "",
+    alt: "A bowl of steaming soup next to a plate of colorful, assorted food items on a wooden table.",
 
     name: "food",
     quantity: 1,
@@ -318,7 +318,7 @@ let items = [
   {
     id: 29,
     image: "images/wholemeal.webp",
-    alt: "",
+    alt: " A freshly baked chocolate chip banana bread loaf",
     name: "whole meal bread",
     quantity: 1,
     price: 4.5,
@@ -441,7 +441,7 @@ let items = [
   {
     id: 40,
     image: "images/shishkebab2.webp",
-    alt: "",
+    alt: "A platter displaying meat skewers paired with golden French fries",
     name: "shishkebab",
     quantity: 1,
     price: 14.99,
@@ -452,7 +452,7 @@ let items = [
   {
     id: 41,
     image: "images/noodles4.webp",
-    alt: "",
+    alt: "Spaghetti topped with tomato sauce and fresh herbs",
     name: "noodles",
     quantity: 1,
     price: 10.99,
@@ -463,6 +463,7 @@ let items = [
   {
     id: 42,
     image: "images/noodles6.webp",
+    alt: "A bowl of noodles topped with meat and colorful vegetables",
     name: "noodles",
     quantity: 1,
     price: 11.99,
@@ -473,7 +474,7 @@ let items = [
   {
     id: 43,
     image: "images/kebab4.webp",
-    alt: "",
+    alt: ". A plate displaying a slice of tomato, cucumber, and onion, highlighting fresh ingredients.",
     name: "shishkebab",
     quantity: 1,
     price: 12.99,
@@ -484,7 +485,7 @@ let items = [
   {
     id: 44,
     image: "images/kebab5.webp",
-    alt: "",
+    alt: "Skewers of grilled meat and vegetables served on a plate",
     name: "shishkebab",
     quantity: 1,
     price: 12.99,
@@ -495,7 +496,7 @@ let items = [
   {
     id: 45,
     image: "images/berries1.webp",
-    alt: "",
+    alt: " A bowl filled with cereal, garnished with colorful berries and nuts",
     name: "berries",
     quantity: 1,
     price: 12.99,
@@ -506,7 +507,7 @@ let items = [
   {
     id: 46,
     image: "images/berries2.webp",
-    alt: "",
+    alt: "Close-up of a cluster of fresh, vibrant red raspberries ",
     name: "berries",
     quantity: 1,
     price: 12.99,
@@ -517,7 +518,7 @@ let items = [
   {
     id: 47,
     image: "images/berries3.webp",
-    alt: "",
+    alt: "A table displaying various fruits arranged in clear plastic containers.",
     name: "berries",
     quantity: 1,
     price: 12.99,
@@ -528,7 +529,7 @@ let items = [
   {
     id: 48,
     image: "images/berries4.webp",
-    alt: "",
+    alt: " A colorful bowl of fresh berries alongside a bowl of juicy pomegranates",
     name: "berries",
     quantity: 1,
     price: 12.99,
@@ -539,7 +540,7 @@ let items = [
   {
     id: 49,
     image: "images/berries5.webp",
-    alt: "",
+    alt: "A plate of crispy chicken and fluffy waffles drizzled with rich blackberry syrup",
     name: "berries",
     quantity: 1,
     price: 12.99,
@@ -550,7 +551,7 @@ let items = [
   {
     id: 50,
     image: "images/berries6.webp",
-    alt: "",
+    alt: " A bowl filled with assorted berries, including strawberries, blueberries, and raspberries",
     name: "berries",
     quantity: 1,
     price: 12.99,
@@ -561,7 +562,7 @@ let items = [
   {
     id: 51,
     image: "images/sish.webp",
-    alt: "",
+    alt: "Two pita wraps stuffed with savory meat and assorted vegetables",
     name: "shishkebab",
     quantity: 1,
     price: 21,
@@ -574,7 +575,7 @@ let items = [
   {
     id: 52,
     image: "images/heronoodles1.webp",
-    alt: "",
+    alt: "A bowl of noodles topped with a soft egg and colorful vegetables",
     name: "noodles",
     quantity: 1,
     price: 17,
@@ -585,7 +586,7 @@ let items = [
   {
     id: 53,
     image: "images/herokebab.webp",
-    alt: "",
+    alt: "A plate featuring a wrap filled with ingredients and fresh tomatoes arranged alongside it.",
     name: "shishkebab",
     quantity: 1,
     price: 17,
