@@ -115,6 +115,11 @@ min-height:800px; /* or use a fixed height if appropriate */
 
      .top-icons{
         color:var(--info-paragraph-color);
+        display:inline-block;
+        width:fit-content;
+        padding:0;
+        margin:0;
+      
      }
          
      
@@ -427,16 +432,36 @@ color:black;
                 position:absolute;
                 right:4px;
                 top:4px;
-                color:var(--white);
-                background:black;
+                color:black;
+               
                 width:20px;
                 height:20px;
                 text-align:center;
                 border-radius:100%;
-                z-index: 999;
-                font-size: 0.5rem;
+               z-index: 999;
+                font-size: 1.8rem;
+                cursor: pointer;
         
         }
+
+
+        .menu-toggle {
+  position: relative;
+  cursor: pointer;
+  font-size: 1.8rem;
+  width: 30px;
+  height: 30px;
+}
+
+.menu-toggle i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  line-height: 30px;
+  text-align: center;
+}
 
         
          .chef-message{
@@ -1219,7 +1244,7 @@ section{
 
         .top-icons{
                 color:var(--white);
-               
+              
                 
         }
         
@@ -3127,6 +3152,7 @@ a.btn, .btn, .form-btn{
 .hamburger{
        cursor:pointer;
        display:none;
+       color:black;
 }
 
 .mobileMenu{
@@ -3193,10 +3219,7 @@ nav i{
 
 nav .top-icons i{
         color:var(--info-paragraph-color);
-}
-
-nav .hamburger i{
-        color:var(--info-paragraph-color);
+      
 }
 
 
@@ -3211,6 +3234,7 @@ nav .hamburger i{
                         grid-template-columns: 1fr;
                         
                 }
+               
                 .hero-section img{
                         height:auto;
                 }
@@ -3220,9 +3244,14 @@ nav .hamburger i{
                 .success-message p{
                         font-size:2rem;
                 }
-
+                .top-icons{
+                        font-size:0.7rem;
+                       
+                }
                 
-
+               .basket{
+                font-size:0.7rem;
+               }
                #order-image{
                 max-height:410px;
                 object-fit:cover;
@@ -3250,9 +3279,11 @@ nav .hamburger i{
                 .mylogo{
                         font-size:1.5rem;
                 }
-                  .hamburger{
+                .hamburger{
                         display:block;
                   }
+
+
                  
                   nav ul li{
                         display:none;
@@ -3260,11 +3291,10 @@ nav .hamburger i{
 
                   .top-icons i{
                         margin-right:3rem;
+                       
                   }
-                  .hamburger{
-                        margin-right:1rem;
-                  }
-               
+                 
+                  
                  .section-text{
                         font-size:1rem;
                  }
@@ -3496,6 +3526,7 @@ h2{
        
 }
 
+
 .sort-list{
         max-width:100%;
         margin:0;
@@ -3524,10 +3555,12 @@ h2{
         font-size:1.5rem;
 }
 
- .hamburger{
+ .hamburger {
         display:block;
                   
 }
+
+
                  
 nav ul li{
  display:none;

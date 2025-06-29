@@ -920,3 +920,18 @@ window.addEventListener("click", (e) => {
     document.body.style.backgroundColor = "pink";
   }
 })
+
+
+document.body.addEventListener("click", closeModal);
+    function closeModal(e) {
+      const closeIcon = document.querySelector(".closer");
+
+      if (
+        e.target.classList.contains("closer") ||
+        e.target.classList.contains("modal") ||
+        e.target.classList.contains("overlay")
+      ) {
+        modal.classList.toggle("show-modal");
+        overlay.style.visibility = "hidden";
+      }
+    }

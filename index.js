@@ -67,39 +67,31 @@ fetch("./template.html")
 
     let hamburger = document.querySelector(".hamburger");
     let close = document.querySelector(".closer");
-
     hamburger.addEventListener("click", showMobileMenu);
     function showMobileMenu() {
       let mobileMenu = document.querySelector(".mobileMenu");
+
       mobileMenu.classList.toggle("mobile-box");
       hamburger.style.display = "none";
+      close.style.display = "inline-block";
     }
 
-    close = document.querySelector(".closer");
     close.addEventListener("click", mobileClose);
+
+    console.log(close);
     function mobileClose(e) {
       let mobileMenu = document.querySelector(".mobileMenu");
 
       if (e.target === close) {
+        //check if the clicked element or any of its ancestors match .closer
         mobileMenu.classList.remove("mobile-box");
-        hamburger.classList.remove("show-hamburger");
+        hamburger.style.display = "inline-block";
+        close.style.display = "none";
+        mobileMenu.classList.remove("mobile-box");
       }
     }
 
     //event delegation
-    document.body.addEventListener("click", closeModal);
-    function closeModal(e) {
-      const closeIcon = document.querySelector(".closer");
-
-      if (
-        e.target.classList.contains("closer") ||
-        e.target.classList.contains("modal") ||
-        e.target.classList.contains("overlay")
-      ) {
-        modal.classList.toggle("show-modal");
-        overlay.style.visibility = "hidden";
-      }
-    }
 
     const successMessage = document.querySelector(".success-message");
     const orderForm = document.querySelector(".order-form");
