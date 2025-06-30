@@ -2419,9 +2419,9 @@ nav ul a:hover:not(.top-icons, .btn.top) {
         
                .social-media{
                     display:flex;
-                    gap:13px;
+                    gap:2rem;
                     align-items: center;
-                    font-size:2.5em;
+                    font-size:2rem;
                }
         
                .me{
