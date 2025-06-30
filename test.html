@@ -935,3 +935,68 @@ document.body.addEventListener("click", closeModal);
         overlay.style.visibility = "hidden";
       }
     }
+
+
+    <script>
+
+ function validateForm() {
+      const firstName = document
+        .getElementById("firstname")
+        .value.trim()
+        .toLowerCase(); //trim removes any extra spaces from the beginning and end of a string.
+      //toLowercase converts the entire input to lowercase.
+      const email = document.getElementById("email").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const message = document.getElementById("message").value.trim();
+
+      // Name check
+      if (firstName === "") {
+        alert("Please enter your name.");
+        return false;
+      }
+
+      // Email format check
+      if (!email.includes("@") || !email.includes(".")) {
+        alert("Please enter a valid email address.");
+        return false; //  Stop form submission
+      }
+
+      // Optional: phone number check (digits only)
+      if (phone !== "" && !/^\d{7,15}$/.test(phone)) {
+        alert("Phone number should be 7–15 digits.");
+        return false;
+      }
+
+      // Message length check
+      if (message.length < 10) {
+        alert("Please enter a message with at least 10 characters.");
+        return false;
+      }
+
+      // If all checks pass
+      return true;
+    }
+
+    orderForm.addEventListener("submit", function (e) {
+      // Check if form is valid
+      if (!orderForm.checkValidity()) {
+        orderForm.reportValidity();
+        return;
+      }
+      if (!validateForm()) {
+        return; // If JS validation fails, don't submit
+      }
+      // If valid, show success message
+      showSuccessMsge();
+    });
+
+
+
+
+
+
+
+
+
+
+    </script>

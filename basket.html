@@ -61,22 +61,22 @@
 <p>Fill out the form below to order your favorite dishes quickly and easily. 
   We'll take care of the rest!</p>
 </div>
-<form class="order-form" onsubmit="return validateForm()" >
+<form class="order-form">
 
 
 
   <div>
-<label for="firstname" required>firstname:</label>
-<input type="text" id="firstname" placeholder="Firstname"  >
+<label for="firstname">firstname:</label>
+<input type="text" id="firstname" placeholder="Firstname" required >
 </div>
 <div>
 <label for="lastname">LastName:</label>
-<input type="text" id="lastname" placeholder="Lastname" >
+<input type="text" id="lastname" placeholder="Lastname" required >
 </div>
 
 <div>
 <label for="email">email:</label>
-<input type="text" id="email" placeholder="Email"  >
+<input type="text" id="email" placeholder="Email" required  >
 </div>
 
 
@@ -84,13 +84,13 @@
 
 <div>
 <label for="telephone">telephone:</label>
-<input type="text" id="phone" placeholder="Telephone">
+<input type="text" id="phone" placeholder="Telephone" required   >
 </div>
 
 
 <div>
 <label for="address">Address:</label>
-<input type="text" id="address" placeholder="Address" >
+<input type="text" id="address" placeholder="Address"required  >
 </div>
 
 
@@ -98,7 +98,7 @@
 <div>
 
 <label style="visibility:hidden">button</label>
-<button type="button"  class="order-btn">Submit</button>
+<button type="submit"  class="order-btn">Submit</button>
 </div>
 
 </div>

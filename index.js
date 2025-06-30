@@ -92,62 +92,30 @@ fetch("./template.html")
     }
 
     //event delegation
-
+    const nextBtn = document.getElementById("next-btn");
     const successMessage = document.querySelector(".success-message");
     const orderForm = document.querySelector(".order-form");
     const submitBtn = document.querySelector(".order-btn");
+    console.log(submitBtn);
 
     orderForm.addEventListener("submit", function (e) {
-      // Check if form is valid
+      e.preventDefault(); // prevent form from reloading the page
+
       if (!orderForm.checkValidity()) {
-        orderForm.reportValidity();
+        // checks the HTML5 required fields.
+        orderForm.reportValidity(); //shows the browser’s error messages (if invalid)
         return;
       }
-      if (!validateForm()) {
-        return; // If JS validation fails, don't submit
-      }
-      // If valid, show success message
-      showSuccessMsge();
+
+      // Show success message
+      orderForm.style.display = "none";
+      successMessage.style.display = "block";
+
+      setTimeout(() => {
+        successMessage.style.display = "none";
+        nextBtn.style.display = "block";
+      }, 6000);
     });
-
-    function showSuccessMsge() {
-      if (successMessage && orderForm) {
-        orderForm.style.display = "none";
-        successMessage.style.display = "block";
-
-        setTimeout(() => {
-          successMessage.style.display = "none";
-          document.getElementById("next-btn").style.display = "block";
-        }, 6000);
-      }
-    }
-
-    submitBtn.addEventListener("click", showSuccessMsge);
-
-    orderForm.addEventListener("submit", function (e) {
-      // Check if form is valid
-      if (!orderForm.checkValidity()) {
-        orderForm.reportValidity();
-        return;
-      }
-      if (!validateForm()) {
-        return; // If JS validation fails, don't submit
-      }
-      // If valid, show success message
-      showSuccessMsge();
-    });
-
-    function showSuccessMsge() {
-      if (successMessage && orderForm) {
-        orderForm.style.display = "none";
-        successMessage.style.display = "block";
-
-        setTimeout(() => {
-          successMessage.style.display = "none";
-          document.getElementById("next-btn").style.display = "block";
-        }, 6000);
-      }
-    }
   });
 
 fetch("./footer.html")
@@ -608,40 +576,3 @@ document.addEventListener("DOMContentLoaded", () => {
     dropMenu.classList.toggle("show");
   });
 });
-function validateForm() {
-  const firstName = document
-    .getElementById("firstname")
-    .value.trim()
-    .toLowerCase(); //trim removes any extra spaces from the beginning and end of a string.
-  //toLowercase converts the entire input to lowercase.
-  const email = document.getElementById("email").value.trim();
-  const phone = document.getElementById("phone").value.trim();
-  const message = document.getElementById("message").value.trim();
-
-  // Name check
-  if (firstName === "") {
-    alert("Please enter your name.");
-    return false;
-  }
-
-  // Email format check
-  if (!email.includes("@") || !email.includes(".")) {
-    alert("Please enter a valid email address.");
-    return false; //  Stop form submission
-  }
-
-  // Optional: phone number check (digits only)
-  if (phone !== "" && !/^\d{7,15}$/.test(phone)) {
-    alert("Phone number should be 7–15 digits.");
-    return false;
-  }
-
-  // Message length check
-  if (message.length < 10) {
-    alert("Please enter a message with at least 10 characters.");
-    return false;
-  }
-
-  // If all checks pass
-  return true;
-}
