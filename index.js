@@ -254,6 +254,19 @@ function displayVegan() {
     )
     .join("");
   veganContainer.appendChild(veganBox);
+
+  gsap.from(".veganContainer", {
+    scrollTrigger: {
+      trigger: ".veganContainer",
+      start: "top 90%", // when top of element hits 90% of viewport
+      toggleActions: "play none none none", // onEnter only
+    },
+    opacity: 0,
+    y: 50,
+    duration: 0.8,
+    ease: "power2.out",
+  });
+
   displayOrder();
 }
 
@@ -574,5 +587,20 @@ document.addEventListener("DOMContentLoaded", () => {
   dropToggle.addEventListener("click", (e) => {
     e.preventDefault(); // prevent navigation on click
     dropMenu.classList.toggle("show");
+  });
+});
+
+document.querySelectorAll("section").forEach((section) => {
+  gsap.from(section, {
+    scrollTrigger: {
+      trigger: section,
+      start: "top 85%", // when top of section hits 85% of viewport
+      toggleActions: "play none none none", // onEnter only
+    },
+    opacity: 0,
+    y: 60,
+    scale: 0.95, // Slight zoom-in effect
+    duration: 1,
+    ease: "power2.out",
   });
 });
