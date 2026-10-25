@@ -1,20 +1,25 @@
 import items from "./menu.js";
 import { filteredByCategorySushi } from "./sushi.js";
-import { filteredByCategoryShishKebab } from "./shishkebab.js";
-import { filteredByCategoryBerries } from "./berries.js";
+
 import { filteredByCategoryRamen } from "./ramen.js";
 import { filteredByCategoryNoodles } from "./noodles.js";
 
 //want your code to run as soon as the page structure is ready, without waiting for large files (e.g., images) to load.//
-
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
 document.addEventListener("DOMContentLoaded", () => {
-  filteredByCategorySushi();
-  displayOrder();
+  let berriesContainer = document.querySelector(".berries-container");
+
+  if (berriesContainer) {
+    renderProducts(berriesContainer, allFiltered("berries"));
+  }
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  filteredByCategoryShishKebab();
-  displayOrder();
+  let shishContainer = document.querySelector(".shish-container");
+
+  if (shishContainer) {
+    renderProducts(shishContainer, allFiltered("shishkebab"));
+  }
 });
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -51,10 +56,25 @@ document.addEventListener("DOMContentLoaded", () => {
   displayChefSpecial();
   displayOrder();
 });
-
+/*
 document.addEventListener("DOMContentLoaded", () => {
   displayVegan();
   displayOrder();
+});
+*/
+
+document.addEventListener("DOMContentLoaded", () => {
+  let veganContainer = document.querySelector(".vegan-container");
+  if (veganContainer) {
+    renderProducts(veganContainer, allFiltered("vegan"));
+  }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  let container = document.querySelector(".menu-container");
+  if (container) {
+    renderProducts(container, items);
+  }
 });
 
 fetch("./template.html")
@@ -130,6 +150,57 @@ let searchButton = document.getElementById("search-btn");
 
 searchButton.addEventListener("click", showFood);
 
+function renderProducts(productContainer, items) {
+  productContainer.innerHTML = items
+    .map((item) => {
+      return `
+    
+    <div class="menu-column" data-product-id="${item.id}">
+      <div class="image">
+  <img src="${item.image}"alt="${item.alt}" >
+</div>
+  <div class="txt">
+  <h3>${item.name}<span class="meal-price">£${item.price}</span></h3>
+  <p>${item.description}</p>
+  </div>
+  <button class="btn"  data-id="${item.id}">order now</button>
+ </div> 
+  
+  `;
+    })
+    .join("");
+
+  let btns = document.querySelectorAll(".btn");
+  console.log(btns);
+  if (btns) {
+    btns.forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        console.log(btn);
+        let productColumn = e.target.closest(".menu-column");
+        if (productColumn) {
+          //This finds the closest .product-column containing the element that was clicked.
+          let button = productColumn.querySelector(".btn");
+          if (button) {
+            console.log(button);
+
+            const productId = button.dataset.id;
+            console.log(productId);
+            let product = items.find((item) => item.id == productId);
+            console.log(product);
+
+            window.location.href = "basket.html";
+
+            addToCart(productId);
+
+            localStorage.setItem("cart", JSON.stringify(cart));
+          }
+        }
+      });
+    });
+  }
+}
+
+/*
 function displayMenu() {
   items.forEach((item) => {
     let container = document.querySelector(".menu-container");
@@ -162,11 +233,49 @@ function displayMenu() {
   });
   displayOrder();
 }
+
 displayMenu();
+*/
+/*
+function displayOrder() {
+  let container = document.querySelector(".menu-container");
+  let newBox = document.createElement("div");
+  newBox.classList.add("box");
+  newBox.innerHTML = items
+    .map((item) => {
+      return `
+      <div class="menu-column" data-product-id="${item.id}">
+      <div class="image">
+  <img src="${item.image}"alt="${item.alt}" >
+</div>
+  <div class="txt">
+  <h3>${item.name}<span class="meal-price">£${item.price}</span></h3>
+  <p>${item.description}</p>
+  </div>
+  <button class="btn"  data-id="${item.id}">order now</button>
+ </div> 
+  
+  `;
+    })
+    .join("");
+  container.appendChild(newBox);
+}
+displayOrder();
+*/
+function addToCart(productId) {
+  let product = items.find((item) => item.id == productId);
+  let existingItem = cart.find((item) => item.id == productId);
+  if (!existingItem) {
+    cart.push({ ...product, quantity: 1 });
+  }
+  if (existingItem) {
+    existingItem.quantity += 1;
+  }
+}
 
 const sortList = document.querySelector(".sort-list");
 sortList.addEventListener("click", addText);
-
+/*
 function addText(event) {
   let categoryTitle = document.querySelector(".category-title");
 
@@ -181,7 +290,7 @@ function addText(event) {
   for (paras of allParas) {
     if (paras === event.target) {
       let filteredCategory = items.filter(
-        (item) => item.category === paras.getAttribute("id")
+        (item) => item.category === paras.getAttribute("id"),
       );
       let container = document.querySelector(".menu-container");
       container.innerHTML = "";
@@ -189,7 +298,7 @@ function addText(event) {
       container.innerHTML = filteredCategory
         .map(
           (item) =>
-            ` <div class="menu-column">
+            ` <div class="menu-column"  data-product-id="${item.id}">
   
   <div class="image">
   
@@ -202,12 +311,11 @@ function addText(event) {
   <h3>${item.name}<span class="meal-price">£${item.price}</span></h3>
   <p>${item.description}</p>
   </div>
- <a  href="#"  class="btn" data-product-id=${item.id}  data-name=${item.name} 
-   data-price=${item.price} data-image=${item.image}>order now   <i class="fa-solid fa-cart-shopping"></i>  </a>
+ <button   class="btn" data-id="${item.id}">order now   <i class="fa-solid fa-cart-shopping"></i>  </a>
    </div>
       </div>
           
-      `
+      `,
         )
         .join("");
     }
@@ -218,9 +326,42 @@ function addText(event) {
       paras.classList.remove("para");
     }
   }
-  displayOrder();
 }
+*/
+function addText() {
+  let categoryTitle = document.querySelector(".category-title");
 
+  let text = event.target.getAttribute("id");
+  if (text) {
+    categoryTitle.textContent = text;
+    categoryTitle.classList.add("category-text");
+  }
+
+  let allParas = document.getElementsByTagName("div");
+  let paras = event.target;
+  for (paras of allParas) {
+    if (paras === event.target) {
+      let filteredCategory = items.filter(
+        (item) => item.category === paras.getAttribute("id"),
+      );
+      let container = document.querySelector(".menu-container");
+      container.innerHTML = "";
+      renderProducts(container, allFiltered(paras.getAttribute("id")));
+    }
+  }
+}
+addText();
+function allFiltered(category, name) {
+  let filters = items.filter((item) => item.category == category);
+  if (category) {
+    filters = items.filter((item) => item.category == category);
+  }
+  if (name) {
+    filters = items.filter((item) => item.name == name);
+  }
+  return filters;
+}
+/*
 function displayVegan() {
   let veganContainer = document.querySelector(".vegan-container");
   let filteredVegan = items.filter((item) => item.category === "vegan");
@@ -230,7 +371,7 @@ function displayVegan() {
   veganContainer.innerHTML = filteredVegan
     .map(
       (item) =>
-        ` <div class="menu-column">
+        ` <div class="menu-column" data-product-id="${item.id}">
   
   <div class="image">
   
@@ -243,14 +384,13 @@ function displayVegan() {
   <h3>${item.name}<span class="meal-price">£${item.price}</span></h3>
   <p>${item.description}</p>
   </div>
- <a href="#" class="btn" data-product-id=${item.id}  data-name=${item.name} 
-   data-price=${item.price} data-image=${item.image}>order now   <i class="fa-solid fa-cart-shopping"></i> </a>
+ <button class="btn" data-id="${item.id}">order now   <i class="fa-solid fa-cart-shopping"></i> </button>
    </div>
       </div>
           
       
         
-  `
+  `,
     )
     .join("");
   veganContainer.appendChild(veganBox);
@@ -266,11 +406,11 @@ function displayVegan() {
     duration: 0.8,
     ease: "power2.out",
   });
-
-  displayOrder();
 }
 
 displayVegan();
+
+
 // map() method is used to create a new array
 
 //Checks if a specific value exists in an array.
@@ -278,13 +418,19 @@ displayVegan();
 // some Tests if at least one element in the array passes a test function (a callback).
 
 // some Tests if at least one element in the array passes a test function (a callback).
+*/
 
+/*
 function showFood() {
   let mapItems = items.map((item) => {
     return item.name;
   });
 
   let searchInput = document.getElementById("search-input");
+  let input = document.getElementById("search-input");
+  input.addEventListener("input", () => {
+    input.value = input.value.replace(/[^a-zA-Z\s]/g, "");
+  });
 
   const searchValue = searchInput.value.trim().toLowerCase(); //convert input to lowercase(makes input value case-sensitive).trim removes whitespace
 
@@ -298,7 +444,7 @@ function showFood() {
       .map(
         (item) =>
           `
-     <div class="menu-column">
+     <div class="menu-column" data-product-id="${item.id}">
   
   <div class="image">
   
@@ -311,8 +457,7 @@ function showFood() {
   <h3>${item.name}<span class="meal-price">£${item.price}</span></h3>
   <p>${item.description}</p>
   </div>
- <button href="#" class="btn" data-product-id=${item.id}  data-name=${item.name} 
-   data-price=${item.price} data-image=${item.image}>order now <i class="fa-solid fa-cart-shopping"></i> </button>
+ <button  class="btn" data-id="${item.id}">order now <i class="fa-solid fa-cart-shopping"></i> </button>
    </div>
      
       </div>
@@ -320,19 +465,41 @@ function showFood() {
      
 
 
-     `
+     `,
       )
       .join("");
   }
+}
+  */
 
-  displayOrder();
+function showFood() {
+  let mapItems = items.map((item) => {
+    return item.name;
+  });
+
+  let searchInput = document.getElementById("search-input");
+  let input = document.getElementById("search-input");
+  input.addEventListener("input", () => {
+    input.value = input.value.replace(/[^a-zA-Z\s]/g, "");
+  });
+
+  const searchValue = searchInput.value.trim().toLowerCase(); //convert input to lowercase(makes input value case-sensitive).trim removes whitespace
+
+  if (!searchValue) {
+    alert("enter food name");
+  } else if (mapItems.includes(searchValue)) {
+    let container = document.querySelector(".menu-container");
+
+    renderProducts(container, allFiltered(searchValue));
+  }
 }
 
+/*
 function displaynewMenu() {
   let newContainer = document.querySelector(".new-menu-container");
 
   let filteredContainer = items.filter(
-    (item) => item.location === "newmenucontainer"
+    (item) => item.location === "newmenucontainer",
   );
 
   newContainer.innerHTML = filteredContainer
@@ -358,12 +525,14 @@ function displaynewMenu() {
    data-price=${item.price} data-image=${item.image}>order now    <i class="fa-solid fa-cart-shopping"></i> </a>
 
 </div>
-`
+`,
     )
     .join("");
 }
 
 displaynewMenu();
+
+*/
 function displaySpecial() {
   let specialMenuContainer = document.querySelector(".special-menu-container");
   let findSpecialMenu = items.filter((item) => item.id === 52);
@@ -396,8 +565,7 @@ Every bowl is a perfect blend of tradition, taste, and texture — a true celebr
   <span class="special-price">£${item.price}</span>
   </div>
   
-   <a  href="#" class="btn" data-product-id="${item.id}"  data-name="${item.name}" 
-   data-price="${item.price}" data-image="${item.image}">order now  <i class="fa-solid fa-cart-shopping"></i>  </a>
+   <button  class="btn" data-id="${item.id}">order now  <i class="fa-solid fa-cart-shopping"></i></button>
 
 </div>
 
@@ -432,12 +600,13 @@ our noodles are as nutritious as they are delicious — perfect for health-consc
 
 </div>
 
-`
+`,
     )
     .join("");
 }
-
-displaySpecial();
+if (specialMenuContainer) {
+  displaySpecial();
+}
 
 function displaySeller() {
   let sellerMenuContainer = document.querySelector(".seller-menu-container");
@@ -487,8 +656,7 @@ function displaySeller() {
     <span class="special-price">£${item.price}</span>
     
     </div>
-    <a  href="#" class="btn" data-product-id="${item.id}"  data-name="${item.name}" 
-   data-price="${item.price}" data-image="${item.image}">order now   <i class="fa-solid fa-cart-shopping"></i> </a>
+    <button  class="btn" data-id="${item.id}">order now <i class="fa-solid fa-cart-shopping"></i></button>
    
     </div>
     </div>
@@ -496,12 +664,13 @@ function displaySeller() {
   
 </div>
 
-`
+`,
     )
     .join("");
 }
-
-displaySeller();
+if (specialMenuContainer) {
+  displaySeller();
+}
 
 function displayChefSpecial() {
   let chefContainer = document.querySelector(".meal-week-container");
@@ -520,6 +689,7 @@ function displayChefSpecial() {
 
 <div class="meal-week-info">
   <div class="meal-week-info-content">
+  
   <h3>What Makes This Week's Meal Special</h3>
   
   
@@ -540,8 +710,7 @@ function displayChefSpecial() {
        <p>A soul-warming bowl crafted with passion and precision. Featuring slow-simmered broth infused with rich umami flavors, 
        tender slices of marinated chashu pork, springy house-made noodles, a soft-boiled soy egg, and a medley of fresh toppings 
        — including scallions, nori, and bamboo shoots.</p>
-<a href="#" class="btn" data-product-id="${item.id}"  data-name="${item.name}" 
-   data-price="${item.price}" data-image="${item.image}">order now   <i class="fa-solid fa-cart-shopping"></i> </a>
+<button class="btn" data-id="${item.id}"">order now   <i class="fa-solid fa-cart-shopping"></i> </button>
 
 </div>
 
@@ -550,12 +719,15 @@ function displayChefSpecial() {
  </div>
 
 
-`
+`,
     )
     .join("");
 }
+if (chefContainer) {
+  displayChefSpecial();
+}
 
-displayChefSpecial();
+/*
 
 function displayOrder() {
   let button = document.querySelectorAll(".btn");
@@ -579,6 +751,8 @@ function displayOrder() {
 }
 
 displayOrder();
+
+*/
 
 document.addEventListener("DOMContentLoaded", () => {
   const dropToggle = document.querySelector(".dropdown-toggle");

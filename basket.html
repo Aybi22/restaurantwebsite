@@ -32,133 +32,49 @@
 
 <body>
   <div id="head-template"></div>
-  
-  <div class="order-infos">
-<div class="food-name">
 
-</div>
-<div class="food-price"></div> 
-
-</div>
-
-<div class="reservation-container">
+<h1 class="cart-page-title">your cart<i class="fa-solid fa-cart-shopping"></i></h1>
 
 
 
-  <div class="image">
 
-<img id="order-image" src="images/contactimage.webp">
-</div>
-
-  
-
-<div class="reservation-box">
-<div class="reservation-content">
-
-<div class="form-header">
-  <h1>order form  <i class="fa-solid fa-utensils spoon"></i> </h1>
-
-<p>Fill out the form below to order your favorite dishes quickly and easily. 
-  We'll take care of the rest!</p>
-</div>
-<form class="order-form">
+  <div class="cart">
 
 
 
-  <div>
-<label for="firstname">firstname:</label>
-<input type="text" id="firstname" placeholder="Firstname" required >
-</div>
-<div>
-<label for="lastname">LastName:</label>
-<input type="text" id="lastname" placeholder="Lastname" required >
-</div>
 
-<div>
-<label for="email">email:</label>
-<input type="text" id="email" placeholder="Email" required  >
+
+
+
+
+
+
+  <div class="product-section">
+    <div class="cart-header"></div>
+
+  <div class="cart-items">
+
+   
+  </div>
+<div class="btn-section">
+  <button class="place-order-btn">proceed to checkout</button>
+<button class="place-order-btn shop">Back to shopping</button>
+  </div>
 </div>
 
 
-
-
-<div>
-<label for="telephone">telephone:</label>
-<input type="text" id="phone" placeholder="Telephone" required   >
+<div class="total-box">
+<p class="cart-text">order total</p>
+<p class="total-display"></p>
+<p class="coupon"> Add coupon</p>
 </div>
-
-
-<div>
-<label for="address">Address:</label>
-<input type="text" id="address" placeholder="Address"required  >
 </div>
-
-
-
-<div>
-
-<label style="visibility:hidden">button</label>
-<button type="submit"  class="order-btn">Submit</button>
-</div>
-
-</div>
-
-
-</form>
-
-<div class="success-message" style="display: none;">
-
- <p> thank you! your order has been succesfully placed!</p>
-</div>
-<a class="btn" href="menu.html"  style="display:none"  id="next-btn">order again</a>
-
-</div>
-
-
-
-</div>
-
-</div>
-
-</div>
-
-
-</div>
-
-
 
   <div class="footer"></div>
 </body>
-<script src="index.js" type="module"></script>
-
-<script>
-document.addEventListener('DOMContentLoaded',()=>{
-  
-  const selectedImage=document.getElementById('order-image');
-  const itemName=document.querySelector('.food-name');
-  const foodPrice=document.querySelector('.food-price')
-  console.log(foodPrice);
-    const savedName=localStorage.getItem('selectedItemName');
-  const savedImage=localStorage.getItem('selectedItemImage');
-   const savedPrice=localStorage.getItem('selectedItemPrice');
- 
-  if(selectedImage && savedImage){
-    selectedImage.src=savedImage;
-  }
-  
-  if(itemName && savedName){
-  itemName.textContent=`your selection: ${savedName}`;
-  }
-  if(foodPrice && savedPrice){
-  foodPrice.textContent=` price:£${savedPrice}`;
-  }
+<script src="basket.js" type="module"></script>
 
 
-
-});
-
-
-</script>
 
 
 

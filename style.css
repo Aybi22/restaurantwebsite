@@ -49,7 +49,7 @@
                 font-family: roboto;
                 width: 100%;  /* full width*/
                 min-height:100vh; /* stretching body height to full viewport */
-                overflow-x: hidden;
+               
 
                
                 font-family:roboto;
@@ -58,9 +58,7 @@
                  font-family: Open Sans;
         }
              
-        body, html {
-                height: 100%;
-              }
+       
                      
               
           a{
@@ -955,10 +953,11 @@ width:100%;
                 background-position:center;
                 background-repeat: no-repeat;
                 background-size: cover;
-                position:relative;
-             
-        
-        }
+                position:relative;}
+
+                .cart-items{
+                       
+                }
 
 .history-para{
        max-width:65%;
@@ -987,6 +986,76 @@ width:100%;
         padding:33px;
 
 }
+
+.cart{
+        display:flex;
+        max-width:1500px;
+        margin:auto;
+        align-items:flex-start;
+     
+}
+
+.product-section{
+       min-height:auto;
+       padding:2rem;
+        max-width:800px;
+        width:100%;
+       
+      color:white;
+        margin: auto;
+        background-color: #2E2E3A;
+}
+
+.total-box{
+       
+        background:#2E2E3A;
+        color:white;
+        width:600px;
+        padding:2rem;
+       
+}
+:disabled{
+        pointer-events: none;
+        opacity:33%;
+        cursor: not-allowed;
+}
+
+.counter{
+        display:flex;
+        gap:1rem;
+}
+ .increase, .decrease{
+   cursor:pointer;
+}
+
+.quantity-section{
+        display:flex;
+        gap:1rem;
+}
+
+.cart-text{
+        font-size:2.5rem;
+        text-align:center;
+        margin-bottom:2rem;
+        text-transform:capitalize;
+        font-weight:700;
+}
+.cart-page-title{
+        display:flex;
+        align-items:center;
+        margin-bottom:2rem;
+        gap:0.5rem;
+        border-bottom:1px solid #DE9151;
+}
+.coupon{
+        background:white;
+        color:black;
+        padding:1rem;
+        width:100%;
+        text-align:center;
+        font-size:1rem;
+        font-weight:700;
+}
 .offer-box-wrapper{
         display:grid;
        grid-template-columns: repeat(2,1fr);
@@ -996,7 +1065,27 @@ width:100%;
         gap:11px;
       
         padding:33px;
-
+}
+.cart-items{
+        
+        gap:1rem;
+   
+        
+}
+.menu-column.cart{
+        border-bottom:1px solid#DE9151;
+        margin-bottom:2rem;
+        padding-bottom:2rem;
+}
+.cart-items .image{
+        width:90px;
+        height:75px;
+}
+.cart-items .image img{
+        width:100%;
+        height:100%;
+        object-fit:cover;
+        display:block;
 }
 
 .history-text{
@@ -1737,12 +1826,11 @@ h4{
           }
 
           header{
-               
-             
+              
                 position:sticky;
                 top:0;
-               
-               
+            
+              
                 z-index:999;
           }
          .search-section{
@@ -1898,7 +1986,7 @@ h4{
           .reservation-container{
                 display:flex;
                 max-width:100%;
-               
+              
               justify-content:center;
                margin-bottom:2rem;
           }
@@ -1934,12 +2022,9 @@ h4{
                 height:800px;
           }
 .box{
-   
-
-       
-        width:100%;
-        margin:0 auto;
-        justify-content:center;
+   width:100%;
+   margin:0 auto;
+   justify-content:center;
 }
      
 
@@ -2470,11 +2555,54 @@ nav ul a:hover:not(.top-icons, .btn.top) {
   stroke: #666;
   transition: stroke 0.3s;
 }
+.cart-box{
+        display:flex;
+        gap:1rem;
+        align-items: flex-start;
+        margin-bottom:1rem;
+}
+.product-name{
+        text-transform:uppercase;
+        font-weight:700;
+        font-size:1rem;
+}
+.product-info{
+        display:flex;
+        flex-direction:column;
+        gap:0.5rem;
+}
+  
+.subtotal{
+        font-weight:700;
+        font-size:2rem;
+}
+   
+
+.remove-btn{
+        cursor:pointer;
+        max-width:100px;
+        width:100%;
+        font-size:0.8rem;
+        color:black;
+        background:white;
+        text-transform: capitalize;
+        padding:0.5rem;
+        border:1px solid black;
+   }     
         
         
-        
-        
-        
+        .product-column .image{
+                width:70px;
+                height:55px;
+           
+
+        }
+        .product-column .image img{
+                display:block;
+                object-fit:cover;
+                width:100%;
+                height:100%;
+        }
         
         
                 .menu_title{
@@ -2491,6 +2619,9 @@ nav ul a:hover:not(.top-icons, .btn.top) {
         .sortlist-title{
                font-weight:900;
                white-space: nowrap;
+               text-align:center;
+               text-transform:capitalize;
+               margin-bottom:2rem;
         }
 
         .description-box{
@@ -2656,12 +2787,30 @@ width:100%;
                 max-width:500px;
                 display:flex;
                 flex-direction:column;
-                min-height:650px;
-              
-                padding:13px;
                
-             
-        }
+              
+               }
+                .btn-section{
+                        display:flex;
+                        flex-direction:column;
+                        gap:1rem;
+                }
+               .place-order-btn{
+                padding:1rem;
+                cursor:pointer;
+                font-weight: 400;
+                color:black;
+                font-size:1rem;
+                text-transform: capitalize;
+                border:none;
+                background:#DE9151;
+                width:100%;
+                margin-top: auto;
+               }
+               .place-order-btn.shop{
+                background-color: white;
+                color:black;
+               }
 
  
         .txt_column{
@@ -3011,6 +3160,7 @@ textarea {
                 margin:auto;
                 grid-template-columns:repeat(auto-fill,minmax(500px, 1fr)); /* default: 1 column */
                 box-sizing: border-box;
+              
         }
               
        
