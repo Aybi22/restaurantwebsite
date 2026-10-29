@@ -87,7 +87,7 @@ let items = [
     description:
       "A savory Japanese classic made with rich, slow-cooked broth, tender noodles, seasoned egg, and perfectly spiced toppings.",
     category: "ramen",
-    location: "newmenucontainer",
+    location: "new",
   },
 
   {
@@ -100,7 +100,7 @@ let items = [
     description:
       "Delicate pastry filled with vanilla cream and finished with a glossy chocolate topping.",
     category: "confectionary",
-    location: "newmenucontainer",
+    location: "new",
   },
 
   {
@@ -424,7 +424,7 @@ let items = [
     description:
       " Fresh, hand-rolled sushi crafted with premium rice, crisp seaweed, and delicately sliced fish a perfect balance of flavor and texture.",
     category: "sushi",
-    location: "newmenucontainer",
+    location: "new",
   },
 
   {
@@ -569,7 +569,7 @@ let items = [
     description:
       " Juicy, marinated meat skewers grilled to perfection with colorful bell peppers and onions  bold flavor in every bite.",
     category: "shishkebab",
-    location: "newmenucontainer",
+    location: "new",
   },
 
   {

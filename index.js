@@ -1,8 +1,4 @@
 import items from "./menu.js";
-import { filteredByCategorySushi } from "./sushi.js";
-
-import { filteredByCategoryRamen } from "./ramen.js";
-import { filteredByCategoryNoodles } from "./noodles.js";
 
 //want your code to run as soon as the page structure is ready, without waiting for large files (e.g., images) to load.//
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -15,6 +11,29 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
+  let ramenContainer = document.querySelector(".ramen-container");
+
+  if (ramenContainer) {
+    renderProducts(ramenContainer, allFiltered("ramen"));
+  }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  let noodlesContainer = document.querySelector(".noodles-container");
+
+  if (noodlesContainer) {
+    renderProducts(noodlesContainer, allFiltered("noodles"));
+  }
+});
+document.addEventListener("DOMContentLoaded", () => {
+  let sushiContainer = document.querySelector(".sushi-container");
+
+  if (sushiContainer) {
+    renderProducts(sushiContainer, allFiltered("sushi"));
+  }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
   let shishContainer = document.querySelector(".shish-container");
 
   if (shishContainer) {
@@ -23,45 +42,33 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  filteredByCategoryRamen();
-  displayOrder();
+  let chefContainer = document.querySelector(".meal-week-container");
+  if (chefContainer) {
+    displayChefSpecial();
+  }
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  filteredByCategoryBerries();
-  displayOrder();
+  let sellerMenuContainer = document.querySelector(".seller-menu-container");
+
+  if (sellerMenuContainer) {
+    displaySeller();
+  }
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  filteredByCategoryNoodles();
-  displayOrder();
+  let specialMenuContainer = document.querySelector(".special-menu-container");
+  if (specialMenuContainer) {
+    displaySpecial();
+  }
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  displaynewMenu();
-  displayOrder();
+  let newContainer = document.querySelector(".new-menu-container");
+  if (newContainer) {
+    displayNewMenu();
+  }
 });
-
-document.addEventListener("DOMContentLoaded", () => {
-  displaySpecial();
-  displayOrder();
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  displaySeller();
-  displayOrder();
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  displayChefSpecial();
-  displayOrder();
-});
-/*
-document.addEventListener("DOMContentLoaded", () => {
-  displayVegan();
-  displayOrder();
-});
-*/
 
 document.addEventListener("DOMContentLoaded", () => {
   let veganContainer = document.querySelector(".vegan-container");
@@ -76,6 +83,14 @@ document.addEventListener("DOMContentLoaded", () => {
     renderProducts(container, items);
   }
 });
+/*
+document.addEventListener("DOMContentLoaded", () => {
+  let newContainer = document.querySelector(".new-menu-container");
+  if (newContainer) {
+    renderProducts(newContainer, allFiltered("new"));
+  }
+});
+*/
 
 fetch("./template.html")
   .then((response) => response.text())
@@ -110,7 +125,7 @@ fetch("./template.html")
         mobileMenu.classList.remove("mobile-box");
       }
     }
-
+    /*
     //event delegation
     const nextBtn = document.getElementById("next-btn");
     const successMessage = document.querySelector(".success-message");
@@ -136,6 +151,7 @@ fetch("./template.html")
         nextBtn.style.display = "block";
       }, 6000);
     });
+    */
   });
 
 fetch("./footer.html")
@@ -147,8 +163,10 @@ fetch("./footer.html")
   });
 
 let searchButton = document.getElementById("search-btn");
-
-searchButton.addEventListener("click", showFood);
+console.log(searchButton);
+if (searchButton) {
+  searchButton.addEventListener("click", showFood);
+}
 
 function renderProducts(productContainer, items) {
   productContainer.innerHTML = items
@@ -163,14 +181,15 @@ function renderProducts(productContainer, items) {
   <h3>${item.name}<span class="meal-price">£${item.price}</span></h3>
   <p>${item.description}</p>
   </div>
-  <button class="btn"  data-id="${item.id}">order now</button>
+  
+  <button class="btn-render"  data-id="${item.id}">Add to cart <i class="fa-solid fa-cart-shopping"></i></button>
  </div> 
   
   `;
     })
     .join("");
 
-  let btns = document.querySelectorAll(".btn");
+  let btns = document.querySelectorAll(".btn-render");
   console.log(btns);
   if (btns) {
     btns.forEach((btn) => {
@@ -179,7 +198,7 @@ function renderProducts(productContainer, items) {
         let productColumn = e.target.closest(".menu-column");
         if (productColumn) {
           //This finds the closest .product-column containing the element that was clicked.
-          let button = productColumn.querySelector(".btn");
+          let button = productColumn.querySelector(".btn-render");
           if (button) {
             console.log(button);
 
@@ -274,7 +293,9 @@ function addToCart(productId) {
 }
 
 const sortList = document.querySelector(".sort-list");
-sortList.addEventListener("click", addText);
+if (sortList) {
+  sortList.addEventListener("click", addText);
+}
 /*
 function addText(event) {
   let categoryTitle = document.querySelector(".category-title");
@@ -341,26 +362,35 @@ function addText() {
   let paras = event.target;
   for (paras of allParas) {
     if (paras === event.target) {
-      let filteredCategory = items.filter(
-        (item) => item.category === paras.getAttribute("id"),
-      );
       let container = document.querySelector(".menu-container");
       container.innerHTML = "";
       renderProducts(container, allFiltered(paras.getAttribute("id")));
     }
   }
 }
+
 addText();
-function allFiltered(category, name) {
-  let filters = items.filter((item) => item.category == category);
+function allFiltered(category, location, name, id) {
+  let filters;
+
   if (category) {
     filters = items.filter((item) => item.category == category);
+  }
+
+  if (location) {
+    filters = items.filter((item) => item.location == location);
   }
   if (name) {
     filters = items.filter((item) => item.name == name);
   }
+
+  if (id) {
+    filters = items.filter((item) => item.id == id);
+  }
+
   return filters;
 }
+
 /*
 function displayVegan() {
   let veganContainer = document.querySelector(".vegan-container");
@@ -489,18 +519,17 @@ function showFood() {
     alert("enter food name");
   } else if (mapItems.includes(searchValue)) {
     let container = document.querySelector(".menu-container");
-
+    let categoryTitle = document.querySelector(".category-title");
+    categoryTitle.innerHTML = searchValue;
     renderProducts(container, allFiltered(searchValue));
   }
 }
+showFood();
 
-/*
-function displaynewMenu() {
+function displayNewMenu() {
   let newContainer = document.querySelector(".new-menu-container");
 
-  let filteredContainer = items.filter(
-    (item) => item.location === "newmenucontainer",
-  );
+  let filteredContainer = items.filter((item) => item.location === "new");
 
   newContainer.innerHTML = filteredContainer
     .map(
@@ -521,18 +550,24 @@ function displaynewMenu() {
   </div>
 <p class="menu-text">${item.description}</p>
 </div>
-  <a  href="#" class="btn" data-product-id=${item.id}  data-name=${item.name} 
-   data-price=${item.price} data-image=${item.image}>order now    <i class="fa-solid fa-cart-shopping"></i> </a>
+  <button class="btn-new" data-id=${item.id} 
+>order now    <i class="fa-solid fa-cart-shopping"></i> </button>
 
 </div>
 `,
     )
     .join("");
+
+  document.addEventListener("click", (e) => {
+    if (e.target.closest(".btn-new")) {
+      let productId = e.target.closest(".btn-new").dataset.id;
+      addToCart(productId);
+      localStorage.setItem("cart", JSON.stringify(cart));
+      window.location.href = "basket.html";
+    }
+  });
 }
 
-displaynewMenu();
-
-*/
 function displaySpecial() {
   let specialMenuContainer = document.querySelector(".special-menu-container");
   let findSpecialMenu = items.filter((item) => item.id === 52);
@@ -540,11 +575,7 @@ function displaySpecial() {
   specialMenuContainer.innerHTML = findSpecialMenu
     .map(
       (item) =>
-        `
-
-
-
-  <div class="description-box">
+        `<div class="description-box">
    <div class="special-info">
     <div class="special-info-content">
 
@@ -565,10 +596,9 @@ Every bowl is a perfect blend of tradition, taste, and texture — a true celebr
   <span class="special-price">£${item.price}</span>
   </div>
   
-   <button  class="btn" data-id="${item.id}">order now  <i class="fa-solid fa-cart-shopping"></i></button>
+   <button  class="btn-special" data-id="${item.id}">order now  <i class="fa-solid fa-cart-shopping"></i></button>
 
 </div>
-
 
 
 </div>
@@ -603,9 +633,15 @@ our noodles are as nutritious as they are delicious — perfect for health-consc
 `,
     )
     .join("");
-}
-if (specialMenuContainer) {
-  displaySpecial();
+
+  document.addEventListener("click", (e) => {
+    if (e.target.closest(".btn-special")) {
+      let productId = e.target.closest(".btn-special").dataset.id;
+      addToCart(productId);
+      window.location.href = "basket.html";
+      localStorage.setItem("cart", JSON.stringify(cart));
+    }
+  });
 }
 
 function displaySeller() {
@@ -656,7 +692,7 @@ function displaySeller() {
     <span class="special-price">£${item.price}</span>
     
     </div>
-    <button  class="btn" data-id="${item.id}">order now <i class="fa-solid fa-cart-shopping"></i></button>
+    <button  class="btn-seller" data-id="${item.id}">order now <i class="fa-solid fa-cart-shopping"></i></button>
    
     </div>
     </div>
@@ -667,9 +703,14 @@ function displaySeller() {
 `,
     )
     .join("");
-}
-if (specialMenuContainer) {
-  displaySeller();
+  document.addEventListener("click", (e) => {
+    if (e.target.closest(".btn-seller")) {
+      let productId = e.target.closest(".btn-seller").dataset.id;
+      addToCart(productId);
+      window.location.href = "basket.html";
+      localStorage.setItem("cart", JSON.stringify(cart));
+    }
+  });
 }
 
 function displayChefSpecial() {
@@ -690,7 +731,7 @@ function displayChefSpecial() {
 <div class="meal-week-info">
   <div class="meal-week-info-content">
   
-  <h3>What Makes This Week's Meal Special</h3>
+  <h3 class="special-title">What Makes This Week's Meal Special</h3>
   
   
   
@@ -710,7 +751,7 @@ function displayChefSpecial() {
        <p>A soul-warming bowl crafted with passion and precision. Featuring slow-simmered broth infused with rich umami flavors, 
        tender slices of marinated chashu pork, springy house-made noodles, a soft-boiled soy egg, and a medley of fresh toppings 
        — including scallions, nori, and bamboo shoots.</p>
-<button class="btn" data-id="${item.id}"">order now   <i class="fa-solid fa-cart-shopping"></i> </button>
+<button class="btn-chef" data-id="${item.id}"">order now   <i class="fa-solid fa-cart-shopping"></i> </button>
 
 </div>
 
@@ -722,6 +763,15 @@ function displayChefSpecial() {
 `,
     )
     .join("");
+
+  document.addEventListener("click", (e) => {
+    if (e.target.closest(".btn-chef")) {
+      let productId = e.target.closest(".btn-chef").dataset.id;
+      addToCart(productId);
+      window.location.href = "basket.html";
+      localStorage.setItem("cart", JSON.stringify(cart));
+    }
+  });
 }
 if (chefContainer) {
   displayChefSpecial();
